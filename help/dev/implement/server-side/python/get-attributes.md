@@ -1,0 +1,85 @@
+---
+title: Come utilizzare le richieste asincrone in [!DNL Adobe Target] SDK Python
+description: Scopri come [!DNL Target] L’SDK di Python supporta le richieste asincrone, che possono ridurre a zero il tempo di destinazione effettivo.
+feature: APIs/SDKs
+exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
+source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 13%
+
+---
+
+# Ottieni attributi (Python)
+
+## Descrizione
+
+`get_attributes()` viene utilizzato per recuperare esperienze di sperimentazione e personalizzate da [!DNL Target] ed estrarre i valori degli attributi.
+
+
+## Metodo
+
+### getAttributes
+
+```python {line-numbers="true"}
+target_client_instance.get_attributes(mbox_names, options)
+```
+
+## Parametri
+
+| Nome | Tipo | Obbligatorio | impostazione predefinita | Descrizione |
+| --- | --- | --- | --- | --- |
+| mbox_nomi | list[str] | Sì | None (Nessuno) | Elenco di nomi mbox |
+| options | dict | No | None (Nessuno) | Le stesse opzioni utilizzate per [Ottieni offerte](get-offers.md) |
+
+## AttributesProvider
+
+Il `AttributesProvider` restituito da `target_client.get_attributes()` dispone dei seguenti metodi:
+
+| Metodo | Tipo restituito | Descrizione |
+| --- | --- | --- |
+| get_value(mbox_name, chiave) | qualsiasi | Restituisce il valore per il nome mbox e la chiave attributo specificati |
+| as_object(mbox_name) | dict | Restituisce un oggetto json semplice con coppie chiave-valore |
+| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Restituisce l’oggetto di risposta normalmente restituito da `get_offers` |
+
+## Esempio
+
+### Python
+
+```python {line-numbers="true"}
+def client_ready_callback():
+    context = Context(channel=ChannelType.WEB)
+    mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
+    execute = ExecuteRequest(mboxes=mboxes)
+    delivery_request = DeliveryRequest(context=context, execute=execute)
+
+    get_attributes_options = {
+      "request": delivery_request
+    }
+
+    attributes_provider = target_client.get_attributes(["demo-engineering-flags"], get_attributes_options)
+    # returns just the value of searchProviderId from the demo-engineering-flags mbox offer
+    search_provider_id = attributes_provider.get_value("demo-engineering-flags", "searchProviderId")
+
+    # returns a simple dict object representing the demo-engineering-flags mbox offer
+    engineering_flags = attributes_provider.as_object("demo-engineering-flags")
+    """  the value of engineeringFlags looks like this
+        {
+            "cdnHostname": "cdn.cloud.corp.net",
+            "searchProviderId": 143,
+            "hasLegacyAccess": false
+        }
+    """
+
+    asset_url = "http://{}/path/to/asset".format(engineering_flags.get("cdnHostname"))
+
+
+client_options = {
+    "client": "acmeclient",
+    "organization_id": "1234567890@AdobeOrg",
+    "events": {
+        "client_ready": client_ready_callback
+    }
+}
+target_client = TargetClient.create(client_options)
+```
