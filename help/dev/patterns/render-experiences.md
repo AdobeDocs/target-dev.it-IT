@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 5321ce43be26e8f0776da49e597ecb5f8dfb5984
+source-git-commit: 9b65380febf64896a3885c49f8bb79e4bb33f604
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 5%
@@ -27,7 +27,7 @@ La gestione automatica della visualizzazione momentanea di altri contenuti pront
 
 I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito.
 
-![Diagramma esperienze di rendering](/help/dev/patterns/assets/render-experiences-diagram.png){width="600" zoomable="yes"}
+![Diagramma esperienze di rendering](/help/dev/patterns/assets/diagram-render-experiences.png){width="600" zoomable="yes"}
 
 Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
