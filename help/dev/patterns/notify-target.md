@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
+source-git-commit: 1291a095a7befed5f795f34099e0411930788e29
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Questo passaggio ti aiuta a garantire che tutti gli eventi che devono essere inv
 
 ![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/assets/fire-adobe-target-track-api-diagram.png){width="100" zoomable="yes"}
 
-Invii gli attributi di conversione dell’ordine come indicato nella sezione Prerequisiti seguente. Il nome della mbox non ha importanza, ma la conversione deve utilizzare `orderConfirmPage`.
+Invii gli attributi di conversione dell’ordine come indicato nella *Prerequisiti* sezione successiva. Il nome della mbox non ha importanza, ma la conversione deve utilizzare `orderConfirmPage`.
 
 Non è necessario includere gli attributi di conversione dell&#39;ordine in questa chiamata. Idealmente, queste chiamate registrano metriche di successo che possono essere considerate come eventi di mini-conversione prima degli eventi di conversione principali. `CardIds` devono essere inclusi nei consigli basati sul carrello in base ai `Add to Cart` evento.
 
@@ -46,7 +46,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
 * Incontra il tuo team aziendale per identificare tutti gli eventi che possono essere considerati come metriche di conversione o di successo. Devi inoltre identificare l’evento di conversione che genera ricavi, in modo che i dettagli possano essere inviati a [!DNL Target] insieme ai dati dell’evento.
 * Assicurati che i seguenti attributi siano disponibili nel livello dati in modo da poterli inviare con l’evento di conversione. L’evento di conversione genera ricavi, ad esempio un acquisto di prodotto o un evento Aggiungi al carrello.
 
-   * `productPurchaseId`: ID prodotto acquistati come parte dell’ordine. La virgola separa più prodotti.
+   * `productPurchaseId`: ID prodotto acquistati come parte dell’ordine. Separa più prodotti utilizzando le virgole.
    * `orderTotal`: totale dell’ordine per l’acquisto.
    * `orderId`: ID ordine dell’acquisto.
 
@@ -59,7 +59,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
 
 **Azioni**
 
-* Utilizzare `adobe.target-trackEvent()` metodo per inviare tutti i dati che devono essere inviati a [!DNL Target].
+* Utilizzare `adobe.target-trackEvent()` metodo per inviare tutti i dati da inviare a [!DNL Target].
 
 
 
