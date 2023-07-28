@@ -4,10 +4,10 @@ description: Visualizza un elenco di host per aiutarti a inserire nell'elenco Co
 title: Come posso eseguire l’Elenco Consentiti? [!DNL Target] Nodi Edge?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ Inserire nell&#39;elenco Consentiti È possibile eseguire l’ [!DNL Target] nod
 >
 >[!DNL Adobe Target] è in corso l’aggiornamento dell’infrastruttura e i clienti che desiderano inserire nell&#39;elenco Consentiti gli indirizzi devono utilizzare entrambi i set di IP. In caso contrario, i clienti che utilizzano implementazioni lato server o ibride in cui le chiamate API di Target per il recupero delle esperienze hanno origine dall’interno di una rete dietro un firewall configurato per l’utilizzo di un elenco Consentiti di.
 >
->Questo aggiornamento viene eseguito in base alla seguente pianificazione:
->
->* 22-26 maggio: area geografica Europa, Medio Oriente e Africa (EMEA)
->* 22-26 maggio: area geografica Asia-Pacifico (APAC)
->* 6-10 giugno: area geografica delle Americhe
+>Tutto Edge4 *x* Gli indirizzi elencati in entrambe le tabelle seguenti saranno aggiornati il 9 agosto 2023.
 
 ## Indirizzi IP NAT (Network Address Translation) di [!DNL Target] spigoli
 
