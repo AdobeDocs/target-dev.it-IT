@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
+source-git-commit: ca3a3e5b8272c0db9e355abd2d16896251594b43
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1080'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 # Esperienze di rendering
 
 Segui i passaggi descritti in *Esperienze di rendering* per garantire che tutte le attività necessarie per il rendering delle esperienze vengano eseguite nella sequenza corretta.
+
+>[!NOTE]
+>
+>Se è stata abilitata la funzione Automatic Page Load Request durante il [Passaggio Configura richiesta di caricamento pagina automatico](/help/dev/patterns/initialize-sdk.md#automatic) in *Inizializzare gli SDK* , puoi saltare questa attività a meno che non desideri chiamare l&#39;SDK di Adobe Target per eseguire il rendering di altre esperienze utilizzando una richiesta di posizione regionale.
 
 >[!TIP]
 >
@@ -58,7 +62,7 @@ Aggiungi articoli in promozione e controllane il posizionamento nel Recommendati
 
 **Parametri di entità richiesti**
 
-* L&#39;attributo dell&#39;articolo nelle promozioni deve essere passato quando si utilizza l&#39;opzione &quot;Promuovi per attributo&quot;.
+* Gli attributi degli articoli nelle promozioni devono essere passati quando si utilizza l&#39;opzione &quot;Promuovi per attributo&quot;.
 
 +++
 
@@ -90,7 +94,7 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 ## 3.3: Criteri basati sulla popolarità {#popularity}
 
-Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemento nel tuo sito o in base alla popolarità degli elementi nella categoria, nel brand, nel genere e così via preferiti o più visualizzati di un utente.
+Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemento nel tuo sito o in base alla popolarità degli elementi nella categoria, nel brand, nel genere e così via preferiti o più visualizzati di un visitatore.
 
 +++Vedi i dettagli
 
@@ -107,7 +111,7 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 **Parametri di entità richiesti**
 
 * `entity.categoryId` o l&#39;attributo dell&#39;articolo in base alla popolarità, se il criterio è basato sull&#39;attributo corrente o sull&#39;attributo dell&#39;articolo.
-* Non è necessario trasmettere nulla per i Più visualizzati/Più venduti nel sito.
+* Non devi passare nulla per Più visualizzato/Più venduto in tutto il sito.
 
 **Letture**
 
@@ -168,7 +172,7 @@ Creare consigli in base al comportamento dell’utente.
 
 ## 3.6: Criteri personalizzati {#custom}
 
-Creare consigli in base a un file personalizzato caricato
+Formulare raccomandazioni in base a un file personalizzato caricato.
 
 +++Vedi i dettagli
 
@@ -222,7 +226,7 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 * [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Puoi eseguire questo passaggio anche creando feed di prodotto utilizzando [!DNL Target] Interfaccia utente per aggiornare il catalogo prodotti per [!DNL Recommendations].
+Puoi anche eseguire questo passaggio creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} utilizzando [!DNL Target] Interfaccia utente per aggiornare il catalogo prodotti per [!DNL Recommendations].
 
 +++
 
@@ -244,7 +248,7 @@ Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclu
 
 ## 3.11: Attivare la richiesta di caricamento pagina {#fire}
 
-Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `pageLoad` payload nella richiesta. Il `getOffers()` il metodo recupera l&#39;esperienza e `applyOffers()` esegue il rendering dell’esperienza sulla pagina. La richiesta pageLoad è necessaria per il rendering delle esperienze create in [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `pageLoad` payload nella richiesta. Il `getOffers()` il metodo recupera l&#39;esperienza e `applyOffers()` esegue il rendering dell’esperienza sulla pagina. Il `pageLoad` richiesta necessaria per il rendering delle esperienze create in [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Vedi i dettagli
 
