@@ -4,10 +4,10 @@ description: Visualizza i dettagli sulle modifiche in ogni versione di [!DNL Ado
 title: Cosa è incluso in ogni versione di at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
 workflow-type: tm+mt
-source-wordcount: '4554'
-ht-degree: 74%
+source-wordcount: '4603'
+ht-degree: 73%
 
 ---
 
@@ -15,9 +15,15 @@ ht-degree: 74%
 
 Dettagli sulle modifiche in ogni versione della libreria JavaScript at.js di [!DNL Adobe Target].
 
->[!WARNING]
+>[!IMPORTANT]
 >
->[!DNL Adobe Target] supporta sia at.js 1.*x* e at.js 2.*x*. Esegui l’aggiornamento alla versione più recente di una delle versioni principali di at.js per assicurarti di eseguire una versione supportata.
+>[!DNL Adobe Target] supporta sia at.js 1.*x* e at.js 2.*x*.
+>
+>at.js 1.*x* è entrato in modalità di manutenzione. Il [!DNL Target] se necessario, il team rilascia correzioni di bug e patch di sicurezza.
+>
+>Il [!DNL Target] team fornisce supporto completo per at.js 2.*x* e rilascia regolarmente correzioni di bug, patch di sicurezza, funzioni e ottimizzazione delle prestazioni.
+>
+>Effettua l’aggiornamento alle versioni più recenti di 1.*x* o 2.*x* per ottenere correzioni di bug e patch di sicurezza per i problemi rilevati in qualsiasi versione secondaria precedente della versione principale corrispondente.
 
 Tag in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sono il metodo preferito per aggiornare at.js. Gli sviluppatori di estensioni aggiungono continuamente nuove funzioni alle loro estensioni e spesso correggono i bug. Questi aggiornamenti vengono assemblati in nuove versioni di un’estensione e sono resi disponibili nel catalogo Adobe Experience Platform come aggiornamenti. Per ulteriori informazioni, consulta [Aggiornamenti delle estensioni](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) nel *Panoramica sui tag* guida.
 
