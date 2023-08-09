@@ -4,9 +4,9 @@ description: Utilizza i collegamenti di anteprima mobile per eseguire un control
 title: Come si utilizza il collegamento di anteprima mobile in [!DNL Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
+source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 51%
 
 ---
@@ -34,7 +34,7 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
    * **iOS**: per ulteriori informazioni sull’impostazione degli schemi URL per iOS, consulta [Definizione di uno schema URL personalizzato per l’app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} sul sito web Apple Developer.
    * **Android**: per ulteriori informazioni sull’impostazione degli schemi URL per Android, consulta [Creare collegamenti profondi al contenuto dell’app](https://developer.android.com/training/app-links/deep-linking){target=_blank} sul sito web Android Developers.
 
-1. **Configurazione `collectLaunchInfo` API**
+1. **Configurazione `collectLaunchInfo` API (solo i0S)**
 
    Per ulteriori informazioni, consulta [Anteprima visiva](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* nel *[!DNL Adobe Experience Platform Mobile SDK]* documentazione.
 
