@@ -4,10 +4,10 @@ description: Utilizza i collegamenti di anteprima mobile per eseguire un control
 title: Come si utilizza il collegamento di anteprima mobile in [!DNL Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
 
 ## Prerequisiti
 
-1. **Utilizzare una versione supportata dell&#39;SDK:** la funzionalità di anteprima mobile richiede che si scarichi e si installi la versione 4.14 (o successiva) appropriata dell&#39;SDK Adobe Mobile nelle applicazioni corrispondenti.
+1. **Utilizza una versione supportata dell’SDK:** La funzione di anteprima mobile richiede che si scarichi e si installi la versione appropriata dell&#39;SDK di Adobe Mobile nelle applicazioni corrispondenti.
 
    Per istruzioni su come scaricare l’SDK appropriato, consulta [Versioni SDK correnti](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} nel *[!DNL Adobe Experience Platform Mobile SDK]* documentazione.
 
