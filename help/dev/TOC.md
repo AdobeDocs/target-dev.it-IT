@@ -2,10 +2,10 @@
 user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
-source-git-commit: eadb45877b13ac029dae6aaf172abebabb804983
+source-git-commit: 2d1b1829a8f794e29bb054d1bfdcb5047d6b4acb
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 53%
+source-wordcount: '721'
+ht-degree: 52%
 
 ---
 
@@ -168,6 +168,7 @@ ht-degree: 53%
    + [Anteprima mobile di Target](implement/mobile/target-mobile-preview.md)
    + [Utilizzare il servizio posizione](implement/mobile/use-location-service.md)
    + [Domande frequenti su Target per le app per dispositivi mobili](implement/mobile/mobile-faq.md)
+   + [Implementare Target con l’SDK di AEP Mobile in un’app nativa con visualizzazioni web](/help/dev/implement/mobile/native-app.md)
 + Implementazione e-mail {#implement-email}
    + [E-mail: panoramica sull’implementazione di Target](implement/email/overview.md)
    + [Creare un AdBox per un’immagine](implement/email/testing-content-with-the-adbox.md)
