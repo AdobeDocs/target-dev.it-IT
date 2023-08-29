@@ -4,10 +4,10 @@ description: Scopri come [!DNL Adobe Target] è conforme alle leggi sulla privac
 title: In che modo Target gestisce i problemi relativi alla privacy, inclusi i PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: d9ac5bab3a09cf49b2178a62c06eebe733b9048d
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 58%
+source-wordcount: '865'
+ht-degree: 48%
 
 ---
 
@@ -38,6 +38,14 @@ Le seguenti impostazioni sono disponibili nel [!DNL Target] Interfaccia utente d
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
 [!DNL Target] riceve l’indirizzo IP completo e lo offusca (se impostato su Last octet o Entire IP) come specificato. [!DNL Target] mantiene quindi in memoria l’indirizzo IP offuscato solo durante la sessione corrente.
+
+### Offuscamento dell’IP a livello di stream di dati quando si utilizza [!DNL Adobe Experience Platform Web SDK]
+
+Quando si utilizza [!DNL Platform Web SDK] (versione 23.4 o successiva), l’impostazione di offuscamento dell’IP a livello di stream di dati ha la precedenza su qualsiasi opzione di offuscamento dell’IP impostata in [!DNL Target]. Ad esempio, se l’opzione di offuscamento dell’IP a livello di flusso di dati è impostata su [!UICONTROL Completo] e [!DNL Target] L’opzione di offuscamento dell’IP è impostata su [!UICONTROL Offuscamento dell’ultimo ottetto], [!DNL Target] riceve un IP completamente offuscato. Perché l’offuscamento dell’IP in [!DNL Target] si verifica prima della ricerca di geolocalizzazione; l’impostazione di offuscamento dell’IP a livello di stream di dati non ha alcun impatto.
+
+Dopo aver impostato l’offuscamento dell’IP a livello di stream di dati e dopo che i dati passano attraverso la rete Edge, le richieste arrivano a [!DNL Target] e [!DNL Adobe Audience Manager] (AAM) contiene solo l’IP offuscato e l’opzione di offuscamento dell’IP a livello di flusso di dati influisce su qualsiasi logica basata sull’IP del client. Qualsiasi offuscamento dell’IP impostato in [!DNL Target] o AAM viene applicato sull’IP già offuscato.
+
+Per ulteriori informazioni, consulta [!UICONTROL Offuscamento IP] in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} nel *[!DNL Adobe Experience Platfrom]Guida agli stream di dati*.
 
 ## Geosegmentazione
 
