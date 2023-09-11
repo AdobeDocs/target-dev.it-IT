@@ -2,10 +2,10 @@
 user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
-source-git-commit: 2d1b1829a8f794e29bb054d1bfdcb5047d6b4acb
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 52%
+source-wordcount: '729'
+ht-degree: 53%
 
 ---
 
@@ -168,7 +168,7 @@ ht-degree: 52%
    + [Anteprima mobile di Target](implement/mobile/target-mobile-preview.md)
    + [Utilizzare il servizio posizione](implement/mobile/use-location-service.md)
    + [Domande frequenti su Target per le app per dispositivi mobili](implement/mobile/mobile-faq.md)
-   + [Implementare Target con l’SDK di AEP Mobile in un’app nativa con visualizzazioni web](/help/dev/implement/mobile/native-app.md)
+   + [Implementare Target con AEP Mobile SDK in un’app nativa con visualizzazioni web](/help/dev/implement/mobile/native-app.md)
 + Implementazione e-mail {#implement-email}
    + [E-mail: panoramica sull’implementazione di Target](implement/email/overview.md)
    + [Creare un AdBox per un’immagine](implement/email/testing-content-with-the-adbox.md)
@@ -208,10 +208,11 @@ ht-degree: 52%
    + [API server di rete Edge di Adobe Experience Platform](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + Modelli di implementazione {#implementation-patterns} {#hidden}
    + [Panoramica sui modelli di implementazione](/help/dev/patterns/pattern-overview.md)
-   + Modello di implementazione di Target {#target}
-      + [Inizializzare gli SDK](/help/dev/patterns/initialize-sdk.md)
-      + [Configurare la raccolta dati](/help/dev/patterns/data-collection.md)
-      + [Esperienze di rendering](/help/dev/patterns/render-experiences.md)
-      + [Notifica Target](/help/dev/patterns/notify-target.md)
+   + Modello di implementazione di Recommendations utilizzando at.js {#atjs}
+      + [Panoramica sul modello di implementazione di Recommendations tramite at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Inizializzare gli SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [Esperienze di rendering](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [Notifica Target](/help/dev/patterns/recs-atjs/notify-target.md)
 
 

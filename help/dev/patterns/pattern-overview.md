@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ Si noti che i numeri nell&#39;immagine non indicano la sequenza di operazioni:
 
 Ogni serie è costituita da parti diverse. Ogni parte corrisponde a un requisito di implementazione critico per il [!DNL Target] implementazione.
 
-Ogni parte viene illustrata in una pagina separata di questa guida. Ad esempio, il [!DNL Target] il modello di implementazione contiene le pagine seguenti:
+Ogni parte viene illustrata in una pagina separata di questa guida. Ad esempio, il [[!DNL Recommendations] pattern di implementazione utilizzando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) contiene le pagine seguenti:
 
 * Inizializza SDK
-* Arricchisci profilo
+* Configurare la raccolta dati
 * Esperienze di rendering
 * Notifica [!DNL Target]
 
