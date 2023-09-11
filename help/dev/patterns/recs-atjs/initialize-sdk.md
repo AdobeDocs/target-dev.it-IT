@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 948ebe0c5011fb0327a7b5d45f3e7ac857fcb8ad
+source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1791'
 ht-degree: 7%
 
 ---
@@ -59,7 +59,7 @@ Questo passaggio garantisce che `VisitorAPI.js` la libreria è caricata, configu
 **Prerequisiti**
 
 * Per utilizzare il servizio ID visitatore/API, la società deve essere abilitata per [!DNL Adobe Experience Cloud] e hanno un [!UICONTROL ID organizzazione]. Per ulteriori informazioni, consulta [Requisiti di Experience Cloud: ID organizzazione](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} nel *Guida del servizio Identity* guida.
-* Hai bisogno di `VisitorAPI.js` file. Per ottenere questo file, rivolgiti al tuo team di marketing digitale.
+* Hai bisogno di `VisitorAPI.js` file. Dovresti avere già questo file, se [!DNL Adobe Analytics] implementato. Questo file può essere aggiunto anche tramite [[!DNL Adobe Experience Platform] estensione tag](https://experienceleague.adobe.com/docs/tags.html){target=_blank} or can be downloaded from the [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
 **Configurare e consultare VisitorAPI.js**
 
@@ -431,7 +431,7 @@ Questo passaggio assicura che la libreria JavaScript at.js sia caricata e inizia
 
 **Prerequisiti**
 
-* Scarica o chiedi al tuo team di marketing digitale il file della libreria SDK Web: `at.js 2.*x*`
+* Scarica o chiedi al tuo team di marketing digitale `at.js 2.*x*` File libreria JavaScript.
 
 *Letture*
 

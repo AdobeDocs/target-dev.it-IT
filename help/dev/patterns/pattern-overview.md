@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -25,16 +25,16 @@ Si noti che i numeri nell&#39;immagine non indicano la sequenza di operazioni:
 
 1. SDK lato client per [!DNL Adobe Target] e [!DNL Experience Cloud ID Service]
 1. [!DNL Target Delivery API] chiamare
-1. Chiamata di acquisizione ECID
+1. [!UICONTROL ID EXPERIENCE CLOUD] (ECID) chiamata di acquisizione
 1. API di aggiornamento del profilo bulk e [!DNL Customer Attributes] (CA) servizio
 1. Acquisizione dei dati del profilo dalle origini dati del cliente in [!DNL Target] archivio profili
-1. Raccogliere dati sul profilo/comportamento e decidere quale esperienza mostrare all’utente finale
+1. Raccogliere dati sul profilo e sul comportamento e decidere quale esperienza mostrare al visitatore
 1. Le esperienze eseguono il rendering sulla pagina
 1. at.js esegue il rendering delle esperienze sulla pagina
 
-Ogni serie è costituita da parti diverse. Ogni parte corrisponde a un requisito di implementazione critico per il [!DNL Target] implementazione.
+Ogni pattern è costituito da parti diverse, ognuna delle quali corrisponde a un requisito di implementazione critico per [!DNL Target] implementazione.
 
-Ogni parte viene illustrata in una pagina separata di questa guida. Ad esempio, il [[!DNL Recommendations] pattern di implementazione utilizzando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) contiene le pagine seguenti:
+Ogni parte viene illustrata in un argomento separato di questa guida. Ad esempio, il [[!DNL Recommendations] pattern di implementazione utilizzando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) contiene i seguenti argomenti:
 
 * Inizializza SDK
 * Configurare la raccolta dati
