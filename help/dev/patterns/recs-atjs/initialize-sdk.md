@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 7%
@@ -54,7 +54,7 @@ Questo passaggio garantisce che `VisitorAPI.js` la libreria è caricata, configu
 
 +++Consulta i dettagli
 
-![Caricare il diagramma SDK dell’API visitatore](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="300" zoomable="yes"}
+![Caricare il diagramma SDK dell’API visitatore](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -90,7 +90,7 @@ Questo passaggio ti aiuta a garantire che gli ID noti dei visitatori (ID CRM, ID
 
 +++Consulta i dettagli
 
-![Imposta ID cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="300" zoomable="yes"}
+![Imposta ID cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -117,7 +117,7 @@ Questo passaggio consente a at.js di recuperare tutte le esperienze che devono e
 
 +++Consulta i dettagli
 
-![Configurare la richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="300" zoomable="yes"}
+![Configurare la richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -146,7 +146,7 @@ Questo passaggio consente di evitare la visualizzazione momentanea di altri cont
 
 +++Consulta i dettagli
 
-![Configurare il diagramma di gestione della visualizzazione momentanea di altri contenuti](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="300" zoomable="yes"}
+![Configurare il diagramma di gestione della visualizzazione momentanea di altri contenuti](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -179,7 +179,7 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL T
 
 +++Consulta i dettagli
 
-![Diagramma di mappatura dei dati](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="300" zoomable="yes"}
+![Diagramma di mappatura dei dati](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -399,7 +399,7 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL T
 
 +++Consulta i dettagli
 
-![Diagramma di mappatura dati remoti](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="300" zoomable="yes"}
+![Diagramma di mappatura dati remoti](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -427,7 +427,7 @@ Questo passaggio assicura che la libreria JavaScript at.js sia caricata e inizia
 
 +++Consulta i dettagli
 
-![Caricare un diagramma di Adobe Target Web SDK](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="300" zoomable="yes"}
+![Caricare un diagramma di Adobe Target Web SDK](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 

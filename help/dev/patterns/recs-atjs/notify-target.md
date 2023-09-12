@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Questo passaggio ti aiuta a garantire che tutti gli eventi che devono essere inv
 
 +++Consulta i dettagli
 
-![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="300" zoomable="yes"}
+![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
 
 Invii gli attributi di conversione dell’ordine come indicato nella *Prerequisiti* sezione successiva. Il nome della mbox non ha importanza, ma la conversione deve utilizzare `orderConfirmPage`.
 

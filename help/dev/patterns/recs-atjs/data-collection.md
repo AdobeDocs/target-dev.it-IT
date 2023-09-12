@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c6d779f14a53193ff423678ebe96fdaacc57be5d
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 3%
@@ -46,7 +46,7 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL A
 
 +++Consulta i dettagli
 
-![Configurare il diagramma di mappatura dei dati](/help/dev/patterns/recs-atjs/assets/cofigure-data-mapping.png){width="300" zoomable="yes"}
+![Configurare il diagramma di mappatura dei dati](/help/dev/patterns/recs-atjs/assets/cofigure-data-mapping.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -90,7 +90,7 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL T
 
 +++Consulta i dettagli
 
-![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-track-api.png){width="300" zoomable="yes"}
+![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-track-api.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
