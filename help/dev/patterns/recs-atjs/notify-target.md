@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: 8fae7e18f555e6b549e0b9c486be73e3483dac86
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -29,13 +29,13 @@ Il numero del passaggio nell&#39;illustrazione seguente corrisponde alla sezione
 
 ![Diagramma Notify Target](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## Fuoco [!DNL Adobe Target] API di tracciamento
+## 4.1: Incendio [!DNL Adobe Target] API di tracciamento
 
 Questo passaggio ti aiuta a garantire che tutti gli eventi che devono essere inviati a [!DNL Target] vengono inviati utilizzando `trackEvent` metodo.
 
 +++Consulta i dettagli
 
-![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
+![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 Invii gli attributi di conversione dell’ordine come indicato nella *Prerequisiti* sezione successiva. Il nome della mbox non ha importanza, ma la conversione deve utilizzare `orderConfirmPage`.
 
