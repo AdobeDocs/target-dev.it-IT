@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a3644cd06c01d7b0d996aabbcb67272e1712b70c
+source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 7%
@@ -117,7 +117,7 @@ Questo passaggio consente a at.js di recuperare tutte le esperienze che devono e
 
 +++Consulta i dettagli
 
-![Configurare la richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
+![Configurare la richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -146,7 +146,7 @@ Questo passaggio consente di evitare la visualizzazione momentanea di altri cont
 
 +++Consulta i dettagli
 
-![Configurare il diagramma di gestione della visualizzazione momentanea di altri contenuti](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
+![Configurare il diagramma di gestione della visualizzazione momentanea di altri contenuti](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
