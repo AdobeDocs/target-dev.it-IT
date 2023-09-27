@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1814'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,9 @@ Segui i passaggi descritti in *Inizializza SDK* per garantire che tutte le attiv
 
 Per le applicazioni multipagina, questo flusso si verifica ogni volta che la pagina si ricarica o il visitatore passa a una nuova pagina del sito web.
 
-I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito.
+>[!NOTE]
+>
+>I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito. I numeri dei passaggi non sono in un ordine particolare e non riflettono l&#39;ordine dei passaggi eseguiti nel [!DNL Target] Interfaccia utente durante la creazione dell’attività.
 
 ![Inizializza diagramma SDK](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 

@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ Segui i passaggi descritti in *Esperienze di rendering* per garantire che tutte 
 
 La gestione automatica della visualizzazione momentanea di altri contenuti pronta all’uso disponibile con at.js ha senso solo quando si dispone di [!UICONTROL Richiesta caricamento pagina automatico] abilitato. Questa opzione nasconde l’intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
 
-I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito.
+>[!NOTE]
+>
+>I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito. I numeri dei passaggi non sono in un ordine particolare e non riflettono l&#39;ordine dei passaggi eseguiti nel [!DNL Target] Interfaccia utente durante la creazione dell’attività.
 
 ![Diagramma esperienze di rendering](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
