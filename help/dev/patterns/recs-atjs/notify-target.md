@@ -4,11 +4,9 @@ description: Assicurati che tutti gli eventi che devono essere tracciati da [!DN
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
    * `productPurchaseId`: ID prodotto acquistati come parte dell’ordine. Separa più prodotti utilizzando le virgole.
    * `orderTotal`: totale dell’ordine per l’acquisto.
    * `orderId`: ID ordine dell’acquisto.
+
+  La figura seguente mostra una [regola per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} che deve essere attivato solo sul [!UICONTROL Conferma] pagina.
+
+  ![Pagina Configurazione azione](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * Se tieni traccia di un evento per l’aggiunta al carrello, invia `cartIds` come parametro. È possibile trasmettere un elenco separato da virgole di ID prodotto per `cardIds`.
 

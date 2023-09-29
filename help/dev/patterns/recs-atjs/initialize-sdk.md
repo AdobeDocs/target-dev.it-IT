@@ -4,11 +4,9 @@ description: Verificare che siano stati eseguiti tutti i passaggi necessari per 
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1820'
 ht-degree: 7%
 
 ---
@@ -448,6 +446,8 @@ Incorpora il file at.js in tutte le tue pagine web in cui si devono effettuare s
 +++
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
+
+Procedi al passaggio 2: [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md).
 
 
 

@@ -4,11 +4,9 @@ description: Assicurati che tutti i passaggi necessari per il rendering delle es
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
 ## 3.1. Promozione {#promotion}
 
-Aggiungi articoli in promozione e controllane il posizionamento nel Recommendations di Target [progetti](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+Aggiungi articoli in promozione e controllane il posizionamento nella progettazione dei consigli scegliendo Promozioni prima o dopo nella [!DNL Target] Interfaccia utente durante la creazione dell’attività.
 
 +++Consulta i dettagli
 
@@ -65,6 +63,10 @@ Aggiungi articoli in promozione e controllane il posizionamento nel Recommendati
 **Parametri di entità richiesti**
 
 * Gli attributi degli articoli nelle promozioni devono essere passati quando si utilizza l&#39;opzione &quot;Promuovi per attributo&quot;.
+
+**Letture**
+
+* [Aggiungere promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `mboxes` p
 +++
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
+
+Procedi al Passaggio 4: [Notifica Target](/help/dev/patterns/recs-atjs/notify-target.md).
