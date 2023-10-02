@@ -4,9 +4,9 @@ description: Come utilizzare i modelli di implementazione
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Il seguente pattern è attualmente disponibile:
 
 * [[!DNL Recommendations] pattern di implementazione utilizzando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-Questi modelli di implementazione hanno lo scopo di concentrarsi su cosa fare, quando farlo e dove farlo piuttosto che su come farlo. I diagrammi di flusso dettagliati consentono di comprendere la sequenza delle operazioni e i collegamenti alla documentazione pertinente forniscono istruzioni contestuali e dettagliate.
+Questi modelli di implementazione si concentrano su cosa fare, quando farlo e dove farlo. I diagrammi di flusso dettagliati consentono di comprendere la sequenza delle operazioni e i collegamenti alla documentazione pertinente forniscono istruzioni contestuali e dettagliate.
 
 ## Suggerisci idee per nuovi pattern o correzioni per pattern esistenti
 
