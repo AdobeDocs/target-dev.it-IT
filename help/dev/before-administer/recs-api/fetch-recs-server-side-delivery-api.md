@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1520'
 ht-degree: 1%
 
 ---
@@ -97,22 +97,22 @@ Le risorse seguenti forniscono esempi di varie implementazioni non incentrate su
 
 Nella maggior parte dei casi, i consigli sono configurati nell’interfaccia utente di Adobe Target e quindi utilizzati o accessibili tramite le API di Target, per motivi come quelli menzionati nelle sezioni precedenti. Questo coordinamento UI-API è comune. Tuttavia, a volte gli utenti possono voler eseguire tutte le azioni tramite API, sia la configurazione che l’utilizzo dei risultati. Anche se molto meno comune, gli utenti possono assolutamente configurare, eseguire, *e* sfrutta interamente i risultati dei consigli utilizzando le API.
 
-Abbiamo imparato in un [sezione precedente](manage-catalog.md) come gestire le entità Recommendations di Adobe Target e distribuirle lato server. Analogamente, il [Console Adobe Developer](https://developer.adobe.com/console/home) consente di gestire criteri, promozioni, raccolte e modelli di progettazione senza dover accedere ad Adobe Target. È possibile trovare un elenco completo di tutte le API di Recommendations [qui](http://developers.adobetarget.com/api/recommendations/), ma ecco un riepilogo come riferimento.
+Abbiamo imparato in un [sezione precedente](manage-catalog.md) come gestire le entità Recommendations di Adobe Target e distribuirle lato server. Analogamente, il [Console Adobe Developer](https://developer.adobe.com/console/home) consente di gestire criteri, promozioni, raccolte e modelli di progettazione senza dover accedere ad Adobe Target. È possibile trovare un elenco completo di tutte le API di Recommendations [qui](https://developer.adobe.com/target/administer/recommendations-api/), ma ecco un riepilogo come riferimento.
 
 | Risorsa | Dettagli |
 | --- | --- |
-| [Raccolte](http://developers.adobetarget.com/api/recommendations/#tag/Collections) | Elenca, crea, ottieni, modifica ed elimina raccolte. |
-| [Criteri](http://developers.adobetarget.com/api/recommendations/#tag/Criteria) | Elencare e ottenere i criteri. |
-| [Progettazioni](http://developers.adobetarget.com/api/recommendations/#tag/Designs) | Elencare, creare, ottenere, modificare, eliminare e convalidare le progettazioni. |
-| [Entità](http://developers.adobetarget.com/api/recommendations/#tag/Entities) | Salvare, eliminare e ottenere le entità. |
-| [Promozioni](http://developers.adobetarget.com/api/recommendations/#tag/Promotions) | Elenca, crea, ottieni, modifica ed elimina promozioni. |
-| [Criteri categoria](http://developers.adobetarget.com/api/recommendations/#tag/Category-Criteria) | Elenca, crea, ottieni, modifica ed elimina criteri di categoria. |
-| [Criteri personalizzati](http://developers.adobetarget.com/api/recommendations/#tag/Custom-Criteria) | Elenca, crea, ottieni, modifica ed elimina criteri personalizzati. |
-| [Criteri articolo](http://developers.adobetarget.com/api/recommendations/#tag/Item-Criteria) | Elenca, crea, ottieni, modifica ed elimina i criteri degli elementi. |
-| [Criteri di popolarità](http://developers.adobetarget.com/api/recommendations/#tag/Popularity-Criteria) | Elencare, creare, ottenere, modificare ed eliminare criteri di popolarità. |
-| [Criteri attributo profilo](http://developers.adobetarget.com/api/recommendations/#tag/Profile-Attribute-Criteria) | Elenca, crea, ottieni, modifica ed elimina i criteri degli attributi di profilo. |
-| [Criteri recenti](http://developers.adobetarget.com/api/recommendations/#tag/Recent-Criteria) | Elenca, crea, ottieni, modifica ed elimina criteri recenti. |
-| [Sequence Criteria](http://developers.adobetarget.com/api/recommendations/#tag/Sequence-Criteria) | Elencare, creare, ottenere, modificare ed eliminare criteri di sequenza. |
+| [Raccolte](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | Elenca, crea, ottieni, modifica ed elimina raccolte. |
+| [Criteri](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | Elencare e ottenere i criteri. |
+| [Progettazioni](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | Elencare, creare, ottenere, modificare, eliminare e convalidare le progettazioni. |
+| [Entità](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | Salvare, eliminare e ottenere le entità. |
+| [Promozioni](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | Elenca, crea, ottieni, modifica ed elimina promozioni. |
+| [Criteri categoria](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | Elenca, crea, ottieni, modifica ed elimina criteri di categoria. |
+| [Criteri personalizzati](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | Elenca, crea, ottieni, modifica ed elimina criteri personalizzati. |
+| [Criteri articolo](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | Elenca, crea, ottieni, modifica ed elimina i criteri degli elementi. |
+| [Criteri di popolarità](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | Elencare, creare, ottenere, modificare ed eliminare criteri di popolarità. |
+| [Criteri attributo profilo](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | Elenca, crea, ottieni, modifica ed elimina i criteri degli attributi di profilo. |
+| [Criteri recenti](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Elenca, crea, ottieni, modifica ed elimina criteri recenti. |
+| [Sequence Criteria](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | Elencare, creare, ottenere, modificare ed eliminare criteri di sequenza. |
 
 ## Documentazione di riferimento
 
