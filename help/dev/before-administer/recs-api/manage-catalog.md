@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 2%
+source-wordcount: '924'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Assicurandoti al contempo di soddisfare i [requisiti per utilizzare l’API di Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites), hai imparato a [generare un token di accesso](/help/dev/before-administer/configure-authentication.md) utilizzo del flusso di autenticazione JWT per utilizzare [!DNL Adobe Target] API di amministrazione su [Console Adobe Developer](https://developer.adobe.com/console/home).
 
-Ora puoi utilizzare la [API di Recommendations](https://developers.adobetarget.com/api/recommendations/) per aggiungere, aggiornare o eliminare elementi nel catalogo dei consigli. Come per le altre API amministratore di Adobe Target, le API Recommendations richiedono l’autenticazione.
+Ora puoi utilizzare la [API di Recommendations](https://developer.adobe.com/target/administer/recommendations-api/) per aggiungere, aggiornare o eliminare elementi nel catalogo dei consigli. Come per le altre API amministratore di Adobe Target, le API Recommendations richiedono l’autenticazione.
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ Ora puoi utilizzare la [API di Recommendations](https://developers.adobetarget.c
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-Prima di procedere, ottenere [Raccolta Postman di Recommendations](https://developers.adobetarget.com/api/recommendations/#section/Postman).
+Prima di procedere, ottenere [Raccolta Postman di Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## Creazione e aggiornamento di elementi con l’API Save Entities
 
-Per popolare il database di prodotti Recommendations utilizzando l’API anziché un feed di prodotto CSV o richieste Target che vengono attivate sulle pagine dei prodotti, utilizza [Salva API entità](https://developers.adobetarget.com/api/recommendations/#operation/saveEntities). Questa richiesta aggiunge o aggiorna un elemento in un singolo ambiente Target. La sintassi è:
+Per popolare il database di prodotti Recommendations utilizzando l’API anziché un feed di prodotto CSV o richieste Target che vengono attivate sulle pagine dei prodotti, utilizza [Salva API entità](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Questa richiesta aggiunge o aggiorna un elemento in un singolo ambiente Target. La sintassi è:
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -124,7 +124,7 @@ Sembra che gli ultimi due elementi non appartengano. Ispezioniamoli utilizzando 
 
 ## Ottenere i dettagli dell’elemento con l’API Get Entity
 
-Per recuperare i dettagli di un elemento esistente, utilizzare [Ottieni API entità](https://developers.adobetarget.com/api/recommendations/#operation/getEntity). La sintassi è:
+Per recuperare i dettagli di un elemento esistente, utilizzare [Ottieni API entità](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity). La sintassi è:
 
 ```
 GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
@@ -163,7 +163,7 @@ Supponiamo di decidere che queste entità devono essere rimosse dal catalogo. Ut
 
 ## Eliminazione di elementi con l’API Elimina entità
 
-Per rimuovere elementi dal catalogo, utilizzare [Elimina API entità](https://developers.adobetarget.com/api/recommendations/#operation/deleteEntities). La sintassi è:
+Per rimuovere elementi dal catalogo, utilizzare [Elimina API entità](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities). La sintassi è:
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]

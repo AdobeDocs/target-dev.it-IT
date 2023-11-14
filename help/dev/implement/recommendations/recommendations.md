@@ -4,9 +4,9 @@ description: Scopri come implementare [!UICONTROL Recommendations] attività in 
 title: Come posso implementare [!UICONTROL Recommendations] Attività?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -40,12 +40,12 @@ Per fornire consigli di alta qualità, [!UICONTROL Target] devono conoscere i pr
 1. Dati utili per applicare controlli di marketing e merchandising. Ad esempio, è possibile visualizzare la classificazione del filmato in modo da non consigliare i film NC-17.
 1. Dati utili per determinare la somiglianza degli elementi con altri elementi. Ad esempio, è possibile visualizzare il genere del filmato e il regista del filmato.
 
-[!UICONTROL Target] offre più opzioni di integrazione per compilare il catalogo. Queste opzioni possono essere utilizzate in combinazione per aggiornare articoli diversi nel catalogo o per aggiornare attributi di articoli diversi con frequenze diverse.
+[!UICONTROL Target] offre più opzioni di integrazione per compilare il catalogo. Queste opzioni possono essere utilizzate in combinazione per aggiornare articoli diversi nel catalogo o per aggiornare attributi di articoli diversi su frequenze diverse.
 
 | Metodo | Che cos’è | Quando utilizzarlo | Informazioni aggiuntive |
 | --- | --- | --- | --- |
 | Feed catalogo | Pianifica il caricamento e l’acquisizione di un feed (CSV, Google Product XML o Classificazioni di prodotto Analytics) su base giornaliera. | Per inviare informazioni su più elementi alla volta. Per l’invio di informazioni che non cambiano frequentemente. | Consulta [Feed](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| API entità | Chiama un’API per inviare aggiornamenti immediati per un singolo elemento. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta la [Documentazione per gli sviluppatori API per le entità](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| API entità | Chiama un’API per inviare aggiornamenti immediati per un singolo elemento. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta la [Documentazione per gli sviluppatori API per le entità](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Trasmettere gli aggiornamenti sulla pagina | Invia aggiornamenti al minuto per un singolo elemento utilizzando JavaScript nella pagina o utilizzando l’API di consegna. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta [Visualizzazioni elemento/pagine prodotto](#item-views-or-product-pages) di seguito. |
 
 La maggior parte dei clienti deve implementare almeno un feed. Puoi quindi scegliere di integrare il feed con aggiornamenti per gli attributi o gli elementi modificati di frequente utilizzando l’API delle entità o il metodo on-the-page.

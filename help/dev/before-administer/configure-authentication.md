@@ -3,9 +3,9 @@ title: Come configurare l’autenticazione per [!DNL Adobe Target] API
 description: Come si generano i token di autenticazione necessari per interagire correttamente con [!DNL Adobe Target] API?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Di seguito sono riportati i passaggi preliminari necessari per generare i token 
 | Risorsa | Dettagli |
 | --- | --- |
 | Postman | Per completare correttamente questi passaggi, scarica il [app Postman](https://www.postman.com/downloads/) per il sistema operativo. Postman basic è gratuito con la creazione dell&#39;account. Sebbene non sia necessario per utilizzare [!DNL Adobe Target] API in generale, Postman semplifica i flussi di lavoro API e [!DNL Adobe Target] fornisce diverse raccolte Postman per aiutarti a eseguire le API e a scoprire come funzionano. Il resto di questa guida presuppone una conoscenza operativa di Postman. Per assistenza, consulta [Documentazione di Postman](https://learning.getpostman.com/). |
-| Riferimenti | Per il resto di questa guida si presume che le risorse seguenti siano familiari:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentazione API per l’amministrazione di Target e il profilo](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentazione API di Recommendations](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| Riferimenti | Per il resto di questa guida si presume che le risorse seguenti siano familiari:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentazione API per l’amministrazione di Target e il profilo](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentazione API di Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Creazione di un progetto di Adobe I/O
 
