@@ -4,10 +4,10 @@ description: Inserire dati in [!DNL Target] utilizzando l’API per l’aggiorna
 title: Come posso inserire dati in [!DNL Target] Utilizzare l’API di aggiornamento del profilo bulk?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 62%
+source-wordcount: '404'
+ht-degree: 59%
 
 ---
 
@@ -41,6 +41,8 @@ Gli attributi del profilo inviati tramite il sito possono essere aggiornati tram
 ## Avvertenze
 
 La dimensione del file batch deve essere inferiore a 50 MB. Inoltre, il numero totale di righe non deve superare 500000 righe per upload.
+
+In genere gli aggiornamenti vengono eseguiti in meno di un’ora, ma la visualizzazione può richiedere fino a 24 ore
 
 Non esiste alcun limite al numero o alle righe che è possibile caricare per un periodo di 24 ore nei batch successivi. Tuttavia, il processo di ingestione potrebbe essere limitato durante l&#39;orario di ufficio per garantire che altri processi vengano eseguiti in modo efficiente.
 
