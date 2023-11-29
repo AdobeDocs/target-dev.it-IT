@@ -2,10 +2,10 @@
 user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 53%
+ht-degree: 54%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 53%
       + [Attributi di profilo script](before-implement/methods-to-get-data-into-target/script-profile-attributes.md)
       + [Fornitori di dati](before-implement/methods-to-get-data-into-target/data-providers.md)
       + [API di aggiornamento del profilo bulk](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
-      + [Aggiornamento di singolo profilo API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
+      + [API di aggiornamento a profilo singolo](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Attributi del cliente](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Impostazioni API del profilo](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
    + [Target panoramica sulla sicurezza](before-implement/target-security-overview.md)
@@ -209,7 +209,7 @@ ht-degree: 53%
 + Modelli di implementazione {#implementation-patterns}
    + [Panoramica sui modelli di implementazione](/help/dev/patterns/pattern-overview.md)
    + Modello di implementazione di Recommendations utilizzando at.js {#atjs}
-      + [Panoramica sul modello di implementazione di Recommendations tramite at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Panoramica sul pattern di implementazione di Recommendations tramite at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Inizializzare gli SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md)
       + [Esperienze di rendering](/help/dev/patterns/recs-atjs/render-experiences.md)
