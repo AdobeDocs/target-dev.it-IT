@@ -4,10 +4,10 @@ description: Inserire dati in [!DNL Target] utilizzando l’API di aggiornamento
 title: Come posso inserire dati in [!DNL Target] Utilizzo di [!UICONTROL API di aggiornamento a profilo singolo]?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Il [!DNL Adobe Target] [!UICONTROL API di aggiornamento a profilo singolo] conse
 
 Il [!UICONTROL API di aggiornamento a profilo singolo] ed è generalmente utilizzato quando si deve verificare un aggiornamento in relazione a una transazione che si verifica in un canale che non è stato implementato [!DNL Target]. Ad esempio, desideri aggiornare il profilo di un singolo visitatore che esegue un’azione offline. Le azioni possono includere il raggiungimento di un call center, il finanziamento di un prestito, l’utilizzo di una carta fedeltà in negozio, l’accesso a un chiosco e così via.
 
-Per ulteriori informazioni, consulta:
+## Risorse:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)

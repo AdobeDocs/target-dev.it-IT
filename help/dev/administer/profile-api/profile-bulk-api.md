@@ -3,9 +3,9 @@ title: API di aggiornamento del profilo bulk di Adobe Target
 description: Scopri come utilizzare [!DNL Adobe Target] [!UICONTROL API di aggiornamento del profilo bulk] per inviare dati di profilo di più visitatori a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 Il [!DNL Adobe Target] [!UICONTROL API di aggiornamento del profilo bulk] consente di aggiornare in blocco i profili utente di più visitatori a un sito web utilizzando un file batch.
 
-Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk], puoi inviare in modo comodo dati dettagliati del profilo del visitatore sotto forma di parametri di profilo per molti utenti a [!DNL Target] da qualsiasi origine esterna. Le origini esterne possono includere sistemi CRM (Customer Relationship Management) o POS (Point of Sale), che in genere non sono disponibili in una pagina Web.
+Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk], puoi inviare in modo comodo dati dettagliati del profilo del visitatore sotto forma di parametri di profilo per molti utenti a [!DNL Target] da qualsiasi origine esterna. Le fonti esterne possono includere sistemi CRM (Customer Relationship Management) o POS (Point of Sale), che di solito non sono disponibili su una pagina web.
 
 | Versione | Esempio di URL | Funzioni |
 | --- | --- | --- |
@@ -24,6 +24,11 @@ Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk], puoi inviare in 
 >[!NOTE]
 >
 >Versione 2 (v2) del [!UICONTROL API di aggiornamento del profilo bulk] è la versione corrente. Tuttavia, [!DNL Target] supporta ancora la versione 1 (v1).
+
+## Vantaggi dell’API di aggiornamento del profilo in blocco
+
+* Nessun limite al numero di attributi del profilo.
+* Gli attributi del profilo inviati tramite il sito possono essere aggiornati tramite l’API e in modo opposto.
 
 ## Avvertenze
 
