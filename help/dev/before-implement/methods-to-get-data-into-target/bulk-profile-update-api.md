@@ -4,10 +4,10 @@ description: Inserire dati in [!DNL Target] utilizzando [!UICONTROL API di aggio
 title: Come posso inserire dati in [!DNL Target] Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk]?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 4%
+source-wordcount: '286'
+ht-degree: 5%
 
 ---
 
@@ -17,9 +17,11 @@ Il [!DNL Adobe Target] [!UICONTROL API di aggiornamento del profilo bulk] consen
 
 Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk], puoi inviare in modo comodo dati dettagliati del profilo del visitatore sotto forma di parametri di profilo per molti utenti a [!DNL Target] da qualsiasi origine esterna. Le fonti esterne possono includere sistemi CRM (Customer Relationship Management) o POS (Point of Sale), che di solito non sono disponibili su una pagina web.
 
+Contrasto [!UICONTROL API di aggiornamento del profilo bulk] con [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md).
+
 ## [!UICONTROL Attributi del cliente] rispetto al [!UICONTROL API di aggiornamento del profilo bulk]
 
-Questa opzione è simile a [!UICONTROL attributi del cliente] con alcune differenze:
+Questa opzione è simile a [[!UICONTROL attributi del cliente]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md) con alcune differenze:
 
 * [!UICONTROL Attributi del cliente] utilizzare un caricamento FTP. Il [!UICONTROL API di aggiornamento del profilo bulk di Target] utilizza un’API HTTP POST.
 * [!UICONTROL Attributo cliente] i dati possono essere condivisi con [!DNL Analytics]. Il [!UICONTROL Aggiornamento del profilo bulk] è utilizzabile solo in [!DNL Target].
@@ -31,6 +33,8 @@ Questa opzione è simile a [!UICONTROL attributi del cliente] con alcune differe
 * Non puoi inviare i seguenti caratteri in `mbox3rdPartyID`: segno più (+) e barra (/).
 
 ## Risorse
+
+Per ulteriori informazioni, consulta:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
