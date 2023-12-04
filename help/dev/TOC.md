@@ -2,10 +2,10 @@
 user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 53%
+source-wordcount: '744'
+ht-degree: 45%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 53%
       + [API di aggiornamento a profilo singolo](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Attributi del cliente](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Impostazioni API del profilo](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target panoramica sulla sicurezza](before-implement/target-security-overview.md)
+   + [Panoramica sulla sicurezza di Target](before-implement/target-security-overview.md)
    + [Browser supportati](before-implement/supported-browsers.md)
    + [Modifiche alla crittografia di TLS (Transport Layer Security)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME e Adobe Target](before-implement/implement-cname-support-in-target.md)
@@ -154,7 +154,7 @@ ht-degree: 53%
    + Riferimenti dell’SDK Python {#python}
       + [Panoramica dell’SDK Python](implement/server-side/python/overview.md)
       + [Installare l’SDK di Python](implement/server-side/python/install-sdk.md)
-      + [Inizializzare l’SDK Python](implement/server-side/python/initialize-sdk.md)
+      + [Inizializzare l’SDK di Python](implement/server-side/python/initialize-sdk.md)
       + [Ottieni offerte (Python)](implement/server-side/python/get-offers.md)
       + [Ottieni attributi (Python)](implement/server-side/python/get-attributes.md)
       + [Invia notifiche (Python)](implement/server-side/python/send-notifications.md)
@@ -168,7 +168,7 @@ ht-degree: 53%
    + [Anteprima mobile di Target](implement/mobile/target-mobile-preview.md)
    + [Utilizzare il servizio posizione](implement/mobile/use-location-service.md)
    + [Domande frequenti su Target per le app per dispositivi mobili](implement/mobile/mobile-faq.md)
-   + [Implementare Target con AEP Mobile SDK in un’app nativa con visualizzazioni web](/help/dev/implement/mobile/native-app.md)
+   + [Implementare Target con l’SDK di AEP Mobile in un’app nativa con visualizzazioni web](/help/dev/implement/mobile/native-app.md)
 + Implementazione e-mail {#implement-email}
    + [E-mail: panoramica sull’implementazione di Target](implement/email/overview.md)
    + [Creare un AdBox per un’immagine](implement/email/testing-content-with-the-adbox.md)
@@ -193,8 +193,10 @@ ht-degree: 53%
    + Admin API {#admin-api}
       + [Panoramica dell’API amministratore](before-administer/admin-api-overview/admin-api-overview.md)
       + [API di amministrazione di Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + API di profilo {#profile-apis}
-      + [Panoramica delle API dei profili](/help/dev/administer/profile-api/profile-api-overview.md)
+   + API profilo {#profile-apis}
+      + [Panoramica API dei profili](/help/dev/administer/profile-api/profiles-api.md)
+      + [Recuperare i profili](/help/dev/administer/profile-api/profile-fetch.md)
+      + [Aggiornare profili](/help/dev/administer/profile-api/profile-api-overview.md)
       + [API di aggiornamento a profilo singolo](/help/dev/administer/profile-api/profile-single-api.md)
       + [API di aggiornamento del profilo bulk](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API di reporting](/help/dev/administer/reporting-api/reporting-api.md)
@@ -212,7 +214,7 @@ ht-degree: 53%
 + Modelli di implementazione {#implementation-patterns}
    + [Panoramica sui modelli di implementazione](/help/dev/patterns/pattern-overview.md)
    + Modello di implementazione di Recommendations utilizzando at.js {#atjs}
-      + [Panoramica sul pattern di implementazione di Recommendations tramite at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Panoramica sul modello di implementazione di Recommendations tramite at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Inizializzare gli SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md)
       + [Esperienze di rendering](/help/dev/patterns/recs-atjs/render-experiences.md)
