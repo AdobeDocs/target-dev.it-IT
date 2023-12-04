@@ -1,14 +1,14 @@
 ---
 keywords: guida per gli sviluppatori di target; panoramica;home
 title: Guida per gli sviluppatori di Adobe Target
-description: Come posso implementare e amministrare  [!DNL Adobe Target]  e lavorare con le relative API e SDK?
+description: Come posso implementare e amministrare [!DNL Adobe Target] e lavorare con le sue API e SDK?
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: a72d3ee76b25702b186565e86ec6b0e67c9d5d1b
+source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 15%
+source-wordcount: '407'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +30,7 @@ Questo *[!DNL Adobe Target]Guida per gli sviluppatori* fornisce risorse e guide 
 
 ## Guida introduttiva all’implementazione
 
-**[](/help/dev/before-implement/considerations-before-you-implement-target.md)** Prima dell’implementazione: considerazioni da affrontare prima di implementare [!DNL Adobe Target].
+**[Prima dell’implementazione](/help/dev/before-implement/considerations-before-you-implement-target.md)**: considerazioni da affrontare prima dell’implementazione [!DNL Adobe Target].
 
 ## Implementazione lato client
 
@@ -76,7 +76,7 @@ Questo *[!DNL Adobe Target]Guida per gli sviluppatori* fornisce risorse e guide 
 
 [**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md): utilizza [!DNL Adobe Target] API di amministrazione per gestire proprietà, attività, tipi di pubblico, offerte, proprietà, rapporti, mbox, host, ambienti e altro ancora.
 
-[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profile-api-overview.md): Recupera [!DNL Adobe Target] informazioni sul profilo utente.
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): Recupera [!DNL Adobe Target] informazioni sul profilo utente.
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recupera [!UICONTROL Test A/B] e [!UICONTROL Automated Personalization] dati del rapporto di attività.
 
