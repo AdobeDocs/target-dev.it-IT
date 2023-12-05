@@ -3,9 +3,9 @@ title: API di aggiornamento del profilo bulk di Adobe Target
 description: Scopri come utilizzare [!DNL Adobe Target] [!UICONTROL API di aggiornamento del profilo bulk] per inviare dati di profilo di più visitatori a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
+source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '773'
 ht-degree: 8%
 
 ---
@@ -72,27 +72,58 @@ Se non conosci il tuo codice cliente, nel [!DNL Target] clic interfaccia utente 
 
 ### Inspect la risposta
 
-v2 restituisce uno stato profilo per profilo e v1 restituisce solo lo stato complessivo. La risposta include un collegamento a un URL diverso con il messaggio di successo profilo per profilo.
+L’API Profiles restituisce lo stato di invio del batch per l’elaborazione insieme a un collegamento in &quot;batchStatus&quot; a un URL diverso che mostra lo stato generale di un particolare processo batch.
 
-### Esempio di risposta
+### Esempio di risposta API
+
+Il seguente codice acquisito è un esempio di risposta API Profiles:
 
 ```
-true http://mboxedge19.tt.omtrdc.net/m2/demo/v2/profile/batchStatus?batchId=demo-1845664501&m2Node=00 Batch submitted for processing
+<response>
+    <success>true</success>
+    <batchStatus>http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383</batchStatus>
+    <message>Batch submitted for processing</message>
+</response>
 ```
 
 In caso di errore, la risposta contiene `success=false` e un messaggio dettagliato dell’errore.
 
-Una risposta corretta si presenta come segue:
+### Risposta di stato batch predefinita
 
-``````
-demo-1845664501 1436187396849-250353.03_03 success 2403081156529-351655.03_03 success 2403081156529-351656.03_03 success 1436187396849-250351.01_00 success 
-``````
+Risposta predefinita corretta quando `batchStatus` Il collegamento URL selezionato si presenta come segue:
+
+```
+<response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
+```
 
 I valori previsti per i campi di stato sono:
 
-**success**: profilo aggiornato. Se il profilo non è stato trovato, ne è stato creato uno con i valori del batch.
-**errore**: il profilo non è stato aggiornato o creato a causa di un errore, un’eccezione o una perdita di messaggi.
-**in sospeso**: il profilo non è ancora stato aggiornato o creato.
+| Stato | Dettagli |
+| --- | --- |
+| [!UICONTROL completo] | La richiesta di aggiornamento batch del profilo è stata completata. |
+| [!UICONTROL incompleto] | La richiesta di aggiornamento batch del profilo è ancora in fase di elaborazione e non è stata completata. |
+| [!UICONTROL bloccato] | La richiesta di aggiornamento batch del profilo è bloccata e non è stato possibile completarla. |
 
+### Risposta URL dettagliata sullo stato del batch
 
+È possibile ottenere una risposta più dettagliata passando un parametro `showDetails=true` al `batchStatus` URL in alto.
 
+Ad esempio:
+
+```
+http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383&showDetails=true
+```
+
+#### Risposta dettagliata
+
+```
+<response>
+    <batchId>demo4-1701473848678-13029383</batchId>
+    <status>complete</status>
+    <batchSize>1</batchSize>
+    <consumedCount>1</consumedCount>
+    <successfulUpdates>1</successfulUpdates>
+    <profilesNotFound>0</profilesNotFound>
+    <failedUpdates>0</failedUpdates>
+</response>
+```
