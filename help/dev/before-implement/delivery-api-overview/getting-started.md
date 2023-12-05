@@ -4,16 +4,16 @@ description: Come si utilizza [!UICONTROL API di consegna di Adobe Target]?
 keywords: api di consegna
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
 # Guida introduttiva a [!UICONTROL API di consegna di Adobe Target]
 
-A [!UICONTROL API di consegna di Target] la chiamata di è simile alla seguente:
+A [!UICONTROL API di consegna di Target] ha un aspetto simile al seguente:
 
 ```
 curl -X POST \
@@ -52,7 +52,3 @@ Prima di effettuare una [!UICONTROL API di consegna di Target] chiama, segui que
 1. Creare un [!DNL Target] attività (A/B, XT, AP o Recommendations) tramite [Compositore basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) o [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 1. Utilizza l’API di consegna per ottenere una risposta per le mbox utilizzate in [!DNL Target] attività creata nel passaggio 2.
 1. Presenta l’esperienza al visitatore.
-
-## Raccolta Postman {#postman}
-
-Postman è un’applicazione che semplifica l’attivazione delle chiamate API. [Questa raccolta Postman](https://run.pstmn.io/button.svg) contiene esempi di chiamate API di consegna.

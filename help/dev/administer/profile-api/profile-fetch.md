@@ -3,7 +3,7 @@ title: Recuperare i profili
 description: Scopri come utilizzare le API di profilo di Adobe Target per recuperare i dati dei visitatori da utilizzare in [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -39,13 +39,13 @@ Consulta [Aggiornare profili](/help/dev/administer/profile-api/profile-api-overv
 L’esempio seguente mostra il formato della richiesta per recuperare un profilo utilizzando un `thirdPartyId`:
 
 ```
-https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
 Sostituisci `<your-client-code>` e `your-thirdpartyid` e attiva una richiesta GET. Esempio di chiamata di recupero del profilo tramite un [!UICONTROL thirdpartyid]:
 
 ```
-http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
 Quando viene effettuata questa chiamata, [!DNL Target] tenta di individuare il profilo prima nel cluster indicato nella richiesta edge, oppure ovunque si trovi il profilo, quindi restituisce il contenuto. I contenuti del profilo vengono restituiti in formato JSON.
