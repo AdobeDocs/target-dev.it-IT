@@ -3,16 +3,28 @@ title: Recuperare i profili
 description: Scopri come utilizzare le API di profilo di Adobe Target per recuperare i dati dei visitatori da utilizzare in [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: ee53a8f0210480d9b70dc77a3a5cd8d92d2f2e3d
+source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
 # Aggiornare profili
 
-A [!DNL Target] il profilo può essere recuperato in due modi: utilizzando un `tntid` o un `thirdPartyId`.
+A [!DNL Target] il profilo può essere recuperato in tre modi: utilizzando un `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` o `thirdPartyId`.
+
+## Utilizzo di un [!DNL Experience Cloud Visitor ID] (ECID)
+
+Puoi recuperare un profilo in base al `ECID`. Il metodo HTTP deve essere GET.
+
+L’URL si presenta come nell’esempio seguente:
+
+```
+https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
+```
+
+Sostituisci `<clientCode>` con il [!DNL Target] [!UICONTROL Codice client] e `<ECID>` con il [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
 
 ## Utilizzo di un tntid
 
@@ -24,7 +36,7 @@ L’esempio seguente mostra il formato della richiesta per recuperare un profilo
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-Sostituisci `<your-client-code>` e `your-tnt-id` e attiva una richiesta GET. Esempio di chiamata di recupero del profilo tramite un `tntid`;
+Sostituisci `<your-client-code>` e `your-tnt-id` e attiva una richiesta GET. Esempio di chiamata di recupero del profilo tramite un `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
