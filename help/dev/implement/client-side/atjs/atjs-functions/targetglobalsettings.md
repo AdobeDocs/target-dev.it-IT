@@ -4,10 +4,10 @@ description: Utilizza il [!UICONTROL targetGlobalSettings()] funzione per [!DNL 
 title: Come si utilizza [!UICONTROL targetGlobalSettings()] Funzione?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 68%
+source-wordcount: '2568'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,18 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 ## Impostazioni
 
 È possibile modificare le seguenti impostazioni:
+
+### aepSandboxId
+
+* **Tipo**: String
+* **Valore predefinito**: null
+* **Descrizione**: parametro facoltativo utilizzato per inviare [!DNL Adobe Experience Platform] ID sandbox da condividere [!DNL Adobe Experience Platform] destinazioni create nella sandbox non predefinita con [!DNL Target]. Se `aepSandboxId` non è nullo, `aepSandboxName` devono essere fornite.
+
+### aepSandboxName
+
+* **Tipo**: String
+* **Valore predefinito**: null
+* **Descrizione**: parametro facoltativo utilizzato per inviare [!DNL Adobe Experience Platform] nome sandbox da condividere [!DNL Adobe Experience Platform] destinazioni create nella sandbox non predefinita con [!DNL Target]. Se `aepSandboxName` non è nullo, `aepSandboxId` devono essere fornite.
 
 ### artifactLocation
 
@@ -90,11 +102,11 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
   Solo lato server è il metodo decisionale predefinito impostato automaticamente quando at.js 2.5+ viene implementato e distribuito sulle proprietà web.
 
-  Se si utilizza Solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge di [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare [!DNL Target]Le funzionalità di apprendimento automatico di includono [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP), e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) attività.
+  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sul [!DNL Target] rete edge, che comporta una chiamata del server di blocco. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare [!DNL Target]Le funzionalità di apprendimento automatico di includono [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP), e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) attività.
 
   Inoltre, migliorare le esperienze personalizzate utilizzando [!DNL Target]Il profilo utente di, che viene mantenuto tra sessioni e canali, può fornire risultati potenti per la tua azienda.
 
-  Infine, Solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi grazie ai segmenti di Audience Manager e Adobe Analytics.
+  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi tramite i segmenti Audienci Manager e Adobe Analytics.
 
   **Solo su dispositivo**:
 
@@ -110,7 +122,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
   Ibrido è il metodo decisionale che deve essere impostato in at.js 2.5+ quando sia le decisioni su dispositivo che le attività che richiedono una chiamata alla rete [!DNL Adobe Target] È necessario eseguire la rete Edge.
 
-  Quando gestisci sia le attività di decisione su dispositivo che quelle lato server, può essere un po’ complicato e noioso pensare a come distribuire ed eseguire il provisioning di [!DNL Target] sulle pagine. Con il metodo decisionale ibrido, [!DNL Target] sa quando deve effettuare una chiamata al server alla rete Edge di per le attività che richiedono l’esecuzione lato server e anche quando eseguire solo le decisioni su dispositivo.[!DNL Adobe Target]
+  Quando gestisci sia le attività di decisione su dispositivo che quelle lato server, può essere un po’ complicato e noioso pensare a come distribuire ed eseguire il provisioning di [!DNL Target] sulle pagine. Con il metodo decisionale ibrido, [!DNL Target] sa quando deve effettuare una chiamata al server al [!DNL Adobe Target] Rete Edge per le attività che richiedono l’esecuzione lato server e quando eseguire solo le decisioni su dispositivo.
 
   L’artefatto delle regole JSON include i metadati che informano at.js se una mbox ha un’attività lato server in esecuzione o un’attività decisionale su dispositivo. Questo metodo decisionale assicura che le attività che intendi consegnare rapidamente vengano eseguite tramite le decisioni su dispositivo, e che quelle che richiedono una personalizzazione basata su ML più potente vengano eseguite tramite [!DNL Adobe Target] Rete Edge.
 
@@ -166,7 +178,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: booleano
 * **Valore predefinito**: false
-* **Descrizione**[!DNL Target]: indica se deve richiamare la funzione `isOptedOut()` dell’API Visitor. Ciò fa parte dell&#39;abilitazione di Device Graph.
+* **Descrizione**: indica se [!DNL Target] deve chiamare l’API Visitor; `isOptedOut()` funzione. Ciò fa parte dell&#39;abilitazione di Device Graph.
 
 ### overrideMboxEdgeServer
 
@@ -214,7 +226,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: String
 * **Valore predefinito**: valore impostato tramite l’interfaccia utente.
-* **Descrizione**[!DNL Target]: rappresenta il server Edge di 
+* **Descrizione**: rappresenta [!DNL Target] server Edge.
 
 ### serverState
 
@@ -244,7 +256,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Type**: numero
 * **Valore predefinito**: 2000 ms = 2 s
-* **Descrizione**: rappresenta il timeout della richiesta dell’API Visitor.
+* **Descrizione**: rappresenta il timeout della richiesta dell’API visitatore.
 
 ## Utilizzo
 
@@ -284,7 +296,7 @@ Ogni provider di dati dispone della struttura seguente:
 | name | Stringa | Nome del provider. |
 | version | Stringa | Versione del fornitore. Questa chiave verrà utilizzata per l&#39;evoluzione del fornitore. |
 | timeout | Numero | Rappresenta il timeout del fornitore se si tratta di una richiesta di rete.  Questa chiave è facoltativa. |
-| provider | Funzione | La funzione che contiene la logica di recupero dei dati del fornitore.<p>La funzione dispone di un solo parametro obbligatorio: `callback`. Il parametro di callback è una funzione che deve essere richiamata solo quando i dati sono stati recuperati correttamente o si visualizza un errore.<p>Il callback prevede due parametri:<ul><li>error: indica se si è verificato un errore. Se tutto è OK, questo parametro deve essere impostato su null.</li><li>parametri: un oggetto JSON, che rappresenta i parametri che verranno inviati in un [!DNL Target] richiesta.</li></ul> |
+| provider | Funzione | La funzione che contiene la logica di recupero dei dati del fornitore.<p>La funzione dispone di un singolo parametro obbligatorio: `callback`. Il parametro di callback è una funzione che deve essere richiamata solo quando i dati sono stati recuperati correttamente o si visualizza un errore.<p>La chiamata di ritorno prevede due parametri:<ul><li>error: indica se si è verificato un errore. Se tutto è OK, questo parametro deve essere impostato su null.</li><li>parametri: un oggetto JSON, che rappresenta i parametri che verranno inviati in un [!DNL Target] richiesta.</li></ul> |
 
 Nell&#39;esempio seguente viene illustrato il punto in cui il fornitore di dati utilizza l&#39;esecuzione di sincronizzazione:
 
@@ -304,7 +316,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-Dopo che at.js elabora `window.targetGlobalSettings.dataProviders`[!DNL Target], la richiesta di conterrà un nuovo parametro: `t1=1`.
+Dopo i processi di at.js `window.targetGlobalSettings.dataProviders`, il [!DNL Target] La richiesta conterrà un nuovo parametro: `t1=1`.
 
 Di seguito è riportato un esempio se i parametri che si desidera aggiungere al [!DNL Target] Le richieste di vengono recuperate da un servizio di terze parti, ad esempio Bluekai, Demandbase e così via:
 
@@ -327,7 +339,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-Dopo che at.js elabora `window.targetGlobalSettings.dataProviders`[!DNL Target], la richiesta contiene parametri aggiuntivi: `t1=1`, `t2=2` e `t3=3`.
+Dopo i processi di at.js `window.targetGlobalSettings.dataProviders`, il [!DNL Target] La richiesta conterrà parametri aggiuntivi: `t1=1`, `t2=2` e `t3=3`.
 
 L’esempio seguente utilizza fornitori di dati per raccogliere dati API meteo e inviarli come parametri in una [!DNL Target] richiesta. Il [!DNL Target] La richiesta avrà parametri aggiuntivi, ad esempio `country` e `weatherCondition`.
 
@@ -398,11 +410,11 @@ window.targetGlobalSettings = {
 ...
 ```
 
-Dopo aver specificato le impostazioni `cspScriptNonce` e `cspStyleNonce`, at.js 2.3.0+ le imposta come attributi nonce in tutti i tag SCRIPT e STYLE che aggiunge al DOM quando si applicano le offerte [!DNL Target]
+Dopo `cspScriptNonce` e `cspStyleNonce` specificate, at.js 2.3.0+ le imposta come attributi nonce su tutti i tag SCRIPT e STYLE che aggiunge al DOM durante l’applicazione [!DNL Target] offerte.
 
 ## Personalizzazione ibrida
 
-`serverState`[!DNL Target] è un’impostazione disponibile in at.js v2.2+ che può essere utilizzata per ottimizzare le prestazioni della pagina quando è stata implementata un’integrazione ibrida di L’integrazione ibrida significa che utilizzi sia at.js v2.2+ sul lato client che l’API di consegna o un [!DNL Target] SDK lato server per distribuire le esperienze. `serverState` consente a at.js v2.2+ di applicare le esperienze direttamente dal contenuto recuperato sul lato server e restituito al client come parte della pagina trasmessa.
+`serverState` è un’impostazione disponibile in at.js v2.2+ che può essere utilizzata per ottimizzare le prestazioni della pagina quando un’integrazione ibrida di [!DNL Target] è implementato. L’integrazione ibrida significa che utilizzi sia at.js v2.2+ sul lato client che l’API di consegna o un [!DNL Target] SDK lato server per distribuire le esperienze. `serverState` consente a at.js v2.2+ di applicare le esperienze direttamente dal contenuto recuperato sul lato server e restituito al client come parte della pagina trasmessa.
 
 ### Prerequisiti
 
@@ -529,9 +541,9 @@ Quando utilizzi `serverState`, tieni presente quanto segue:
 
    * **Nota**: attualmente, le mbox recuperate sul lato server non sono supportate in `serverState`.
 
-* Quando applichi le offerte `serverState`, at.js prende in considerazione le impostazioni `pageLoadEnabled` e `viewsEnabled`, ad esempio le offerte di caricamento pagina non verranno applicate se `pageLoadEnabled` è impostato su false.
+* Quando si applica `serverState` offerte, at.js prende in considerazione `pageLoadEnabled` e `viewsEnabled` impostazioni, ad esempio le offerte di caricamento pagina non verranno applicate se `pageLoadEnabled` L&#39;impostazione è false.
 
-  Per attivare queste impostazioni, abilita l’opzione in **Amministrazione > Implementazione > Modifica > Caricamento pagina abilitato**.
+  Per attivare queste impostazioni, abilita l’accesso **Amministrazione > Implementazione > Modifica > Caricamento pagina abilitato**.
 
   ![Impostazioni per Caricamento pagina attivato](../../assets/page-load-enabled-setting.png)
 
