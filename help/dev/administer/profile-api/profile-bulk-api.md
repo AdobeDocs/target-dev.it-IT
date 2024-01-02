@@ -3,7 +3,8 @@ title: API di aggiornamento del profilo bulk di Adobe Target
 description: Scopri come utilizzare [!DNL Adobe Target] [!UICONTROL API di aggiornamento del profilo bulk] per inviare dati di profilo di più visitatori a [!DNL Target] da utilizzare nel targeting.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: a6f47c99cfc419771c1a6674990c415a2035ab4e
+exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
+source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 8%
@@ -18,8 +19,8 @@ Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk], puoi inviare in 
 
 | Versione | Esempio di URL | Funzioni |
 | --- | --- | --- |
-| v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/profile/batchUpdate` | Supporto solo per l’aggiornamento in blocco dei profili. |
-| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Crea profilo se non trovato.</li><li>Aggiornamento dello stato per riga.</li></ul> |
+| v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/profile/batchUpdate` | Supporto solo per l’aggiornamento in blocco dei profili. |
+| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Crea profilo se non trovato.</li><li>Aggiornamento dello stato per riga.</li></ul> |
 
 >[!NOTE]
 >
