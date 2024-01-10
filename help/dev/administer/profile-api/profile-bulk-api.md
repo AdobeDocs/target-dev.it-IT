@@ -4,9 +4,9 @@ description: Scopri come utilizzare [!DNL Adobe Target] [!UICONTROL API di aggio
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
+source-git-commit: 3d90616b0a920abea380d4cfcd1227eafde86adb
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 8%
 
 ---
@@ -34,6 +34,7 @@ Utilizzo di [!UICONTROL API di aggiornamento del profilo bulk], puoi inviare in 
 ## Avvertenze
 
 * La dimensione del file batch deve essere inferiore a 50 MB. Inoltre, il numero totale di righe non deve superare 500000 righe per upload.
+* Gli aggiornamenti in genere si verificano in meno di un’ora, ma la visualizzazione potrebbe richiedere fino a 24 ore.
 * Non esiste alcun limite al numero o alle righe che è possibile caricare in un periodo di 24 ore nei batch successivi. Tuttavia, il processo di ingestione potrebbe essere limitato durante l&#39;orario di ufficio per garantire che altri processi vengano eseguiti in modo efficiente.
 * Le chiamate all’aggiornamento collettivo v2 senza chiamate mbox tra gli stessi thirdPartyIds sovrascrivono le proprietà aggiornate nella prima chiamata di aggiornamento collettivo.
 * [!DNL Adobe] non garantisce che il 100% dei dati del profilo batch sia integrato e mantenuto in Target e sia quindi disponibile per l’utilizzo nel targeting. Nella progettazione corrente, esiste la possibilità che una piccola percentuale di dati (fino allo 0,1% dei batch di produzione di grandi dimensioni) non venga caricata o conservata.
