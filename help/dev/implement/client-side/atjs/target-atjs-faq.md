@@ -1,13 +1,13 @@
 ---
 keywords: faq at.js, domande frequenti at.js, faq, visualizzazione momentanea di altri contenuti, caricatore, loader, caricatore di pagina, cross domain, dimensione del file, dimensione file, dominio x, at.js e mbox.js, solo x, per diversi domini, safari, app singola pagina, selettori mancanti, selettori, applicazione a pagina singola, tt.omtrdc.net, spa, Adobe Experience Manager, AEM, indirizzo ip, httponly, HttpOnly, protetto, ip, dominio cookie
-description: Risposte alle domande frequenti sulla libreria JavaScript at.js di  [!DNL Adobe Target] .
+description: Risposte alle domande più frequenti su [!DNL Adobe Target] Libreria JavaScript at.js.
 title: Quali sono le domande più comuni su at.js, e le relative risposte?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
 workflow-type: tm+mt
-source-wordcount: '2897'
-ht-degree: 75%
+source-wordcount: '2938'
+ht-degree: 66%
 
 ---
 
@@ -31,7 +31,7 @@ Come illustrato in precedenza, utilizzando mbox.js il contenuto della pagina ini
 
 ## Qual è l’impatto di at.js e mbox.js sui tempi di caricamento delle pagine?
 
-Molti clienti e consulenti vogliono conoscere l&#39;impatto di at.js e di mbox.js sul tempo di caricamento delle pagine, soprattutto nel contesto di nuovi utenti rispetto a utenti di ritorno. Purtroppo, è difficile misurare e offrire numeri concreti per quanto riguarda l&#39;influenza di at.js o mbox.js sul tempo di caricamento della pagina, a causa delle implementazioni del singolo cliente.
+Molti clienti e consulenti vogliono conoscere l’impatto di at.js e mbox.js sui tempi di caricamento delle pagine, soprattutto nel contesto di nuovi utenti rispetto a utenti di ritorno. Sfortunatamente, è difficile misurare e fornire numeri concreti per quanto riguarda l’influenza di at.js o mbox.js sul tempo di caricamento della pagina a causa dell’implementazione di ciascun cliente.
 
 Tuttavia, se sulla pagina è presente l’API visitatore, [!DNL Target] può capire meglio in che modo at.js e mbox.js influenzano il tempo di caricamento delle pagine.
 
@@ -118,11 +118,11 @@ Per ulteriori informazioni, consulta [Gestione at.js della visualizzazione momen
 
 ## at.js è compatibile con l’integrazione [!DNL Adobe Experience Manager] (Experience Manager)?
 
-[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive) supporta ora le implementazioni di at.js con l’integrazione di [!UICONTROL Adobe Target Cloud Services].
+[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive) supporta ora le implementazioni di at.js con [!UICONTROL Cloud Service Adobe Target] integrazione.
 
 ## Come posso evitare la visualizzazione momentanea di altri contenuti al caricamento pagina, utilizzando at.js?
 
-[!DNL Target] consente di impedire la visualizzazione momentanea di altri contenuti al caricamento della pagina utilizzando uno dei seguenti metodi. Per ulteriori informazioni, consulta [Prevenzione della visualizzazione momentanea di altri contenuti con at.js](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] offre diversi modi per evitare la visualizzazione momentanea di altri contenuti al caricamento della pagina. Per ulteriori informazioni, consulta [Prevenzione della visualizzazione momentanea di altri contenuti con at.js](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ## Qual è la dimensione del file di at.js?
 
@@ -130,7 +130,7 @@ Il file di at.js che scarichi è approssimativamente 109 KB. Tuttavia, poiché l
 
 ## Perché at.js è più grande di mbox.js?
 
-Le implementazioni di at.js utilizzano una sola libreria (at.js), mentre quelle di mbox.js usano due librerie (mbox.js e target.js). Quindi un confronto più equo è quello tra at.js e mbox.js *più* `target.js`. Confrontando le dimensioni compresse con GZIP delle due versioni, at.js versione 1.2 è di 34 KB e mbox.js versione 63 è di 26,2 KB. ``
+Le implementazioni di at.js utilizzano una sola libreria ( at.js), mentre quelle di mbox.js usano due librerie ( mbox.js e target.js). Quindi un confronto più equo è quello tra at.js e mbox.js *più* `target.js`. Confrontando le dimensioni compresse con GZIP delle due versioni, at.js versione 1.2 è di 34 KB e mbox.js versione 63 è di 26,2 KB. ``
 
 at.js è più grande perché effettua molta più analisi DOM rispetto a mbox.js. Questo è necessario perché at.js ottiene dati “grezzi” dalla risposta JSON e deve interpretarli. mbox.js utilizzava invece `document.write()` ed era il browser a eseguire l’analisi.
 
@@ -162,7 +162,7 @@ Sì, come con mbox.js.
 
 I [!DNL Target] clienti di utilizzano talvolta istanze basate su cloud con [!DNL Target] per test o semplici prove di concetto. Questi domini, e molti altri, fanno parte dell’[elenco dei suffissi pubblici](https://publicsuffix.org/list/public_suffix_list.dat).
 
-I browser moderni non salvano i cookie se usi questi domini, a meno che non personalizzi l’impostazione `cookieDomain` utilizzando targetGlobalSettings(). Per ulteriori informazioni, consulta [Utilizzo di istanze basate su Cloud con [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
+I browser moderni non salvano i cookie se usi questi domini, a meno che non personalizzi l’impostazione `cookieDomain` utilizzando targetGlobalSettings(). Per ulteriori informazioni, consulta [Utilizzo di istanze basate su cloud con [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
 
 ## Gli indirizzi IP possono essere utilizzati come dominio dei cookie quando si utilizza at.js?
 
@@ -196,14 +196,14 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 
 ## Perché ricevo messaggi di avviso, ad esempio “azioni con selettori mancanti”?
 
-Questi messaggi non sono legati alla funzionalità at.js. La libreria at.js cerca di segnalare tutto ciò che non si trova nel DOM.
+Questi messaggi non sono legati alla funzionalità at.js. La libreria at.js tenta di segnalare tutto ciò che non si trova nel DOM.
 
 Di seguito sono riportate le possibili cause principali per questo messaggio di avviso:
 
 * La pagina viene generata in modo dinamico e at.js non è in grado di trovare l’elemento.
 * La pagina viene creata lentamente (a causa di una rete lenta) e at.js non riesce a trovare il selettore nel DOM.
 * La struttura di pagina su cui è in esecuzione l’attività è stata modificata. Se riapri l’attività nel Compositore esperienza visivo dovrebbe comparire un messaggio di avviso. È necessario aggiornare l’attività in modo che tutti gli elementi necessari possano essere trovati.
-* La pagina sottostante fa parte di un’applicazione a pagina singola (Single Page Application, SPA) oppure la pagina contiene elementi che appaiono più in basso e il “meccanismo di polling selettivo” di at.js non riesce a trovarli. Può essere utile aumentare il valore di `selectorsPollingTimeout`. Per ulteriori informazioni, consulta [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+* La pagina sottostante fa parte di un’applicazione a pagina singola (SPA) oppure la pagina contiene elementi che appaiono più in basso e il &quot;meccanismo di polling selettivo&quot; di at.js non riesce a trovarli. Può essere utile aumentare il valore di `selectorsPollingTimeout`. Per ulteriori informazioni, consulta [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Qualsiasi metrica di rilevamento dei clic tenta di aggiungersi a ogni pagina, indipendentemente dall’URL su cui è stata impostata la metrica. Anche se innocua, questa situazione fa apparire molti di questi messaggi.
 
   Per ottenere i migliori risultati, scarica e utilizza [versione più recente di at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). Per ulteriori informazioni su come scaricare at.js, consulta [Scaricare at.js utilizzando [!DNL Target] Interfaccia](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) sezione nella sezione [*Come distribuire at.js* > *Implementare [!DNL Target] senza un sistema per la gestione dei tag*](how-to-deployatjs/implement-target-without-a-tag-manager.md) articolo.
@@ -297,3 +297,7 @@ La sintassi è:
 `<!DOCTYPE html>`
 
 Il doctype HTML5 assicura che la pagina venga caricata in modalità standard. Durante il caricamento in modalità quirks, alcune API JS dalle quali dipende at.js sono disabilitate. [!DNL Target] disabilita at.js in modalità quirks.
+
+## at.js funziona in un ambiente di app Ionic.
+
+Questa implementazione non è mai stata testata, poiché at.js non era destinato a funzionare in un ambiente non web. [!DNL Adobe] consiglia quanto segue [SDK per le implementazioni per dispositivi mobili](/help/dev/implement/mobile/overview.md).
