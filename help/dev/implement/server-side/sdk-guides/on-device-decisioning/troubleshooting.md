@@ -3,9 +3,9 @@ title: Risolvere i problemi relativi al decisioning sul dispositivo
 description: Scopri come risolvere i problemi [!UICONTROL decisioning sul dispositivo]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ L&#39;abilitazione delle tracce genera ulteriori informazioni da [!DNL Adobe Tar
 
 ## 3. Verificare la [!UICONTROL decisioning sul dispositivo] *artefatto regola* è stato recuperato e memorizzato nella cache in base all’intervallo di polling definito.
 
-1. Attendi la durata dell&#39;intervallo di polling (il valore predefinito è 5 minuti) e assicurati che l&#39;artefatto venga recuperato dall&#39;SDK. Vengono generati gli stessi registri del terminale.
+1. Attendi la durata dell&#39;intervallo di polling (il valore predefinito è 20 minuti) e assicurati che l&#39;artefatto venga recuperato dall&#39;SDK. Vengono generati gli stessi registri del terminale.
 
    Inoltre, le informazioni provenienti dal[!DNL Target]La traccia deve essere inviata al terminale con i dettagli dell’artefatto della regola.
 
