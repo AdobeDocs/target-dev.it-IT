@@ -4,9 +4,9 @@ description: Come si utilizza la preacquisizione in [!UICONTROL API di consegna 
 keywords: api di consegna
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Quando si utilizza la preacquisizione, è importante avere familiarità con i se
 
 ## Preacquisizione di Mbox
 
-Client come app e server per dispositivi mobili possono preacquisire più mbox per un determinato utente all’interno di una sessione e memorizzarle nella cache per evitare di effettuare più chiamate a [!UICONTROL API di consegna di Adobe Target].
+I client come le app e i server per dispositivi mobili possono preacquisire più mbox per un determinato utente all’interno di una sessione e memorizzarle nella cache, al fine di evitare chiamate multiple a [!UICONTROL API di consegna di Adobe Target].
 
 ```
 curl -X POST \
@@ -121,6 +121,51 @@ All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire 
 ```
 
 All’interno della risposta, visualizzerai `content` campo contenente l’esperienza da mostrare all’utente per una particolare `mbox`. Questa funzione è molto utile quando è memorizzata nella cache del server, in modo che quando un utente interagisce con l’app web o mobile all’interno di una sessione e visita un’ `mbox` in una pagina specifica dell&#39;applicazione, l&#39;esperienza può essere distribuita dalla cache anziché crearne un&#39;altra [!UICONTROL API di consegna di Adobe Target] chiamare. Tuttavia, quando un’esperienza viene consegnata all’utente da `mbox`, a `notification` sarà inviato tramite una chiamata API di consegna per consentire la registrazione delle impression. Questo perché la risposta di `prefetch` Le chiamate di sono memorizzate nella cache, il che significa che l&#39;utente non ha visualizzato le esperienze al momento della `prefetch` chiamata eseguita. Per saperne di più sulle `notification` processo, consulta [Notifiche](notifications.md).
+
+## Preacquisire mbox con le metriche clickTrack quando si utilizza [!UICONTROL Analytics for Target] (A4T)
+
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un’integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
+
+Il seguente snippet di codice consente di preacquisire una mbox contenente `clickTrack` metriche da notificare [!DNL Analytics] che è stato fatto clic su un’offerta:
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>La preacquisizione di una mbox contiene [!DNL Analytics] payload solo per attività qualificate. La preacquisizione delle metriche di successo per le attività non ancora qualificate genera incongruenze nei rapporti.
 
 ## Preacquisire le viste
 
