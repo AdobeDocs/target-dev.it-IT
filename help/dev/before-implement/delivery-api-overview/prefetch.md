@@ -4,9 +4,9 @@ description: Come si utilizza la preacquisizione in [!UICONTROL API di consegna 
 keywords: api di consegna
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
+source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ All’interno della risposta, visualizzerai `content` campo contenente l’esper
 
 [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un’integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
 
-Il seguente snippet di codice consente di preacquisire una mbox contenente `clickTrack` metriche da notificare [!DNL Analytics] che è stato fatto clic su un’offerta:
+Il seguente frammento di codice è una risposta di una preacquisizione di una mbox contenente `clickTrack` metriche da notificare [!DNL Analytics] che è stato fatto clic su un’offerta:
 
 ```
 {
