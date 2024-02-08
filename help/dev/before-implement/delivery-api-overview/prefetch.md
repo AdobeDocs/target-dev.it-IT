@@ -4,28 +4,28 @@ description: Come si utilizza la preacquisizione in [!UICONTROL API di consegna 
 keywords: api di consegna
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
+source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
 
 # Preacquisizione
 
-La preacquisizione consente ai client come applicazioni e server mobili di recuperare contenuti per più mbox o visualizzazioni in una richiesta, memorizzarli nella cache locale e successivamente inviare una notifica [!DNL Target] quando l’utente visita queste mbox o visualizzazioni.
+La preacquisizione consente ai client come applicazioni e server mobili di recuperare contenuti per più mbox o visualizzazioni in una richiesta, memorizzarli nella cache locale e successivamente inviare una notifica [!DNL Target] quando il visitatore visita tali mbox o visualizzazioni.
 
 Quando si utilizza la preacquisizione, è importante avere familiarità con i seguenti termini:
 
 | Nome campo | Descrizione |
 | --- | --- |
-| `prefetch` | Elenco di mbox e visualizzazioni che devono essere recuperate ma non contrassegnate come visitate. Il [!DNL Target] Edge restituisce un `eventToke`n per ogni mbox o vista esistente nella matrice di preacquisizione. |
+| `prefetch` | Elenco di mbox e visualizzazioni che devono essere recuperate ma non contrassegnate come visitate. Il [!DNL Target] Edge restituisce un `eventToken` per ogni mbox o vista esistente nella matrice di preacquisizione. |
 | `notifications` | Elenco di mbox e visualizzazioni precedentemente preacquisite che devono essere contrassegnate come visitate. |
 | `eventToken` | Token crittografato con hash restituito quando il contenuto viene prerecuperato. Questo token deve essere rimandato a [!DNL Target] nel `notifications` array. |
 
 ## Preacquisizione di Mbox
 
-I client come le app e i server per dispositivi mobili possono preacquisire più mbox per un determinato utente all’interno di una sessione e memorizzarle nella cache, al fine di evitare chiamate multiple a [!UICONTROL API di consegna di Adobe Target].
+I client, come le app e i server per dispositivi mobili, possono preacquisire più mbox per un dato visitatore all’interno di una sessione e memorizzarle nella cache per evitare di effettuare più chiamate al [!UICONTROL API di consegna di Adobe Target].
 
 ```
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire la preacquisizione di contemporaneamente per un utente all’interno di una sessione. Una volta preacquisiti per questi `mboxes` riceverai la seguente risposta:
+All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire la preacquisizione almeno una volta per un visitatore all’interno di una sessione. Dopo la preacquisizione di questi `mboxes`, riceverai la seguente risposta:
 
 ```
 {
@@ -120,9 +120,9 @@ All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire 
 }
 ```
 
-All’interno della risposta, visualizzerai `content` campo contenente l’esperienza da mostrare all’utente per una particolare `mbox`. Questa funzione è molto utile quando è memorizzata nella cache del server, in modo che quando un utente interagisce con l’app web o mobile all’interno di una sessione e visita un’ `mbox` in una pagina specifica dell&#39;applicazione, l&#39;esperienza può essere distribuita dalla cache anziché crearne un&#39;altra [!UICONTROL API di consegna di Adobe Target] chiamare. Tuttavia, quando un’esperienza viene consegnata all’utente da `mbox`, a `notification` sarà inviato tramite una chiamata API di consegna per consentire la registrazione delle impression. Questo perché la risposta di `prefetch` Le chiamate di sono memorizzate nella cache, il che significa che l&#39;utente non ha visualizzato le esperienze al momento della `prefetch` chiamata eseguita. Per saperne di più sulle `notification` processo, consulta [Notifiche](notifications.md).
+All’interno della risposta, puoi vedere `content` campo contenente l’esperienza da mostrare al visitatore per una particolare `mbox`. Questa funzione è molto utile quando è memorizzata nella cache del server, in modo che quando un visitatore interagisce con l’app web o mobile all’interno di una sessione e visita un’ `mbox` in una pagina specifica dell&#39;applicazione, l&#39;esperienza può essere distribuita dalla cache anziché crearne un&#39;altra [!UICONTROL API di consegna di Adobe Target] chiamare. Tuttavia, quando un’esperienza viene consegnata al visitatore da `mbox`, a `notification` viene inviato tramite una chiamata API di consegna per consentire la registrazione delle impression. Questo perché la risposta di `prefetch` Le chiamate di sono memorizzate nella cache, il che significa che il visitatore non ha visualizzato le esperienze al momento della `prefetch` chiamata eseguita. Per ulteriori informazioni su `notification` processo, vedi [Notifiche](notifications.md).
 
-## Preacquisire mbox con le metriche clickTrack quando si utilizza [!UICONTROL Analytics for Target] (A4T)
+## Preacquisizione di mbox con `clickTrack` metriche quando si utilizza [!UICONTROL Analytics for Target] (A4T)
 
 [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un’integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
 
