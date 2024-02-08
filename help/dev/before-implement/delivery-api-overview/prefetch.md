@@ -4,9 +4,9 @@ description: Come si utilizza la preacquisizione in [!UICONTROL API di consegna 
 keywords: api di consegna
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Quando si utilizza la preacquisizione, è importante avere familiarità con i se
 
 I client, come le app e i server per dispositivi mobili, possono preacquisire più mbox per un dato visitatore all’interno di una sessione e memorizzarle nella cache per evitare di effettuare più chiamate al [!UICONTROL API di consegna di Adobe Target].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire la preacquisizione almeno una volta per un visitatore all’interno di una sessione. Dopo la preacquisizione di questi `mboxes`, riceverai la seguente risposta:
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ All’interno della risposta, puoi vedere `content` campo contenente l’esperie
 
 Il seguente frammento di codice è una risposta di una preacquisizione di una mbox contenente `clickTrack` metriche da notificare [!DNL Analytics] che è stato fatto clic su un’offerta:
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ Il seguente frammento di codice è una risposta di una preacquisizione di una mb
 
 ## Preacquisire le viste
 
-Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l’API di consegna, il Compositore esperienza visivo ha creato attività AB e XT con modifiche su [Opinioni per l&#39;SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ora può essere preacquisito.
+Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l’API di consegna, è stato creato il Compositore esperienza visivo [[!UICONTROL Test A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} Attività (X)T con modifiche su [Opinioni per l&#39;SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ora può essere preacquisito.
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-La chiamata di esempio precedente preacquisirà tutte le visualizzazioni create tramite il Compositore esperienza visivo dell’SPA per le attività AB e XT da visualizzare per il web `channel`. Nella chiamata di vogliamo preacquisire tutte le visualizzazioni dalle attività AB o XT con cui un visitatore `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` che sta visitando `url`:`https://target.enablementadobe.com/react/demo/#/` si qualifica per.
+La chiamata di esempio precedente recupera tutte le visualizzazioni create tramite il Compositore esperienza visivo SPA per [!UICONTROL Test A/B] Attività e Targeting esperienza da visualizzare per il web `channel`. Nota che la chiamata prerecupera tutte le visualizzazioni dal [!UICONTROL Test A/B] o attività XT con cui un visitatore `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` che sta visitando `url`:`https://target.enablementadobe.com/react/demo/#/` si qualifica per.
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ La chiamata di esempio precedente preacquisirà tutte le visualizzazioni create 
 }
 ```
 
-In `content` campi della risposta, metadati di note come `type`, `selector`, `cssSelector`, e `content`, utilizzati per eseguire il rendering dell’esperienza per l’utente finale quando un utente visita la pagina. Tieni presente che `prefetched` il contenuto può essere memorizzato in cache e sottoposto a rendering per l’utente, quando necessario.
+In `content` campi della risposta, metadati di note come `type`, `selector`, `cssSelector`, e `content`, utilizzati per eseguire il rendering dell’esperienza al visitatore quando un utente visita la pagina. Tieni presente che `prefetched` il contenuto può essere memorizzato in cache e sottoposto a rendering per l’utente, quando necessario.
