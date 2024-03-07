@@ -4,10 +4,10 @@ description: Utilizza i collegamenti di anteprima mobile per eseguire un control
 title: Come si utilizzano i collegamenti di anteprima mobili in [!DNL Adobe Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -38,15 +38,15 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
 
 ## Generazione di un link di anteprima
 
-1. In [!DNL Target] interfaccia utente, fai clic su **[!UICONTROL Altre opzioni]** (puntini di sospensione verticali), quindi seleziona **[!UICONTROL Crea collegamento di anteprima mobile]**.
+1. In [!DNL Target] interfaccia utente, fai clic su **[!UICONTROL More Options]** (puntini di sospensione verticali), quindi seleziona **[!UICONTROL Create Mobile Preview Link]**.
 
    ![immagine alt](assets/mobile-preview-create.png)
 
-1. Seleziona le attività da visualizzare in anteprima, quindi fai clic su **[!UICONTROL Genera collegamento di anteprima mobile]**.
+1. Seleziona le attività da visualizzare in anteprima, quindi fai clic su **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >Puoi selezionare solo Basato su modulo [!UICONTROL Test A/B] e [!UICONTROL Targeting esperienza] (XT) attività.
+   >Puoi selezionare solo Basato su modulo [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) attività.
 
    ![immagine alt](assets/mobile-preview-select-activities.png)
 
@@ -56,7 +56,7 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
 
    ![immagine alt](assets/mobile-preview-enter-url-scheme.png)
 
-1. Fai clic su **[!UICONTROL Genera collegamento di anteprima mobile]**, quindi copia il collegamento.
+1. Clic **[!UICONTROL Generate Mobile Preview Link]**, quindi copia il collegamento.
 
    ![immagine alt](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ Apri il link in un browser mobile su un dispositivo in cui hai installato l&#39;
 
    |![collegamento diretto anteprima 1](assets/mobile-preview-open-deeplink.png)|![collegamento diretto anteprima 2](assets/mobile-preview-open-app.png)|
 
-   L’app apre e avvia il [!DNL Target] [!UICONTROL Modalità anteprima mobile].
+   L’app apre e avvia il [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. Seleziona la combinazione di esperienze da visualizzare, quindi fai clic su **[!UICONTROL Avvia esperienze]**.
+1. Seleziona la combinazione di esperienze da visualizzare, quindi fai clic su **[!UICONTROL Launch Experiences]**.
 
    |![anteprima mobile 1](assets/mobile-preview-experience-selection-1.png)|![anteprima mobile 2](assets/mobile-preview-experience-result-1-france.png)|![anteprima mobile 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![anteprima mobile 4](assets/mobile-preview-experience-selection-2.png)|![anteprima mobile 5](assets/mobile-preview-experience-result-2-aus.png)|![anteprima mobile 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitazioni 
 
-* La visualizzazione deve caricare nuovamente per il nuovo contenuto da visualizzare dopo aver fatto clic sul pulsante **[!UICONTROL Avvia esperienze]**. Il modo più semplice è quello di passare a una schermata diversa e poi tornare alla schermata in cui si prevede che il cambiamento avvenga.
+* La visualizzazione deve caricare nuovamente per il nuovo contenuto da visualizzare dopo il **[!UICONTROL Launch Experiences]** clic sul pulsante. Il modo più semplice è quello di passare a una schermata diversa e poi tornare alla schermata in cui si prevede che il cambiamento avvenga.
 * L&#39;anteprima mobile non è supportata per le versioni Android prima di API-19 (KitKat).
