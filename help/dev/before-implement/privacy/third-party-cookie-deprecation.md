@@ -3,7 +3,7 @@ keywords: Panoramica e riferimento, cookie, prime parti, terze parti, prime part
 description: Scopri l’impatto della rimozione dei cookie di terze parti su [!DNL Adobe Target] (at.js)
 title: L’impatto della rimozione dei cookie di terze parti su [!DNL Adobe Target] (at.js)
 feature: at.js
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: 705b94d60690a6e32185908c4bc53d8a3cee70bb
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
