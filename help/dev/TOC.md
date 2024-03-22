@@ -2,10 +2,10 @@
 user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: 49b6572c0d414ab304712691c97794bb0b1e3781
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 45%
+source-wordcount: '753'
+ht-degree: 44%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 45%
       + [Normative sulla privacy e la protezione dei dati](before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)
       + [Cookie di Target](before-implement/privacy/cookie-behavior.md)
       + [Eliminare il cookie di Target](before-implement/privacy/cookie-deleting.md)
+      + [Impatto della rimozione dei cookie di terze parti da Target (at.js)](/help/dev/before-implement/privacy/third_party_cookie_deprecation)
       + [Criteri per cookie SameSite di Google Chrome](before-implement/privacy/google-chrome-samesite-cookie-policies.md)
       + [Apple Intelligent Tracking Prevention (ITP) 2.x](before-implement/privacy/apple-itp-2x.md)
       + [Direttive Content Security Policy (CSP)](before-implement/privacy/content-security-policy.md)
