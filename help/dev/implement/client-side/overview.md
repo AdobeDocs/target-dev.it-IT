@@ -4,10 +4,10 @@ description: Scopri come implementare [!DNL Adobe Target] per web lato client tr
 title: Come posso implementare [!DNL Target] per web lato client
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2d2a593df661c7e6c6e6384af6042e8aa4575fdb
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 30%
+source-wordcount: '207'
+ht-degree: 28%
 
 ---
 
@@ -24,3 +24,6 @@ Per implementare [!DNL Target] sul lato client, è necessario utilizzare una del
 * [[!DNL Target] Libreria JavaScript at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
 
   La libreria JavaScript at.js migliora i tempi di caricamento delle pagine per le implementazioni web, migliora la sicurezza e fornisce migliori opzioni di implementazione per le applicazioni a pagina singola. Se scegli di migrare a at.js, consulta [Funzionamento di at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) e [[!DNL Adobe Target] Skill Builder: chat per sviluppatori, migrazione di Adobe Target mbox.js in at.js](https://seminars.adobeconnect.com/ptdo6mfo6qn6/?proto=true).
+
+
+Consulta [Confronto della libreria at.js con Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/adobe-target/web-sdk-atjs-comparison){target=_blank} per scoprire le differenze tra i due approcci di implementazione.
