@@ -1,6 +1,6 @@
 ---
-title: Utilizzare getAttributes in [!DNL Adobe Target] con .NET SDK
-description: Scopri come utilizzare getAttributes() per recuperare esperienze di sperimentazione e personalizzate da [!DNL Target] ed estrarre i valori degli attributi.
+title: Usa getAttributes in [!DNL Adobe Target] con .NET SDK
+description: Scopri come utilizzare getAttributes() per recuperare esperienze di sperimentazione e personalizzate da [!DNL Target]  ed estrarre valori di attributi.
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -26,18 +26,18 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 ## Parametri
 
-| Nome | Tipo | Obbligatorio | impostazione predefinita | Descrizione |
+| Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | No | nulle | Uguale [!DNL Target] richiesta utilizzata per [Ottieni offerte&#x200B;](get-offers.md) |
+| targetRequest | TargetDeliveryRequest | No | nulle | La stessa richiesta [!DNL Target] utilizzata per [Ottieni offerte&#x200B;](get-offers.md) |
 | mboxNames | stringa parametri[] | No | nulle | Matrice di parametri di nomi mbox |
 
 ## Risultato
 
-A `TargetAttributes` l&#39;oggetto viene restituito da `TargetClient.GetAttributes()` che dispone delle proprietà e dei metodi seguenti:
+Un oggetto `TargetAttributes` è stato restituito da `TargetClient.GetAttributes()` con le proprietà e i metodi seguenti:
 
 | Proprietà/Metodo | Tipo restituito | Descrizione |
 | --- | --- | --- |
-| Risposta | TargetDeliveryResponse | Restituisce l’oggetto di risposta normalmente restituito da [Ottieni offerte](get-offers.md) |
+| Risposta | TargetDeliveryResponse | Restituisce l&#39;oggetto di risposta normalmente restituito da [Get Offers](get-offers.md) |
 | ToDictionary | IReadOnlyDictionary | Restituisce un dizionario di dizionari con coppie chiave-valore raggruppate per nomi mbox |
 | ToMboxDictionary(mboxName) | IReadOnlyDictionary | Restituisce un dizionario con coppie di valori chiave per la mbox fornita |
 | GetBoolean(mboxName, key, defaultValue) | booleano | Restituisce il valore per il nome mbox e la chiave attributo specificati |

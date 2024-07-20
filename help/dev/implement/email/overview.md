@@ -1,19 +1,19 @@
 ---
 keywords: Implementazione, at.js non JavaScript, adbox, redirector, mbox
-description: Scopri come implementare [!DNL Adobe Target] in scenari non JavaScript, ad esempio l’utilizzo di un AdBox o di un redirector.
-title: Come posso implementare [!DNL Target] per e-mail?
+description: Scopri come implementare [!DNL Adobe Target] in scenari non JavaScript, ad esempio utilizzando un AdBox o un redirector.
+title: Come posso implementare  [!DNL Target]  per e-mail?
 feature: Implement Email
 exl-id: dda00b75-5d58-4405-ae58-75e7883a30ed
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 69%
+source-wordcount: '429'
+ht-degree: 63%
 
 ---
 
 # E-mail: implementare [!DNL Target]
 
-Informazioni sull’implementazione di [!DNL Target] in scenari non JavaScript, ad esempio l’utilizzo di un AdBox o di un redirector.
+Informazioni sull&#39;implementazione di [!DNL Target] in scenari non JavaScript, ad esempio l&#39;utilizzo di un AdBox o di un redirector.
 
 È possibile tenere traccia delle visite agli annunci e ad altri contenuti fuori sito. Puoi inoltre identificare lo stesso utente sul sito e all&#39;esterno di esso, per fornirgli un&#39;esperienza web coerente. Utilizzando un singolo URL, l’AdBox consente il test senza JavaScript o at.js.
 
@@ -28,11 +28,11 @@ Gli annunci AdBox e i Redirector possono essere utilizzati con qualsiasi tipo di
 
 ## Best practice per la sicurezza
 
-Tieni presente che con Redirector puoi essere esposto a un rischio di vulnerabilità di reindirizzamento aperto. Per evitare l’uso non autorizzato dei collegamenti redirector da parte di terze parti, ti consigliamo di utilizzare &quot;host autorizzati&quot; per inserire nell&#39;elenco Consentiti i domini URL di reindirizzamento predefiniti. [!DNL Target] utilizza gli host per inserire nell&#39;elenco Consentiti i domini a cui desideri consentire i reindirizzamenti. Per ulteriori informazioni, consulta [Creare elenchi Consentiti che specificano gli host autorizzati per l’invio di chiamate mbox a  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) in *Host*.
+Tieni presente che con Redirector puoi essere esposto a un rischio di vulnerabilità di reindirizzamento aperto. Per evitare l’uso non autorizzato dei collegamenti redirector da parte di terze parti, ti consigliamo di utilizzare &quot;host autorizzati&quot; per inserire nell&#39;elenco Consentiti i domini URL di reindirizzamento predefiniti. [!DNL Target] utilizza gli host per inserire nell&#39;elenco Consentiti i domini ai quali si desidera consentire i reindirizzamenti. Inserire nell&#39;elenco Consentiti Per ulteriori informazioni, vedere [Creare che specificano gli host autorizzati per l&#39;invio di chiamate mbox a  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) in *Host*.
 
 ## Vincoli
 
-* Non vi è timeout lato client come per le mbox standard. Se [!DNL Target] è completamente inattivo, i visitatori dell’annuncio non visualizzeranno il contenuto, nemmeno quello predefinito.
+* Non vi è timeout lato client come per le mbox standard. Se [!DNL Target] è completamente inattivo, i visitatori dell&#39;annuncio non vedranno il contenuto, nemmeno quello predefinito.
 * I cookie di terze parti vengono utilizzati per tenere traccia delle visite. Se i PCId sono diversi, per impostazione predefinita lil profilo di terza parte del visitatore viene unito a eventuali profili di prima parte esistente.
 * Per utilizzare i cookie di prima parte su AdBox, dovrai portare la sessione mBox nell&#39;URL. A tale scopo, rivolgiti al rappresentante del tuo account.
 * Per utilizzare i cookie di prima parte per tenere traccia dei clic sugli annunci, passa la sessione mbox nell&#39;URL. A tale scopo, rivolgiti al rappresentante del tuo account.

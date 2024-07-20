@@ -1,11 +1,11 @@
 ---
-title: Iscriviti agli eventi in [!DNL Adobe Target] SDK .NET
-description: Scopri come effettuare la sottoscrizione a vari eventi che si verificano all’interno di .NET SDK utilizzando [!UICONTROL OnDeviceDecisioningHandler] oggetto.
+title: Sottoscrivi eventi nell'SDK  [!DNL Adobe Target] .NET
+description: Scopri come effettuare la sottoscrizione a vari eventi che si verificano all'interno di .NET SDK utilizzando l'oggetto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 7578033f-3de5-4d13-9739-46ad1269ec5f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '120'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## Descrizione
 
-Quando [inizializzazione dell’SDK](initialize-sdk.md), un elemento facoltativo `OnDeviceDecisioningReady` il delegato può essere fornito sulla `TargetClientConfig` , che verrà richiamato quando l&#39;SDK sarà pronto per le chiamate al metodo sul dispositivo. Ci sono anche un paio di altri delegati disponibili per gestire il [!UICONTROL decisioning sul dispositivo] download di artefatti.
+Quando [viene inizializzato l&#39;SDK](initialize-sdk.md), è possibile fornire un delegato `OnDeviceDecisioningReady` facoltativo sull&#39;oggetto `TargetClientConfig`, che verrà richiamato quando l&#39;SDK sarà pronto per le chiamate di metodo su dispositivo. Sono inoltre disponibili altri due delegati per la gestione del download dell&#39;artefatto [!UICONTROL on-device decisioning].
 
 ## Eventi
 
@@ -22,9 +22,9 @@ Per alcuni eventi è possibile configurare i seguenti delegati:
 
 | Nome | Argomenti | Descrizione |
 | --- | --- | --- |
-| OnDeviceDecisioningReady | None (Nessuno) | Chiamata eseguita una sola volta la prima volta che il client è pronto per [!UICONTROL decisioning sul dispositivo] |
-| ArtefattoDownloadRiuscito | contenuto stringa del file di artefatto | Chiamato ogni volta che un [!UICONTROL decisioning sul dispositivo] artefatto scaricato |
-| ArtifactDownloadFailed | Eccezione | Chiamata eseguita ogni volta che si verifica un errore durante il download di un [!UICONTROL decisioning sul dispositivo] artefatto |
+| OnDeviceDecisioningReady | None (Nessuno) | Chiamata eseguita solo una volta la prima volta che il client è pronto per [!UICONTROL on-device decisioning] |
+| ArtefattoDownloadRiuscito | contenuto stringa del file di artefatto | Chiamata eseguita ogni volta che viene scaricato un artefatto [!UICONTROL on-device decisioning] |
+| ArtifactDownloadFailed | Eccezione | Chiamata eseguita ogni volta che non è possibile scaricare un artefatto [!UICONTROL on-device decisioning] |
 
 ## Esempio
 

@@ -1,12 +1,12 @@
 ---
 title: Notifiche API di consegna di Adobe Target
-description: Come si attivano le notifiche utilizzando [!UICONTROL API di consegna di Adobe Target]?
+description: Come si attivano le notifiche utilizzando [!UICONTROL Adobe Target Delivery API]?
 keywords: api di consegna
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 Le notifiche devono essere attivate quando una mbox o una visualizzazione preacquisite viene visitata o sottoposta a rendering all’utente finale.
 
-Affinché le notifiche vengano inviate per la mbox o la visualizzazione corretta, assicurati di tenere traccia delle corrispondenti `eventToken` per ogni mbox o vista. Notifiche con il corretto `eventToken` affinché i rapporti vengano rispecchiati correttamente, è necessario attivare le mbox o le visualizzazioni corrispondenti.
+Affinché le notifiche vengano inviate per la mbox o la visualizzazione corretta, assicurati di tenere traccia di `eventToken` corrispondente per ogni mbox o visualizzazione. Le notifiche con `eventToken` corretto per le mbox o le visualizzazioni corrispondenti devono essere attivate affinché il reporting venga rispecchiato correttamente.
 
 ## Notifiche per mbox preacquisite
 
-Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determinare se la metrica da tracciare è `click` o `display` per ogni mbox in modo che il `type` della notifica possa essere riflessa correttamente. Inoltre, passa un `id` per ogni notifica, in modo da poter determinare se una notifica è stata inviata correttamente tramite il[!UICONTROL  API di consegna di Adobe Target]. Il `timestamp` è importante anche per essere inoltrato a [!DNL Target] per indicare quando `click` o `display` si è verificato per una data mbox a scopo di reporting.
+Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o un `display` per ogni mbox in modo che la `type` della notifica possa essere riflessa correttamente. Inoltre, passa un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite [!UICONTROL  Adobe Target Delivery API]. `timestamp` è inoltre importante da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una data mbox a scopo di reporting.
 
 ```
 curl -X POST \
@@ -81,7 +81,7 @@ curl -X POST \
   }'
 ```
 
-La chiamata di esempio precedente si tradurrà in una risposta che indica `notifications` richiesta elaborata correttamente.
+La chiamata di esempio precedente darà luogo a una risposta che indica che la richiesta `notifications` è stata elaborata correttamente.
 
 ```
 {
@@ -106,11 +106,11 @@ La chiamata di esempio precedente si tradurrà in una risposta che indica `notif
 }
 ```
 
-Se tutte le `notifications` inviato a [!DNL Target] vengono elaborati correttamente, verranno visualizzati nel `notifications` nella risposta. Tuttavia, se un `notifications` `id` manca, quel particolare `notification` non è passato. In questo scenario, è possibile implementare una logica di nuovo tentativo fino a quando non viene `notification` risposta recuperata. Assicurati che nella logica di esecuzione di un nuovo tentativo sia specificato un timeout in modo che la chiamata API non si blocchi e non provochi ritardi nelle prestazioni.
+Se tutti i `notifications` inviati a [!DNL Target] sono elaborati correttamente, verranno visualizzati nell&#39;array `notifications` nella risposta. Tuttavia, se manca un `notifications` `id`, quel particolare `notification` non è passato attraverso. In questo scenario, è possibile implementare una logica di nuovo tentativo fino al recupero di una risposta `notification` completata. Assicurati che nella logica di esecuzione di un nuovo tentativo sia specificato un timeout in modo che la chiamata API non si blocchi e non provochi ritardi nelle prestazioni.
 
 ## Notifiche per le visualizzazioni preacquisite
 
-Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determinare se la metrica da tracciare è `click` o `display` per ogni mbox in modo che il tipo di notifica possa essere riflesso correttamente. Inoltre, passa un `id` per ogni notifica, in modo da poter determinare se una notifica è stata inviata correttamente tramite il [!UICONTROL API di consegna di Adobe Target]. Anche la marca temporale è importante per essere inoltrata a [!DNL Target] per indicare quando `click` o `display` si è verificato per una determinata visualizzazione a scopo di reporting.
+Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o `display` per ogni mbox in modo che il tipo di notifica possa essere riflesso correttamente. Inoltre, passare un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite [!UICONTROL Adobe Target Delivery API]. La marca temporale è importante anche da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una determinata visualizzazione a scopo di reporting.
 
 ```
 curl -X POST \
@@ -161,7 +161,7 @@ curl -X POST \
 }'
 ```
 
-La chiamata di esempio precedente si tradurrà in una risposta che indica `notifications` richiesta elaborata correttamente.
+La chiamata di esempio precedente darà luogo a una risposta che indica che la richiesta `notifications` è stata elaborata correttamente.
 
 ```
 {
@@ -186,4 +186,4 @@ La chiamata di esempio precedente si tradurrà in una risposta che indica `notif
 }
 ```
 
-Se tutte le `notifications` inviato a  [!DNL Target] vengono elaborati correttamente, verranno visualizzati nel `notifications` nella risposta. Tuttavia, se un `notifications` `id` manca, quella particolare notifica non è stata eseguita. In questo scenario, è possibile implementare una logica di nuovo tentativo fino a quando non viene recuperata una risposta di notifica corretta. Assicurati che nella logica di esecuzione di un nuovo tentativo sia specificato un timeout in modo che la chiamata API non si blocchi e non provochi ritardi nelle prestazioni.
+Se tutti i `notifications` inviati a [!DNL Target] sono elaborati correttamente, verranno visualizzati nell&#39;array `notifications` nella risposta. Tuttavia, se manca un `notifications` `id`, quella particolare notifica non è stata eseguita. In questo scenario, è possibile implementare una logica di nuovo tentativo fino a quando non viene recuperata una risposta di notifica corretta. Assicurati che nella logica di esecuzione di un nuovo tentativo sia specificato un timeout in modo che la chiamata API non si blocchi e non provochi ritardi nelle prestazioni.

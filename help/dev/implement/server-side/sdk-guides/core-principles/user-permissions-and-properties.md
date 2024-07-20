@@ -1,18 +1,18 @@
 ---
 title: Autorizzazioni utente e proprietà
-description: Il [!DNL Target] Gli SDK includono il supporto per le autorizzazioni utente e le proprietà.
+description: Gli SDK di  [!DNL Target]  includono il supporto per le autorizzazioni utente e le proprietà.
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 9%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 # Autorizzazioni utente e proprietà
 
-Il [!DNL Target] Gli SDK includono il supporto per le autorizzazioni utente e le proprietà. Se non conosci come [!DNL Adobe Target] gestisce le autorizzazioni enterprise tramite le aree di lavoro e le proprietà. per ulteriori informazioni, consulta [Autorizzazioni per gli utenti Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=it).
+Gli SDK [!DNL Target] includono il supporto per le autorizzazioni utente e le proprietà. Se non sai in che modo [!DNL Adobe Target] gestisce le autorizzazioni Enterprise tramite aree di lavoro e proprietà, puoi trovare ulteriori informazioni in [Autorizzazioni per gli utenti Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=it).
 
 Il client può utilizzare un token di proprietà in uno dei due modi seguenti.
 
@@ -50,7 +50,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Token di proprietà accidentale nella chiamata getOffers
 
-È inoltre possibile specificare un token di proprietà in un singolo `getOffers` chiamare. A questo scopo, aggiungi un oggetto proprietà alla richiesta. Un token di proprietà specificato in questo modo ha la precedenza su un set nella configurazione.
+È inoltre possibile specificare un token di proprietà in una singola chiamata `getOffers`. A questo scopo, aggiungi un oggetto proprietà alla richiesta. Un token di proprietà specificato in questo modo ha la precedenza su un set nella configurazione.
 
 >[!BEGINTABS]
 

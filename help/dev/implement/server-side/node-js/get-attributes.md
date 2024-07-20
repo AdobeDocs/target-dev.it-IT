@@ -1,11 +1,11 @@
 ---
-title: Come utilizzare le richieste asincrone in [!DNL Adobe Target] SDK di Node.js
-description: Scopri come [!DNL Target] L’SDK di Node.js supporta le richieste asincrone, che possono ridurre a zero il tempo di destinazione effettivo.
+title: Come utilizzare le richieste asincrone nell'SDK di  [!DNL Adobe Target] Node.js
+description: Scopri come l'SDK di  [!DNL Target] Node.js supporta le richieste asincrone, riducendo a zero il tempo di destinazione effettivo.
 feature: APIs/SDKs
 exl-id: aa06f3ca-7d2a-4334-8092-730a8705dfb0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '112'
 ht-degree: 16%
 
 ---
@@ -26,20 +26,20 @@ TargetClient.getAttributes(mboxNames: Array, options: Object): Promise
 
 ## Parametri
 
-| Nome | Tipo | Obbligatorio | impostazione predefinita |
+| Nome | Tipo | Obbligatorio | Predefinito |
 | --- | --- | --- |--- |
 | mboxNames | Array | Sì | None (Nessuno) |
 | options | Oggetto | No | None (Nessuno) |
 
 ## Promessa
 
-Il `Promise` restituito da `TargetClient.getAttributes()` risolve un oggetto con i seguenti metodi:
+`Promise` restituito da `TargetClient.getAttributes()` risolve un oggetto con i seguenti metodi:
 
 | Metodo | Tipo restituito | Descrizione |
 | --- | --- | --- |
 | getValue(mboxName, key) | Any | Restituisce il valore per il nome mbox e la chiave attributo specificati |
 | asObject(mboxName) | Oggetto | Restituisce un oggetto json semplice con coppie chiave-valore |
-| getResponse() | [Risposta getOffers](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | Restituisce l’oggetto di risposta normalmente restituito da `getOffers` |
+| getResponse() | [Risposta getOffers](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | Restituisce l&#39;oggetto di risposta normalmente restituito da `getOffers` |
 
 ## Esempio
 

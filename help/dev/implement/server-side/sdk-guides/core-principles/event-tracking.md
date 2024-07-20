@@ -1,30 +1,30 @@
 ---
 title: Tracciamento degli eventi
-description: Utilizzare [!DNL Adobe Target]funzionalità di tracciamento degli eventi di per misurare in modo efficace le metriche più importanti per la tua attività e i casi d’uso.
+description: Utilizza le funzionalità di tracciamento degli eventi di  [!DNL Adobe Target] per misurare in modo efficace le metriche più importanti per la tua azienda e i casi d'uso.
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
 # Tracciamento degli eventi
 
-Utilizzare [!DNL Adobe Target]funzionalità di tracciamento degli eventi di per misurare in modo efficace le metriche più importanti per la tua attività e i casi d’uso. Il tracciamento degli eventi è fondamentale per misurare il successo delle attività di sperimentazione o personalizzazione, in quanto ti dicono quale variante o esperienza vince o perde. Comprendere questo ti aiuterà a capire in che modo gli utenti interagiscono con il tuo prodotto o si evolvono in un panorama in continua evoluzione.
+Utilizza le funzionalità di tracciamento degli eventi di [!DNL Adobe Target] per misurare in modo efficace le metriche più importanti per la tua azienda e i casi d&#39;uso. Il tracciamento degli eventi è fondamentale per misurare il successo delle attività di sperimentazione o personalizzazione, in quanto ti dicono quale variante o esperienza vince o perde. Comprendere questo ti aiuterà a capire in che modo gli utenti interagiscono con il tuo prodotto o si evolvono in un panorama in continua evoluzione.
 
-Per tenere traccia degli eventi [!DNL Adobe Target]degli SDK di, segui questo processo in due fasi:
+Per tenere traccia degli eventi tramite gli SDK di [!DNL Adobe Target], segui questo processo in due fasi:
 
-1. Installa l’SDK e distribuisci il codice che invia gli eventi a [!DNL Adobe Target].
+1. Installa l&#39;SDK e distribuisci il codice che invia gli eventi a [!DNL Adobe Target].
 
-1. Creare e attivare un’ [!DNL Adobe Target] attività con una metrica di obiettivo nell’interfaccia utente.
+1. Crea e attiva un&#39;attività [!DNL Adobe Target] con una metrica di obiettivo nell&#39;interfaccia utente.
 
-   ![immagine alt](./assets/report-settings.png)
+   ![Alt immagine](./assets/report-settings.png)
 
 ## Metriche ed eventi per obiettivo
 
-La tabella seguente definisce la combinazione di obiettivi ed eventi che è possibile definire e misurare con un [!DNL Target] attività tramite [!DNL Target]Funzionalità di reporting di:
+La tabella seguente definisce la combinazione di obiettivi ed eventi che è possibile definire e misurare con un&#39;attività [!DNL Target] utilizzando le funzionalità di reporting di [!DNL Target]:
 
 | Obiettivo principale | Evento |
 | --- | --- |
@@ -34,7 +34,7 @@ La tabella seguente definisce la combinazione di obiettivi ed eventi che è poss
 
 ## Come vengono attivate le impression
 
-Gli SDK di Target chiamano il sottostante [API di consegna](/help/dev/implement/delivery-api/overview.md). Quando un oggetto di esecuzione con i parametri richiesti si trova all’interno della richiesta stessa, l’impression viene incrementata automaticamente per le attività qualificate. I metodi SDK che incrementano automaticamente un’impression sono:
+Gli SDK di Target chiamano l&#39;[API di consegna](/help/dev/implement/delivery-api/overview.md) sottostante. Quando un oggetto di esecuzione con i parametri richiesti si trova all’interno della richiesta stessa, l’impression viene incrementata automaticamente per le attività qualificate. I metodi SDK che incrementano automaticamente un’impression sono:
 
 * getOffers()
 * getAttributes()
@@ -43,7 +43,7 @@ Gli SDK di Target chiamano il sottostante [API di consegna](/help/dev/implement/
 >
 >Quando un oggetto di preacquisizione viene passato all’interno della richiesta, l’impression non viene incrementata automaticamente per le attività con mbox all’interno dell’oggetto di preacquisizione.
 
-Il `sendNotifications` può essere utilizzato per inviare manualmente eventi a [!DNL Adobe Target] e attiva un’impression.
+Il metodo `sendNotifications` può essere utilizzato per inviare manualmente eventi a [!DNL Adobe Target] e attivare un&#39;impression.
 
 >[!BEGINTABS]
 
@@ -67,13 +67,13 @@ I seguenti esempi di codice funzionano per tutti i tipi di metriche obiettivo, c
 
 ### Visualizzazione di una pagina o di una mbox
 
-Questo esempio ottiene prima un’offerta mbox di destinazione utilizzando `getOffers`. Quindi crea una richiesta con una notifica basata su tale offerta mbox.
+Questo esempio ottiene prima un&#39;offerta mbox di destinazione utilizzando `getOffers`. Quindi crea una richiesta con una notifica basata su tale offerta mbox.
 
-La notifica `type` proprietà impostata su `display`.
+La proprietà `type` della notifica è impostata su `display`.
 
 Per indicare che una pagina è stata visualizzata, è importante specificare l’oggetto indirizzo nel payload di notifica. Assicurati di impostare l’URL di conseguenza.
 
-Per le mbox, è necessario impostare la proprietà mbox sull’oggetto di notifica e fornire una matrice di token basata sulla matrice delle opzioni in `targetResult`.
+Per le mbox, è necessario impostare la proprietà mbox sull&#39;oggetto di notifica e fornire una matrice di token basata sulla matrice delle opzioni in `targetResult`.
 
 >[!BEGINTABS]
 
@@ -184,11 +184,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Clic su una Mbox
 
-Questo esempio ottiene prima un’offerta mbox di destinazione utilizzando `getOffers`. Quindi crea una richiesta con una notifica basata su tale offerta mbox.
+Questo esempio ottiene prima un&#39;offerta mbox di destinazione utilizzando `getOffers`. Quindi crea una richiesta con una notifica basata su tale offerta mbox.
 
-La notifica `type` proprietà impostata su `click`.
+La proprietà `type` della notifica è impostata su `click`.
 
-È necessario impostare `mbox` sull&#39;oggetto di notifica e fornire un array di token basato sull&#39;array di metriche in `targetResult`.
+È necessario impostare la proprietà `mbox` sull&#39;oggetto di notifica e fornire un array di token basato sull&#39;array delle metriche in `targetResult`.
 
 >[!BEGINTABS]
 
@@ -304,11 +304,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Visualizzazione visualizzata
 
-In questo esempio vengono innanzitutto ottenute le visualizzazioni di destinazione tramite `getOffers`. Quindi, crea una richiesta con una notifica basata su tali visualizzazioni.
+In questo esempio vengono prima ottenute le visualizzazioni di destinazione utilizzando `getOffers`. Quindi, crea una richiesta con una notifica basata su tali visualizzazioni.
 
-La notifica `type` proprietà impostata su `display`.
+La proprietà `type` della notifica è impostata su `display`.
 
-Per le viste, è necessario impostare `view` sull&#39;oggetto di notifica e fornire un array di token basato sull&#39;array di opzioni in targetResult.
+Per le visualizzazioni, è necessario impostare la proprietà `view` sull&#39;oggetto di notifica e fornire una matrice di token basata sulla matrice delle opzioni in targetResult.
 
 >[!BEGINTABS]
 
@@ -414,11 +414,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Clic su una visualizzazione
 
-In questo esempio vengono innanzitutto ottenute le visualizzazioni di destinazione tramite `getOffers`. Quindi crea una richiesta con le notifiche basate su tali visualizzazioni.
+In questo esempio vengono prima ottenute le visualizzazioni di destinazione utilizzando `getOffers`. Quindi crea una richiesta con le notifiche basate su tali visualizzazioni.
 
-La notifica `type` proprietà impostata su `click`.
+La proprietà `type` della notifica è impostata su `click`.
 
-È necessario impostare `view` sull&#39;oggetto di notifica e fornire un array di token basato sull&#39;array delle metriche in targetResult.
+È necessario impostare la proprietà `view` sull&#39;oggetto di notifica e fornire una matrice di token basata sulla matrice delle metriche in targetResult.
 
 >[!BEGINTABS]
 

@@ -1,19 +1,19 @@
 ---
 keywords: implementare, implementare, configurare, configurare, provider di dati
-description: Inserire dati in [!DNL Target] utilizzo di provider di dati.
-title: Come posso inserire dati in [!DNL Target] Utilizzare i provider di dati?
+description: Ottieni dati in [!DNL Target] utilizzando i provider di dati.
+title: Come posso inserire dati in [!DNL Target] utilizzando i provider di dati?
 feature: Implementation
 exl-id: 9971bd96-f736-4965-afe2-b4901c12d006
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 53%
+source-wordcount: '287'
+ht-degree: 55%
 
 ---
 
 # Fornitori di dati
 
-I fornitori di dati sono una funzionalità che ti consente di trasmettere facilmente dati da terze parti a [!DNL Adobe Target].
+I provider di dati sono una funzionalità che consente di passare facilmente i dati da terze parti a [!DNL Adobe Target].
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ L&#39;utilizzo di questo approccio semplifica la gestione della visualizzazione 
 
 ## Avvertenze
 
-Se i provider di dati sono stati aggiunti a `window.targetGlobalSettings.dataProviders` sono asincroni, vengono eseguiti in parallelo. La richiesta API dei visitatori viene eseguita in parallelo con le funzioni aggiunte a `window.targetGlobalSettings.dataProviders` per consentire un tempo di attesa minimo.
+Se i provider di dati aggiunti a `window.targetGlobalSettings.dataProviders` sono asincroni, vengono eseguiti in parallelo. La richiesta API dei visitatori viene eseguita in parallelo con le funzioni aggiunte a `window.targetGlobalSettings.dataProviders` per consentire un tempo minimo di attesa.
 
 at.js non tenta di memorizzare i dati nella cache. Se il fornitore di dati recupera i dati una sola volta, deve assicurarsi che i dati siano memorizzati nella cache e, quando viene invocata la funzione di fornitore di dati, deve servire i dati della cache per la seconda invocazione.
 

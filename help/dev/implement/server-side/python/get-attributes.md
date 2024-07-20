@@ -1,12 +1,12 @@
 ---
-title: Come utilizzare le richieste asincrone in [!DNL Adobe Target] SDK Python
-description: Scopri come [!DNL Target] L’SDK di Python supporta le richieste asincrone, che possono ridurre a zero il tempo di destinazione effettivo.
+title: Come utilizzare le richieste asincrone nell'SDK di  [!DNL Adobe Target] Python
+description: Scopri come l'SDK di Python  [!DNL Target]  supporta le richieste asincrone, riducendo a zero il tempo di destinazione effettivo.
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 13%
+source-wordcount: '123'
+ht-degree: 14%
 
 ---
 
@@ -27,20 +27,20 @@ target_client_instance.get_attributes(mbox_names, options)
 
 ## Parametri
 
-| Nome | Tipo | Obbligatorio | impostazione predefinita | Descrizione |
+| Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| mbox_nomi | list[str] | Sì | None (Nessuno) | Elenco di nomi mbox |
+| mbox_names | list[str] | Sì | None (Nessuno) | Elenco di nomi mbox |
 | options | dict | No | None (Nessuno) | Le stesse opzioni utilizzate per [Ottieni offerte](get-offers.md) |
 
 ## AttributesProvider
 
-Il `AttributesProvider` restituito da `target_client.get_attributes()` dispone dei seguenti metodi:
+`AttributesProvider` restituito da `target_client.get_attributes()` ha i seguenti metodi:
 
 | Metodo | Tipo restituito | Descrizione |
 | --- | --- | --- |
 | get_value(mbox_name, chiave) | qualsiasi | Restituisce il valore per il nome mbox e la chiave attributo specificati |
 | as_object(mbox_name) | dict | Restituisce un oggetto json semplice con coppie chiave-valore |
-| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Restituisce l’oggetto di risposta normalmente restituito da `get_offers` |
+| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Restituisce l&#39;oggetto di risposta normalmente restituito da `get_offers` |
 
 ## Esempio
 

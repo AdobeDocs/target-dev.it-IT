@@ -1,19 +1,19 @@
 ---
-keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, global settings, global settings, at.js, funzioni, funzione, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, globalMboxAutoCreate, visitor ApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiesDomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optoutEnabled, out, opt out, selectorsPollingTimeout, dataProviders, Personalizzazione ibrida, deviceIdLifetime
-description: Utilizza il [!UICONTROL targetGlobalSettings()] funzione per [!DNL Adobe Target] Libreria JavaScript at.js per ignorare le impostazioni invece di utilizzare [!DNL Target] API UI o REST.
-title: Come si utilizza [!UICONTROL targetGlobalSettings()] Funzione?
+keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, global settings, global settings, at.js, funzioni, funzione, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, globalMboxAutoCreate, visitor ApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiesDomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optoutEnabled, out, opt out, selectorsPollingTimeout, dataProviders, Personalization ibrido, deviceIdLifetime
+description: Utilizza la funzione [!UICONTROL targetGlobalSettings()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per ignorare le impostazioni invece di utilizzare le API REST o l'interfaccia utente di  [!DNL Target] .
+title: Come si utilizza la funzione [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2565'
 ht-degree: 58%
 
 ---
 
 # [!UICONTROL targetGlobalSettings()]
 
-Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL targetGlobalSettings()]`, anziché configurarli in [!DNL Target] Interfaccia utente o utilizzando le API REST.
+È possibile modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL targetGlobalSettings()]`, anziché configurarle nell&#39;interfaccia utente di [!DNL Target] o utilizzando le API REST.
 
 ## Impostazioni
 
@@ -23,19 +23,19 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: String
 * **Valore predefinito**: null
-* **Descrizione**: parametro facoltativo utilizzato per inviare [!DNL Adobe Experience Platform] ID sandbox da condividere [!DNL Adobe Experience Platform] destinazioni create nella sandbox non predefinita con [!DNL Target]. Se `aepSandboxId` non è nullo, `aepSandboxName` devono essere fornite.
+* **Descrizione**: parametro facoltativo utilizzato per inviare l&#39;ID sandbox [!DNL Adobe Experience Platform] alla condivisione di [!DNL Adobe Experience Platform] destinazioni create nella sandbox non predefinita con [!DNL Target]. Se `aepSandboxId` non è Null, è necessario specificare anche `aepSandboxName`.
 
 ### aepSandboxName
 
 * **Tipo**: String
 * **Valore predefinito**: null
-* **Descrizione**: parametro facoltativo utilizzato per inviare [!DNL Adobe Experience Platform] nome sandbox da condividere [!DNL Adobe Experience Platform] destinazioni create nella sandbox non predefinita con [!DNL Target]. Se `aepSandboxName` non è nullo, `aepSandboxId` devono essere fornite.
+* **Descrizione**: parametro facoltativo utilizzato per inviare il nome della sandbox [!DNL Adobe Experience Platform] alla condivisione di [!DNL Adobe Experience Platform] destinazioni create nella sandbox non predefinita con [!DNL Target]. Se `aepSandboxName` non è Null, è necessario specificare anche `aepSandboxId`.
 
 ### artifactLocation
 
 * **Tipo**: String
-* **Valore predefinito**: nessuna
-* **Descrizione**: URL completo del [artefatto della regola di decisioning sul dispositivo](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
+* **Valore predefinito**: nessuno
+* **Descrizione**: URL completo dell&#39;artefatto [della regola di decisioning sul dispositivo](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
 
 ### bodyHiddenStyle
 
@@ -67,7 +67,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: String
 * **Valore predefinito**: valore impostato tramite l’interfaccia utente.
-* **Descrizione**: indica se il tracciamento tra domini diversi è abilitato o meno. I valori consentiti dipendono dalla versione at.js in uso. Per at.js v1.*x*, specifica se le funzionalità tra domini sono `disabled` I browser impostano i cookie solo nel tuo dominio (cookie di prime parti), `x only` (i browser impostano i cookie in [!DNL Target]solo dominio di ), o entrambi, selezionando `enabled` (i browser impostano sia cookie di prima parte che di terze parti). Per at.js v2.10 e versioni successive, specifica se le funzionalità tra domini diversi sono `enabled` (i browser impostano sia cookie di prima parte che di terze parti) oppure `disabled` (i browser non impostano cookie di terze parti).
+* **Descrizione**: indica se il tracciamento tra domini diversi è abilitato o meno. I valori consentiti dipendono dalla versione at.js in uso. Per at.js v1.*x*, specifica se le funzionalità tra domini diversi sono `disabled` (i browser impostano i cookie solo nel tuo dominio (cookie di prime parti), `x only` (i browser impostano i cookie solo nel dominio di [!DNL Target]) o entrambi, selezionando `enabled` (i browser impostano sia i cookie di prima parte che quelli di terze parti). Per at.js v2.10 e versioni successive, specifica se le funzionalità tra domini diversi sono `enabled` (i browser impostano sia cookie di prima parte che di terze parti) o `disabled` (i browser non impostano cookie di terze parti).
 
 ### cspScriptNonce
 
@@ -96,17 +96,17 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
   **Metodi di decisione**
 
-  Con decisioning sul dispositivo, [!DNL Target] introduce una nuova impostazione denominata Metodo di decisione che determina il modo in cui at.js distribuisce le esperienze. `decisioningMethod` ha tre valori: solo lato server, solo su dispositivo e ibrido. Quando `decisioningMethod` viene impostato in `targetGlobalSettings()`, agisce come metodo di decisione predefinito per tutte le decisioni di [!DNL Target].
+  Con le decisioni sul dispositivo, [!DNL Target] introduce una nuova impostazione denominata Metodo di decisione che determina il modo in cui at.js distribuisce le esperienze. `decisioningMethod` ha tre valori: solo lato server, solo su dispositivo e ibrido. Quando `decisioningMethod` viene impostato in `targetGlobalSettings()`, agisce come metodo di decisione predefinito per tutte le decisioni di [!DNL Target].
 
   **Solo lato server**:
 
   Solo lato server è il metodo decisionale predefinito impostato automaticamente quando at.js 2.5+ viene implementato e distribuito sulle proprietà web.
 
-  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sul [!DNL Target] rete edge, che comporta una chiamata del server di blocco. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare [!DNL Target]Le funzionalità di apprendimento automatico di includono [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP), e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) attività.
+  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html).
 
-  Inoltre, migliorare le esperienze personalizzate utilizzando [!DNL Target]Il profilo utente di, che viene mantenuto tra sessioni e canali, può fornire risultati potenti per la tua azienda.
+  Inoltre, migliorare le tue esperienze personalizzate utilizzando il profilo utente di [!DNL Target], che viene mantenuto tra sessioni e canali diversi, può fornire risultati potenti per la tua azienda.
 
-  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi tramite i segmenti Audienci Manager e Adobe Analytics.
+  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi tramite i segmenti Audience Manager e Adobe Analytics.
 
   **Solo su dispositivo**:
 
@@ -120,11 +120,11 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
   **Ibrido**:
 
-  Ibrido è il metodo decisionale che deve essere impostato in at.js 2.5+ quando sia le decisioni su dispositivo che le attività che richiedono una chiamata alla rete [!DNL Adobe Target] È necessario eseguire la rete Edge.
+  Ibrido è il metodo decisionale che deve essere impostato in at.js 2.5+ quando è necessario eseguire sia le decisioni su dispositivo che le attività che richiedono una chiamata alla rete Edge [!DNL Adobe Target].
 
-  Quando gestisci sia le attività di decisione su dispositivo che quelle lato server, può essere un po’ complicato e noioso pensare a come distribuire ed eseguire il provisioning di [!DNL Target] sulle pagine. Con il metodo decisionale ibrido, [!DNL Target] sa quando deve effettuare una chiamata al server al [!DNL Adobe Target] Rete Edge per le attività che richiedono l’esecuzione lato server e quando eseguire solo le decisioni su dispositivo.
+  Quando gestisci sia le attività di decisione su dispositivo che quelle lato server, può essere un po’ complicato e noioso pensare a come distribuire ed eseguire il provisioning di [!DNL Target] sulle pagine. Con il metodo decisionale ibrido, [!DNL Target] sa quando deve effettuare una chiamata al server alla rete Edge [!DNL Adobe Target] per le attività che richiedono l&#39;esecuzione lato server e anche quando eseguire solo le decisioni su dispositivo.
 
-  L’artefatto delle regole JSON include i metadati che informano at.js se una mbox ha un’attività lato server in esecuzione o un’attività decisionale su dispositivo. Questo metodo decisionale assicura che le attività che intendi consegnare rapidamente vengano eseguite tramite le decisioni su dispositivo, e che quelle che richiedono una personalizzazione basata su ML più potente vengano eseguite tramite [!DNL Adobe Target] Rete Edge.
+  L’artefatto delle regole JSON include i metadati che informano at.js se una mbox ha un’attività lato server in esecuzione o un’attività decisionale su dispositivo. Questo metodo decisionale assicura che le attività che intendi consegnare rapidamente vengano eseguite tramite le decisioni su dispositivo e che quelle che richiedono una personalizzazione basata su ML più potente vengano eseguite tramite la rete Edge [!DNL Adobe Target].
 
 ### defaultContentHiddenStyle
 
@@ -172,13 +172,13 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: booleano
 * **Valore predefinito**: false
-* **Descrizione**: [!DNL Target] fornisce supporto per la funzionalità opt-in tramite Adobe Experience Platform per supportare la strategia di gestione dei consensi. La funzionalità opt-in consente ai clienti di controllare come e quando viene attivato il tag di [!DNL Target]. È inoltre disponibile un&#39;opzione tramite Adobe Experience Platform per pre-approvare [!DNL Target] tag. Per abilitare la capacità di utilizzare la funzione di opt-in nella libreria at.js di [!DNL Target], aggiungi l’impostazione `optinEnabled=true`. In Adobe Experience Platform, è necessario selezionare &quot;abilita&quot; dall’elenco a discesa Opt-in RGPD nella visualizzazione di installazione dell’estensione. Per ulteriori informazioni, consulta la [documentazione di Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md). Per ulteriori informazioni su questa impostazione in relazione alle normative sulla privacy e la protezione dei dati, tra cui il Regolamento generale sulla protezione dei dati (RGPD) dell’Unione Europea e il California Consumer Privacy Act (CCPA), consulta [Normative sulla privacy e la protezione dei dati](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md).
+* **Descrizione**: [!DNL Target] fornisce supporto per la funzionalità opt-in tramite Adobe Experience Platform per supportare la strategia di gestione dei consensi. La funzionalità opt-in consente ai clienti di controllare come e quando viene attivato il tag di [!DNL Target]. È inoltre disponibile un&#39;opzione tramite Adobe Experience Platform per pre-approvare il tag [!DNL Target]. Per abilitare la capacità di utilizzare la funzione di opt-in nella libreria at.js di [!DNL Target], aggiungi l’impostazione `optinEnabled=true`. In Adobe Experience Platform, è necessario selezionare &quot;abilita&quot; dall’elenco a discesa Opt-in RGPD nella visualizzazione di installazione dell’estensione. Per ulteriori informazioni, consulta la [documentazione di Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md). Per ulteriori informazioni su questa impostazione in relazione alle normative sulla privacy e la protezione dei dati, tra cui il Regolamento generale sulla protezione dei dati (RGPD) dell&#39;Unione Europea e il California Consumer Privacy Act (CCPA), consulta [Normative sulla privacy e la protezione dei dati](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md).
 
 ### optoutEnabled
 
 * **Tipo**: booleano
 * **Valore predefinito**: false
-* **Descrizione**: indica se [!DNL Target] deve chiamare l’API Visitor; `isOptedOut()` funzione. Ciò fa parte dell&#39;abilitazione di Device Graph.
+* **Descrizione**: indica se [!DNL Target] deve chiamare la funzione `isOptedOut()` dell&#39;API visitatore. Ciò fa parte dell&#39;abilitazione di Device Graph.
 
 ### overrideMboxEdgeServer
 
@@ -204,7 +204,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: numero
 * **Valore predefinito**: 300000 (cinque minuti in millisecondi)
-* **Descrizione**: intervallo che at.js recupera una nuova versione di un artefatto decisioning sul dispositivo e aggiorna la cache. 300000 valore minimo consentito per `pollingInterval`.
+* **Descrizione**: intervallo che at.js recupera una nuova versione di un artefatto di decisioning sul dispositivo e aggiorna la cache. 300000 valore minimo consentito per `pollingInterval`.
 
 ### secureOnly
 
@@ -226,7 +226,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: String
 * **Valore predefinito**: valore impostato tramite l’interfaccia utente.
-* **Descrizione**: rappresenta [!DNL Target] server Edge.
+* **Descrizione**: rappresenta il server Edge [!DNL Target].
 
 ### serverState
 
@@ -238,7 +238,7 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: booleano
 * **Valore predefinito**: true
-* **Descrizione**: quando abilitato, Adobe raccoglie dati di telemetria relativi all’utilizzo delle funzioni SDK e alle prestazioni. I dati personali non vengono raccolti.
+* **Descrizione**: se abilitata, Adobe raccoglie dati di telemetria relativi all&#39;utilizzo delle funzionalità SDK e alle prestazioni. I dati personali non vengono raccolti.
 
 ### timeout
 
@@ -250,13 +250,13 @@ Puoi modificare le impostazioni nella libreria at.js utilizzando `[!UICONTROL ta
 
 * **Tipo**: booleano
 * **Valore predefinito**: true
-* **Descrizione**: quando questa opzione è abilitata, le visualizzazioni vengono recuperate automaticamente al caricamento della pagina. Quando `triggerView` è chiamato, le viste applicabili vengono visualizzate nel browser. Se questa opzione è disattivata, le visualizzazioni non vengono recuperate al momento del caricamento della pagina e `triggerView` non fa nulla. Le visualizzazioni sono supportate in at.js 2.*x.*
+* **Descrizione**: se abilitata, le visualizzazioni vengono recuperate automaticamente al caricamento della pagina. Quando viene chiamato `triggerView`, le visualizzazioni applicabili vengono visualizzate nel browser. Se questa opzione è disabilitata, le visualizzazioni non vengono recuperate al momento del caricamento della pagina e `triggerView` non esegue alcuna operazione. Le visualizzazioni sono supportate in at.js 2.*x.*
 
 ### visitorApiTimeout
 
 * **Type**: numero
 * **Valore predefinito**: 2000 ms = 2 s
-* **Descrizione**: rappresenta il timeout della richiesta dell’API visitatore.
+* **Descrizione**: rappresenta il timeout della richiesta API visitatore.
 
 ## Utilizzo
 
@@ -285,7 +285,7 @@ I video che seguono contengono ulteriori informazioni:
 | Video | Descrizione |
 |--- |--- |
 | [Utilizzo di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | Fornitori di dati è una funzionalità che ti permette di trasmettere facilmente dati da terze parti a Target. Un esempio di terza parte potrebbe essere un servizio meteo, un DMP o persino il tuo servizio web. Puoi utilizzare questi dati per generare tipi di pubblico e contenuti mirati e per arricchire il profilo del visitatore. |
-| [Implementazione di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | Dettagli di implementazione ed esempi di utilizzo di Adobe [!DNL Target]funzionalità di dataProvider per recuperare dati da provider di dati di terze parti e trasmetterli in [!DNL Target] richiesta. |
+| [Implementazione di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | Dettagli di implementazione ed esempi di utilizzo della funzionalità dataProvider di Adobe [!DNL Target] per recuperare dati da provider di dati di terze parti e trasmetterli nella richiesta [!DNL Target]. |
 
 L’impostazione `window.targetGlobalSettings.dataProviders` è un array dei fornitori di dati.
 
@@ -296,7 +296,7 @@ Ogni provider di dati dispone della struttura seguente:
 | name | Stringa | Nome del provider. |
 | version | Stringa | Versione del fornitore. Questa chiave verrà utilizzata per l&#39;evoluzione del fornitore. |
 | timeout | Numero | Rappresenta il timeout del fornitore se si tratta di una richiesta di rete.  Questa chiave è facoltativa. |
-| provider | Funzione | La funzione che contiene la logica di recupero dei dati del fornitore.<p>La funzione dispone di un singolo parametro obbligatorio: `callback`. Il parametro di callback è una funzione che deve essere richiamata solo quando i dati sono stati recuperati correttamente o si visualizza un errore.<p>La chiamata di ritorno prevede due parametri:<ul><li>error: indica se si è verificato un errore. Se tutto è OK, questo parametro deve essere impostato su null.</li><li>parametri: un oggetto JSON, che rappresenta i parametri che verranno inviati in un [!DNL Target] richiesta.</li></ul> |
+| provider | Funzione | La funzione che contiene la logica di recupero dei dati del fornitore.<p>La funzione ha un solo parametro obbligatorio: `callback`. Il parametro di callback è una funzione che deve essere richiamata solo quando i dati sono stati recuperati correttamente o si visualizza un errore.<p>La chiamata di ritorno prevede due parametri:<ul><li>error: indica se si è verificato un errore. Se tutto è OK, questo parametro deve essere impostato su null.</li><li>parametri: un oggetto JSON, che rappresenta i parametri che verranno inviati in una richiesta [!DNL Target].</li></ul> |
 
 Nell&#39;esempio seguente viene illustrato il punto in cui il fornitore di dati utilizza l&#39;esecuzione di sincronizzazione:
 
@@ -316,9 +316,9 @@ window.targetGlobalSettings = {
 };
 ```
 
-Dopo i processi di at.js `window.targetGlobalSettings.dataProviders`, il [!DNL Target] La richiesta conterrà un nuovo parametro: `t1=1`.
+Dopo che at.js elabora `window.targetGlobalSettings.dataProviders`, la richiesta [!DNL Target] conterrà un nuovo parametro: `t1=1`.
 
-Di seguito è riportato un esempio se i parametri che si desidera aggiungere al [!DNL Target] Le richieste di vengono recuperate da un servizio di terze parti, ad esempio Bluekai, Demandbase e così via:
+Di seguito è riportato un esempio se i parametri che si desidera aggiungere alla richiesta [!DNL Target] vengono recuperati da un servizio di terze parti, ad esempio Bluekai, Demandbase e così via:
 
 ```javascript {line-numbers="true"}
 var blueKaiDataProvider = {
@@ -339,9 +339,9 @@ window.targetGlobalSettings = {
 };
 ```
 
-Dopo i processi di at.js `window.targetGlobalSettings.dataProviders`, il [!DNL Target] La richiesta conterrà parametri aggiuntivi: `t1=1`, `t2=2` e `t3=3`.
+Dopo che at.js elabora `window.targetGlobalSettings.dataProviders`, la richiesta [!DNL Target] conterrà parametri aggiuntivi: `t1=1`, `t2=2` e `t3=3`.
 
-L’esempio seguente utilizza fornitori di dati per raccogliere dati API meteo e inviarli come parametri in una [!DNL Target] richiesta. Il [!DNL Target] La richiesta avrà parametri aggiuntivi, ad esempio `country` e `weatherCondition`.
+Nell&#39;esempio seguente vengono utilizzati i provider di dati per raccogliere i dati dell&#39;API meteo e inviarli come parametri in una richiesta [!DNL Target]. La richiesta [!DNL Target] avrà parametri aggiuntivi, ad esempio `country` e `weatherCondition`.
 
 ```javascript {line-numbers="true"}
 var weatherProvider = {
@@ -391,7 +391,7 @@ Quando si lavora con l&#39;impostazione `dataProviders`, tieni presente quanto s
 
 ## Informativa sulla sicurezza dei contenuti
 
-at.js 2.3.0+ supporta l’impostazione dei nonce della policy sulla sicurezza dei contenuti nei tag SCRIPT e STYLE aggiunti al DOM della pagina quando si applica il codice distribuito [!DNL Target] offerte.
+at.js 2.3.0+ supporta l’impostazione dei nonce della policy sulla sicurezza dei contenuti nei tag SCRIPT e STYLE aggiunti al DOM della pagina quando si applicano le offerte [!DNL Target] consegnate.
 
 I nonce SCRIPT e STYLE devono essere impostati rispettivamente in `targetGlobalSettings.cspScriptNonce` e `targetGlobalSettings.cspStyleNonce` prima del caricamento di at.js 2.3.0+. Vedi un esempio qui sotto:
 
@@ -410,17 +410,17 @@ window.targetGlobalSettings = {
 ...
 ```
 
-Dopo `cspScriptNonce` e `cspStyleNonce` specificate, at.js 2.3.0+ le imposta come attributi nonce su tutti i tag SCRIPT e STYLE che aggiunge al DOM durante l’applicazione [!DNL Target] offerte.
+Dopo aver specificato le impostazioni `cspScriptNonce` e `cspStyleNonce`, at.js 2.3.0+ le imposta come attributi nonce in tutti i tag SCRIPT e STYLE che aggiunge al DOM quando si applicano le offerte [!DNL Target].
 
 ## Personalizzazione ibrida
 
-`serverState` è un’impostazione disponibile in at.js v2.2+ che può essere utilizzata per ottimizzare le prestazioni della pagina quando un’integrazione ibrida di [!DNL Target] è implementato. L’integrazione ibrida significa che utilizzi sia at.js v2.2+ sul lato client che l’API di consegna o un [!DNL Target] SDK lato server per distribuire le esperienze. `serverState` consente a at.js v2.2+ di applicare le esperienze direttamente dal contenuto recuperato sul lato server e restituito al client come parte della pagina trasmessa.
+`serverState` è un&#39;impostazione disponibile in at.js v2.2+ che può essere utilizzata per ottimizzare le prestazioni della pagina quando viene implementata un&#39;integrazione ibrida di [!DNL Target]. Per integrazione ibrida si intende l&#39;utilizzo sia di at.js v2.2+ sul lato client che dell&#39;API di consegna o di un SDK [!DNL Target] sul lato server per distribuire le esperienze. `serverState` consente a at.js v2.2+ di applicare le esperienze direttamente dal contenuto recuperato sul lato server e restituito al client come parte della pagina trasmessa.
 
 ### Prerequisiti
 
 È necessaria un’integrazione ibrida di [!DNL Target].
 
-* **Lato server**: utilizza [API di consegna](/help/dev/implement/delivery-api/overview.md) o [SDK di Target](/help/dev/implement/server-side/sdk-guides/getting-started/getting-started.md).
+* **Lato server**: è necessario utilizzare [API di consegna](/help/dev/implement/delivery-api/overview.md) o [SDK di destinazione](/help/dev/implement/server-side/sdk-guides/getting-started/getting-started.md).
 * **Lato client**: devi utilizzare [at.js versione 2.2 o successiva](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
 
 ### Esempi di codice
@@ -537,13 +537,13 @@ Quando utilizzi `serverState`, tieni presente quanto segue:
    * Attività create dal Compositore esperienza visivo che vengono eseguite al caricamento della pagina.
    * Visualizzazioni preacquisite.
 
-     In caso di SPA che utilizzi [!DNL Target] Visualizzazioni e `triggerView()` nell’API at.js, at.js v2.2 memorizza in cache il contenuto di tutte le visualizzazioni preacquisite sul lato server e le applica non appena ogni visualizzazione viene attivata tramite `triggerView()`, di nuovo senza attivare altre chiamate per il recupero dei contenuti a [!DNL Target].
+     Nel caso di SPA che utilizza [!DNL Target] visualizzazioni e `triggerView()` nell&#39;API at.js, at.js v2.2 memorizza nella cache il contenuto di tutte le visualizzazioni preacquisite sul lato server e le applica non appena ogni visualizzazione viene attivata tramite `triggerView()`, di nuovo senza attivare altre chiamate al recupero contenuti per [!DNL Target].
 
    * **Nota**: attualmente, le mbox recuperate sul lato server non sono supportate in `serverState`.
 
-* Quando si applica `serverState` offerte, at.js prende in considerazione `pageLoadEnabled` e `viewsEnabled` impostazioni, ad esempio le offerte di caricamento pagina non verranno applicate se `pageLoadEnabled` L&#39;impostazione è false.
+* Quando si applicano offerte `serverState`, at.js prende in considerazione le impostazioni `pageLoadEnabled` e `viewsEnabled`. Ad esempio, le offerte di caricamento pagina non verranno applicate se l&#39;impostazione `pageLoadEnabled` è false.
 
-  Per attivare queste impostazioni, abilita l’accesso **Amministrazione > Implementazione > Modifica > Caricamento pagina abilitato**.
+  Per attivare queste impostazioni, attivare l&#39;opzione in **Amministrazione > Implementazione > Modifica > Caricamento pagina abilitato**.
 
   ![Impostazioni per Caricamento pagina attivato](../../assets/page-load-enabled-setting.png)
 

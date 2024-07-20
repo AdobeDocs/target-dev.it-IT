@@ -1,7 +1,7 @@
 ---
 keywords: lato server, lato server, api, sdk, node.js, nodejs, node js, recommendations api, api, api, api, lato server1
-description: Scopri di più su [!DNL Adobe Target] API di distribuzione lato server, SDK e [!DNL Target Recommendations] API.
-title: Dove posso saperne di più su [!DNL Target] API e SDK di distribuzione lato server?
+description: Scopri le [!DNL Adobe Target] API di distribuzione lato server, SDK e [!DNL Target Recommendations] API.
+title: Dove posso trovare informazioni su [!DNL Target] API e SDK di distribuzione lato server?
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
 source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
@@ -17,9 +17,9 @@ Informazioni su [!DNL Adobe Target] API di distribuzione lato server, SDK e [!DN
 
 >[!NOTE]
 >
->Se la tua implementazione utilizza at.js e [!DNL AppMeasurement] sul lato client, utilizza [!UICONTROL Target Delivery API] e gli SDK lato server discussi di seguito.
+>Se l&#39;implementazione utilizza at.js e [!DNL AppMeasurement] sul lato client, è necessario utilizzare gli SDK di [!UICONTROL Target Delivery API] e lato server descritti di seguito.
 >
->Se l&#39;implementazione utilizza [!UICONTROL Adobe Experience Platform Web SDK], è necessario utilizzare [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Se l&#39;implementazione utilizza [!UICONTROL Adobe Experience Platform Web SDK], utilizzare [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 Il processo seguente si verifica in un’implementazione lato server di [!DNL Target]:
 
@@ -38,11 +38,11 @@ Le sezioni seguenti forniscono ulteriori informazioni sulle varie API e SDK lato
 
 ## API di distribuzione lato server
 
-Link: [API di distribuzione lato server](/help/dev/implement/delivery-api/overview.md)
+Collegamento: [API di distribuzione lato server](/help/dev/implement/delivery-api/overview.md)
 
 `/rest/v1/delivery`
 
-Attraverso il [!DNL Target] API di consegna, puoi:
+Tramite l&#39;API di consegna [!DNL Target], puoi:
 
 * Distribuisci esperienze su web, inclusi SPA, canali mobili e dispositivi IoT non basati su browser, come TV connesse, chioschi o schermi digitali in-store.
 * Distribuisci esperienze da qualsiasi piattaforma o applicazione lato server in grado di effettuare chiamate HTTP/s.
@@ -52,26 +52,26 @@ Attraverso il [!DNL Target] API di consegna, puoi:
 
 ## SDK lato server
 
-Il [!DNL Adobe Target] la documentazione dell’SDK lato server consente di implementare [!DNL Target] sui server nella lingua desiderata.
+La documentazione SDK lato server di [!DNL Adobe Target] ti aiuta a implementare [!DNL Target] sui server nella tua lingua.
 
 * [Node.js](node-js/overview.md)
 * [Java](java/overview.md)
 * [.NET](net/overview.md)
 * [Python](python/overview.md)
 
-Da a [!DNL Adobe Target]degli SDK lato server di, puoi:
+Tramite gli SDK lato server di [!DNL Adobe Target] puoi:
 
-* Esegui ed esegui **segnalazione di funzioni**, **rollout**, e **Esperimenti A/B** a **latenza prossima allo zero**.
-* Distribuisci esperienze in **web**, tra cui **SPA**, e **canali mobili**, nonché non basati su browser **Dispositivi Internet of Things (IoT)** ad esempio un televisore, un chiosco o uno schermo digitale nel negozio.
-* Consegna **Esperienze personalizzate basate sull’apprendimento automatico (ML)** a un utente, indipendentemente dal canale o dispositivo utilizzato dall’utente nella tua attività.
-* **Integrazione perfetta con Adobe Experience Cloud** prodotti come **Adobe Analytics**, **Adobe Audience Manager** e **Servizio ID Experience Cloud** dal lato server.
+* Esegui ed esegui **esperimenti di contrassegno di funzionalità**, **rollout** ed **esperimenti A/B** con **latenza prossima allo zero**.
+* Distribuisci esperienze su **web**, inclusi **SPA** e **canali mobili**, nonché su dispositivi **Internet of Things (IoT) non basati su browser**, ad esempio TV connessa, chiosco o schermo digitale in-store.
+* Distribuisci **esperienze personalizzate basate su Machine Learning (ML)** a un utente, indipendentemente dal canale o dal dispositivo utilizzato dall&#39;utente nella tua azienda.
+* **Integrazione perfetta con i prodotti Adobe Experience Cloud** come **Adobe Analytics**, **Adobe Audience Manager** e **Experience Cloud ID Service** dal lato server.
 
-Consulta la [Guida introduttiva](sdk-guides/getting-started/getting-started.md) per scoprire come eseguire un caso d’uso semplice di segnalazione di funzioni tramite [decisioning sul dispositivo](sdk-guides/on-device-decisioning/overview.md).
+Consulta la pagina [Guida introduttiva](sdk-guides/getting-started/getting-started.md) per scoprire come eseguire un semplice caso d&#39;uso di segnalazione di funzionalità tramite [decisioning sul dispositivo](sdk-guides/on-device-decisioning/overview.md).
 
-Consulta la nostra [App di esempio](sdk-guides/sample-apps/sample-apps.md) per divertirsi e giocare in giro!
+Controlla le [app di esempio](sdk-guides/sample-apps/sample-apps.md) per divertirti e divertirti.
 
 ## API di [!DNL Target Recommendations]
 
-Link: [API Recommendations di Target](https://developers.adobetarget.com/api/recommendations) e [Panoramica API di Adobe Recommendations](../../before-administer/recs-api/overview.md).
+Collegamento: [API Recommendations di Target](https://developers.adobetarget.com/api/recommendations) e [Panoramica API Adobe Recommendations](../../before-administer/recs-api/overview.md).
 
-Le API di Recommendations consentono di interagire in modo programmatico con [!DNL Target] server di consigli. Queste API possono essere integrate con una serie di applicazioni per eseguire funzioni che vengono normalmente eseguite mediante [!DNL Target] dell&#39;utente.
+Le API di Recommendations consentono di interagire in modo programmatico con [!DNL Target] server di consigli. Queste API possono essere integrate con una serie di applicazioni per eseguire funzioni che vengono normalmente eseguite tramite l&#39;interfaccia utente [!DNL Target].

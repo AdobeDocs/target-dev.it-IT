@@ -6,7 +6,7 @@ exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '342'
 ht-degree: 6%
 
 ---
@@ -15,24 +15,24 @@ ht-degree: 6%
 
 [!DNL Adobe Target] supporta il reporting A4T sia per le attività di decisioning sul dispositivo che per le attività Target lato server. Esistono due opzioni di configurazione per abilitare il reporting A4T:
 
-* [!DNL Adobe Target] inoltra automaticamente il payload di analytics a [!DNL Adobe Analytics], o
-* L’utente richiede il payload di Analytics da [!DNL Adobe Target]. ([!DNL Adobe Target] restituisce il [!DNL Adobe Analytics] payload al chiamante).
+* [!DNL Adobe Target] inoltra automaticamente il payload di analytics a [!DNL Adobe Analytics], oppure
+* L&#39;utente richiede il payload di Analytics da [!DNL Adobe Target]. ([!DNL Adobe Target] restituisce il payload [!DNL Adobe Analytics] al chiamante.)
 
 >[!NOTE]
 >
->Il decisioning sul dispositivo supporta solo il reporting A4T di cui [!DNL Adobe Target] inoltra automaticamente il payload di analytics a [!DNL Adobe Analytics]. Recupero del payload di Analytics da [!DNL Adobe Target] non è supportato.
+>Il decisioning sul dispositivo supporta solo il reporting A4T, di cui [!DNL Adobe Target] inoltra automaticamente il payload di Analytics a [!DNL Adobe Analytics]. Il recupero del payload di Analytics da [!DNL Adobe Target] non è supportato.
 
 ## Prerequisiti
 
-1. Configurare l’attività in [!DNL Adobe Target] Interfaccia utente con [!DNL Adobe Analytics] come origine per la generazione di rapporti e assicurati che i conti siano abilitati per A4T.
+1. Configurare l&#39;attività nell&#39;interfaccia utente di [!DNL Adobe Target] con [!DNL Adobe Analytics] come origine per la generazione di rapporti e assicurarsi che gli account siano abilitati per A4T.
 1. L’utente API genera l’ID visitatore di Adobe Marketing Cloud e si assicura che sia disponibile quando viene eseguita la richiesta di Target.
 
 ## [!DNL Adobe Target] inoltra automaticamente il payload di Analytics
 
-[!DNL Adobe Target] può inoltrare automaticamente il payload di analytics a [!DNL Adobe Analytics] se sono forniti i seguenti identificatori:
+[!DNL Adobe Target] può inoltrare automaticamente il payload di Analytics a [!DNL Adobe Analytics] se vengono forniti i seguenti identificatori:
 
-1. `supplementalDataId`: ID utilizzato per unire tra [!DNL Adobe Analytics] e [!DNL Adobe Target]. Per ottenere [!DNL Adobe Target] e [!DNL Adobe Analytics] per unire correttamente i dati, lo stesso `supplementalDataId` deve essere passato a entrambi [!DNL Adobe Target] e [!DNL Adobe Analytics].
-1. `trackingServer`: Il [!DNL Adobe Analytics] Server.
+1. `supplementalDataId`: ID utilizzato per unire tra [!DNL Adobe Analytics] e [!DNL Adobe Target]. Affinché [!DNL Adobe Target] e [!DNL Adobe Analytics] possano unire correttamente i dati, è necessario passare lo stesso `supplementalDataId` a [!DNL Adobe Target] e [!DNL Adobe Analytics].
+1. `trackingServer`: Il Server [!DNL Adobe Analytics].
 
 >[!BEGINTABS]
 
@@ -113,9 +113,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## L’utente recupera il payload di Analytics da [!DNL Adobe Target]
+## L&#39;utente recupera il payload di Analytics da [!DNL Adobe Target]
 
-Un utente può recuperare [!DNL Adobe Analytics] payload per una data mbox, quindi invialo a [!DNL Adobe Analytics] tramite [API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Quando un [!DNL Adobe Target] richiesta attivata, riuscita `client_side` al `logging` nella richiesta. Questo restituirà un payload se la mbox specificata è presente in un’attività che utilizza Analytics come origine per la generazione di rapporti.
+Un utente può recuperare il payload [!DNL Adobe Analytics] per una data mbox, quindi inviarlo a [!DNL Adobe Analytics] tramite l&#39;[API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Quando viene attivata una richiesta [!DNL Adobe Target], passare `client_side` al campo `logging` nella richiesta. Questo restituirà un payload se la mbox specificata è presente in un’attività che utilizza Analytics come origine per la generazione di rapporti.
 
 >[!BEGINTABS]
 
@@ -191,7 +191,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 Dopo aver specificato `logging = client_side`, riceverai il payload nel campo mbox.
 
-Se la risposta di Target contiene elementi nel `analytics -> payload` proprietà, inoltrarla così com&#39;è [!DNL Adobe Analytics]. [!DNL Adobe Analytics] sa come elaborare questo payload. Questa operazione può essere eseguita in una richiesta GET utilizzando il seguente formato:
+Se la risposta di Target contiene qualcosa nella proprietà `analytics -> payload`, inoltrarla così com&#39;è a [!DNL Adobe Analytics]. [!DNL Adobe Analytics] sa come elaborare questo payload. Questa operazione può essere eseguita in una richiesta GET utilizzando il seguente formato:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -203,7 +203,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | --- | --- | --- |
 | `rsid` | Sì | ID suite di rapporti |
 | `pe` | Sì | Evento pagina. Sempre impostato su `tnt` |
-| `tnta` | Sì | Payload di Analytics restituito dal server Target in `analytics -> payload -> tnta` |
+| `tnta` | Sì | Payload di Analytics restituito dal server di Target in `analytics -> payload -> tnta` |
 | `mid` | Sì | ID visitatore di Marketing Cloud |
 
 ### Valori intestazione richiesti

@@ -1,31 +1,31 @@
 ---
 keywords: visualizzazione momentanea di altri contenuti, at.js, implementazione, asincrona, asincrona, sincrona, $8
-description: Scopri come at.js e [!DNL Target] evita sfarfallii (il contenuto predefinito viene visualizzato momentaneamente prima di essere sostituito dal contenuto dell’attività) durante il caricamento della pagina o dell’app.
+description: Scopri come at.js e [!DNL Target] impedire la visualizzazione momentanea di altri contenuti (il contenuto predefinito viene visualizzato momentaneamente prima di essere sostituito dal contenuto dell'attività) durante il caricamento della pagina o dell'app.
 title: Come gestisce at.js la visualizzazione momentanea di altri contenuti?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 63%
+source-wordcount: '699'
+ht-degree: 57%
 
 ---
 
 # Gestione at.js della visualizzazione momentanea di altri contenuti
 
-Informazioni su come [!DNL Adobe Target] La libreria JavaScript at.js impedisce la visualizzazione momentanea di altri contenuti durante il caricamento della pagina o dell’app.
+Informazioni su come la libreria JavaScript at.js di [!DNL Adobe Target] impedisce la visualizzazione momentanea di altri contenuti durante il caricamento della pagina o dell&#39;app.
 
 La visualizzazione momentanea di altri contenuti si verifica quando il contenuto predefinito viene momentaneamente visualizzato ai visitatori prima che venga sostituito dal contenuto dell’attività. Tale visualizzazione momentanea è da evitare perché può confondere i visitatori.
 
 ## Utilizzo di una mbox globale creata automaticamente
 
-Se abiliti l’impostazione [Creazione automatica di una mbox globale](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) quando configuri at.js, at.js gestisce la visualizzazione momentanea di altri contenuti modificando l’impostazione di opacità durante il caricamento della pagina. Quando si carica, at.js cambia l’impostazione di opacità dell’elemento `<body>` Su “0”, rendendo la pagina inizialmente invisibile ai visitatori. Dopo una risposta da [!DNL Target] viene ricevuto, o se si verifica un errore con [!DNL Target] richiesta rilevata: at.js reimposta l&#39;opacità su &quot;1&quot;. In questo modo il visitatore vede la pagina solo dopo l&#39;applicazione del contenuto delle attività.
+Se abiliti l’impostazione [Creazione automatica di una mbox globale](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) quando configuri at.js, at.js gestisce la visualizzazione momentanea di altri contenuti modificando l’impostazione di opacità durante il caricamento della pagina. Al caricamento di at.js, l&#39;impostazione di opacità dell&#39;elemento `<body>` verrà modificata in &quot;0&quot;, rendendo la pagina inizialmente invisibile ai visitatori. Dopo aver ricevuto una risposta da [!DNL Target], o se viene rilevato un errore con la richiesta [!DNL Target], at.js reimposta l&#39;opacità su &quot;1&quot;. In questo modo il visitatore vede la pagina solo dopo l&#39;applicazione del contenuto delle attività.
 
-Se si abilita l&#39;impostazione, quando si configura at.js, at.js imposta l&#39;elemento HTML “BODY” con un valore di opacità pari a 0. Dopo una risposta da [!DNL Target] Ricevuto, at.js reimposta l&#39;opacità HTML BODY su 1.
+Se si abilita l&#39;impostazione, quando si configura at.js, at.js imposta l&#39;elemento HTML “BODY” con un valore di opacità pari a 0. Dopo aver ricevuto una risposta da [!DNL Target], at.js reimposta su 1 l&#39;opacità del BODY del HTML.
 
 L&#39;opzione opacità impostata su 0 mantiene il contenuto della pagina nascosto per impedire la visualizzazione momentanea di altri contenuti, ma il browser esegue ancora il rendering della pagina e carica tutte le risorse necessarie come CSS, immagini e così via.
 
-Se `opacity: 0` non funziona nell’implementazione, puoi anche gestire la visualizzazione momentanea di altri contenuti personalizzando `bodyHiddenStyle` e impostarlo su `body {visibility:hidden !important}`. È possibile utilizzare `body {opacity:0 !important}` o `body {visibility:hidden !important}`, a seconda di quale sia il migliore per il tuo caso specifico.
+Se `opacity: 0` non funziona nell&#39;implementazione, puoi anche gestire la visualizzazione momentanea di altri contenuti personalizzando `bodyHiddenStyle` e impostarlo su `body {visibility:hidden !important}`. Puoi utilizzare `body {opacity:0 !important}` o `body {visibility:hidden !important}`, a seconda di quale sia il migliore per il tuo caso specifico.
 
 La figura seguente mostra le chiamate per Nascondi corpo e Mostra corpo, sia in at.js 1.*x* che in at.js 2.x.
 
@@ -33,13 +33,13 @@ La figura seguente mostra le chiamate per Nascondi corpo e Mostra corpo, sia in 
 
 (Fare clic sull&#39;immagine per espanderla a larghezza intera.)
 
-![Flusso di Target: richiesta di caricamento pagina di at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Flusso di Target: richiesta di caricamento pagina di at.js"){zoomable=&quot;yes&quot;}
+![Flusso di Target: richiesta di caricamento pagina at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Flusso di Target: richiesta di caricamento pagina at.js"){zoomable="yes"}
 
 **at.js 1.*x***
 
 (Fare clic sull&#39;immagine per espanderla a larghezza intera.)
 
-![Flusso di Target: mbox globale creata automaticamente](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Flusso di Target: mbox globale creata automaticamente"){zoomable=&quot;yes&quot;}
+![Flusso di destinazione: mbox globale creata automaticamente](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Flusso di destinazione: mbox globale creata automaticamente"){zoomable="yes"}
 
 Per ulteriori informazioni sull’override di `bodyHiddenStyle`, consulta [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
@@ -47,7 +47,7 @@ Per ulteriori informazioni sull’override di `bodyHiddenStyle`, consulta [targe
 
 Caricare at.js in modo asincrono è un ottimo modo per evitare di bloccare il rendering del browser; tuttavia, questa tecnica può portare alla visualizzazione momentanea di altri contenuti della pagina web.
 
-È possibile evitare questo fenomeno utilizzando uno snippet per nascondere le pagine che sarà visibile dopo che Target avrà personalizzato gli elementi HTML rilevanti.
+Puoi evitare questo fenomeno utilizzando uno snippet per nascondere le pagine che sarà visibile dopo che Target avrà personalizzato gli elementi HTML rilevanti.
 
 at.js può essere caricato in modo asincrono, direttamente incorporato nella pagina o tramite un gestore di tag (ad esempio Adobe Experience Platform Launch).
 

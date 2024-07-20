@@ -1,19 +1,19 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, ottieni offerta, at.js, funzioni, funzione, $ 8
-description: Utilizza il [!UICONTROL adobe.target.getOffer()] e le relative opzioni per [!DNL Adobe Target] Libreria at.js per attivare le richieste per ottenere un [!DNL Target] offerta.
-title: Come si utilizza [!UICONTROL adobe.target.getOffer()] Funzione?
+description: Utilizza la funzione [!UICONTROL adobe.target.getOffer()] e le relative opzioni per la libreria  [!DNL Adobe Target] at.js per attivare le richieste per ottenere un'offerta [!DNL Target] .
+title: Come si utilizza la funzione [!UICONTROL adobe.target.getOffer()]?
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 81%
+source-wordcount: '460'
+ht-degree: 79%
 
 ---
 
 # [!DNL adobe.target.getOffer(options)]
 
-Questa funzione genera una richiesta per ottenere un [!DNL Target] offerta.
+Questa funzione genera una richiesta per ottenere un&#39;offerta [!DNL Target].
 
 Puoi utilizzarlo con `[!UICONTROL adobe.target.applyOffer()]` per elaborare la risposta o usare la tua gestione di successo. Il parametro delle opzioni è obbligatorio e ha la seguente struttura:
 
@@ -22,12 +22,12 @@ Puoi utilizzarlo con `[!UICONTROL adobe.target.applyOffer()]` per elaborare la r
 | mbox | Stringa | Sì | Nome Mbox |
 | params | Oggetto | No | Parametri mbox. Un oggetto di coppie chiave-valore che presenta la struttura seguente:<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | Funzione | Sì | Callback da eseguire quando abbiamo ricevuto una risposta dal server. La funzione di callback di successo riceverà un singolo parametro che rappresenta un array di oggetti di offerta. Esempio di callback di successo:<P>`function handleSuccess(response){......}`<P>Vedi le risposte qui sotto per i dettagli. |
-| error | Funzione | Sì | Callback da eseguire quando visualizziamo un errore. Ci sono alcuni casi che sono considerati di errore:<ul><li>Codice di stato HTTP diverso da 200 OK</li><li>La risposta non può essere analizzata. Ad esempio abbiamo generato in modo non corretto JSON o HTML invece di JSON.</li><li>La risposta contiene la chiave “Errore”. Ad esempio, è stata lanciata un&#39;eccezione sull&#39;Edge di una richiesta che non è stato possibile elaborare correttamente. Si può ricevere un errore se una mbox è bloccata e non è possibile recuperare alcun contenuto per essa, ecc. La funzione di callback di errore riceverà due parametri: stato ed errore. Ecco un esempio di callback di errore: `function handleError(status, error){......}`</li></ul>Vedi le risposte di errore qui sotto per i dettagli. |
-| timeout | Numero | No | Timeout in millisecondi. Se non viene specificato, verrà utilizzato il timeout predefinito in at.js.<P>Il timeout predefinito può essere impostato da [!DNL Target] Interfaccia utente in [!UICONTROL Amministrazione] > [!UICONTROL Implementazione]. |
+| error | Funzione | Sì | Callback da eseguire quando visualizziamo un errore. Ci sono alcuni casi che sono considerati di errore:<ul><li>Codice di stato HTTP diverso da 200 OK</li><li>La risposta non può essere analizzata. Ad esempio abbiamo generato in modo non corretto JSON o HTML invece di JSON.</li><li>La risposta contiene la chiave “Errore”. Ad esempio, è stata lanciata un&#39;eccezione sull&#39;Edge di una richiesta che non è stato possibile elaborare correttamente. Si può ricevere un errore se una mbox è bloccata e non è possibile recuperare alcun contenuto per essa, ecc. La funzione di callback di errore riceverà due parametri: stato ed errore. Esempio di callback di errore: `function handleError(status, error){......}`</li></ul>Vedi le risposte di errore qui sotto per i dettagli. |
+| timeout | Numero | No | Timeout in millisecondi. Se non viene specificato, verrà utilizzato il timeout predefinito in at.js.<P>Il timeout predefinito può essere impostato dall&#39;interfaccia utente [!DNL Target] in [!UICONTROL Administration] > [!UICONTROL Implementation]. |
 
 ## Esempi
 
-Aggiunta di parametri con [!UICONTROL getOffer()] e utilizzando [!UICONTROL applyOffer()] per la gestione del successo:
+Aggiunta di parametri con [!UICONTROL getOffer()] e utilizzo di [!UICONTROL applyOffer()] per la gestione del successo:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -48,7 +48,7 @@ adobe.target.getOffer({
 });
 ```
 
-Aggiunta di parametri e parametri di profilo con [!UICONTROL getOffer()] e utilizzando [!UICONTROL applyOffer()] per la gestione del successo:
+Aggiunta di parametri e parametri di profilo con [!UICONTROL getOffer()] e utilizzo di [!UICONTROL applyOffer()] per la gestione del successo:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -71,7 +71,7 @@ adobe.target.getOffer({
 });
 ```
 
-Utilizzo di timeout personalizzato e gestione del successo personalizzata con [!UICONTROL getOffer()]:
+Utilizzo del timeout personalizzato e della gestione di successo personalizzata con [!UICONTROL getOffer()]:
 
 “YOUR_OWN_CUSTOM_HANDLING_FUNCTION” è un segnaposto per una funzione che il cliente può definire.
 
@@ -126,5 +126,5 @@ I parametri “status” ed “error” trasmessi al callback di errore avranno 
 
 | Nome | Tipo | Descrizione |
 |--- |--- |--- |
-| status | Stringa | Rappresenta lo stato di errore. Questo parametro può avere i seguenti valori:<ul><li>timeout: Indica che la richiesta è scaduta.</li><li>parseerror: indica che la risposta non può essere analizzata, ad esempio se si riceve HTML o testo normale anziché JSON.</li><li>error: indica un errore generale, ad esempio se si riceve uno stato HTTP diverso da 200 OK</li></ul> |
+| status | Stringa | Rappresenta lo stato di errore. Questo parametro può avere i seguenti valori:<ul><li>timeout: indica che la richiesta è scaduta.</li><li>parseerror: indica che la risposta non può essere analizzata, ad esempio se si riceve HTML o testo normale anziché JSON.</li><li>error: indica un errore generale, ad esempio se si riceve uno stato HTTP diverso da 200 OK</li></ul> |
 | error | Stringa | Contiene dati aggiuntivi come messaggi di eccezione o qualsiasi altra informazione utile per la risoluzione dei problemi. |

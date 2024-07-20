@@ -5,8 +5,8 @@ feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -113,10 +113,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Sia client che `organizationId` può essere recuperato da [!DNL Adobe Target]passando a **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**, come illustrato di seguito.
+1. Il client e `organizationId` possono essere recuperati da [!DNL Adobe Target] passando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, come illustrato di seguito.
 
    &lt;!— Inserisci image-client-code.png —>
-   ![immagine alt](assets/asset-rule-artifact-3.png)
+   ![Alt immagine](assets/asset-rule-artifact-3.png)
 
 ## 3. Memorizzare e riattivare il payload JSON
 
@@ -162,7 +162,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Inizializzando [!DNL Adobe Target]SDK tramite il payload JSON, il server è pronto a distribuire le richieste immediatamente con le attività di decisione sul dispositivo, poiché [!DNL Adobe Target]L’SDK non deve attendere che l’artefatto della regola venga scaricato.
+>Inizializzando l&#39;SDK [!DNL Adobe Target]tramite il payload JSON, il server è pronto a distribuire le richieste immediatamente con le attività di decisioning sul dispositivo, poiché l&#39;SDK [!DNL Adobe Target]non deve attendere che l&#39;artefatto della regola venga scaricato.
 
 Ecco un esempio che illustra la funzionalità di inizializzazione del payload JSON.
 

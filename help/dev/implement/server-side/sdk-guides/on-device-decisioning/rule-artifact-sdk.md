@@ -1,18 +1,18 @@
 ---
 title: Scarica, archivia e aggiorna automaticamente l’artefatto della regola di decisioning sul dispositivo
-description: Scopri come utilizzare l’artefatto della regola di decisioning sul dispositivo durante l’inizializzazione di [!DNL Adobe Target] SDK
+description: Scopri come utilizzare l'artefatto della regola di decisioning sul dispositivo durante l'inizializzazione dell'SDK  [!DNL Adobe Target] .
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-# Download, archiviazione e aggiornamento automatico dell’artefatto della regola tramite [!DNL Adobe Target] SDK
+# Download, archiviazione e aggiornamento automatico dell&#39;artefatto della regola tramite l&#39;SDK [!DNL Adobe Target]
 
-Questo approccio è ideale quando è possibile inizializzare [!DNL Adobe Target] SDK contemporaneamente all’inizializzazione e all’avvio del server web. L’artefatto della regola verrà scaricato da [!DNL Adobe Target] SDK e memorizzati nella cache prima che l’applicazione del server web inizi a soddisfare le richieste. Quando l’applicazione web è in esecuzione, tutte le [!DNL Adobe Target] le decisioni verranno eseguite utilizzando l’artefatto della regola in memoria. L’artefatto della regola memorizzata nella cache verrà aggiornato in base al `pollingInterval` specificata durante il passaggio di inizializzazione dell’SDK.
+Questo approccio è ideale quando è possibile inizializzare l&#39;SDK [!DNL Adobe Target] contemporaneamente all&#39;inizializzazione e all&#39;avvio del server Web. L&#39;artefatto della regola verrà scaricato dall&#39;SDK [!DNL Adobe Target] e memorizzato nella cache prima che l&#39;applicazione server Web inizi a servire le richieste. Quando l&#39;applicazione Web è in esecuzione, tutte le [!DNL Adobe Target] decisioni verranno eseguite utilizzando l&#39;artefatto della regola in memoria. L&#39;artefatto della regola memorizzata nella cache verrà aggiornato in base ai `pollingInterval` specificati durante il passaggio di inizializzazione dell&#39;SDK.
 
 ## Riepilogo dei passaggi
 
@@ -92,10 +92,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. È possibile recuperare sia il client che l’OrganizationId da [!DNL Adobe Target] passando a **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**, come illustrato di seguito.
+1. È possibile recuperare sia il client che l&#39;OrganizationId da [!DNL Adobe Target] passando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, come illustrato di seguito.
 
    &lt;!— Inserisci image-client-code.png —>
-   ![Pagina Implementazione in Amministrazione in Target](assets/asset-rule-artifact-3.png)
+   ![Pagina di implementazione in Amministrazione in Target](assets/asset-rule-artifact-3.png)
 
 ## 3. Memorizzare e utilizzare l’artefatto della regola
 
@@ -146,9 +146,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Nell’esempio di codice riportato qui sopra, l’opzione `TargetClient` L&#39;oggetto contiene un riferimento all&#39;artefatto della regola in memoria. Quando utilizzi questo oggetto per richiamare i metodi SDK standard, utilizza l’artefatto della regola in memoria per le decisioni. Se l’applicazione è strutturata in modo tale da dover chiamare i metodi SDK in file diversi da quello che inizializza e ascolta le richieste dei client e se tali file non hanno accesso all’oggetto TargetClient, puoi scaricare il payload JSON e memorizzarlo in un file JSON locale da utilizzare su altri file, che devono inizializzare l’SDK. Questo è spiegato nella sezione successiva, relativa a [download dell’artefatto della regola utilizzando un payload JSON](rule-artifact-json.md).
+>Nell&#39;esempio di codice precedente, l&#39;oggetto `TargetClient` contiene un riferimento all&#39;artefatto della regola in memoria. Quando utilizzi questo oggetto per richiamare i metodi SDK standard, utilizza l’artefatto della regola in memoria per le decisioni. Se l’applicazione è strutturata in modo tale da dover chiamare i metodi SDK in file diversi da quello che inizializza e ascolta le richieste dei client e se tali file non hanno accesso all’oggetto TargetClient, puoi scaricare il payload JSON e memorizzarlo in un file JSON locale da utilizzare su altri file, che devono inizializzare l’SDK. Questo è spiegato nella sezione successiva, relativa al [download dell&#39;artefatto della regola utilizzando un payload JSON](rule-artifact-json.md).
 
-Esempio che avvia un’applicazione web dopo l’inizializzazione di [!DNL Adobe Target] SDK
+Di seguito è riportato un esempio che avvia un&#39;applicazione Web dopo l&#39;inizializzazione dell&#39;SDK [!DNL Adobe Target].
 
 >[!BEGINTABS]
 

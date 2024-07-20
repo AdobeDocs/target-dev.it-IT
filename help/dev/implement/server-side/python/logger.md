@@ -1,6 +1,6 @@
 ---
-title: Inizializzare [!DNL Adobe Target] SDK Python per registrare le richieste
-description: Scopri come registrare le richieste in [!DNL Adobe Target] SDK Python.
+title: Inizializza l'SDK di Python  [!DNL Adobe Target]  per registrare le richieste
+description: Scopri come registrare le richieste nell’SDK di Python [!DNL Adobe Target] .
 feature: APIs/SDKs
 exl-id: 0b3792a5-a9a7-4768-a429-598b49f1fd93
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Descrizione
 
-Quando [inizializzazione dell’SDK](initialize-sdk.md), il `options["logger"]` object è un oggetto facoltativo. Per impostazione predefinita, viene creato un logger a livello INFO sotto il `adobe.target` spazio dei nomi. Tuttavia, per personalizzare il livello di registro o eseguire il debug in modo efficace quando si verifica un problema, è necessario `logger` durante l&#39;inizializzazione dell&#39;SDK.
+Quando [viene inizializzato l&#39;SDK](initialize-sdk.md), l&#39;oggetto `options["logger"]` è un oggetto facoltativo. Per impostazione predefinita, verrà creato un logger a livello INFO nello spazio dei nomi `adobe.target`. Tuttavia, per personalizzare il livello di registro o eseguire il debug in modo efficace quando si verifica un problema, è possibile fornire un oggetto `logger` durante l&#39;inizializzazione dell&#39;SDK.
 
-Il `logger` l&#39;oggetto deve avere `debug()` e un `error()` metodo. Quando viene fornito un logger appropriato, [!DNL Target] Le richieste e le risposte verranno registrate.
+Per l&#39;oggetto `logger` è previsto un metodo `debug()` e `error()`. Se viene fornito un logger appropriato, verranno registrate [!DNL Target] richieste e risposte.
 
 ## Esempio
 

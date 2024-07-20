@@ -1,13 +1,13 @@
 ---
 keywords: targetPageParamsAll, targetpageparamsall, PageParamsAll, pageparamsall, parametri di pagina, parametri di pagina, at.js, funzioni, funzione, targetPageParamsAll0
-description: Utilizza il [!UICONTROL targetPageParamsAll()] funzione per [!DNL Adobe Target] Libreria JavaScript at.js per allegare i parametri a tutte le mbox dall’esterno del codice di richiesta.
-title: Come si utilizza [!UICONTROL targetPageParamsAll()] Funzione?
+description: Utilizza la funzione [!UICONTROL targetPageParamsAll()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per allegare i parametri a tutte le mbox dall'esterno del codice di richiesta.
+title: Come si utilizza la funzione [!UICONTROL targetPageParamsAll()]?
 feature: at.js
 exl-id: 32045e60-6904-42a1-bf71-fd7e167a829f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 55%
+source-wordcount: '157'
+ht-degree: 68%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 55%
 
 Questo metodo consente di allegare i parametri a tutte le mbox dall’esterno del codice di richiesta.
 
-Questa funzione è molto utile per includere lo stesso insieme di parametri su più chiamate alla mbox. La funzione deve essere definita dal cliente. Dovrebbe restituire un array di parametri che verranno passati a tutte le richieste mbox nella pagina. Questa funzione può essere definita prima che at.js sia caricato o in **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** > **[!UICONTROL Modifica]** > **[!UICONTROL Impostazioni codice]** > **[!UICONTROL Intestazione libreria]**.
+Questa funzione è molto utile per includere lo stesso insieme di parametri su più chiamate alla mbox. La funzione deve essere definita dal cliente. Dovrebbe restituire un array di parametri che verranno passati a tutte le richieste mbox nella pagina. Questa funzione può essere definita prima che at.js sia caricato o in **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Code Settings]** > **[!UICONTROL Library Header]**.
 
-Puoi trasmettere parametri a target-global-mbox utilizzando [!UICONTROL targetPageParamsAll()] funzioni in uno dei seguenti modi:
+Puoi trasmettere parametri a target-global-mbox utilizzando la funzione [!UICONTROL targetPageParamsAll()] in uno dei seguenti modi:
 
 * Un elenco delimitato dal simbolo &amp;
 * Un array

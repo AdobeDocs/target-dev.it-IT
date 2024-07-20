@@ -5,14 +5,14 @@ feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 10%
+source-wordcount: '474'
+ht-degree: 13%
 
 ---
 
 # Panoramica delle funzioni supportate
 
-[!DNL Adobe Target]Gli SDK lato server di consentono agli sviluppatori di scegliere tra prestazioni e aggiornamento dei dati per le decisioni. In altre parole, se la distribuzione dei contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico è la cosa più importante per te, è necessario effettuare una chiamata al server live. Tuttavia, quando le prestazioni sono più importanti, è necessario prendere una decisione sul dispositivo. Per [!UICONTROL decisioning sul dispositivo] per lavorare, consulta il seguente elenco di funzioni supportate:
+Gli SDK lato server di [!DNL Adobe Target] offrono agli sviluppatori la flessibilità di scegliere tra prestazioni e aggiornamento dei dati per le decisioni. In altre parole, se la distribuzione dei contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico è la cosa più importante per te, è necessario effettuare una chiamata al server live. Tuttavia, quando le prestazioni sono più importanti, è necessario prendere una decisione sul dispositivo. Affinché [!UICONTROL on-device decisioning] funzioni, consulta il seguente elenco di funzioni supportate:
 
 * Tipi di attività
 * Targeting del pubblico
@@ -20,7 +20,7 @@ ht-degree: 10%
 
 ## Tipi di attività
 
-La tabella seguente indica quali [tipi di attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) creato utilizzando [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) sono supportati o non supportati per [!UICONTROL decisioning sul dispositivo].
+La tabella seguente indica quali [tipi di attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) creati utilizzando il [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) sono supportati o non supportati per [!UICONTROL on-device decisioning].
 
 | Tipo di attività | Supportato |
 | --- | --- |
@@ -36,7 +36,7 @@ La tabella seguente indica quali [tipi di attività](https://experienceleague.ad
 
 ## Targeting del pubblico
 
-La tabella seguente indica per quali regole di pubblico sono supportate o meno [!UICONTROL decisioning sul dispositivo].
+La tabella seguente indica quali regole di pubblico sono supportate o meno per [!UICONTROL on-device decisioning].
 
 | Regola pubblico | Decisioning sul dispositivo |
 | --- | --- |
@@ -50,11 +50,11 @@ La tabella seguente indica per quali regole di pubblico sono supportate o meno [
 | [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | No |
 | [Origini del traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | No |
 | [Arco temporale](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sì |
-| [Tipi di pubblico di Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Tipi di pubblico da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | No |
+| [Tipi di pubblico di Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (tipi di pubblico da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | No |
 
-### Geotargeting per [!UICONTROL decisioning sul dispositivo]
+### Geotargeting per [!UICONTROL on-device decisioning]
 
-Per mantenere una latenza prossima allo zero per [!UICONTROL decisioning sul dispositivo] con tipi di pubblico basati sulla geotargeting, l’Adobe consiglia di fornire tu stesso i valori geografici nella chiamata a `getOffers`. A tale scopo, impostare `Geo` oggetto in `Context` della richiesta. Ciò significa che il server dovrà essere in grado di determinare la posizione di ciascun utente finale. Ad esempio, il server potrebbe eseguire una ricerca IP-to-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
+Per mantenere una latenza prossima allo zero per le attività [!UICONTROL on-device decisioning] con pubblico basato su geotargeting, l&#39;Adobe consiglia di fornire personalmente i valori geografici nella chiamata a `getOffers`. A tale scopo, impostare l&#39;oggetto `Geo` in `Context` della richiesta. Ciò significa che il server dovrà essere in grado di determinare la posizione di ciascun utente finale. Ad esempio, il server potrebbe eseguire una ricerca IP-to-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
 
 >[!BEGINTABS]
 
@@ -114,7 +114,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-Tuttavia, se non hai la possibilità di eseguire ricerche IP-to-Geo sul server, ma desideri comunque eseguire [!UICONTROL decisioning sul dispositivo] per `getOffers` sono supportate anche le richieste che contengono tipi di pubblico basati su geotargeting. Il lato negativo di questo approccio è che utilizzerà una ricerca remota IP-to-Geo, che aggiungerà latenza a ogni `getOffers` chiamare. Questa latenza deve essere inferiore a un `getOffers` , poiché raggiunge una rete CDN situata vicino al server. È necessario fornire solo `ipAddress` campo in `Geo` oggetto in `Context` della richiesta, affinché l’SDK possa recuperare la geolocalizzazione dell’indirizzo IP dell’utente. Se sono presenti altri campi oltre a `ipAddress` viene fornito, il [!DNL Target] L’SDK non recupererà i metadati di geolocalizzazione per la risoluzione.
+Tuttavia, se non hai la possibilità di eseguire ricerche IP-to-Geo sul server, ma desideri comunque eseguire [!UICONTROL on-device decisioning] per `getOffers` richieste che contengono tipi di pubblico basati su geotargeting, anche questo è supportato. Il lato negativo di questo approccio è che utilizzerà una ricerca remota IP-Geo, che aggiungerà latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` remota, poiché raggiunge una rete CDN vicina al server. È necessario fornire solo il campo `ipAddress` nell&#39;oggetto `Geo` nella `Context` della richiesta, affinché l&#39;SDK possa recuperare la geolocalizzazione dell&#39;indirizzo IP dell&#39;utente. Se viene fornito un altro campo oltre a `ipAddress`, l&#39;SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
 
 
 >[!BEGINTABS]
@@ -165,10 +165,10 @@ public class TargetRequestUtils {
 
 ## Metodo di allocazione
 
-Nella tabella seguente vengono indicati i metodi di allocazione supportati o non supportati per [!UICONTROL decisioning sul dispositivo].
+La tabella seguente indica i metodi di allocazione supportati o non supportati per [!UICONTROL on-device decisioning].
 
 | Metodo di allocazione | Supportato |
 | --- | --- |
 | Manuale | Sì |
-| [Allocazione automatica all’esperienza migliore](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | No |
+| [Allocazione automatica all&#39;esperienza migliore](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | No |
 | [Targeting automatico per esperienze personalizzate](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html) | No |

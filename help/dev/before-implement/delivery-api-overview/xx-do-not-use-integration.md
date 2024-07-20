@@ -4,8 +4,8 @@ description: Integrazione con Experience Cloud
 keywords: api di consegna
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 5%
+source-wordcount: '467'
+ht-degree: 6%
 
 ---
 
@@ -25,8 +25,8 @@ Quando una chiamata API di consegna di Target viene attivata dal server, Adobe T
 
 Adobe Target può inoltrare automaticamente il payload di Analytics ad Adobe Analytics tramite il lato server se vengono forniti i seguenti identificatori:
 
-1. `supplementalDataId` : ID utilizzato per eseguire l’unione tra Adobe Analytics e Adobe Target
-1. `trackingServer` : il server Analytics di Adobe Per consentire ad Adobe Target e Adobe Analytics di unire correttamente i dati, `supplementalDataId` devono essere passati ad Adobe Target e Adobe Analytics.
+1. `supplementalDataId` - ID utilizzato per unire Adobe Analytics e Adobe Target
+1. `trackingServer` - Server Adobe Analytics Per consentire ad Adobe Target e Adobe Analytics di unire correttamente i dati, è necessario passare gli stessi `supplementalDataId` sia ad Adobe Target che ad Adobe Analytics.
 
 ```
 curl -X POST \
@@ -73,7 +73,7 @@ curl -X POST \
 
 ### Recuperare il payload di Analytics da Adobe Target
 
-I consumatori dell’API di consegna di Adobe Target possono recuperare il payload di Adobe Analytics per una mbox corrispondente in modo che il consumatore possa inviare il payload ad Adobe Analytics tramite [API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Quando viene attivata una chiamata Adobe Target lato server, passa `client_side` al `logging` nella richiesta. Questo a sua volta restituirà un payload se la mbox è presente in un’attività che utilizza Analytics come origine per la generazione di rapporti.
+I consumatori dell&#39;API di consegna di Adobe Target possono recuperare il payload di Adobe Analytics per una mbox corrispondente in modo che il consumatore possa inviare il payload ad Adobe Analytics tramite l&#39;[API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Quando viene attivata una chiamata Adobe Target lato server, passa `client_side` al campo `logging` nella richiesta. Questo a sua volta restituirà un payload se la mbox è presente in un’attività che utilizza Analytics come origine per la generazione di rapporti.
 
 ```
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
     }'
 ```
 
-Dopo aver specificato `logging` = `client_side`, riceverai il payload in `mbox` come mostrato di seguito.
+Dopo aver specificato `logging` = `client_side`, riceverai il payload nel campo `mbox` come mostrato di seguito.
 
 ```
 {
@@ -176,7 +176,7 @@ Dopo aver specificato `logging` = `client_side`, riceverai il payload in `mbox` 
 }
 ```
 
-Se la risposta di Target contiene elementi nel `analytics` -> `payload` inoltra la proprietà così com&#39;è ad Adobe Analytics. Analytics sa come elaborare questo payload. Questa operazione può essere eseguita in una richiesta GET utilizzando il seguente formato:
+Se la risposta di Target contiene qualcosa nella proprietà `analytics` -> `payload`, inoltrarla così com&#39;è ad Adobe Analytics. Analytics sa come elaborare questo payload. Questa operazione può essere eseguita in una richiesta GET utilizzando il seguente formato:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -188,7 +188,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | --- | --- | --- |
 | `rsid` | Sì | ID suite di rapporti |
 | `pe` | Sì | Evento pagina. Sempre impostato su `tnt` |
-| `tnta` | Sì | Payload di Analytics restituito dal server Target in `analytics` -> `payload` -> `tnta` |
+| `tnta` | Sì | Payload di Analytics restituito dal server di Target in `analytics` -> `payload` -> `tnta` |
 | `mid` | ID visitatore di Marketing Cloud |
 
 ### Valori intestazione richiesti

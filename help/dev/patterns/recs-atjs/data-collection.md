@@ -4,16 +4,17 @@ description: Assicurati che tutte le attività necessarie per la raccolta dei da
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '384'
+ht-degree: 2%
 
 ---
 
 # Configurare la raccolta dati
 
-Segui i passaggi descritti in *Raccolta dati* per garantire che tutte le attività necessarie per la raccolta dei dati vengano eseguite nella sequenza corretta.
+Segui i passaggi nel diagramma *Raccolta dati* per assicurarti che tutte le attività necessarie per la raccolta dati vengano eseguite nella sequenza corretta.
 
 >[!TIP]
 >
@@ -21,16 +22,16 @@ Segui i passaggi descritti in *Raccolta dati* per garantire che tutte le attivit
 
 Il livello dati è pronto durante il caricamento della pagina o quando cambia dopo il caricamento della pagina.
 
-Se hai già mappato i dati durante il [fase di inizializzazione SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md), è necessario eseguire i passaggi in questo diagramma se:
+Se hai già mappato i dati durante la [fase di inizializzazione dell&#39;SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md), devi eseguire i passaggi in questo diagramma se:
 
 * Il livello dati viene potenziato in qualsiasi modo sulla stessa pagina e desideri inviare tali dati aggiuntivi a [!DNL Target]
-* Desideri inviare i dati del catalogo prodotti a [!DNL Target Recommendations]
+* Si desidera inviare i dati del catalogo prodotti a [!DNL Target Recommendations]
 
 ## Raccogli diagramma dati {#diagram}
 
 I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito.
 
-![Diagramma di Data Collection](/help/dev/patterns/recs-atjs/assets/data-collection-diagram.png){width="600" zoomable="yes"}
+![Diagramma raccolta dati](/help/dev/patterns/recs-atjs/assets/data-collection-diagram.png){width="600" zoomable="yes"}
 
 Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
@@ -40,11 +41,11 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
 ## 2.1: Configurare la mappatura dei dati {#configure}
 
-Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Adobe Target] è impostato.
+Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Adobe Target] siano impostati.
 
 +++Consulta i dettagli
 
-![Configurare il diagramma di mappatura dei dati](/help/dev/patterns/recs-atjs/assets/configure-data-mapping-combined.png){width="400" zoomable="yes"}
+![Configura diagramma di mappatura dati](/help/dev/patterns/recs-atjs/assets/configure-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
@@ -56,7 +57,7 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL A
 
 **Azioni**
 
-Utilizza il `targetPageParams()` per impostare tutti i dati richiesti da inviare a [!DNL Target].
+Utilizzare la funzione `targetPageParams()` per impostare tutti i dati richiesti da inviare a [!DNL Target].
 
 +++
 
@@ -64,7 +65,7 @@ Utilizza il `targetPageParams()` per impostare tutti i dati richiesti da inviare
 
 ## 2.2: Collegamento ad attributi di entità {#entity-attributes}
 
-Collega ad attributi di entità per aggiornare il catalogo prodotti per [!DNL Target Recommendations].
+Collegamento agli attributi di entità per aggiornare il catalogo prodotti per [!DNL Target Recommendations].
 
 +++Consulta i dettagli
 
@@ -74,9 +75,9 @@ Collega ad attributi di entità per aggiornare il catalogo prodotti per [!DNL Ta
 
 **Considerazioni**
 
-* Un modo alternativo per trasmettere gli attributi di entità consiste nell’aggiornare il catalogo prodotti in [!DNL Target] Interfaccia utente da utilizzare [Feed di prodotto di Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
+* Un modo alternativo per passare gli attributi di entità consiste nell&#39;aggiornare il catalogo prodotti nell&#39;interfaccia utente [!DNL Target] per utilizzare [feed prodotti Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
 * Il passaggio degli attributi di entità è applicabile solo alle pagine in cui i dati del catalogo prodotti sono disponibili nel livello dati.
-* Superamento del `entity.event.detailsOnly=true` Il parametro in qualsiasi chiamata ha la priorità.
+* Il passaggio del parametro `entity.event.detailsOnly=true` in qualsiasi chiamata ha la priorità.
 
 +++
 
@@ -84,15 +85,15 @@ Collega ad attributi di entità per aggiornare il catalogo prodotti per [!DNL Ta
 
 ## 2.3 Attivare l’API di Adobe Target Track {#fire-api}
 
-Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Target] viene inviato.
+Questo passaggio garantisce l&#39;invio di tutti i dati che devono essere inviati a [!DNL Target].
 
 +++Consulta i dettagli
 
-![Attiva diagramma API del tracciamento di Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
+![Attiva diagramma API di Adobe Target Track](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
-* Tutta la mappatura dei dati deve essere stata eseguita utilizzando [funzione targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+* Tutte le mappature dei dati devono essere state eseguite utilizzando la funzione [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
 
 **Letture**
 
@@ -100,11 +101,10 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL T
 
 **Azioni**
 
-Utilizzare [metodo adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) per inviare tutti i dati da inviare a [!DNL Target].
+Utilizzare il metodo [adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) per inviare tutti i dati che devono essere inviati a [!DNL Target].
 
 +++
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
 
-Procedi al Passaggio 3: [Esperienze di rendering](/help/dev/patterns/recs-atjs/render-experiences.md)
-
+Procedi al passaggio 3: [Esperienze di rendering](/help/dev/patterns/recs-atjs/render-experiences.md)

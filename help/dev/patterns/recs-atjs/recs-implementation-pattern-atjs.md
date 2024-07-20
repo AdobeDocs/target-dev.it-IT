@@ -4,33 +4,34 @@ description: Come utilizzare il modello di implementazione per Recommendations c
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
-# [!DNL Recommendations] modello di implementazione tramite panoramica di at.js
+# Schema di implementazione di [!DNL Recommendations] tramite panoramica di at.js
 
-Questo modello di implementazione consente di comprendere e creare [!DNL Adobe Target Recommendations] implementazione quando si utilizza [Libreria JavaScript at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
+Questo modello di implementazione consente di comprendere e creare l&#39;implementazione di [!DNL Adobe Target Recommendations] quando si utilizza la libreria JavaScript di [at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
 
 Fare clic sull&#39;immagine per espandere a schermo intero.
 
-![Diagramma dell’architettura di Adobe Target](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
+![Diagramma architettura di Adobe Target](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
 
 Si noti che i numeri nell&#39;immagine non indicano la sequenza di operazioni:
 
 1. SDK lato client per [!DNL Adobe Target] e [!DNL Experience Cloud ID Service]
-1. [!DNL Target Delivery API] chiamare
-1. [!UICONTROL ID EXPERIENCE CLOUD] (ECID) chiamata di acquisizione
-1. API di aggiornamento del profilo bulk e [!DNL Customer Attributes] (CA) servizio
-1. Acquisizione dei dati del profilo dalle origini dati del cliente in [!DNL Target] archivio profili
+1. Chiamata [!DNL Target Delivery API]
+1. Chiamata di acquisizione [!UICONTROL Experience Cloud ID] (ECID)
+1. API di aggiornamento del profilo bulk e servizio [!DNL Customer Attributes] (CA)
+1. Acquisizione dei dati del profilo dalle origini dati del cliente all&#39;archivio profili [!DNL Target]
 1. Raccogliere dati sul profilo e sul comportamento e decidere quale esperienza mostrare al visitatore
 1. Le esperienze eseguono il rendering sulla pagina
 1. at.js esegue il rendering delle esperienze sulla pagina
 
-Ogni pattern è costituito da parti diverse, ognuna delle quali corrisponde a un requisito di implementazione critico per [!DNL Target] implementazione.
+Ogni modello è costituito da parti diverse, ognuna delle quali corrisponde a un requisito di implementazione critico per l&#39;implementazione di [!DNL Target].
 
 Ogni parte è spiegata in un articolo separato di questa guida:
 
@@ -38,4 +39,3 @@ Ogni parte è spiegata in un articolo separato di questa guida:
 * [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md)
 * [Esperienze di rendering](/help/dev/patterns/recs-atjs/render-experiences.md)
 * [Notifica Target](/help/dev/patterns/recs-atjs/notify-target.md)
-

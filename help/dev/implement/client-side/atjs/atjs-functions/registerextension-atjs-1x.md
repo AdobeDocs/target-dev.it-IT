@@ -1,13 +1,13 @@
 ---
 keywords: registerExtension, registerextension, register extension, at.js, funzioni, funzione, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: Utilizza il [!UICONTROL registerExtension()] funzione per [!DNL Adobe Target] Libreria JavaScript at.js per registrare un’estensione specifica. (at.js 1.x)
-title: Come si utilizza [!UICONTROL registerExtension()] Funzione?
+description: Utilizza la funzione [!UICONTROL registerExtension()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per registrare un'estensione specifica. (at.js 1.x)
+title: Come si utilizza la funzione [!UICONTROL registerExtension()]?
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 76%
+source-wordcount: '265'
+ht-degree: 69%
 
 ---
 
@@ -32,7 +32,7 @@ Note:
 * se uno dei parametri non viene fornito, viene generata un&#39;eccezione.
 * Se l’array dei moduli è vuoto, viene generata un&#39;eccezione.
 
-Per ulteriori informazioni ed esempi sull’utilizzo di `[!UICONTROL registerExtension]`, consulta la pagina [Estensioni atjs di Adobe Experience Cloud](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) su GitHub.
+Per ulteriori informazioni ed esempi sull&#39;utilizzo di `[!UICONTROL registerExtension]`, vedere la pagina [Estensioni atjs di Adobe Experience Cloud Target](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) su GitHub.
 
 ## Metodi del modulo impostazioni
 
@@ -40,7 +40,7 @@ Per ulteriori informazioni ed esempi sull’utilizzo di `[!UICONTROL registerExt
 |--- |--- |--- |
 | clientCode | Stringa | Codice cliente |
 | serverDomain | Stringa | Dominio server Edge |
-| globalMboxName | Stringa | [!DNL Target] nome mbox globale |
+| globalMboxName | Stringa | Nome mbox globale [!DNL Target] |
 | globalMboxAutoCreate | Booleano | Indica se la creazione automatica è abilitata o meno |
 | timeout | Numero | Timeout richiesta |
 

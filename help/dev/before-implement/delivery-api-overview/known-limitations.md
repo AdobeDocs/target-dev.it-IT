@@ -1,21 +1,21 @@
 ---
 title: Considerazioni sull’API di consegna di Adobe Target e limitazioni note
-description: Quali considerazioni e limitazioni note devo tenere in considerazione quando utilizzo il [!UICONTROL API di consegna di Adobe Target]?
+description: Quali considerazioni e limitazioni note devo tenere in considerazione quando utilizzo [!UICONTROL Adobe Target Delivery API]?
 keywords: api di consegna
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
 source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '134'
 ht-degree: 6%
 
 ---
 
 # Considerazioni e limitazioni note
 
-* Nessuna autenticazione per [!DNL Target] API di consegna.
+* Nessuna autenticazione per le API di consegna [!DNL Target].
 * Questa API non elabora i cookie o le chiamate di reindirizzamento.
-* Sia i nomi di intestazione HTTP/1.1 che HTTP/2 non fanno distinzione tra maiuscole e minuscole; tuttavia, HTTP/2 applica i nomi di intestazione minuscoli. Per ulteriori informazioni, vedere [Documentazione di Hypertext Transfer Protocol versione 2 (HTTP/2)](https://www.rfc-editor.org/rfc/rfc7540#section-8.1.2){target=_blank}.
+* Sia i nomi di intestazione HTTP/1.1 che HTTP/2 non fanno distinzione tra maiuscole e minuscole; tuttavia, HTTP/2 applica i nomi di intestazione minuscoli. Per ulteriori informazioni, vedere la documentazione del [protocollo HTTP/2 (Hypertext Transfer Protocol Version 2)](https://www.rfc-editor.org/rfc/rfc7540#section-8.1.2){target=_blank}.
 
   Se utilizzi un endpoint che indirizza i visitatori attraverso la nostra nuova infrastruttura di load balancer, le loro connessioni vengono automaticamente aggiornate a HTTP/2. Questo processo di aggiornamento converte le intestazioni di richiesta in intestazioni minuscole in modo che non vengano considerate in formato non valido.
 

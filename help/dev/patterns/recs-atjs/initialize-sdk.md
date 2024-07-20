@@ -1,19 +1,20 @@
 ---
 title: Inizializzare gli SDK
-description: Verificare che siano stati eseguiti tutti i passaggi necessari per caricare [!DNL Adobe Target] La libreria JavaScript at.js viene eseguita nella sequenza corretta.
+description: Assicurati che tutti i passaggi necessari per il caricamento della libreria JavaScript at.js di  [!DNL Adobe Target]  siano eseguiti nella sequenza corretta.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 7%
+source-wordcount: '1558'
+ht-degree: 5%
 
 ---
 
 # Inizializzare gli SDK
 
-Segui i passaggi descritti in *Inizializza SDK* per garantire che tutte le attività necessarie per caricare [!DNL Adobe Target] La libreria JavaScript at.js viene eseguita nella sequenza corretta.
+Segui i passaggi descritti nel diagramma *Initialize SDK* per assicurarti che tutte le attività necessarie per caricare la libreria at.js JavaScript di [!DNL Adobe Target] vengano eseguite nella sequenza corretta.
 
 >[!TIP]
 >
@@ -25,7 +26,7 @@ Per le applicazioni multipagina, questo flusso si verifica ogni volta che la pag
 
 >[!NOTE]
 >
->I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito. I numeri dei passaggi non sono in un ordine particolare e non riflettono l&#39;ordine dei passaggi eseguiti nel [!DNL Target] Interfaccia utente durante la creazione dell’attività.
+>I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito. I numeri dei passaggi non sono in un ordine particolare e non riflettono l&#39;ordine dei passaggi eseguiti nell&#39;interfaccia utente [!DNL Target] durante la creazione dell&#39;attività.
 
 ![Inizializza diagramma SDK](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 
@@ -50,20 +51,20 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
 ## 1.1: Caricare l’SDK dell’API visitatore {#load}
 
-Questo passaggio garantisce che `VisitorAPI.js` la libreria è caricata, configurata e inizializzata correttamente.
+Questo passaggio garantisce che la libreria `VisitorAPI.js` sia caricata, configurata e inizializzata correttamente.
 
 +++Consulta i dettagli
 
-![Caricare il diagramma SDK dell’API visitatore](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
+![Carica diagramma SDK API visitatore](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
-* Per utilizzare il servizio ID visitatore/API, la società deve essere abilitata per [!DNL Adobe Experience Cloud] e hanno un [!UICONTROL ID organizzazione]. Per ulteriori informazioni, consulta [Requisiti di Experience Cloud: ID organizzazione](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} nel *Guida del servizio Identity* guida.
-* Hai bisogno di `VisitorAPI.js` file. Dovresti avere già questo file, se [!DNL Adobe Analytics] implementato. Questo file può essere aggiunto anche tramite [[!DNL Adobe Experience Platform] estensione tag](https://experienceleague.adobe.com/docs/tags.html){target=_blank} or can be downloaded from the [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
+* Per utilizzare il servizio ID visitatore/API, la società deve essere abilitata per [!DNL Adobe Experience Cloud] e disporre di [!UICONTROL Organization ID]. Per ulteriori informazioni, consulta [Requisiti di Experience Cloud: ID organizzazione](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} nella *Guida del servizio Identity*.
+* È necessario il file `VisitorAPI.js`. Questo file dovrebbe essere già presente se sono stati implementati [!DNL Adobe Analytics]. Questo file può anche essere aggiunto tramite l&#39;estensione [[!DNL Adobe Experience Platform] tags](https://experienceleague.adobe.com/docs/tags.html){target=_blank} o scaricato da [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
-**Configurare e consultare VisitorAPI.js**
+**Configura e fai riferimento a VisitorAPI.js**
 
-Per ulteriori informazioni, consulta [Implementazione del servizio Experience Cloud per Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
+Per ulteriori informazioni, vedere [Implementare il servizio Experience Cloud per Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
 
 **Letture**
 
@@ -75,10 +76,10 @@ Per ulteriori informazioni, consulta [Implementazione del servizio Experience Cl
 
 **Azioni**
 
-* Incorpora il `VisitorAPI.js` nelle pagine Web.
-* Leggi informazioni su [configurazioni disponibili per il servizio ID visitatore/API](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
-* Dopo il `VisitorAPI.js` è caricato, utilizza `Visitor.getInstance` per inizializzare utilizzando le configurazioni necessarie.
-* Acquisisci familiarità con [metodi disponibili](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}.
+* Incorporare il file `VisitorAPI.js` nelle pagine Web.
+* Scopri le [configurazioni disponibili per il servizio ID visitatore/API](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
+* Dopo il caricamento del file `VisitorAPI.js`, utilizzare il metodo `Visitor.getInstance` per inizializzare utilizzando le configurazioni necessarie.
+* Acquisisci familiarità con i [metodi disponibili](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}.
 
 +++
 
@@ -86,7 +87,7 @@ Per ulteriori informazioni, consulta [Implementazione del servizio Experience Cl
 
 ## 1.2: Imposta ID cliente {#set}
 
-Questo passaggio ti aiuta a garantire che gli ID noti dei visitatori (ID CRM, ID utente e così via) siano associati all&#39;ID anonimo di [!DNL Adobe] per la personalizzazione tra dispositivi.
+Questo passaggio garantisce che gli ID noti dei visitatori (ID CRM, ID utente e così via) siano associati all&#39;ID anonimo di [!DNL Adobe] per la personalizzazione tra dispositivi diversi.
 
 +++Consulta i dettagli
 
@@ -97,7 +98,7 @@ Questo passaggio ti aiuta a garantire che gli ID noti dei visitatori (ID CRM, ID
 * L’ID noto dei visitatori deve essere disponibile nel livello dati.
 
 **Imposta ID cliente**
-Per ulteriori informazioni, consulta [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}.
+Per ulteriori informazioni, vedere [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}.
 
 **Letture**
 
@@ -105,7 +106,7 @@ Per ulteriori informazioni, consulta [setCustomerIDs](https://experienceleague.a
 
 **Azioni**
 
-* Utilizzare `visitor.setCustomerIDs` per impostare l&#39;ID noto del visitatore.
+* Utilizza `visitor.setCustomerIDs` per impostare l&#39;ID noto del visitatore.
 
 +++
 
@@ -113,28 +114,28 @@ Per ulteriori informazioni, consulta [setCustomerIDs](https://experienceleague.a
 
 ## 1.3: Configurare la richiesta di caricamento pagina automatico {#automatic}
 
-Questo passaggio consente a at.js di recuperare tutte le esperienze che devono essere sottoposte a rendering sulla pagina durante il caricamento del file di libreria JavaScript at.js.
+Questo passaggio consente a at.js di recuperare tutte le esperienze di cui è necessario eseguire il rendering sulla pagina durante il caricamento del file della libreria JavaScript at.js.
 
 +++Consulta i dettagli
 
-![Configurare la richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
+![Configura richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
 * Non tutti i dati nel livello dati devono essere inviati a [!DNL Target]. Rivolgiti al team aziendale (team di marketing digitale) per determinare quali dati sono utili per la sperimentazione, l’ottimizzazione e la personalizzazione. Solo questi dati devono essere inviati a [!DNL Target].
-* Assicurati di non inviare dati personali (PII, Personally Identifiable Information) a [!DNL Target].
+* Assicurarsi di non inviare dati PII (Personally Identifiable Information) a [!DNL Target].
 
-**Configurare la richiesta di caricamento pagina automatico**
+**Configura richiesta di caricamento pagina automatico**
 
 Per ulteriori informazioni, consulta [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
 **Letture**
 
-Scopri di più su `pageLoadEnabled` impostazione in [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+Informazioni sull&#39;impostazione `pageLoadEnabled` in [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
 **Azioni**
 
-* Modifica il `window.targetGlobalSettings` per abilitare le richieste di caricamento pagina automatico.
+* Modificare l&#39;oggetto `window.targetGlobalSettings` per abilitare le richieste di caricamento pagina automatico.
 
 +++
 
@@ -146,19 +147,19 @@ Questo passaggio consente di evitare la visualizzazione momentanea di altri cont
 
 +++Consulta i dettagli
 
-![Configurare il diagramma di gestione della visualizzazione momentanea di altri contenuti](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
+![Configura diagramma gestione sfarfallio](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
 * Discuti con il team responsabile delle prestazioni delle pagine web dei pro e dei contro del controllo della visualizzazione momentanea di altri contenuti utilizzando il metodo predefinito utilizzato da at.js. È possibile cercare modelli di progettazione che consentano di utilizzare soluzioni personalizzate per la gestione dello sfarfallio, ad esempio l&#39;animazione del caricatore. Se non trovate un pattern, potete richiederne uno nuovo.
 
-**Configurare la gestione dello sfarfallio**
+**Configura gestione sfarfallio**
 
 Per ulteriori informazioni, consulta [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
-Impostazione `bodyHidingEnabled` a `true` nasconde l’intero corpo della pagina mentre è in corso la richiesta di caricamento della pagina. Se non hai attivato la richiesta di caricamento pagina automatico per qualsiasi motivo (ad esempio, se i dati non sono pronti in un secondo momento), è meglio impostare questa impostazione su `false`.
+Se si imposta `bodyHidingEnabled` su `true`, verrà nascosto l&#39;intero corpo della pagina mentre è in corso la richiesta di caricamento della pagina. Se non hai attivato la richiesta di caricamento pagina automatico per nessun motivo (ad esempio, se i dati non sono pronti in un secondo momento), conviene impostare questa impostazione su `false`.
 
-Se hai disabilitato `bodyHidingEnabled` poiché non si desidera attivare l&#39;APLR e si desidera attivare la richiesta di pagina in un secondo momento, oppure non è necessario gestire la visualizzazione momentanea di altri contenuti, è necessario implementare la gestione della visualizzazione momentanea di altri contenuti. È possibile gestire la visualizzazione momentanea di altri contenuti in due modi: nascondendo le sezioni in fase di test o visualizzando un pulsante sulle sezioni in fase di test.
+Se `bodyHidingEnabled` è stato disabilitato perché non si desidera attivare l&#39;APLR e si desidera attivare la richiesta di pagina in un secondo momento oppure non è necessario gestire la visualizzazione momentanea di altri contenuti, è necessario implementare la gestione della visualizzazione momentanea di altri contenuti. È possibile gestire la visualizzazione momentanea di altri contenuti in due modi: nascondendo le sezioni in fase di test o visualizzando un pulsante sulle sezioni in fase di test.
 
 **Letture**
 
@@ -167,7 +168,7 @@ Se hai disabilitato `bodyHidingEnabled` poiché non si desidera attivare l&#39;A
 
 **Azioni**
 
-* Modifica il `window.targetGlobalSettings` oggetto da impostare `bodyHiddenStyle` e `bodyHidingEnabled`.
+* Modificare l&#39;oggetto `window.targetGlobalSettings` per impostare `bodyHiddenStyle` e `bodyHidingEnabled`.
 
 +++
 
@@ -175,26 +176,26 @@ Se hai disabilitato `bodyHidingEnabled` poiché non si desidera attivare l&#39;A
 
 ## 1.5: Configurare la mappatura dei dati {#data-mapping}
 
-Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Target] è impostato.
+Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Target] siano impostati.
 
 +++Consulta i dettagli
 
-![Diagramma di mappatura dei dati](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
+![Diagramma mappatura dati](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
 * Il livello dati deve essere pronto con tutti i dati che devono essere inviati a [!DNL Target].
 * Recommendations: arricchisci profilo.
-   * Superato `entity.id` per acquisire dati per articoli e criteri visualizzati di recente in base a criteri basati sull’ultimo prodotto visualizzato.
-   * Superato `entity.id` per acquisire dati per i criteri di popolarità in base alla categoria preferita.
+   * Passa `entity.id` per acquisire i dati per gli elementi e i criteri visualizzati di recente in base ai criteri dell&#39;ultimo prodotto visualizzato.
+   * Passa `entity.id` per acquisire i dati per i criteri di popolarità in base alla categoria preferita.
    * Passa l’attributo di profilo se i criteri personalizzati sono basati su di esso o utilizzati nel filtro della regola di inclusione in qualsiasi criterio.
 * Recommendations: acquisire i dati di prodotto.
-   * Altri parametri di entità (riservati e personalizzati) possono essere trasmessi per acquisire o aggiornare il catalogo dei prodotti in [!DNL Recommendations].
-   * Il catalogo dei prodotti può essere aggiornato anche utilizzando i feed di entità utilizzando [!DNL Target] Interfaccia utente o API.
+   * Altri parametri di entità (riservati e personalizzati) possono essere passati per acquisire o aggiornare il catalogo prodotti in [!DNL Recommendations].
+   * È inoltre possibile aggiornare il catalogo prodotti utilizzando feed di entità tramite l&#39;interfaccia utente o l&#39;API [!DNL Target].
 
-**Mappa dati su[!DNL Target]**
+**Mappa i dati su[!DNL Target]**
 
-Per ulteriori informazioni, consulta [targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+Per ulteriori informazioni, vedere [targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
 
 **Letture**
 
@@ -204,7 +205,7 @@ Per ulteriori informazioni, consulta [targetPageParams()](/help/dev/implement/cl
 
 **Azioni**
 
-* Utilizza il `targetPageParams()` per impostare tutti i dati richiesti da inviare a [!DNL Target].
+* Utilizzare la funzione `targetPageParams()` per impostare tutti i dati richiesti da inviare a [!DNL Target].
 
 +++
 
@@ -212,7 +213,7 @@ Per ulteriori informazioni, consulta [targetPageParams()](/help/dev/implement/cl
 
 ## 1.6: Promozione {#promotion}
 
-Aggiungi articoli in promozione e controllane il posizionamento nel tuo [!DNL Target Recommendations] [progetti](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+Aggiungi elementi promossi e controllane il posizionamento nelle [!DNL Target Recommendations] [progettazioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
 
 +++Consulta i dettagli
 
@@ -238,9 +239,9 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Chi ha visualizzato questi ha visualizzato anche quelli]
-* [!UICONTROL Chi ha visualizzato questi ha acquistato anche quelli]
-* [!UICONTROL Chi ha comprato questi ha acquistato anche quelli]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
 **Parametri di entità richiesti**
 
@@ -262,17 +263,17 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Criteri disponibili**
 
-* [!UICONTROL Articoli più visualizzati nel sito]
-* [!UICONTROL Più visualizzati per categoria]
-* [!UICONTROL Più visualizzati per attributo articolo]
-* [!UICONTROL Articoli più venduti in tutto il sito]
-* [!UICONTROL Articoli più venduti per categoria]
-* [!UICONTROL Attributo Articoli più venduti]
-* [!UICONTROL Primi per metrica di Analytics]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
 **Parametri di entità richiesti**
 
-* `entity.categoryId` o l&#39;attributo dell&#39;articolo in base alla popolarità, se il criterio è basato sull&#39;articolo corrente o sull&#39;attributo dell&#39;articolo.
+* `entity.categoryId` o l&#39;attributo dell&#39;elemento per la popolarità se il criterio è basato sull&#39;elemento corrente o sull&#39;attributo dell&#39;elemento.
 * Non è necessario trasmettere nulla per i Più visualizzati/Più venduti nel sito.
 
 **Letture**
@@ -291,10 +292,10 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Criteri disponibili**
 
-* [!UICONTROL Chi ha visualizzato questo ha visualizzato anche quello]
-* [!UICONTROL Chi ha visualizzato questo ha acquistato anche quello]
-* [!UICONTROL Chi ha comprato questo ha acquistato anche quello]
-* [!UICONTROL Articoli con attributi simili]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
 **Parametri di entità richiesti**
 
@@ -316,8 +317,8 @@ Creare consigli in base al comportamento dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Articoli visualizzati di recente]
-* [!UICONTROL Consigliato per te]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
 **Parametri di entità richiesti**
 
@@ -339,11 +340,11 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Criteri disponibili**
 
-* [!UICONTROL Algoritmo personalizzato]
+* [!UICONTROL Custom algorithm]
 
 **Parametri di entità richiesti**
 
-`entity.id` o l’attributo utilizzato come chiave per l’algoritmo personalizzato
+`entity.id` o l&#39;attributo utilizzato come chiave per l&#39;algoritmo personalizzato
 
 **Letture**
 
@@ -373,15 +374,15 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 **Letture**
 
-* [È possibile escludere un’entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [È possibile escludere un&#39;entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
 
-## 1.14: Superare il `entity.event.detailsOnly=true` parametro {#true}
+## 1.14: passa il parametro `entity.event.detailsOnly=true` {#true}
 
-Utilizzare gli attributi di entità per trasmettere informazioni su prodotti o contenuti a [!DNL Target Recommendations].
+Utilizzare gli attributi di entità per passare informazioni su prodotti o contenuti a [!DNL Target Recommendations].
 
 +++Consulta i dettagli
 
@@ -395,7 +396,7 @@ Utilizzare gli attributi di entità per trasmettere informazioni su prodotti o c
 
 ## 1.15: Configurare la mappatura dei dati remoti (remota)
 
-Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Target] è impostato.
+Questo passaggio assicura che tutti i dati che devono essere inviati a [!DNL Target] siano impostati.
 
 +++Consulta i dettagli
 
@@ -407,7 +408,7 @@ Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL T
 
 **Configurare i provider di dati**
 
-Per ulteriori informazioni, consulta [Fornitori di dati](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#data-providers).
+Per ulteriori informazioni, vedere [Provider di dati](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#data-providers).
 
 **Letture**
 
@@ -415,7 +416,7 @@ Per ulteriori informazioni, consulta [Fornitori di dati](/help/dev/implement/cli
 
 **Azioni**
 
-Utilizza il `targetPageParams()` per impostare tutti i dati richiesti da inviare a [!DNL Target].
+Utilizzare la funzione `targetPageParams()` per impostare tutti i dati richiesti da inviare a [!DNL Target].
 
 +++
 
@@ -427,15 +428,15 @@ Questo passaggio assicura che la libreria JavaScript at.js sia caricata e inizia
 
 +++Consulta i dettagli
 
-![Caricare un diagramma at.js di Adobe Target](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
+![Carica diagramma at.js di Adobe Target](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
-* Scarica o chiedi al tuo team di marketing digitale `at.js 2.*x*` File libreria JavaScript.
+* Scarica o chiedi al tuo team di marketing digitale il file della libreria JavaScript `at.js 2.*x*`.
 
 *Letture*
 
-* [Come funziona Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
+* [Funzionamento di Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
 * [Funzionamento di at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [Implementare Target senza un sistema per la gestione dei tag](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 
@@ -447,33 +448,4 @@ Incorpora il file at.js in tutte le tue pagine web in cui si devono effettuare s
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
 
-Procedi al passaggio 2: [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Procedere con il passaggio 2: [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md).

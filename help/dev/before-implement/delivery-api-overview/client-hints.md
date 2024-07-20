@@ -1,26 +1,26 @@
 ---
 title: Hint client API di consegna Adobe Target
-description: Come si utilizzano gli Client Hints in [!DNL Adobe Target] API di consegna?
+description: Come si utilizzano i Client Hints nell'API di consegna  [!DNL Adobe Target] ?
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
-# Client Hints e [!UICONTROL API di consegna di Adobe Target]
+# Client Hints e [!UICONTROL Adobe Target Delivery API]
 
 Gli Client Hints devono essere inviati a [!DNL Adobe Target] nella richiesta di offerte.
 
-In genere, si consiglia di inviare tutti gli Client Hints disponibili a [!DNL Target]. Per ulteriori informazioni, consulta [User-agent e Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) nel [Implementazione lato client](../../implement/client-side/overview.md) sezione.
+In genere, si consiglia di inviare tutti gli Client Hints disponibili a [!DNL Target]. Per ulteriori informazioni, vedere [User-agent e Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) nella sezione [Implementazione lato client](../../implement/client-side/overview.md).
 
 ## Chiamate dirette API di consegna
 
 ### Dal browser
 
-In questo caso, il browser invia Client Hints a bassa entropia a [!DNL Target] automaticamente tramite intestazioni di richiesta. Tuttavia, questa implementazione presenta alcune limitazioni a livello di browser. Primo: dal browser non verranno inviate intestazioni dei Client Hints, a meno che la richiesta non venga effettuata tramite https. Secondo - Client Hints non verranno inviati alla prima richiesta a [!DNL Target] sulla pagina. Le intestazioni dei Client Hints vengono inviate solo alla seconda richiesta e successivamente a tutte le richieste. Ciò significa che la segmentazione e la personalizzazione del pubblico non possono essere eseguite da [!DNL Target] alla prima visita di pagina. Per ovviare a entrambe queste limitazioni, si consiglia vivamente di utilizzare l’API dei User Agent Client Hints nel browser per raccogliere direttamente i Client Hints e inviarli al payload della richiesta.
+In questo caso, il browser invierà automaticamente i Client Hints a bassa entropia a [!DNL Target] tramite intestazioni di richiesta. Tuttavia, questa implementazione presenta alcune limitazioni a livello di browser. Primo: dal browser non verranno inviate intestazioni dei Client Hints, a meno che la richiesta non venga effettuata tramite https. Secondo - Client Hints non verranno inviati alla prima richiesta a [!DNL Target] sulla pagina. Le intestazioni dei Client Hints vengono inviate solo alla seconda richiesta e successivamente a tutte le richieste. Ciò significa che [!DNL Target] non può eseguire la segmentazione e la personalizzazione del pubblico alla prima visita della pagina. Per ovviare a entrambe queste limitazioni, si consiglia vivamente di utilizzare l’API dei User Agent Client Hints nel browser per raccogliere direttamente i Client Hints e inviarli al payload della richiesta.
 
 ### Da un server
 

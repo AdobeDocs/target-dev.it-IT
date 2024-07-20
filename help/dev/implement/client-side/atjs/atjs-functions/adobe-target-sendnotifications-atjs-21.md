@@ -1,19 +1,19 @@
 ---
 keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications, invia notifiche, notifiche, at.js, funzioni, funzione, 9 $
-description: Utilizzare [!UICONTROL adobe.target.sendNotifications()] affinché at.js invii notifiche al [!DNL Target] Edge quando viene eseguito il rendering di un’esperienza che non utilizza [!UICONTROL applyOffer](s). (at.js.2.1 +)
+description: Utilizza [!UICONTROL adobe.target.sendNotifications()] per at.js per inviare notifiche al  [!DNL Target] perimetro quando viene eseguito il rendering di un'esperienza che non utilizza [!UICONTROL applyOffer]. (at.js.2.1 +)
 title: Come si utilizza la funzione adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 84%
+source-wordcount: '640'
+ht-degree: 83%
 
 ---
 
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
-Questa funzione invia una notifica a [!DNL Target] edge quando viene eseguito il rendering di un’esperienza senza utilizzare `[!UICONTROL adobe.target.applyOffer()]` o `[!UICONTROL adobe.target.applyOffers()]`.
+Questa funzione invia una notifica al server Edge [!DNL Target] quando viene eseguito il rendering di un&#39;esperienza senza utilizzare `[!UICONTROL adobe.target.applyOffer()]` o `[!UICONTROL adobe.target.applyOffers()]`.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Questa funzione invia una notifica a [!DNL Target] edge quando viene eseguito il
 | Request > notifications > view > key | Stringa | No | `<=` 512 caratteri. | Chiave visualizzazione. Chiave impostata per la visualizzazione tramite l’API. |
 | Request > notifications > view > state | Stringa | No |  | Token dello stato della visualizzazione. |
 
-**Nota**: i seguenti caratteri sono *non* consentito per `Request > notifications > mbox > name`:
+**Nota**: i seguenti caratteri sono *non* consentiti per `Request > notifications > mbox > name`:
 
 ```
 - '-, ./=`:;&!@#$%^&*()+|?~[]{}'
@@ -118,4 +118,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Se sta usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` solo con preacquisizione e `[!UICONTROL sendNotifications()]`, il [!DNL Analytics] la richiesta deve essere attivata dopo `[!UICONTROL sendNotifications()]` viene eseguito. Lo scopo è garantire che il codice SDID generato da `[!UICONTROL sendNotifications()]` corrisponde al codice SDID inviato a [!DNL Analytics] e [!DNL Target].
+>Se utilizzi [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` solo con preacquisizione e `[!UICONTROL sendNotifications()]`, la richiesta di [!DNL Analytics] deve essere attivata dopo l&#39;esecuzione di `[!UICONTROL sendNotifications()]`. Lo scopo di questo controllo è garantire che l&#39;identificatore SDID generato da `[!UICONTROL sendNotifications()]` corrisponda all&#39;identificatore SDID inviato a [!DNL Analytics] e [!DNL Target].

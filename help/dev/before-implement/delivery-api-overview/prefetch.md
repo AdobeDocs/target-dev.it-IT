@@ -1,31 +1,31 @@
 ---
 title: Preacquisizione API di consegna Adobe Target
-description: Come si utilizza la preacquisizione in [!UICONTROL API di consegna di Adobe Target]?
+description: Come si utilizza la preacquisizione in [!UICONTROL Adobe Target Delivery API]?
 keywords: api di consegna
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # Preacquisizione
 
-La preacquisizione consente ai client come applicazioni e server mobili di recuperare contenuti per più mbox o visualizzazioni in una richiesta, memorizzarli nella cache locale e successivamente inviare una notifica [!DNL Target] quando il visitatore visita tali mbox o visualizzazioni.
+La preacquisizione consente ai client come le app e i server mobili di recuperare contenuti per più mbox o visualizzazioni in una richiesta, memorizzarli nella cache locale e successivamente inviare una notifica a [!DNL Target] quando il visitatore visita tali mbox o visualizzazioni.
 
 Quando si utilizza la preacquisizione, è importante avere familiarità con i seguenti termini:
 
 | Nome campo | Descrizione |
 | --- | --- |
-| `prefetch` | Elenco di mbox e visualizzazioni che devono essere recuperate ma non contrassegnate come visitate. Il [!DNL Target] Edge restituisce un `eventToken` per ogni mbox o vista esistente nella matrice di preacquisizione. |
+| `prefetch` | Elenco di mbox e visualizzazioni che devono essere recuperate ma non contrassegnate come visitate. L&#39;Edge [!DNL Target] restituisce un `eventToken` per ogni mbox o vista esistente nell&#39;array di preacquisizione. |
 | `notifications` | Elenco di mbox e visualizzazioni precedentemente preacquisite che devono essere contrassegnate come visitate. |
-| `eventToken` | Token crittografato con hash restituito quando il contenuto viene prerecuperato. Questo token deve essere rimandato a [!DNL Target] nel `notifications` array. |
+| `eventToken` | Token crittografato con hash restituito quando il contenuto viene prerecuperato. Questo token deve essere rimandato a [!DNL Target] nell&#39;array `notifications`. |
 
 ## Preacquisizione di Mbox
 
-I client, come le app e i server per dispositivi mobili, possono preacquisire più mbox per un dato visitatore all’interno di una sessione e memorizzarle nella cache per evitare di effettuare più chiamate al [!UICONTROL API di consegna di Adobe Target].
+I client, ad esempio le app per dispositivi mobili e i server, possono preacquisire più mbox per un determinato visitatore all&#39;interno di una sessione e memorizzarle nella cache per evitare più chiamate a [!UICONTROL Adobe Target Delivery API].
 
 ```shell shell-session
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire la preacquisizione almeno una volta per un visitatore all’interno di una sessione. Dopo la preacquisizione di questi `mboxes`, riceverai la seguente risposta:
+All&#39;interno del campo `prefetch`, aggiungi uno o più `mboxes` da preacquisire almeno una volta per un visitatore all&#39;interno di una sessione. Dopo la preacquisizione di questi `mboxes`, si riceve la seguente risposta:
 
 ```JSON {line-numbers="true"}
 {
@@ -120,13 +120,13 @@ All&#39;interno del `prefetch` , aggiungi uno o più `mboxes` desideri eseguire 
 }
 ```
 
-All’interno della risposta, puoi vedere `content` campo contenente l’esperienza da mostrare al visitatore per una particolare `mbox`. Questa funzione è molto utile quando è memorizzata nella cache del server, in modo che quando un visitatore interagisce con l’app web o mobile all’interno di una sessione e visita un’ `mbox` in una pagina specifica dell&#39;applicazione, l&#39;esperienza può essere distribuita dalla cache anziché crearne un&#39;altra [!UICONTROL API di consegna di Adobe Target] chiamare. Tuttavia, quando un’esperienza viene consegnata al visitatore da `mbox`, a `notification` viene inviato tramite una chiamata API di consegna per consentire la registrazione delle impression. Questo perché la risposta di `prefetch` Le chiamate di sono memorizzate nella cache, il che significa che il visitatore non ha visualizzato le esperienze al momento della `prefetch` chiamata eseguita. Per ulteriori informazioni su `notification` processo, vedi [Notifiche](notifications.md).
+All&#39;interno della risposta, viene visualizzato il campo `content` contenente l&#39;esperienza da mostrare al visitatore per un particolare `mbox`. Questa funzione è molto utile quando è memorizzata nella cache del server, in modo che, quando un visitatore interagisce con l&#39;app web o mobile all&#39;interno di una sessione e visita un `mbox` in una pagina specifica dell&#39;applicazione, l&#39;esperienza possa essere distribuita dalla cache anziché effettuare un&#39;altra chiamata a [!UICONTROL Adobe Target Delivery API]. Tuttavia, quando un&#39;esperienza viene consegnata al visitatore da `mbox`, un `notification` viene inviato tramite una chiamata API di consegna per consentire la registrazione delle impression. Questo perché la risposta di `prefetch` chiamate è memorizzata nella cache, il che significa che il visitatore non ha visto le esperienze al momento della chiamata di `prefetch`. Per ulteriori informazioni sul processo `notification`, vedere [Notifiche](notifications.md).
 
-## Preacquisizione di mbox con `clickTrack` metriche quando si utilizza [!UICONTROL Analytics for Target] (A4T)
+## Preacquisire mbox con `clickTrack` metriche quando si utilizza [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un’integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un&#39;integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
 
-Il seguente frammento di codice è una risposta di una preacquisizione di una mbox contenente `clickTrack` metriche da notificare [!DNL Analytics] che è stato fatto clic su un’offerta:
+Il seguente frammento di codice è una risposta di un recupero preventivo di una mbox contenente `clickTrack` metriche per notificare a [!DNL Analytics] che è stato fatto clic su un&#39;offerta:
 
 ```JSON {line-numbers="true"}
 {
@@ -165,11 +165,11 @@ Il seguente frammento di codice è una risposta di una preacquisizione di una mb
 
 >[!NOTE]
 >
->La preacquisizione di una mbox contiene [!DNL Analytics] payload solo per attività qualificate. La preacquisizione delle metriche di successo per le attività non ancora qualificate genera incongruenze nei rapporti.
+>La preacquisizione di una mbox contiene il payload [!DNL Analytics] solo per le attività qualificate. La preacquisizione delle metriche di successo per le attività non ancora qualificate genera incongruenze nei rapporti.
 
 ## Preacquisire le viste
 
-Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l’API di consegna, è stato creato il Compositore esperienza visivo [[!UICONTROL Test A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} Attività (X)T con modifiche su [Opinioni per l&#39;SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ora può essere preacquisito.
+Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -199,7 +199,7 @@ curl -X POST \
 }'
 ```
 
-La chiamata di esempio precedente recupera tutte le visualizzazioni create tramite il Compositore esperienza visivo SPA per [!UICONTROL Test A/B] Attività e Targeting esperienza da visualizzare per il web `channel`. Nota che la chiamata prerecupera tutte le visualizzazioni dal [!UICONTROL Test A/B] o attività XT con cui un visitatore `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` che sta visitando `url`:`https://target.enablementadobe.com/react/demo/#/` si qualifica per.
+La chiamata di esempio precedente recupera tutte le visualizzazioni create tramite il Compositore esperienza visivo SPA per [!UICONTROL A/B Test] e le attività XT da visualizzare per il Web `channel`. Si noti che la chiamata preacquisisce tutte le visualizzazioni dalle attività [!UICONTROL A/B Test] o XT per le quali un visitatore con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` che sta visitando il `url`:`https://target.enablementadobe.com/react/demo/#/` è idoneo.
 
 ```JSON  {line-numbers="true"}
 {
@@ -280,4 +280,4 @@ La chiamata di esempio precedente recupera tutte le visualizzazioni create trami
 }
 ```
 
-In `content` campi della risposta, metadati di note come `type`, `selector`, `cssSelector`, e `content`, utilizzati per eseguire il rendering dell’esperienza al visitatore quando un utente visita la pagina. Tieni presente che `prefetched` il contenuto può essere memorizzato in cache e sottoposto a rendering per l’utente, quando necessario.
+Nei campi `content` della risposta, annota i metadati come `type`, `selector`, `cssSelector` e `content`, utilizzati per eseguire il rendering dell&#39;esperienza per il visitatore quando un utente visita la pagina. Si noti che il contenuto `prefetched` può essere memorizzato nella cache e sottoposto a rendering per l&#39;utente quando necessario.

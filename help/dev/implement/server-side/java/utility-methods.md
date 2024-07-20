@@ -1,5 +1,5 @@
 ---
-title: Utilizzare i metodi di utilità in [!DNL Adobe Target] SDK Java
+title: Utilizzare i metodi di utilità nell'SDK Java  [!DNL Adobe Target]
 description: Scopri come utilizzare i metodi helper, riutilizzabili tra i controller e spostabili in una classe di utilità separata.
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec

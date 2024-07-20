@@ -1,25 +1,25 @@
 ---
 keywords: implementa, implementa, configura, configura, parametro pagina
-description: Inserire dati in [!DNL Target] utilizzo degli attributi di profilo nella pagina.
-title: Come posso inserire dati in [!DNL Target] Usare Attributi Di Profilo Nella Pagina?
+description: Ottieni dati in [!DNL Target] utilizzando gli attributi del profilo nella pagina.
+title: Come posso inserire dati in [!DNL Target] utilizzando attributi di profilo nella pagina?
 feature: Implementation
 exl-id: c19fd746-21a2-4eb5-8c2a-c24806e09324
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 45%
+source-wordcount: '283'
+ht-degree: 43%
 
 ---
 
 # Attributi di profilo nella pagina
 
-Attributi di profilo nella pagina in [!DNL Adobe Target] (detti anche &quot;attributi di profilo in-mbox&quot;) sono coppie nome/valore passate direttamente attraverso il codice della pagina e memorizzate nel profilo del visitatore per utilizzi futuri.
+Gli attributi del profilo nella pagina in [!DNL Adobe Target] (detti anche &quot;attributi del profilo nella mbox&quot;) sono coppie nome/valore passate direttamente attraverso il codice della pagina e memorizzate nel profilo del visitatore per utilizzi futuri.
 
 Gli attributi di profilo nella pagina consentono l&#39;archiviazione dei dati specifici dell&#39;utente nel profilo di Target per targeting e segmentazione in un secondo momento.
 
 ## Formato
 
-Gli attributi del profilo nella pagina vengono trasmessi in [!DNL Target] tramite una chiamata al server come coppia nome/valore stringa con il prefisso &quot;profile&quot;. prima del nome dell&#39;attributo.
+Gli attributi del profilo nella pagina vengono passati in [!DNL Target] tramite una chiamata al server come coppia nome/valore stringa con il prefisso &quot;profile&quot;. prima del nome dell&#39;attributo.
 
 I nomi e i valori degli attributi sono personalizzabili (sebbene esistano alcuni “nomi riservati” per usi specifici).
 
@@ -30,13 +30,13 @@ Di seguito sono riportati alcuni esempi di attributi di profilo nella pagina:
 
 ## Casi d’uso di esempio
 
-* **Informazioni di login**[!DNL Target]: condividi dati non-PII (personalmente identificabili) con in base al login dell’utente. Questi dati possono essere lo stato di appartenenza, la cronologia degli ordini o altro ancora.
+* **Informazioni di accesso**: condividere dati non PII (personalmente identificabili) con [!DNL Target] in base al login dell&#39;utente. Questi dati possono essere lo stato di appartenenza, la cronologia degli ordini o altro ancora.
 * **Informazioni sul negozio**: tracciare quale negozio è la posizione preferita dell’utente.
 * **Interazioni precedenti**: tenere traccia di ciò che l’utente ha fatto precedentemente sul sito per informare le future personalizzazioni.
 
 ## Vantaggi del metodo
 
-I dati vengono inviati a [!DNL Target] in tempo reale, e possono essere utilizzati nella stessa chiamata al server in cui arrivano i dati.
+I dati vengono inviati a [!DNL Target] in tempo reale e possono essere utilizzati nella stessa chiamata al server in cui vengono inseriti i dati.
 
 ## Avvertenze
 

@@ -1,27 +1,28 @@
 ---
 title: API dei profili di Adobe Target
-description: Scopri come utilizzare le API di profilo di Adobe Target per inviare dati dei visitatori a [!DNL Target].
+description: Scopri come utilizzare le API del profilo di Adobe Target per inviare i dati dei visitatori a  [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
+exl-id: 480cbbbe-4822-48c3-80d4-53628dee57b0
+source-git-commit: e2462d12cf58ab5a588c13a96df5e6abafb9d675
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profiles API] panoramica
+# Panoramica di [!DNL Adobe Target Profiles API]
 
-[!DNL Adobe Target] crea e gestisce un profilo per ogni singolo utente. Questo profilo è memorizzato in [!DNL Target] edge cluster e viene aggiornato in tempo reale dopo ogni visita.
+[!DNL Adobe Target] crea e gestisce un profilo per ogni singolo utente. Questo profilo è archiviato nel cluster Edge [!DNL Target] e viene aggiornato in tempo reale dopo ogni visita.
 
-## Struttura di un [!DNL Target] profilo
+## Struttura di un profilo [!DNL Target]
 
 Un profilo di Target è costituito dai seguenti oggetti:
 
 | Oggetto | Dettagli |
 | --- | --- |
-| `clientcode` | Il [!DNL Target] codice client a cui è associato il profilo. |
-| `visitorId` | Identificatore del profilo. Questo può essere un `tntid`, `thirdpartyid`, o `marketingcloudvisitorid`. |
+| `clientcode` | Il codice client [!DNL Target] a cui è associato il profilo. |
+| `visitorId` | Identificatore del profilo. Può essere `tntid`, `thirdpartyid` o `marketingcloudvisitorid`. |
 | `modifiedAt` | La marca temporale dell’ultimo aggiornamento del profilo. |
 | `profileAttributes` | Elenco di tutti gli attributi di profilo memorizzati come coppie chiave-valore su quel singolo profilo. |
 

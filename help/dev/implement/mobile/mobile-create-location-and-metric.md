@@ -1,38 +1,38 @@
 ---
 keywords: app mobile, posizione di app mobile, target app mobile, posizioni di destinazione mobile, metriche di successo di app mobile
-description: Visualizza un codice di esempio per scoprire come creare posizioni e metriche di successo nelle app iOS, in modo da poter utilizzare [!DNL Adobe Target] per personalizzare e ottimizzare la tua app.
-title: Come si crea [!DNL Target] Posizioni e metriche di successo in un’app iOS?
+description: Visualizza il codice di esempio per scoprire come creare posizioni e metriche di successo nelle app iOS, in modo da poter utilizzare  [!DNL Adobe Target]  per personalizzare e ottimizzare l'app.
+title: Come posso creare  [!DNL Target] posizioni e metriche di successo in un'app iOS?
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 67%
+source-wordcount: '442'
+ht-degree: 66%
 
 ---
 
-# iOS - creazione di un [!DNL Target] posizione e metrica di successo
+# iOS - crea una posizione [!DNL Target] e una metrica di successo
 
-Da utilizzare [!DNL Target] nell’app mobile, crea una posizione e una metrica di successo.
+Per utilizzare [!DNL Target] nell&#39;app mobile, crea una posizione e una metrica di successo.
 
 >[!IMPORTANT]
 >
 >Supporto per [!DNL Adobe Mobile] versione 4.*x* SDK è terminato il 31 agosto 2021 e non è più consigliato per [!DNL Adobe Target] utenti di dispositivi mobili.
 >
->Il [SDK di Adobe Experience Platform per le app mobili](https://developer.adobe.com/client-sdks/documentation/){target=_blank} è la soluzione consigliata per [!DNL Adobe Experience Cloud] soluzioni e servizi nelle app mobili.
+>L&#39;SDK [Adobe Experience Platform per le app mobili](https://developer.adobe.com/client-sdks/documentation/){target=_blank} è la soluzione consigliata per alimentare le soluzioni e i servizi [!DNL Adobe Experience Cloud] nelle app mobili.
 
-Questa sezione include il codice di esempio che può essere utilizzato come modello per l&#39;app. Gli esempi in questa sezione contengono il codice per iOS. Gli stessi modelli si applicano ad Android. La sintassi specifica per Android può essere trovata nel manuale [](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html)Android SDK 4.x per Experience Cloud Solutions.
+Questa sezione include il codice di esempio che può essere utilizzato come modello per l&#39;app. Gli esempi in questa sezione contengono il codice per iOS. Gli stessi modelli si applicano ad Android. La sintassi specifica per Android si trova nella guida [SDK 4.x per Android, ad Experience Cloud per le soluzioni](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html).
 
 >[!NOTE]
 >
->Consulta la [Documentazione mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) per un elenco di tutti i [!DNL Target] metodi.
+>Per un elenco di tutti i metodi [!DNL Target] disponibili, consulta la [documentazione di Mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html).
 
-Per creare un [!DNL Target] posizione nell’app e invia una richiesta, esistono due metodi principali:
+Per creare una posizione [!DNL Target] nell&#39;app e effettuare una richiesta, esistono due metodi principali:
 
 * `targetCreateRequestWithName`
 * `targetLoadRequest`
 
-1. Creare un [!DNL Target] posizione.
+1. Crea un percorso [!DNL Target].
 
    Ecco una chiamata di esempio per creare una richiesta:
 

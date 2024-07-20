@@ -1,23 +1,23 @@
 ---
 keywords: implementazione, libreria javascript, js, atjs, decisioning sul dispositivo, decisioning sul dispositivo, at.js, sul dispositivo, sul dispositivo, risoluzione dei problemi, risoluzione dei problemi, implementazione2
-description: Scopri come risolvere i problemi [!UICONTROL decisioning sul dispositivo] con la libreria at.js.
+description: Scopri come risolvere i problemi di [!UICONTROL on-device decisioning] con la libreria at.js.
 title: Come posso risolvere i problemi relativi al decisioning sul dispositivo con la libreria JavaScript at.js?
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
-# Risoluzione dei problemi [!UICONTROL decisioning sul dispositivo] per at.js
+# Risoluzione dei problemi di [!UICONTROL on-device decisioning] per at.js
 
-Completa i seguenti passaggi per risolvere i problemi [!UICONTROL decisioning sul dispositivo] in [!UICONTROL Adobe Target] con la libreria JavaScript at.js:
+Completa i seguenti passaggi per risolvere i problemi di [!UICONTROL on-device decisioning] in [!UICONTROL Adobe Target] con la libreria JavaScript at.js:
 
 ## Passaggio 1: abilitare il registro della console per at.js
 
-Aggiunta del parametro URL `mboxDebug=1` consente a at.js di stampare i messaggi nella console del browser.
+L&#39;aggiunta del parametro URL `mboxDebug=1` consente ad at.js di stampare messaggi nella console del browser.
 
 Tutti i messaggi contengono il prefisso &quot;AT:&quot; per una comoda panoramica. Per garantire che un artefatto sia stato caricato correttamente, il registro della console deve contenere messaggi simili ai seguenti:
 
@@ -30,7 +30,7 @@ La figura seguente mostra questi messaggi nel registro della console:
 
 (Fare clic sull&#39;immagine per espanderla a larghezza intera.)
 
-![Registro della console con messaggi di artefatti](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "Registro della console con messaggi di artefatti"){zoomable=&quot;yes&quot;}
+![Registro console con messaggi artifact](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "Registro console con messaggi artifact"){zoomable="yes"}
 
 ## Passaggio 2: verifica il download dell’artefatto della regola nella scheda Rete del browser
 
@@ -48,7 +48,7 @@ Ad esempio, per aprire DevTools in Google Chrome:
 
 ## Passaggio 3: verifica il download dell’artefatto della regola utilizzando gli eventi personalizzati di at.js
 
-La libreria at.js invia due nuovi eventi personalizzati per supportare [!UICONTROL decisioning sul dispositivo].
+La libreria at.js invia due nuovi eventi personalizzati per supportare [!UICONTROL on-device decisioning].
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

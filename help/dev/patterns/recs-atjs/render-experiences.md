@@ -4,20 +4,21 @@ description: Assicurati che tutti i passaggi necessari per il rendering delle es
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 4%
 
 ---
 
 # Esperienze di rendering
 
-Segui i passaggi descritti in *Esperienze di rendering* per garantire che tutte le attività necessarie per il rendering delle esperienze vengano eseguite nella sequenza corretta.
+Segui i passaggi nel diagramma *Esperienze di rendering* per assicurarti che tutte le attività necessarie per il rendering delle esperienze vengano eseguite nella sequenza corretta.
 
 >[!NOTE]
 >
->Se è stata abilitata la funzione Automatic Page Load Request durante il [Passaggio Configura richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Inizializzare gli SDK* , puoi saltare questa attività a meno che non desideri chiamare l&#39;SDK di Adobe Target per eseguire il rendering di altre esperienze utilizzando una richiesta di posizione regionale.
+>Se hai abilitato la richiesta automatica di caricamento pagina durante il passaggio [Configura richiesta automatica di caricamento pagina](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Inizializza SDKS* , puoi saltare questa attività a meno che non desideri chiamare l&#39;SDK di Adobe Target per eseguire il rendering di altre esperienze utilizzando una richiesta di posizione regionale.
 
 >[!TIP]
 >
@@ -25,13 +26,13 @@ Segui i passaggi descritti in *Esperienze di rendering* per garantire che tutte 
 
 ## Diagramma esperienze di rendering {#diagram}
 
-La gestione automatica della visualizzazione momentanea di altri contenuti pronta all’uso disponibile con at.js ha senso solo quando si dispone di [!UICONTROL Richiesta caricamento pagina automatico] abilitato. Questa opzione nasconde l’intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
+La gestione automatica della visualizzazione momentanea di altri contenuti pronta all&#39;uso con at.js ha senso solo se è stato abilitato [!UICONTROL Automatic Page Load Request]. Questa opzione nasconde l&#39;intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
 
 >[!NOTE]
 >
->I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito. I numeri dei passaggi non sono in un ordine particolare e non riflettono l&#39;ordine dei passaggi eseguiti nel [!DNL Target] Interfaccia utente durante la creazione dell’attività.
+>I numeri dei passi nella figura seguente corrispondono alle sezioni riportate di seguito. I numeri dei passaggi non sono in un ordine particolare e non riflettono l&#39;ordine dei passaggi eseguiti nell&#39;interfaccia utente [!DNL Target] durante la creazione dell&#39;attività.
 
-![Diagramma esperienze di rendering](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
+![Diagramma esperienze rendering](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
 Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
@@ -50,7 +51,7 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
 ## 3.1. Promozione {#promotion}
 
-Aggiungi articoli in promozione e controllane il posizionamento nella progettazione dei consigli scegliendo Promozioni prima o dopo nella [!DNL Target] Interfaccia utente durante la creazione dell’attività.
+Aggiungi gli elementi in promozione e controllane il posizionamento nella progettazione dei consigli scegliendo Promozioni prima o dopo nell&#39;interfaccia utente [!DNL Target] durante la creazione dell&#39;attività.
 
 +++Consulta i dettagli
 
@@ -66,7 +67,7 @@ Aggiungi articoli in promozione e controllane il posizionamento nella progettazi
 
 **Letture**
 
-* [Aggiungere promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
+* [Aggiungi promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -80,9 +81,9 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Chi ha visualizzato questi ha visualizzato anche quelli]
-* [!UICONTROL Chi ha visualizzato questi ha acquistato anche quelli]
-* [!UICONTROL Chi ha comprato questi ha acquistato anche quelli]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
 **Parametri di entità richiesti**
 
@@ -104,17 +105,17 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Criteri disponibili**
 
-* [!UICONTROL Articoli più visualizzati nel sito]
-* [!UICONTROL Più visualizzati per categoria]
-* [!UICONTROL Più visualizzati per attributo articolo]
-* [!UICONTROL Articoli più venduti in tutto il sito]
-* [!UICONTROL Articoli più venduti per categoria]
-* [!UICONTROL Attributo Articoli più venduti]
-* [!UICONTROL Primi per metrica di Analytics]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
 **Parametri di entità richiesti**
 
-* `entity.categoryId` o l&#39;attributo dell&#39;articolo in base alla popolarità, se il criterio è basato sull&#39;attributo corrente o sull&#39;attributo dell&#39;articolo.
+* `entity.categoryId` o l&#39;attributo dell&#39;elemento per la popolarità se il criterio è basato sull&#39;attributo corrente o sull&#39;attributo dell&#39;elemento.
 * Non devi passare nulla per Più visualizzato/Più venduto in tutto il sito.
 
 **Letture**
@@ -133,10 +134,10 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Criteri disponibili**
 
-* [!UICONTROL Chi ha visualizzato questo ha visualizzato anche quello]
-* [!UICONTROL Chi ha visualizzato questo ha acquistato anche quello]
-* [!UICONTROL Chi ha comprato questo ha acquistato anche quello]
-* [!UICONTROL Articoli con attributi simili]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
 **Parametri di entità richiesti**
 
@@ -159,8 +160,8 @@ Creare consigli in base al comportamento dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Articoli visualizzati di recente]
-* [!UICONTROL Consigliato per te]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
 **Parametri di entità richiesti**
 
@@ -182,11 +183,11 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Criteri disponibili**
 
-* [!UICONTROL Algoritmo personalizzato]
+* [!UICONTROL Custom algorithm]
 
 **Parametri di entità richiesti**
 
-`entity.id` o l’attributo utilizzato come chiave per l’algoritmo personalizzato
+`entity.id` o l&#39;attributo utilizzato come chiave per l&#39;algoritmo personalizzato
 
 **Letture**
 
@@ -216,13 +217,13 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 **Letture**
 
-* [È possibile escludere un’entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [È possibile escludere un&#39;entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
 
-## 3.9: Fornisci attributi di entità per aggiornare il catalogo prodotti per [!DNL Recommendations] {#entity-attributes}
+## 3.9: fornisci attributi di entità per aggiornare il catalogo prodotti per [!DNL Recommendations] {#entity-attributes}
 
 +++Consulta i dettagli
 
@@ -230,7 +231,7 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 * [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Puoi anche eseguire questo passaggio creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} utilizzando [!DNL Target] Interfaccia utente per aggiornare il catalogo prodotti per [!DNL Recommendations].
+Puoi eseguire questo passaggio anche creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} utilizzando l&#39;interfaccia utente [!DNL Target] per aggiornare il catalogo prodotti per [!DNL Recommendations].
 
 +++
 
@@ -240,7 +241,7 @@ Puoi anche eseguire questo passaggio creando [feed di prodotto](https://experien
 
 Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclusione in qualsiasi criterio di Recommendations menzionato sopra.
 
-+++ Consulta i dettagli
++++ Vedi i dettagli
 
 **Letture**
 
@@ -252,15 +253,15 @@ Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclu
 
 ## 3.11: Attivare la richiesta di caricamento pagina {#fire}
 
-Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `pageLoad` payload nella richiesta. Il `getOffers()` il metodo recupera l&#39;esperienza e `applyOffers()` esegue il rendering dell’esperienza sulla pagina. Il `pageLoad` richiesta necessaria per il rendering delle esperienze create in [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Questo passaggio attiva una chiamata [!DNL Delivery API] con payload `execute` > `pageLoad` nella richiesta. Il metodo `getOffers()` recupera l&#39;esperienza ed esegue il rendering di `applyOffers()` sulla pagina. La richiesta `pageLoad` è necessaria per il rendering delle esperienze create nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Consulta i dettagli
 
-![Attiva il diagramma di richiesta di caricamento pagina](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
+![Attiva diagramma richieste caricamento pagina](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
-* Tutta la mappatura dei dati deve essere eseguita utilizzando `targetPageParams` funzione.
+* Tutte le mappature dei dati devono essere eseguite utilizzando la funzione `targetPageParams`.
 
 **Letture**
 
@@ -269,7 +270,7 @@ Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `pageLoad`
 
 **Azioni**
 
-* Utilizza il `getOffers` e `applyOffers` metodi per recuperare l’esperienza utilizzando una chiamata API Page Load Request.
+* Utilizza i metodi `getOffers` e `applyOffers` per recuperare l&#39;esperienza utilizzando una chiamata API Page Load Request.
 
 +++
 
@@ -277,15 +278,15 @@ Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `pageLoad`
 
 ## 3.12: richiesta di localizzazione regionale di un incendio (#location)
 
-Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `mboxes` payload nella richiesta. Il `getOffers` il metodo recupera l&#39;esperienza e `applyOffers` esegue il rendering dell’esperienza nella pagina. Puoi inviare più mbox sotto `execute` > `mboxes` payload.
+Questo passaggio attiva una chiamata [!DNL Delivery API] con `execute` > `mboxes` payload nella richiesta. Il metodo `getOffers` recupera l&#39;esperienza e `applyOffers` esegue il rendering dell&#39;esperienza nella pagina. Puoi inviare più di una mbox sotto il payload `execute` > `mboxes`.
 
 +++Consulta i dettagli
 
-![Attiva diagramma di richiesta posizione regionale](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
+![Attiva diagramma di richiesta località regionale](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
-* Tutta la mappatura dei dati deve essere eseguita utilizzando `targetPageParams` funzione.
+* Tutte le mappature dei dati devono essere eseguite utilizzando la funzione `targetPageParams`.
 
 **Letture**
 
@@ -294,10 +295,10 @@ Questo passaggio attiva un [!DNL Delivery API] chiama con `execute` > `mboxes` p
 
 **Azioni**
 
-* Utilizza il `getOffers` e `applyOffers` metodi per recuperare l’esperienza utilizzando una chiamata API Page Load Request.
+* Utilizza i metodi `getOffers` e `applyOffers` per recuperare l&#39;esperienza utilizzando una chiamata API Page Load Request.
 
 +++
 
 [Torna al diagramma nella parte superiore di questa pagina.](#diagram)
 
-Procedi al Passaggio 4: [Notifica Target](/help/dev/patterns/recs-atjs/notify-target.md).
+Procedi al passaggio 4: [Notifica a Target](/help/dev/patterns/recs-atjs/notify-target.md).

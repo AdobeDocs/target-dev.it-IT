@@ -1,6 +1,6 @@
 ---
-title: Come utilizzare le richieste asincrone in [!DNL Adobe Target] SDK .NET
-description: Scopri come [!DNL Target] L’SDK Java supporta le richieste asincrone, che possono ridurre a zero il tempo di destinazione effettivo.
+title: Come utilizzare le richieste asincrone nell'SDK  [!DNL Adobe Target] .NET
+description: Scopri come l'SDK di Java  [!DNL Target]  supporta le richieste asincrone, riducendo a zero il tempo di destinazione effettivo.
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Descrizione
 
-Uno dei vantaggi dell&#39;integrazione lato server è la possibilità di sfruttare l&#39;enorme larghezza di banda e le risorse informatiche disponibili sul lato server utilizzando il parallelismo. [!DNL Target] .NET SDK supporta le richieste asincrone, semplificando l&#39;integrazione [!DNL Target] nel flusso di lavoro asincrono esistente di un’app.
+Uno dei vantaggi dell&#39;integrazione lato server è la possibilità di sfruttare l&#39;enorme larghezza di banda e le risorse informatiche disponibili sul lato server utilizzando il parallelismo. [!DNL Target] .NET SDK supporta le richieste asincrone, semplificando l&#39;integrazione di [!DNL Target] nel flusso di lavoro asincrono esistente dell&#39;app.
 
 ## Metodi supportati
 
@@ -53,4 +53,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-Questo esempio presuppone che tu abbia [ha inizializzato l&#39;SDK](initialize-sdk.md).
+Questo esempio presuppone che tu abbia [inizializzato l&#39;SDK](initialize-sdk.md).

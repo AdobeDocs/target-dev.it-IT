@@ -7,21 +7,21 @@ exl-id: cd2a1016-e085-4b61-8680-c0cc176c8277
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
 source-wordcount: '264'
-ht-degree: 53%
+ht-degree: 45%
 
 ---
 
-# Preparare l’implementazione di [!DNL Target]
+# Preparare l&#39;implementazione di [!DNL Target]
 
-Attività da completare e informazioni da raccogliere durante la preparazione dell’implementazione [!DNL Adobe Target].
+Attività da completare e informazioni da raccogliere durante la preparazione all&#39;implementazione di [!DNL Adobe Target].
 
-L’aderenza a queste linee guida e la compilazione dei questionari forniti ti aiuteranno a implementare [!DNL Target], sia che si implementi da solo o si lavori con [!DNL Adobe Consulting] (consigliato).
+Seguire queste linee guida e compilare i questionari forniti ti aiuterà a implementare [!DNL Target], sia che tu implementi autonomamente o lavori con [!DNL Adobe Consulting] (consigliato).
 
-Se lavori con un consulente Adobe, non è necessario conoscere le informazioni contenute in questi documenti prima di implementare [!DNL Target]. Tuttavia, per velocizzare il processo di pre-implementazione è utile avere familiarità con i documenti che Adobe Consulting creerà e le domande che ti farà. Questi documenti potrebbero essere modificati in futuro.
+Se si lavora con un consulente Adobe, non è necessario conoscere le informazioni contenute in questi documenti prima di implementare [!DNL Target]. Tuttavia, per velocizzare il processo di pre-implementazione è utile avere familiarità con i documenti che Adobe Consulting creerà e le domande che ti farà. Questi documenti potrebbero essere modificati in futuro.
 
 ## [!DNL Adobe Target] richiesta di informazioni aziendali
 
-Questa sezione contiene il documento di richiesta di informazioni aziendali (RFI) che deve essere completato dal cliente prima del [!DNL Target] avvio dell’implementazione.
+Questa sezione contiene il documento di richiesta di informazioni aziendali (RFI) che deve essere completato dal cliente prima della chiamata di avvio dell&#39;implementazione di [!DNL Target].
 
 Le finalità del documento RFI aziendale sono le seguenti:
 
@@ -32,7 +32,7 @@ Scarica il documento di [richiesta di informazioni aziendali](assets/business-rf
 
 ## [!DNL Adobe Target] richiesta di informazioni tecniche
 
-Questa sezione contiene il documento di richiesta di informazioni tecniche (RFI) che aiuterà il nostro team di consulenza a sviluppare un [!DNL Target] che soddisfino i requisiti tecnici e aziendali del cliente. Le domande di questo documento riguarderanno eventuali ostacoli nascosti o difficoltà per minimizzare o eliminare la necessità di rivedere l&#39;implementazione.
+Questa sezione contiene il documento di richiesta di informazioni tecniche (RFI) che aiuterà il nostro team di consulenza a sviluppare un&#39;implementazione [!DNL Target] che soddisfi i requisiti tecnici e aziendali del cliente. Le domande di questo documento riguarderanno eventuali ostacoli nascosti o difficoltà per minimizzare o eliminare la necessità di rivedere l&#39;implementazione.
 
 Le finalità del documento RFI tecnico sono le seguenti:
 

@@ -1,11 +1,11 @@
 ---
-title: Utilizzare getOffers() in [!DNL Adobe Target] quando si utilizza l’SDK Java
-description: Scopri come utilizzare getOffers() per eseguire una decisione e recuperare un’esperienza da [!DNL Adobe Target].
+title: Usa getOffers() in [!DNL Adobe Target] quando utilizzi l'SDK Java
+description: Scopri come utilizzare getOffers() per eseguire una decisione e recuperare un'esperienza da [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '635'
 ht-degree: 13%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 13%
 
 ## Descrizione
 
-`getOffers()` viene utilizzato per eseguire una decisione e recuperare un’esperienza da [!DNL Adobe Target].
+`getOffers()` viene utilizzato per eseguire una decisione e recuperare un&#39;esperienza da [!DNL Adobe Target].
 
 ## Metodo
 
 ### getOffers
 
-Il `TargetClient.getOffers` la firma del metodo viene visualizzata come segue.
+La firma del metodo `TargetClient.getOffers` viene visualizzata come segue.
 
 **Richiesta**
 
@@ -28,7 +28,7 @@ Il `TargetClient.getOffers` la firma del metodo viene visualizzata come segue.
 TargetDeliveryResponse TargetClient.getOffers(TargetDeliveryRequest request)
 ```
 
-TargetDeliveryRequest viene creato tramite `TargetDeliveryRequest.builder`.
+TargetDeliveryRequest creato utilizzando `TargetDeliveryRequest.builder`.
 
 **Risposta**
 
@@ -38,14 +38,14 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 
 ## Parametri
 
-Il `[!UICONTROL TargetDeliveryRequestBuilder]` L&#39;oggetto ha la seguente struttura:
+L&#39;oggetto `[!UICONTROL TargetDeliveryRequestBuilder]` ha la seguente struttura:
 
 | Nome | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
 | Contesto | Contesto | Sì | Specifica il contesto per la richiesta |
-| sessionId |  | Stringa | No | Utilizzato per il collegamento di più [!DNL Target] richieste |
+| sessionId |  | Stringa | No | Utilizzato per collegare più richieste [!DNL Target] |
 | thirdPartyId | Stringa | No | Identificatore della tua azienda per l&#39;utente che puoi inviare con ogni chiamata |
-| cookie | Elenco | No | Elenco dei cookie restituiti in precedenza [!DNL Target] richiesta dello stesso utente. |
+| cookie | Elenco | No | Elenco di cookie restituiti nella precedente richiesta [!DNL Target] dello stesso utente. |
 | customerIds | Mappa | No | ID cliente in formato compatibile con VisitorId |
 | esegui | ExecuteRequest | No | Richiesta PageLoad o mboxes da eseguire. Verrà immediatamente valutato sul lato server |
 | preacquisizione | PrefetchRequest | No | Visualizzazioni, PageLoad o mbox richiedono la preacquisizione. Restituisce con il token di notifica da restituire al momento della conversione. |
@@ -56,22 +56,22 @@ Il `[!UICONTROL TargetDeliveryRequestBuilder]` L&#39;oggetto ha la seguente stru
 | proprietà | Proprietà | No | Specifica la at_property tramite il campo token. Può essere utilizzato per controllare l’ambito della consegna. |
 | traccia | Traccia | No | Abilita la traccia per l’API di consegna. |
 | qaMode | QAMode | No | Utilizza questo oggetto per abilitare la modalità di controllo qualità nella richiesta. |
-| locationHint | Stringa | No | [!DNL Target] hint di posizione cluster edge. Utilizzato per eseguire il targeting di un determinato cluster Edge per questa richiesta. |
+| locationHint | Stringa | No | hint posizione cluster edge [!DNL Target]. Utilizzato per eseguire il targeting di un determinato cluster Edge per questa richiesta. |
 | visitatore | Visitatore | No | Utilizzato per fornire un oggetto API visitatore personalizzato. |
-| id | VisitorId | No | Oggetto contenente gli identificatori del visitatore. Esempio: tntId, thirdParyId, mcId, customerIds. |
-| experienceCloud | Experience Cloud | No | Specifica le integrazioni con Audienci Manager e Analytics. Compilato automaticamente utilizzando i cookie, se non fornito. |
+| ID | VisitorId | No | Oggetto contenente gli identificatori del visitatore. Esempio: tntId, thirdParyId, mcId, customerIds. |
+| experienceCloud | Experience Cloud | No | Specifica le integrazioni con Audience Manager e Analytics. Compilato automaticamente utilizzando i cookie, se non fornito. |
 | tntId | Stringa | No | Identificatore primario in [!DNL Target] per un utente. Recuperato da targetCookies. Generato automaticamente se non specificato. |
-| mcId | Stringa | No | Utilizzato per unire e condividere dati tra diversi [!DNL Adobe] solutions(ECID). Recuperato da targetCookies. Generato automaticamente se non specificato. |
-| trackingServer | Stringa | No | Il server Adobe Analytics per [!DNL Adobe Target] e [!DNL Adobe Analytics] per unire correttamente i dati. |
-| trackingServerSecure | Stringa | No | Il [!UICONTROL Adobe Analytics Secure Server] affinché [!DNL Adobe Target] e [!DNL Adobe Analytics] per unire correttamente i dati. |
+| mcId | Stringa | No | Utilizzato per unire e condividere dati tra diverse [!DNL Adobe] soluzioni (ECID). Recuperato da targetCookies. Generato automaticamente se non specificato. |
+| trackingServer | Stringa | No | Il server Adobe Analytics affinché [!DNL Adobe Target] e [!DNL Adobe Analytics] uniscano correttamente i dati. |
+| trackingServerSecure | Stringa | No | [!UICONTROL Adobe Analytics Secure Server] affinché [!DNL Adobe Target] e [!DNL Adobe Analytics] uniscano correttamente i dati. |
 | decisioningMethod | DecisioningMethod | No | Può essere utilizzato per impostare in modo esplicito il metodo di decisione ON_DEVICE o HYBRID per le decisioni sul dispositivo |
 
-I valori di ciascun campo devono essere conformi a *[!UICONTROL API di consegna della visualizzazione di Target]* specifica della richiesta. Per ulteriori informazioni su *[!UICONTROL API di consegna della visualizzazione di Target]*, vedi [http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
+I valori di ciascun campo devono essere conformi alla specifica della richiesta *[!UICONTROL Target View Delivery API]*. Per ulteriori informazioni su *[!UICONTROL Target View Delivery API]*, vedere [http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
 
 
 ## Risposta
 
-Il `TargetDeliveryResponse` restituito da `TargetClient.getOffers(`) ha la seguente struttura:
+`TargetDeliveryResponse` restituito da `TargetClient.getOffers(`) ha la seguente struttura:
 
 | Nome | Tipo | Descrizione |
 | --- | --- | --- |
@@ -90,7 +90,7 @@ Il `ResponseStatus` nella risposta contiene i campi seguenti:
 | remoteMboxes | Elenco di stringhe | Utilizzato per il decisioning sul dispositivo. Contiene un elenco di mbox con attività remote che non possono essere decise completamente su dispositivo. |
 | remoteViews | Elenco di stringhe | Utilizzato per il decisioning sul dispositivo. Contiene un elenco di visualizzazioni con attività remote che non possono essere decise interamente su dispositivo. |
 
-Il `TargetCookie` l’oggetto utilizzato per salvare i dati per la sessione utente ha la seguente struttura:
+L&#39;oggetto `TargetCookie` utilizzato per il salvataggio dei dati per la sessione utente ha la seguente struttura:
 
 | Nome | Tipo | Descrizione |
 | --- | --- | --- |

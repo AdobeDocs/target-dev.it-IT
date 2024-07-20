@@ -1,6 +1,6 @@
 ---
-title: Utilizzare getAttributes in [!DNL Adobe Target] con l’SDK Java
-description: Scopri come utilizzare getAttributes() per recuperare esperienze di sperimentazione e personalizzate da [!DNL Target] ed estrarre i valori degli attributi.
+title: Usa getAttributes in [!DNL Adobe Target] con l'SDK Java
+description: Scopri come utilizzare getAttributes() per recuperare esperienze di sperimentazione e personalizzate da [!DNL Target]  ed estrarre valori di attributi.
 feature: APIs/SDKs
 exl-id: e493e1b9-7180-4a7c-b98d-be84cc3a57c3
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -26,15 +26,15 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 ## Parametri
 
-| Nome | Tipo | Obbligatorio | impostazione predefinita | Descrizione |
+| Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | Sì | None (Nessuno) | La stessa richiesta di destinazione utilizzata per [Ottieni offerte&#x200B;](get-offers.md) |
+| targetRequest | TargetDeliveryRequest | Sì | None (Nessuno) | La stessa richiesta di destinazione utilizzata per [Get Offers&#x200B;](get-offers.md) |
 | mboxNames | array var-args | No | None (Nessuno) | Matrice var-args di nomi mbox |
 
 
 ## Risultato
 
-Un `Attributes` l&#39;oggetto viene restituito da `TargetClient.getAttributes()` che ha i seguenti metodi:
+Un oggetto `Attributes` è restituito da `TargetClient.getAttributes()` che dispone dei seguenti metodi:
 
 | Nome | Tipo | Descrizione |
 | --- | --- | --- |

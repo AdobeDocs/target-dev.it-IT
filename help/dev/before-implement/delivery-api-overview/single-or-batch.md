@@ -1,25 +1,25 @@
 ---
 title: API di consegna Adobe Target Consegna singola o in batch
-description: Come si utilizza [!UICONTROL API di consegna di Adobe Target] Chiamate di consegna singole o batch?
+description: Come si utilizzano [!UICONTROL Adobe Target Delivery API] chiamate di consegna singole o in batch?
 keywords: api di consegna
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
 
 # Consegna singola o in batch
 
-Il [!UICONTROL API di consegna di Adobe Target] supporta una chiamata di consegna singola o batch. È possibile effettuare una richiesta al server per contenuto per una o più mbox.
+[!UICONTROL Adobe Target Delivery API] supporta una chiamata di consegna singola o batch. È possibile effettuare una richiesta al server per contenuto per una o più mbox.
 
 Quando si decide di effettuare una singola chiamata rispetto a una chiamata in batch, è necessario valutare i costi delle prestazioni. Se conosci tutti i contenuti che devono essere visualizzati per un utente, la best practice consiste nel recuperare contenuti per tutte le mbox con una singola chiamata di consegna in batch, al fine di evitare di effettuare più chiamate di consegna singole.
 
 ## Chiamata di consegna singola
 
-Puoi recuperare un’esperienza da mostrare all’utente per una mbox tramite [!UICONTROL API di consegna di Adobe Target]. Tieni presente che se effettui una singola chiamata di consegna, dovrai avviare un’altra chiamata al server per recuperare contenuto aggiuntivo per una mbox per un utente. Questo può diventare molto costoso nel tempo, quindi assicurati di valutare il tuo approccio quando utilizzi la singola chiamata API di consegna.
+È possibile recuperare un&#39;esperienza da visualizzare all&#39;utente per una mbox tramite [!UICONTROL Adobe Target Delivery API]. Tieni presente che se effettui una singola chiamata di consegna, dovrai avviare un’altra chiamata al server per recuperare contenuto aggiuntivo per una mbox per un utente. Questo può diventare molto costoso nel tempo, quindi assicurati di valutare il tuo approccio quando utilizzi la singola chiamata API di consegna.
 
 ```
 curl -X POST \
@@ -55,7 +55,7 @@ curl -X POST \
 }'
 ```
 
-Nell’esempio di chiamata di consegna singola precedente, l’esperienza viene recuperata e visualizzata all’utente con `tntId`: `abcdefghijkl00023.1_1` per un `mbox`:`SummerOffer` sul canale web. Questa singola chiamata di consegna genera la seguente risposta:
+Nell&#39;esempio di chiamata di consegna singola riportato sopra, l&#39;esperienza viene recuperata per essere visualizzata all&#39;utente con `tntId`: `abcdefghijkl00023.1_1` per un `mbox`:`SummerOffer` sul canale Web. Questa singola chiamata di consegna genera la seguente risposta:
 
 ```
 {
@@ -83,11 +83,11 @@ Nell’esempio di chiamata di consegna singola precedente, l’esperienza viene 
 }
 ```
 
-Nella risposta, tieni presente `content` Questo campo contiene il HTML che descrive l’esperienza da mostrare all’utente per il web che corrisponde alla mbox SummerOffer.
+Nella risposta, tieni presente che il campo `content` contiene il HTML che descrive l&#39;esperienza da mostrare all&#39;utente per il Web che corrisponde alla mbox SummerOffer.
 
 ### Esegui caricamento pagina
 
-Se esistono esperienze che devono essere visualizzate quando si verifica un caricamento di pagina nel canale web, come ad esempio test AB dei font che si trovano nel piè di pagina o nell’intestazione, puoi specificare `pageLoad` nel `execute` per recuperare tutte le modifiche da applicare.
+Se ci sono esperienze che devono essere mostrate quando si verifica un caricamento di pagina nel canale web, come ad esempio test AB dei font che si trovano nel piè di pagina o nell&#39;intestazione, puoi specificare `pageLoad` nel campo `execute` per recuperare tutte le modifiche che devono essere applicate.
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 }'
 ```
 
-La chiamata di esempio precedente recupera tutte le esperienze da mostrare a un utente quando la pagina `https://target.enablementadobe.com/react/demo/#/` caricamenti.
+La chiamata di esempio precedente recupera tutte le esperienze per mostrare un utente al caricamento della pagina `https://target.enablementadobe.com/react/demo/#/`.
 
 ```
 {
@@ -155,7 +155,7 @@ La chiamata di esempio precedente recupera tutte le esperienze da mostrare a un 
   }
 ```
 
-In `content` , è possibile recuperare la modifica che deve essere applicata al caricamento di una pagina. Nell’esempio precedente, tieni presente che un collegamento sull’intestazione deve essere denominato *Home Modificato*.
+Nel campo `content` è possibile recuperare la modifica che deve essere applicata al caricamento di una pagina. Nell&#39;esempio precedente, si noti che un collegamento nell&#39;intestazione deve essere denominato *Pagina principale modificata*.
 
 ## Chiamata di consegna in batch
 
@@ -203,7 +203,7 @@ curl -X POST \
 }'
 ```
 
-Nell’esempio di chiamata di consegna in batch precedente, le esperienze vengono recuperate e visualizzate per l’utente con `tntId`: `abcdefghijkl00023.1_1` per più `mbox`:`SummerOffer`, `SummerShoesOffer`, e `SummerDressOffer`. Poiché sappiamo che è necessario mostrare un’esperienza per più mbox per questo utente, possiamo raggruppare queste richieste in batch ed effettuare una chiamata al server invece di tre singole chiamate di consegna.
+Nell&#39;esempio di chiamata di consegna in batch riportato sopra, le esperienze vengono recuperate per essere visualizzate per l&#39;utente con `tntId`: `abcdefghijkl00023.1_1` per più di `mbox`:`SummerOffer`, `SummerShoesOffer` e `SummerDressOffer`. Poiché sappiamo che è necessario mostrare un’esperienza per più mbox per questo utente, possiamo raggruppare queste richieste in batch ed effettuare una chiamata al server invece di tre singole chiamate di consegna.
 
 ```
 {
@@ -252,4 +252,4 @@ Nell’esempio di chiamata di consegna in batch precedente, le esperienze vengon
 }
 ```
 
-Nella risposta precedente, puoi vedere che all’interno di `content` di ogni mbox, è possibile recuperare la rappresentazione HTML dell’esperienza da mostrare all’utente per ogni mbox.
+Nella risposta precedente, puoi vedere che all&#39;interno del campo `content` di ogni mbox, è recuperabile la rappresentazione HTML dell&#39;esperienza da mostrare all&#39;utente per ogni mbox.

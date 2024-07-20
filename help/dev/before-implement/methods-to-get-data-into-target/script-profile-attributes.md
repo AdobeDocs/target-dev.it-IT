@@ -1,25 +1,25 @@
 ---
 keywords: implementare, implementare, configurare, impostare gli attributi del profilo
-description: Inserire dati in [!DNL Target] utilizzo degli attributi del profilo di script.
-title: Come posso inserire dati in [!DNL Target] Utilizzare gli attributi del profilo di script?
+description: Ottieni dati in [!DNL Target] utilizzando gli attributi del profilo di script.
+title: Come posso inserire dati in [!DNL Target] utilizzando gli attributi del profilo di script?
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 69%
+source-wordcount: '283'
+ht-degree: 74%
 
 ---
 
 # Attributi di profilo script
 
-Gli attributi del profilo di script sono coppie nome/valore definite nella [!DNL Adobe Target] soluzione. Il valore è determinato dall&#39;esecuzione di un frammento JavaScript sul server di destinazione per ogni chiamata del server.
+Gli attributi del profilo di script sono coppie nome/valore definite nella soluzione [!DNL Adobe Target]. Il valore è determinato dall&#39;esecuzione di un frammento JavaScript sul server di destinazione per ogni chiamata del server.
 
 Gli utenti scrivono frammenti di codice di piccole dimensioni che vengono eseguiti per chiamata mbox e prima che un visitatore venga valutato per l&#39;appartenenza al pubblico e all&#39;attività.
 
 ## Formato
 
-Gli attributi di profilo script vengono creati nella sezione Tipi di pubblico di Target. Qualsiasi nome di attributo è valido e il valore è il risultato di una funzione JavaScript scritta da [!DNL Target] utente. Il nome dell&#39;attributo viene automaticamente preceduto da “user. &quot; in [!DNL Target] per distinguerli dagli attributi di profilo nella pagina.
+Gli attributi di profilo script vengono creati nella sezione Tipi di pubblico di Target. Qualsiasi nome di attributo è valido e il valore è il risultato di una funzione JavaScript scritta dall&#39;utente [!DNL Target]. Il nome dell&#39;attributo viene automaticamente preceduto da “user. &quot; in [!DNL Target] per distinguerli dagli attributi di profilo nella pagina.
 
 Il frammento di codice è scritto nel linguaggio Rhino JS e può fare riferimento a token e altri valori.
 

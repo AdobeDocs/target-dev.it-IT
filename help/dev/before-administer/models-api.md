@@ -5,18 +5,18 @@ exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1288'
 ht-degree: 2%
 
 ---
 
 # Panoramica di Models API
 
-L’API Models, denominata anche API di Inserire nell&#39;elenco Bloccati, consente agli utenti di visualizzare e gestire l’elenco di funzioni utilizzate nei modelli di apprendimento automatico per l’apprendimento automatico di. [!UICONTROL Automated Personalization] (AP) [!DNL Auto-Target] attività (AT). Se un utente desidera escludere una funzione dall’utilizzo da parte dei modelli per attività di AP o AT, può utilizzare l’API Models per aggiungere tale funzione al &quot;inserisco nell&#39;elenco Bloccati di&quot;.
+L&#39;API Models, denominata anche API di Inserire nell&#39;elenco Bloccati, consente agli utenti di visualizzare e gestire l&#39;elenco delle funzionalità utilizzate nei modelli di apprendimento automatico per le attività [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se un utente desidera escludere una funzione dall’utilizzo da parte dei modelli per attività di AP o AT, può utilizzare l’API Models per aggiungere tale funzione al &quot;inserisco nell&#39;elenco Bloccati di&quot;.
 
-A **[!UICONTROL INSERISCO NELL&#39;ELENCO BLOCCATI DI]** definisce l&#39;insieme di feature che verranno escluse da [!DNL Adobe Target] dai modelli di apprendimento automatico. Per ulteriori informazioni sulle funzioni, consulta [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
+**[!UICONTROL blocklist]** definisce l&#39;insieme di funzionalità che [!DNL Adobe Target] escluderà dai propri modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
 
-È possibile definire i Inserisce nell&#39;elenco Bloccati di attività (livello di attività) o per tutte le attività all’interno di una [!DNL Target] account (livello globale).
+È possibile definire i Inserisce nell&#39;elenco Bloccati per attività (livello di attività) o per tutte le attività all&#39;interno di un account [!DNL Target] (livello globale).
 
 <!-- To get started with the Models API in order to create and manage your blocklist, download the Postman Collection [here](https://git.corp.adobe.com/target/ml-configuration-management-service/tree/nextRelease/rest_api_library). Note this is an Adobe internal link. Need to publish this publicly if want to share with customers. -->
 
@@ -26,26 +26,26 @@ Visualizza la specifica Models API [qui](../administer/models-api/models-api-ove
 
 ## Prerequisiti
 
-Per utilizzare Models API, devi configurare l’autenticazione utilizzando [Console Adobe Developer](https://developer.adobe.com/console/home), proprio come faresti con il [API amministratore di Target](../administer/admin-api/admin-api-overview-new.md). Per ulteriori informazioni, consulta [Come configurare l’autenticazione](../before-administer/configure-authentication.md).
+Per utilizzare Models API, devi configurare l&#39;autenticazione utilizzando [Adobe Developer Console](https://developer.adobe.com/console/home), esattamente come faresti con [Target Admin API](../administer/admin-api/admin-api-overview-new.md). Per ulteriori informazioni, vedere [Come configurare l&#39;autenticazione](../before-administer/configure-authentication.md).
 
 ## Linee guida per l’utilizzo delle API per modelli
 
 Come gestire i inserisce nell&#39;elenco Bloccati di
 
-[**Passaggio 1:**](#step1) Visualizzare l’elenco delle funzioni per un’attività
+[**Passaggio 1:**](#step1) Visualizza l&#39;elenco delle funzionalità per un&#39;attività
 
-[**Passaggio 2:**](#step2) Controlla il inserisco nell&#39;elenco Bloccati di dell’attività
+[**Passaggio 2:**](#step2) Controllare il inserisco nell&#39;elenco Bloccati di dell&#39;attività
 
-[**Passaggio 3:**](#step3) Aggiungi funzionalità al inserisco nell&#39;elenco Bloccati di dell’attività
+[**Passaggio 3:**](#step3) Aggiungi funzionalità al inserisco nell&#39;elenco Bloccati di dell&#39;attività
 
-[**Passaggio 4:**](#step4) Sblocca (facoltativo)
+[**Passaggio 4:**](#step4) (facoltativo) sblocca
 
 [**Passaggio 5:**](#step5) (Facoltativo) Gestione del inserisco nell&#39;elenco Bloccati di globale
 
 
 ## Passaggio 1: visualizzare l’elenco delle funzioni per un’attività {#step1}
 
-Inserire nell&#39;elenco Bloccati Prima di la creazione di una feature, visualizzate l&#39;elenco delle feature attualmente incluse nei modelli per tale attività.
+Prima di inserire nell&#39;elenco Bloccati una feature, è necessario visualizzare l&#39;elenco delle feature attualmente incluse nei modelli per tale attività.
 
 >[!BEGINTABS]
 
@@ -98,11 +98,11 @@ Nell’esempio mostrato qui, l’utente sta controllando per visualizzare l’el
 
 >[!NOTE]
 >
->Per trovare l’ID attività dell’attività, passa all’elenco Attività nella sezione [!DNL Target] UI. Fai clic sull’attività di interesse. L’ID attività viene visualizzato nel corpo della pagina Panoramica delle attività risultante e alla fine dell’URL della pagina.
+>Per trovare l&#39;ID attività dell&#39;attività, passare all&#39;Elenco attività nell&#39;interfaccia utente [!DNL Target]. Fai clic sull’attività di interesse. L’ID attività viene visualizzato nel corpo della pagina Panoramica delle attività risultante e alla fine dell’URL della pagina.
 
-Il **[!UICONTROL externalName]** è un nome descrittivo per una funzione. Viene creato da [!DNL Target]ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [Rapporto Approfondimenti personalizzazione](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
+**[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
 
-Il **[!UICONTROL internalName]** è l’identificatore effettivo della funzione. Viene anche creato da [!DNL Target], ma non può essere modificato. Inserire nell&#39;elenco Bloccati Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
+**[!UICONTROL internalName]** è l&#39;identificatore effettivo della funzionalità. Viene creato anche da [!DNL Target], ma non può essere modificato. Inserire nell&#39;elenco Bloccati Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
 
 Tieni presente che, affinché l’elenco delle funzioni possa essere compilato con valori (ovvero, affinché non sia nullo), un’attività:
 
@@ -115,7 +115,7 @@ Quindi, visualizza il inserisco nell&#39;elenco Bloccati di. In altre parole, ve
 
 >[!ERROR]
 >
->Tieni presente che `/blockList/` fa distinzione tra maiuscole e minuscole nella richiesta.
+>`/blockList/` fa distinzione tra maiuscole e minuscole nella richiesta.
 
 >[!BEGINTABS]
 
@@ -143,13 +143,13 @@ Nell’esempio mostrato qui, l’utente sta controllando l’elenco delle funzio
 
 ## Passaggio 3: aggiungere funzioni al inserisco nell&#39;elenco Bloccati di dell’attività {#step3}
 
-Per aggiungere funzionalità al inserisco nell&#39;elenco Bloccati di, modificare la richiesta da GET a PUT e modificare il corpo della richiesta per specificare `blockedFeatureSources` o `blockedFeatures` come desiderato.
+Per aggiungere funzionalità al inserisco nell&#39;elenco Bloccati di, modificare la richiesta da GET a PUT e modificare il corpo della richiesta in modo da specificare `blockedFeatureSources` o `blockedFeatures` come desiderato.
 
 * Il corpo della richiesta richiede `blockedFeatures` o `blockedFeatureSources`. Entrambi possono essere inclusi.
-* Popolare `blockedFeatures` con valori identificati da `internalName`. Consulta [Passaggio 1](#step1).
+* Popolare `blockedFeatures` con valori identificati da `internalName`. Vedi [Passaggio 1](#step1).
 * Popolare `blockedFeatureSources` con i valori della tabella seguente.
 
-Tieni presente che `blockedFeatureSources` indica la provenienza di una feature. Ai fini dell&#39;inserire nell&#39;elenco Bloccati dei gruppi di feature, questi vengono utilizzati come gruppi o categorie di feature che consentono agli utenti di bloccare interi insiemi di feature contemporaneamente. I valori di `blockedFeatureSources` corrisponde ai primi caratteri dell&#39;identificatore di una caratteristica (`blockedFeatures` o `internalName` ), pertanto possono essere considerati anche &quot;prefissi di feature&quot;.
+`blockedFeatureSources` indica la provenienza di una funzionalità. Ai fini della inserire nell&#39;elenco Bloccati dei gruppi di feature, questi vengono utilizzati come gruppi o categorie di feature che consentono agli utenti di bloccare interi insiemi di feature contemporaneamente. I valori di `blockedFeatureSources` corrispondono ai primi caratteri dell&#39;identificatore di una caratteristica (`blockedFeatures` o `internalName` valori), pertanto possono essere considerati anche &quot;prefissi di funzionalità&quot;.
 
 ### Tabella di `blockedFeatureSources` valori {#table}
 
@@ -163,7 +163,7 @@ Tieni presente che `blockedFeatureSources` indica la provenienza di una feature.
 | PRO | Personalizzato - Profilo |
 | SEG | Personalizzato - Segmento di reporting |
 | AAM | Personalizzato - Segmento Experience Cloud |
-| MOB | Dispositivi mobili |
+| FOLLA | Dispositivi mobili |
 | CRS | Personalizzato - Attributi del cliente |
 | UPA | Personalizzato - Attributo profilo RT-CDP |
 | IAC | Aree di interesse visitatore |  |
@@ -197,15 +197,15 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-Nell’esempio mostrato qui, l’utente sta bloccando due funzioni, `SES_PREVIOUS_VISIT_COUNT` e `SES_TOTAL_SESSIONS`, che hanno identificato in precedenza interrogando l’elenco completo delle funzioni per l’attività di cui viene 260480 l’ID attività, come descritto in [Passaggio 1](#step1). Stanno inoltre bloccando tutte le funzioni provenienti dai segmenti Experience Cloud, operazione che si ottiene bloccando le funzioni con il prefisso &quot;AAM&quot;, come descritto nella sezione [tabella](#table) sopra.
+Nell&#39;esempio seguente, l&#39;utente sta bloccando due funzionalità, `SES_PREVIOUS_VISIT_COUNT` e `SES_TOTAL_SESSIONS`, che ha identificato in precedenza eseguendo una query sull&#39;elenco completo delle funzionalità per l&#39;attività il cui ID attività è 260480, come descritto in [Passaggio 1](#step1). Stanno inoltre bloccando tutte le funzionalità provenienti da segmenti Experience Cloud, operazione che si ottiene bloccando le funzionalità con il prefisso &quot;AAM&quot;, come descritto nella [tabella](#table) precedente.
 
 ![Passaggio 3](assets/models-api-step-3.png)
 
-Dopo aver inserito nell&#39;elenco Bloccati una feature, si consiglia di verificare il inserisco nell&#39;elenco Bloccati di aggiornamento della feature di eseguendo le operazioni riportate di seguito. [Passaggio 2](#step2) di nuovo (GET il inserisco nell&#39;elenco Bloccati di). Verifica che i risultati vengano visualizzati come previsto (verifica che i risultati includano le funzioni aggiunte dall’ultima richiesta PUT).
+Dopo aver inserito nell&#39;elenco Bloccati una funzione, si consiglia di verificare il inserisco nell&#39;elenco Bloccati di aggiornamento della funzione di eseguendo nuovamente il [passaggio 2](#step2) (GET il inserisco nell&#39;elenco Bloccati di). Verifica che i risultati vengano visualizzati come previsto (verifica che i risultati includano le funzioni aggiunte dall’ultima richiesta PUT).
 
 ## Passaggio 4: (facoltativo) sblocca {#step4}
 
-Per sbloccare tutte le feature inserite nell&#39;elenco Bloccati, cancellate i valori da `blockedFeatureSources` o `blockedFeatures`.
+Inserire nell&#39;elenco Bloccati Per sbloccare tutte le funzionalità, cancellare i valori da `blockedFeatureSources` o `blockedFeatures`.
 
 >[!BEGINTABS]
 
@@ -231,21 +231,21 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-Nell’esempio mostrato qui, l’utente sta cancellando il proprio inserisco nell&#39;elenco Bloccati di per l’attività di cui viene 260840 l’ID attività. La risposta conferma la presenza di array vuoti sia per le funzioni bloccate che per le relative origini:`blockedFeatureSources` e `blockedFeatures`, rispettivamente.
+Nell’esempio mostrato qui, l’utente sta cancellando il proprio inserisco nell&#39;elenco Bloccati di per l’attività di cui viene 260840 l’ID attività. La risposta conferma la presenza di array vuoti sia per le funzionalità bloccate che per le relative origini, rispettivamente `blockedFeatureSources` e `blockedFeatures`.
 
 ![Passaggio 4](assets/models-api-step-4.png)
 
-Come sempre, dopo aver modificato il inserisco nell&#39;elenco Bloccati di, si consiglia di eseguire le seguenti operazioni: [Passaggio 2](#step2) di nuovo (GET il inserisco nell&#39;elenco Bloccati di verifica dell’elenco che include le funzioni come previsto). Nell’esempio mostrato qui, l’utente sta verificando che il proprio inserisco nell&#39;elenco Bloccati di sia ora vuoto.
+Come sempre, dopo aver modificato il inserisco nell&#39;elenco Bloccati di, si consiglia di eseguire di nuovo il [Passaggio 2](#step2) (GET il inserisco nell&#39;elenco Bloccati di per verificare che l&#39;elenco includa le funzioni come previsto). Nell’esempio mostrato qui, l’utente sta verificando che il proprio inserisco nell&#39;elenco Bloccati di sia ora vuoto.
 
-![Fase 4b](assets/models-api-step-4b.png)
+![Passaggio 4b](assets/models-api-step-4b.png)
 
 Domanda: come posso eliminare alcuni, ma non tutti, di un inserisco nell&#39;elenco Bloccati di?
 
-Risposta: per rimuovere un sottoinsieme discreto di feature da un inserire nell&#39;elenco Bloccati inserisco nell&#39;elenco Bloccati a più feature, gli utenti possono semplicemente inviare l&#39;elenco aggiornato delle feature che desiderano bloccare in [la richiesta di inserisce nell&#39;elenco Bloccati di](#step3)anziché cancellare l&#39;intero inserisco nell&#39;elenco Bloccati di e aggiungere nuovamente le feature desiderate. In altre parole, invia l’elenco delle funzioni aggiornato (come mostrato nella [Passaggio 3](#step3)), accertandosi di escludere le funzioni che si desidera &quot;eliminare&quot; dal inserisco nell&#39;elenco Bloccati di.
+Risposta: per rimuovere un sottoinsieme discreto di funzioni inserite nell&#39;elenco Bloccati da un elenco Bloccati di più funzioni, gli utenti possono semplicemente inviare l&#39;elenco aggiornato delle funzioni che desiderano bloccare in [la richiesta di di elenco Bloccati di](#step3), anziché cancellare l&#39;intero inserisco nell&#39;elenco Bloccati di e aggiungere nuovamente le funzioni desiderate. In altre parole, inviare l&#39;elenco delle funzionalità aggiornato (come mostrato in [Passaggio 3](#step3)), assicurandosi di escludere le funzionalità che si desidera &quot;eliminare&quot; dal inserisco nell&#39;elenco Bloccati di eliminazione del sistema di gestione delle funzionalità di cui si è in possesso.
 
 ## Passaggio 5: (facoltativo) gestisci il inserisco nell&#39;elenco Bloccati di globale {#step5}
 
-Gli esempi di cui sopra si collocano tutti nel contesto di un’unica attività. Puoi anche bloccare le funzionalità per tutte le attività in un dato client (tenant), invece di dover specificare il inserisco nell&#39;elenco Bloccati di per ogni attività singolarmente. Per eseguire un inserisco nell&#39;elenco Bloccati di globale, utilizzare `/blockList/global` chiama, invece di `blockList/<campaignId>`.
+Gli esempi di cui sopra si collocano tutti nel contesto di un’unica attività. Puoi anche bloccare le funzionalità per tutte le attività in un dato client (tenant), invece di dover specificare il inserisco nell&#39;elenco Bloccati di per ogni attività singolarmente. Per eseguire un inserisco nell&#39;elenco Bloccati di globale, utilizzare la chiamata `/blockList/global` anziché `blockList/<campaignId>`.
 
 >[!BEGINTABS]
 
@@ -278,14 +278,14 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 >[!ENDTABS]
 
-Nell’esempio di richiesta mostrato qui sopra, l’utente sta bloccando due funzioni, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot;, per tutte le attività in [!DNL Target] account. Ciò significa che, indipendentemente dall’attività, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot; non saranno inclusi nei modelli di apprendimento automatico per questo account. Inoltre, l’utente blocca a livello globale anche tutte le funzioni il cui prefisso è &quot;AAM&quot;, &quot;PRO&quot; o &quot;ENV&quot;.
+Nella richiesta di esempio mostrata sopra, l’utente sta bloccando due funzionalità, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot;, per tutte le attività nel proprio account [!DNL Target]. Ciò significa che, indipendentemente dall’attività, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot; non saranno inclusi nei modelli di apprendimento automatico per questo account. Inoltre, l’utente blocca a livello globale anche tutte le funzioni il cui prefisso è &quot;AAM&quot;, &quot;PRO&quot; o &quot;ENV&quot;.
 
 Domanda: l&#39;esempio di codice qui sopra non è ridondante?
 
 Risposta: Sì. È ridondante bloccare le funzioni con valori che iniziano con &quot;AAM&quot;, bloccando al contempo tutte le funzioni la cui origine è &quot;AAM&quot;. Il risultato netto è che tutte le funzioni originate dall’AAM (segmenti Experience Cloud) verranno bloccate. Pertanto, se l’obiettivo è quello di bloccare tutte le funzioni di Experience Cloud Segments, non è necessario specificare singolarmente alcune funzioni che iniziano con &quot;AAM&quot;, nell’esempio precedente.
 
-Passaggio finale: a livello di attività o globale, è consigliabile verificare il inserisco nell&#39;elenco Bloccati di aggiornamento dopo averlo modificato, per assicurarsi che contenga i valori previsti. Per farlo, modifica il `PUT` a un `GET`.
+Passaggio finale: a livello di attività o globale, è consigliabile verificare il inserisco nell&#39;elenco Bloccati di aggiornamento dopo averlo modificato, per assicurarsi che contenga i valori previsti. Per eseguire questa operazione, modificare `PUT` in `GET`.
 
-La risposta di esempio mostrata di seguito indica [!DNL Target] sta bloccando due singole funzioni, oltre a tutte quelle fornite da &quot;AAM&quot;, &quot;PRO&quot; e &quot;ENV&quot;.
+La risposta di esempio mostrata di seguito indica che [!DNL Target] sta bloccando due singole funzionalità, più tutte quelle fornite da &quot;AAM&quot;, &quot;PRO&quot; e &quot;ENV&quot;.
 
 ![Passaggio 5](assets/models-api-step-5.png)

@@ -1,6 +1,6 @@
 ---
-title: Implementare la configurazione proxy in [!DNL Adobe Target] SDK Java
-description: Scopri come configurare la configurazione proxy di TargetClient nel [!DNL Adobe Target] SDK Java.
+title: Implementare la configurazione proxy nell'SDK Java  [!DNL Adobe Target]
+description: Scopri come configurare la configurazione proxy di TargetClient nell'SDK Java [!DNL Adobe Target] .
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
 source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Proxy di base
 
-Se l’applicazione che esegue l’SDK richiede un proxy per accedere a Internet, il `TargetClient` dovrà essere configurato con una configurazione proxy come segue.
+Se l&#39;applicazione che esegue l&#39;SDK richiede un proxy per accedere a Internet, `TargetClient` dovrà essere configurato con una configurazione proxy come segue.
 
 ### Configurazione proxy di base
 
@@ -29,7 +29,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Autenticazione
 
-Se è richiesta l&#39;autenticazione proxy, le credenziali possono essere trasmesse come parametri al `ClientProxyConfig` costruttore, come nell’esempio seguente. Questo funziona solo per l’autenticazione proxy semplice nome utente/password.
+Se è richiesta un&#39;autenticazione proxy, le credenziali possono essere passate come parametri al costruttore `ClientProxyConfig`, come nell&#39;esempio seguente. Questo funziona solo per l’autenticazione proxy semplice nome utente/password.
 
 ### Autenticazione proxy di base
 
@@ -44,7 +44,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Decisioning sul dispositivo
 
-Affinché le richieste possano recuperare l’artefatto delle regole, il proxy deve essere configurato in modo da non memorizzare la risposta nella cache. Tuttavia, se non è possibile configurare il meccanismo di memorizzazione in cache del proxy per tale richiesta, utilizza un’opzione di configurazione come soluzione alternativa per ignorare la cache a livello di proxy. Questa soluzione alternativa aggiunge `Authorization` intestazione con un valore stringa vuoto per la richiesta rules, che deve indicare al proxy che la risposta non deve essere memorizzata in cache.
+Affinché le richieste possano recuperare l’artefatto delle regole, il proxy deve essere configurato in modo da non memorizzare la risposta nella cache. Tuttavia, se non è possibile configurare il meccanismo di memorizzazione in cache del proxy per tale richiesta, utilizza un’opzione di configurazione come soluzione alternativa per ignorare la cache a livello di proxy. Questa soluzione alternativa aggiunge l&#39;intestazione `Authorization` con un valore stringa vuoto alla richiesta rules, che dovrebbe indicare al proxy che la risposta non deve essere memorizzata nella cache.
 
 Per abilitare questa soluzione alternativa, impostare quanto segue:
 

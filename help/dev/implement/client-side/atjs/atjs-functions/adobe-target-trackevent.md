@@ -1,13 +1,13 @@
 ---
 keywords: adobe.target.trackEvent, trackEvent, trackevent, track event, at.js, funzioni, funzione, preventDefault, preventdefault, prevent default, adobe.target.trackEvent
-description: Utilizza il [!UICONTROL adobe.target.trackEvent()] funzione per [!DNL Adobe Target] Libreria JavaScript at.js per attivare una richiesta per segnalare le azioni dell’utente, come clic e conversioni sul sito.
-title: Come si utilizza [!UICONTROL adobe.target.trackEvent()] Funzione?
+description: Utilizza la funzione [!UICONTROL adobe.target.trackEvent()] per la libreria JavaScript di  [!DNL Adobe Target] at.js per attivare una richiesta per segnalare le azioni dell'utente, ad esempio clic e conversioni sul sito.
+title: Come si utilizza la funzione [!UICONTROL adobe.target.trackEvent()]?
 feature: at.js
 exl-id: 9a55e4f1-d7f9-47c1-867c-2ce06fb26f9f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 59%
+source-wordcount: '314'
+ht-degree: 62%
 
 ---
 
@@ -21,10 +21,10 @@ Di seguito sono riportati i dettagli API:
 
 | Chiave | Tipo | Obbligatorio | Descrizione |
 |--- |--- |--- |--- |
-| mbox | Stringa | Sì | Nome Mbox<P>**Nota**: se un [!UICONTROL trackEvent()] viene attivata con un nome mbox che è già stato attivato sulla pagina, l&#39;identificatore SDID di [!UICONTROL trackEvent()] è reimpostato e sarà diverso da [!DNL Target] chiama sulla pagina. Tuttavia, l&#39;attivazione di un [!UICONTROL trackEvent()] chiamata con un nome mbox diverso mantiene il [!UICONTROL trackEvent()] SDID della chiamata coerente con [!UICONTROL Richiesta di caricamento pagina]/[!UICONTROL triggerView()] chiama sulla pagina. |
+| mbox | Stringa | Sì | Nome Mbox<P>**Nota**: se viene attivata una chiamata [!UICONTROL trackEvent()] con un nome mbox già attivato sulla pagina, l&#39;identificatore SDID di [!UICONTROL trackEvent()] viene reimpostato e sarà diverso dalle chiamate di [!DNL Target] sulla pagina. Tuttavia, l&#39;attivazione di una chiamata [!UICONTROL trackEvent()] con un nome mbox diverso mantiene l&#39;identificatore SDID della chiamata [!UICONTROL trackEvent()] coerente con le chiamate [!UICONTROL Page Load Request]/[!UICONTROL triggerView()] sulla pagina. |
 | selector | Stringa | No | Selettori CSS utilizzati per trovare gli elementi HTML. I listener di eventi verranno allegati agli elementi trovati. |
 | type | Stringa | No | Rappresenta un tipo di evento registrato. Può trattarsi sia di eventi HTML noti come: click, mouseown, ecc, così come di eventi HTML personalizzati. |
-| preventDefault | Booleano | No | Indica se utilizzare `[!UICONTROL event.preventDefault()]` nella chiamata di ritorno del listener di eventi. Predefinito su false.<P>**Nota**: Solo `[!UICONTROL form[submit]]` e `a[click]` sono supportati. Altri scenari non sono supportati a causa della complessità e delle enormi quantità di scenari da supportare. |
+| preventDefault | Booleano | No | Indica se utilizzare `[!UICONTROL event.preventDefault()]` nella chiamata di ritorno del listener di eventi. Predefinito su false.<P>**Nota**: sono supportati solo `[!UICONTROL form[submit]]` e `a[click]`. Altri scenari non sono supportati a causa della complessità e delle enormi quantità di scenari da supportare. |
 | params | Oggetto | No | Parametri mbox. Un oggetto di coppie chiave-valore che presenta la struttura seguente:<P>`{ "param1": "value1", "param2": "value2"}` |
 | timeout | Numero | No | Timeout in millisecondi.<P>Se non viene specificato, viene utilizzato il valore predefinito:<P>`...timeoutInSeconds: 0.15...}` |
 | success | Funzione | No | Funzione di callback utilizzata per indicare che quell’evento è stato segnalato. |

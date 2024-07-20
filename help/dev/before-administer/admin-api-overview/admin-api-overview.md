@@ -1,36 +1,36 @@
 ---
 title: Panoramica dell’API di amministrazione di Adobe Target
-description: Panoramica di [!DNL Adobe Target Admin API]
+description: Panoramica di  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 3%
+source-wordcount: '1312'
+ht-degree: 1%
 
 ---
 
 # Panoramica API dell’amministratore di Target
 
-Questo articolo fornisce una panoramica delle informazioni generali necessarie per comprendere e utilizzare [!DNL Adobe Target Admin API]s correttamente. Il contenuto seguente presuppone che tu capisca come [configurare l’autenticazione](../configure-authentication.md) per [!DNL Adobe Target Admin API]s.
+Questo articolo fornisce una panoramica delle informazioni di base necessarie per comprendere e utilizzare [!DNL Adobe Target Admin API] correttamente. Il contenuto seguente presuppone che tu sappia come [configurare l&#39;autenticazione](../configure-authentication.md) per [!DNL Adobe Target Admin API].
 
 >[!NOTE]
 >
->Se si desidera somministrare [!DNL Target] tramite l’interfaccia utente, consulta [sezione di somministrazione del *Guida di Adobe Target per professionisti aziendali*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+>Se desideri amministrare [!DNL Target] tramite l&#39;interfaccia utente, consulta la [sezione amministrazione della *Guida di Adobe Target Business Practitioner*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 >
->Le API amministratore e le API profilo sono spesso indicate collettivamente (&quot;API amministratore e API profilo&quot;), ma è possibile fare riferimento a esse separatamente (&quot;API amministratore&quot; e &quot;API profilo&quot;). L’API Recommendations è un’implementazione specifica di un [!DNL Target] API amministratore.
+>Le API amministratore e le API profilo sono spesso indicate collettivamente (&quot;API amministratore e API profilo&quot;), ma è possibile fare riferimento a esse separatamente (&quot;API amministratore&quot; e &quot;API profilo&quot;). L&#39;API Recommendations è un&#39;implementazione specifica di un&#39;API amministratore [!DNL Target].
 
 ## Prima di iniziare
 
-In tutti gli esempi di codice forniti per [API amministratore](../../administer/admin-api/admin-api-overview-new.md), sostituisci {tenant} con il valore tenant, `your-bearer-token` con il token di accesso generato con il codice JWT e `your-api-key` con la tua chiave API da [Console Adobe Developer](https://developer.adobe.com/console/home). Per ulteriori informazioni su tenant e JWT, consulta l’articolo su come [configurare l’autenticazione](../configure-authentication.md) ad Adobe [!DNL Target] API di amministrazione.
+In tutti gli esempi di codice forniti per le [API amministratore](../../administer/admin-api/admin-api-overview-new.md), sostituisci {tenant} con il valore tenant, `your-bearer-token` con il token di accesso generato con il tuo JWT e `your-api-key` con la tua chiave API di [Adobe Developer Console](https://developer.adobe.com/console/home). Per ulteriori informazioni su tenant e JWT, consulta l&#39;articolo su come [configurare l&#39;autenticazione](../configure-authentication.md), ad Adobe [!DNL Target] API amministratore.
 
 ## Controllo delle versioni
 
 A tutte le API è associata una versione. È importante fornire la versione corretta dell’API che desideri utilizzare.
 
-Se la richiesta contiene un payload (POST o PUT), il `Content-Type` per specificare la versione viene utilizzata l’intestazione della richiesta.
+Se la richiesta contiene un payload (POST o PUT), l&#39;intestazione `Content-Type` della richiesta viene utilizzata per specificare la versione.
 
-Se la richiesta non contiene un payload (GET, DELETE o OPTIONS), il `Accept` L’intestazione viene utilizzata per specificare la versione.
+Se la richiesta non contiene un payload (GET, DELETE o OPTIONS), per specificare la versione viene utilizzata l&#39;intestazione `Accept`.
 
 Se non viene fornita una versione, la chiamata sarà predefinita V1 (application/vnd.adobe.target.v1+json).
 
@@ -56,7 +56,7 @@ Messaggio di errore per funzioni non supportate
 
 Raccolta Postman amministrazione
 
-Postman è un’applicazione che semplifica l’attivazione delle chiamate API. Questo [Raccolta Postman API amministratore di Target](https://developers.adobetarget.com/api/#admin-postman-collection) contiene tutte le chiamate API dell’amministratore di Target che richiedono l’autenticazione tramite attività, tipi di pubblico, offerte, rapporti, mbox e ambienti
+Postman è un’applicazione che semplifica l’attivazione delle chiamate API. Questa [raccolta Postman API amministratore di Target](https://developers.adobetarget.com/api/#admin-postman-collection) contiene tutte le chiamate API amministratore di Target che richiedono l&#39;autenticazione tramite attività, tipi di pubblico, offerte, report, mbox e ambienti
 
 ## Codici di risposta
 
@@ -67,8 +67,8 @@ Di seguito sono riportati i codici di risposta comuni per le API di amministrazi
 | 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
 | 400 | [Richiesta non valida](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Richiesta non valida. Probabilmente i dati forniti nella richiesta non sono validi. |  |
 | 401 | [Non autorizzato](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | L&#39;utente non è autorizzato a eseguire questa operazione. |  |
-| 403 | [Operazione non consentita](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | L’accesso a questa risorsa non è consentito. |  |
-| 404 | [Non trovato](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | Impossibile trovare la risorsa di riferimento. |  |
+| 403 | [Non consentito](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | L’accesso a questa risorsa non è consentito. |  |
+| 404 | [Non Trovato](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | Impossibile trovare la risorsa di riferimento. |  |
 
 ## Attività
 
@@ -108,7 +108,7 @@ L&#39;elaborazione batch termina quando tutte le operazioni sono state completat
 
 #### Parametri oggetto di richiesta
 
-| Attributo | Descrizione | Limiti | impostazione predefinita |
+| Attributo | Descrizione | Limiti | Predefinito |
 | --- | --- | --- | --- |
 | corpo | corpo dell&#39;operazione batch HTTP. verrà ignorato per tutte le azioni ad eccezione di POST e PUT. può fare riferimento agli ID da azioni batch precedenti, ad esempio: &quot;offerId&quot;: &quot;{operationIdResponse:0}&quot;, &quot;segmentId&quot;: &quot;{operationIdResponse:1}&quot; | deve essere un JSON valido; nel caso in cui si faccia riferimento a un operationIdResponse, la risposta operationId a cui si fa riferimento deve essere un ID valido e il metodo su tale azione deve essere POST | oggetto vuoto {} |  |
 | dependentOnOperationIds | elenco di ID vincolo che garantiranno che l&#39;operazione corrente verrà eseguita solo se le operazioni specificate sono state completate correttamente. Può essere utilizzato per ottenere il concatenamento delle operazioni. | sono consentite al massimo 255 operazioni; sono consentiti solo valori univoci; deve puntare a un operationId valido nell’array; non sono consentite dipendenze cicliche |  |  |
@@ -118,7 +118,7 @@ L&#39;elaborazione batch termina quando tutte le operazioni sono state completat
 | metodo | Metodo HTTP da utilizzare. Opzioni disponibili: GET, POST, PUT, PATCH, DELETE | sono consentiti solo i metodi GET, POST, PUT, PATCH e DELETE |  |  |
 | operationId | ID operazione utilizzato per identificare un’operazione tra altre operazioni per le risposte e i risultati di riferimento. | unico tra altre operazioni; valori da 0 a 255 |  |  |
 | operazioni | elenco delle operazioni da eseguire in un batch. l&#39;ordine non è rilevante. | sono consentite al massimo 256 operazioni |  |  |
-| relativeUrl | URL relativo per l’API rest di amministrazione, la parte successiva a &quot;/admin/rest/&quot;. Può contenere parametri della stringa di query come: &quot;/v2/campaigns?limit=10&amp;offset=10&quot;. può fare riferimento a URL con ID contenenti da azioni batch precedenti, ad esempio: &quot;/v1/offers/{operationIdResponse:0}&quot;. Se vengono inviati parametri di query, questi devono essere codificati nell’URL. | deve iniziare con / (essere relativo); sono supportate solo le nuove API JSON valide; in caso di URL relativo non valido verrà restituita una risposta 404 per un’operazione particolare; nel caso in cui si faccia riferimento a un operationIdResponse, la risposta operationId a cui si fa riferimento deve essere un ID valido e il metodo su tale azione deve essere POST |  |  |
+| relativeUrl | URL relativo per l’API rest di amministrazione, la parte successiva a &quot;/admin/rest/&quot;. Può contenere parametri della stringa di query come: &quot;/v2/campaigns?limit=10&amp;offset=10&quot;. può fare riferimento a URL con ID contenuti da azioni batch precedenti, ad esempio: &quot;/v1/offers/{operationIdResponse:0}&quot;. Se vengono inviati parametri di query, questi devono essere codificati nell’URL. | deve iniziare con / (essere relativo); sono supportate solo le nuove API JSON valide; in caso di URL relativo non valido verrà restituita una risposta 404 per un’operazione particolare; nel caso in cui si faccia riferimento a un operationIdResponse, la risposta operationId a cui si fa riferimento deve essere un ID valido e il metodo su tale azione deve essere POST |  |  |
 
 #### Oggetto di richiesta di esempio
 

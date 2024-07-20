@@ -13,7 +13,7 @@ ht-degree: 44%
 # Guida per gli sviluppatori di Adobe Target {#developer}
 
 + [Guida per gli sviluppatori di Adobe Target](overview.md)
-+ Introduzione {#implementation}
++ Introduzione a {#implementation}
    + Prima dell’implementazione {#before-implement}
       + [Prima dell’implementazione](before-implement/considerations-before-you-implement-target.md)
       + [Preparare l’implementazione di Target](before-implement/prepare-to-implement-target.md)
@@ -95,7 +95,7 @@ ht-degree: 44%
    + [Guida introduttiva agli SDK di Target](implement/server-side/sdk-guides/getting-started/getting-started.md)
    + [App di esempio](implement/server-side/sdk-guides/sample-apps/sample-apps.md)
    + [Transizione dalle API legacy di Target ad Adobe I/O](implement/server-side/transition-from-target-classic-apis.md)
-   + Principi fondamentali {#core-principles}
+   + Principi di base {#core-principles}
       + [Panoramica sui principi fondamentali](implement/server-side/sdk-guides/core-principles/overview.md)
       + [ID utente e bucket](implement/server-side/sdk-guides/core-principles/user-identification-and-bucketing.md)
       + [Targeting del pubblico](implement/server-side/sdk-guides/core-principles/audience-targeting.md)
@@ -106,9 +106,9 @@ ht-degree: 44%
       + [Servizio ID Experience Cloud (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Reporting di Analytics for Target (A4T)](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [Segmenti AAM](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
-   + Decisioning sul dispositivo {#on-device-decisioning}
+   + Decisioning Sul Dispositivo {#on-device-decisioning}
       + [Panoramica del decisioning sul dispositivo](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + Artefatto della regola {#rule-artifact}
+      + Artefatto regola {#rule-artifact}
          + [Panoramica dell’artefatto della regola](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [Scarica tramite SDK di Adobe Target](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Download tramite payload JSON](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -130,7 +130,7 @@ ht-degree: 44%
       + [Eventi SDK (Node.js)](implement/server-side/node-js/sdk-events.md)
       + [Logger (Node.js)](implement/server-side/node-js/logger.md)
       + [Configurazione proxy (Node.js)](implement/server-side/node-js/proxy-configuration.md)
-   + Guida di riferimento dell’SDK Java {#java}
+   + Riferimento SDK Java {#java}
       + [Panoramica dell’SDK Java](implement/server-side/java/overview.md)
       + [Installare l’SDK Java](implement/server-side/java/install-sdk.md)
       + [Inizializzare l’SDK Java](implement/server-side/java/initialize-sdk.md)
@@ -152,7 +152,7 @@ ht-degree: 44%
       + [Invia notifiche (.NET)](implement/server-side/net/send-notifications.md)
       + [Eventi SDK (.NET)](implement/server-side/net/sdk-events.md)
       + [Richieste asincrone (.NET)](implement/server-side/net/asynchronous-requests.md)
-   + Riferimenti dell’SDK Python {#python}
+   + Riferimento SDK Python {#python}
       + [Panoramica dell’SDK Python](implement/server-side/python/overview.md)
       + [Installare l’SDK di Python](implement/server-side/python/install-sdk.md)
       + [Inizializzare l’SDK di Python](implement/server-side/python/initialize-sdk.md)
@@ -165,7 +165,7 @@ ht-degree: 44%
 + [Implementazione ibrida](implement/hybrid/hybrid-overview.md)
 + [Implementazione Recommendations](implement/recommendations/recommendations.md)
 + [Implementazione beta di Recommendations](/help/dev/implement/recommendations/recommendations-beta.md)
-+ Implementazione di un’app mobile {#mobile-apps}
++ Implementazione app mobile {#mobile-apps}
    + [Panoramica su Target per le app per dispositivi mobili](implement/mobile/overview.md)
    + [Anteprima mobile di Target](implement/mobile/target-mobile-preview.md)
    + [Utilizzare il servizio posizione](implement/mobile/use-location-service.md)
@@ -179,7 +179,7 @@ ht-degree: 44%
 + Guide API {#api}
    + [Panoramica API di Target](/help/dev/before-administer/target-api-overview.md)
    + [Configurare l’autenticazione per le API di Target](/help/dev/before-administer/configure-authentication.md)
-   + Guida all’API di consegna {#delivery-api}
+   + Guida dell&#39;API di consegna {#delivery-api}
       + [Panoramica dell’API di consegna](/help/dev/implement/delivery-api/overview.md)
       + [SDK per interagire con l’API di consegna](/help/dev/before-implement/delivery-api-overview/sdks.md)
       + [Introduzione](/help/dev/before-implement/delivery-api-overview/getting-started.md)
@@ -192,7 +192,7 @@ ht-degree: 44%
       + [Considerazioni e limitazioni note](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client Hints](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [API di consegna](/help/dev/implement/delivery-api/delivery-api.md)
-   + Admin API {#admin-api}
+   + API amministratore {#admin-api}
       + [Panoramica dell’API amministratore](before-administer/admin-api-overview/admin-api-overview.md)
       + [API di amministrazione di Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
    + API profilo {#profile-apis}
@@ -202,7 +202,7 @@ ht-degree: 44%
       + [API di aggiornamento a profilo singolo](/help/dev/administer/profile-api/profile-single-api.md)
       + [API di aggiornamento del profilo bulk](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API di reporting](/help/dev/administer/reporting-api/reporting-api.md)
-   + API RECOMMENDATIONS {#recommendations-api}
+   + API Recommendations {#recommendations-api}
       + [Panoramica API di Recommendations](before-administer/recs-api/overview.md)
       + [Gestire il catalogo con API](before-administer/recs-api/manage-catalog.md)
       + [Gestire i criteri personalizzati](before-administer/recs-api/manage-custom-criteria.md)
@@ -215,7 +215,7 @@ ht-degree: 44%
    + [API server Adobe Experience Platform Edge Network](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + Modelli di implementazione {#implementation-patterns}
    + [Panoramica sui modelli di implementazione](/help/dev/patterns/pattern-overview.md)
-   + Modello di implementazione di Recommendations utilizzando at.js {#atjs}
+   + Schema di implementazione di Recommendations utilizzando at.js {#atjs}
       + [Panoramica sul modello di implementazione di Recommendations tramite at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Inizializzare gli SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Configurare la raccolta dati](/help/dev/patterns/recs-atjs/data-collection.md)

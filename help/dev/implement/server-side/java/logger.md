@@ -1,11 +1,11 @@
 ---
-title: Inizializzare [!DNL Adobe Target] SDK Java per registrare le richieste
-description: Scopri come registrare le richieste in [!DNL Adobe Target] SDK Java.
+title: Inizializza l'SDK Java  [!DNL Adobe Target]  per registrare le richieste
+description: Scopri come registrare le richieste nell'SDK Java [!DNL Adobe Target] .
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '118'
 ht-degree: 4%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 ## Descrizione
 
-Quando [inizializzazione dell’SDK](initialize-sdk.md), sono disponibili diverse opzioni per `ClientConfig` , che può essere impostato per registrare le richieste.
+Quando [viene inizializzato l&#39;SDK](initialize-sdk.md), nell&#39;oggetto `ClientConfig` sono disponibili diverse opzioni che possono essere impostate per registrare le richieste.
 
 | Opzione | Descrizione |
 | --- | --- |
 | `logRequests` | Registra l’intero corpo della richiesta e il corpo della risposta. |
 | `logRequestStatus` | Registra l’URL della richiesta, lo stato e il tempo di risposta. |
 
-[!DNL Target] L’SDK Java utilizza `slf4j` registrazione. Devi fornire la tua implementazione di logger, ad esempio `java.util.logging`, `logback`, e `log4j`. Fai riferimento a [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) per ulteriori informazioni. Tutti i registri verranno stampati in `debug`.
+L&#39;SDK Java [!DNL Target] utilizza la registrazione `slf4j`. È necessario fornire l&#39;implementazione del logger come `java.util.logging`, `logback` e `log4j`. Per ulteriori informazioni, consultare [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html). Tutti i registri verranno stampati in `debug`.
 
 ## Esempio
 
-Aggiungi il `slf4j` dipendenza.
+Aggiungi la dipendenza `slf4j`.
 
 >[!BEGINTABS]
 
@@ -49,7 +49,7 @@ compile 'org.slf4j:slf4j-simple:2.0.0-alpha0'
 
 >[!ENDTABS]
 
-Abilita `DEBUG` registra in base all’implementazione e contrassegna i flag di registrazione delle richieste.
+Abilita i registri `DEBUG` in base all&#39;implementazione e contrassegna i flag di registrazione delle richieste.
 
 ### Debug
 

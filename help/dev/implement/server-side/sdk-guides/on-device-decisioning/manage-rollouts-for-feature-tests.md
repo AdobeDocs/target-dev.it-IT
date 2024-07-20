@@ -1,11 +1,11 @@
 ---
 title: Gestire i rollout per i test delle funzioni
-description: Scopri come gestire i rollout per i test delle funzioni tramite [!UICONTROL decisioning sul dispositivo].
+description: Scopri come gestire i rollout per i test di funzionalità utilizzando [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -14,65 +14,65 @@ ht-degree: 0%
 
 ## Riepilogo dei passaggi
 
-1. Abilita [!UICONTROL decisioning sul dispositivo] per la tua organizzazione
-1. Creare un [!UICONTROL Test A/B] attività
+1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
+1. Crea un&#39;attività [!UICONTROL A/B Test]
 1. Definire la funzione e le impostazioni di rollout
 1. Implementare ed eseguire il rendering della funzione nell’applicazione
 1. Implementa il tracciamento degli eventi nell’applicazione
 1. Attivare l’attività A/B
 1. Regola rollout e allocazione del traffico in base alle esigenze
 
-## 1. Abilita [!UICONTROL decisioning sul dispositivo] per la tua organizzazione
+## 1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
 
-L’abilitazione del decisioning sul dispositivo garantisce che un’attività A/B venga eseguita con latenza vicina allo zero. Per abilitare questa funzione, vai a **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** > **[!UICONTROL Dettagli account]** in [!DNL Adobe Target], e abilita **[!UICONTROL Decisioning sul dispositivo]** attivare/disattivare.
+L’abilitazione del decisioning sul dispositivo garantisce che un’attività A/B venga eseguita con latenza vicina allo zero. Per abilitare questa funzione, passare a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** in [!DNL Adobe Target] e attivare/disattivare **[!UICONTROL On-Device Decisioning]**.
 
-![immagine alt](assets/asset-odd-toggle.png)
+![Alt immagine](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->È necessario disporre dell&#39;amministratore o dell&#39;approvatore [ruolo utente](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) per abilitare o disabilitare [!UICONTROL Decisioning sul dispositivo] attivare/disattivare.
+>Per abilitare o disabilitare l&#39;attivazione/disattivazione di [!UICONTROL On-Device Decisioning], è necessario disporre del ruolo utente [amministratore o approvatore](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html).
 
-Dopo aver abilitato [!UICONTROL Decisioning sul dispositivo] attivare/disattivare, [!DNL Adobe Target] inizia a generare *artefatti regola* per il tuo cliente.
+Dopo aver attivato l&#39;interruttore [!UICONTROL On-Device Decisioning], [!DNL Adobe Target] inizia a generare *artefatti regola* per il client.
 
-## 2. Creare un [!UICONTROL Test A/B] attività
+## 2. Creare un&#39;attività [!UICONTROL A/B Test]
 
-1. In entrata [!DNL Adobe Target], passare alla **[!UICONTROL Attività]** , quindi seleziona **[!UICONTROL Crea attività]** > **[!UICONTROL Test A/B]**.
+1. In [!DNL Adobe Target], passare alla pagina **[!UICONTROL Activities]**, quindi selezionare **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
-   ![immagine alt](assets/asset-ab.png)
+   ![Alt immagine](assets/asset-ab.png)
 
-1. In **[!UICONTROL Crea attività test A/B]** , lascia il valore predefinito **[!UICONTROL Web]** opzione selezionata (1), seleziona **[!UICONTROL Modulo]** come compositore esperienza (2), seleziona **[!UICONTROL Area di lavoro predefinita]** con **[!UICONTROL Nessuna restrizione di proprietà]** (3) e fai clic su **[!UICONTROL Successivo]** 4).
+1. Nel modale **[!UICONTROL Create A/B Test Activity]**, lascia selezionata l&#39;opzione predefinita **[!UICONTROL Web]** (1), seleziona **[!UICONTROL Form]** come compositore esperienza (2), seleziona **[!UICONTROL Default Workspace]** con **[!UICONTROL No Property Restrictions]** (3), quindi fai clic su **[!UICONTROL Next]** (4).
 
-   ![immagine alt](assets/asset-form.png)
+   ![Alt immagine](assets/asset-form.png)
 
 ## 3. Definisci la funzione e le impostazioni di rollout
 
-In **[!UICONTROL Esperienze]** passaggio di creazione dell’attività, specifica un nome per l’attività (1). Immetti il nome della posizione (2) all&#39;interno dell&#39;applicazione in cui desideri gestire i rollout per la funzione. Ad esempio:  `ondevice-rollout` o `homepage-addtocart-rollout` sono nomi di posizione che indicano le destinazioni per la gestione dei rollout di funzioni. Nell’esempio riportato di seguito, `ondevice-rollout` è la posizione definita per l’Esperienza A. Facoltativamente, puoi aggiungere perfezionamenti del pubblico (4) per limitare la qualifica all’attività.
+Nel passaggio **[!UICONTROL Experiences]** della creazione di attività, fornisci un nome per l&#39;attività (1). Immetti il nome della posizione (2) all&#39;interno dell&#39;applicazione in cui desideri gestire i rollout per la funzione. Ad esempio, `ondevice-rollout` o `homepage-addtocart-rollout` sono nomi di posizione che indicano le destinazioni per la gestione dei rollout di funzionalità. Nell&#39;esempio seguente, `ondevice-rollout` è la posizione definita per l&#39;Esperienza A. Facoltativamente, puoi aggiungere perfezionamenti del pubblico (4) per limitare la qualifica all’attività.
 
-![immagine alt](assets/asset-location-rollout.png)
+![Alt immagine](assets/asset-location-rollout.png)
 
-1. In **[!UICONTROL Contenuto]** nella stessa pagina, seleziona **[!UICONTROL Crea offerta JSON]** nell’elenco a discesa (1), come illustrato.
+1. Nella sezione **[!UICONTROL Content]** della stessa pagina, seleziona **[!UICONTROL Create JSON Offer]** nel menu a discesa (1) come mostrato.
 
-   ![immagine alt](assets/asset-offer.png)
+   ![Alt immagine](assets/asset-offer.png)
 
-1. In **[!UICONTROL Dati JSON]** Casella di testo che appare, inserisci la variabile del flag di funzione per la funzione che intendi eseguire il rollout con questa attività nell’Esperienza A (1), utilizzando un oggetto JSON valido (2).
+1. Nella casella di testo **[!UICONTROL JSON Data]** che viene visualizzata, immetti la variabile del flag di funzione per la funzione che intendi eseguire il rollout con questa attività nell&#39;Esperienza A (1), utilizzando un oggetto JSON valido (2).
 
-   ![immagine alt](assets/asset-json-a-rollout.png)
+   ![Alt immagine](assets/asset-json-a-rollout.png)
 
-1. Clic **[!UICONTROL Successivo]** (1) anticipare al **[!UICONTROL Targeting]** passaggio di creazione dell’attività.
+1. Fai clic su **[!UICONTROL Next]** (1) per passare al passaggio **[!UICONTROL Targeting]** della creazione di attività.
 
-   ![immagine alt](assets/asset-next-2-t-rollout.png)
+   ![Alt immagine](assets/asset-next-2-t-rollout.png)
 
-1. In **[!UICONTROL Targeting]** passaggio, mantieni **[!UICONTROL Tutti i visitatori]** pubblico (1), per semplicità. Ma regola l&#39;allocazione del traffico (2) al 10%. In questo modo la funzione sarà limitata al 10% dei visitatori del sito. Fai clic su Successivo (3) per passare al **[!UICONTROL Obiettivi e impostazioni]** passaggio.
+1. Nel passaggio **[!UICONTROL Targeting]**, mantieni il pubblico **[!UICONTROL All Visitors]** (1), per semplicità. Ma regola l&#39;allocazione del traffico (2) al 10%. In questo modo la funzione sarà limitata al 10% dei visitatori del sito. Fare clic su Avanti (3) per passare al passaggio **[!UICONTROL Goals & Settings]**.
 
-   ![immagine alt](assets/asset-next-2-g-rollout.png)
+   ![Alt immagine](assets/asset-next-2-g-rollout.png)
 
-1. In **[!UICONTROL Obiettivi e impostazioni]** passo, scegli **[!UICONTROL Adobe Target]** (1) in quanto **[!UICONTROL Origine per la generazione di rapporti]** per visualizzare i risultati dell’attività in [!DNL Adobe Target] UI.
+1. Nel passaggio **[!UICONTROL Goals & Settings]**, scegli **[!UICONTROL Adobe Target]** (1) come **[!UICONTROL Reporting Source]** per visualizzare i risultati dell&#39;attività nell&#39;interfaccia utente [!DNL Adobe Target].
 
-1. Scegli un **[!UICONTROL Metrica per obiettivo]** per misurare l’attività. In questo esempio, una conversione corretta si basa sull&#39;acquisto o meno di un articolo da parte dell&#39;utente, come indicato dal fatto che l&#39;utente abbia raggiunto o meno la posizione orderConfirm (2).
+1. Scegli un **[!UICONTROL Goal Metric]** per misurare l&#39;attività. In questo esempio, una conversione corretta si basa sull&#39;acquisto o meno di un articolo da parte dell&#39;utente, come indicato dal fatto che l&#39;utente abbia raggiunto o meno la posizione orderConfirm (2).
 
-1. Clic **[!UICONTROL Salva e chiudi]** (3) per salvare l’attività.
+1. Fare clic su **[!UICONTROL Save & Close]** (3) per salvare l&#39;attività.
 
-   ![immagine alt](assets/asset-conv-rollout.png)
+   ![Alt immagine](assets/asset-conv-rollout.png)
 
 ## 4. Implementare ed eseguire il rendering della funzione nell’applicazione
 
@@ -157,7 +157,7 @@ else {
 
 ## 6. Attivare l’attività di rollout
 
-![immagine alt](assets/asset-activate-rollout.png)
+![Alt immagine](assets/asset-activate-rollout.png)
 
 ## 7. Regola il rollout e l’allocazione del traffico in base alle esigenze
 
@@ -165,4 +165,4 @@ Dopo aver attivato l’attività, modificala in qualsiasi momento per aumentare 
 
 Aumento dell’allocazione del traffico dal 10% al 50% a causa del successo del rollout iniziale.
 
-![immagine alt](assets/asset-adjust-rollout.png)
+![Alt immagine](assets/asset-adjust-rollout.png)

@@ -1,27 +1,27 @@
 ---
 keywords: parametri mbox globali, targetPageParams, stringa query, array, json, dtm
-description: Scopri come utilizzare il [!UICONTROL targetPageParams] funzione per trasmettere ulteriori informazioni di targeting o contesto nel [!DNL Adobe Target] mbox globale.
+description: Scopri come utilizzare la funzione [!UICONTROL targetPageParams] per passare ulteriori informazioni di targeting o contesto nella mbox globale [!DNL Adobe Target] .
 title: Come si trasmettono i parametri a una mbox globale?
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 63%
+source-wordcount: '370'
+ht-degree: 61%
 
 ---
 
 # Trasmettere i parametri a una mbox globale
 
-JavaScript `targetPageParams` viene utilizzata per trasmettere parametri alla mbox globale in [!DNL Adobe Target]. Ciò è necessario in qualsiasi scenario in cui debbano essere trasmesse informazioni di targeting/contesto aggiuntive [!DNL Target].
+La funzione JavaScript `targetPageParams` viene utilizzata per passare parametri alla mbox globale in [!DNL Adobe Target]. Ciò è necessario in qualsiasi scenario in cui debbano essere passate informazioni aggiuntive di targeting/contesto in [!DNL Target].
 
 Ad esempio, in un&#39;attività di Consigli, rappresenta il prodotto o la categoria corrente che stai osservando con i parametri.
 
-Il codice per chiamare la funzione JavaScript deve precedere la mbox globale sulla pagina, che sia attivata come parte di at.js o inclusa manualmente nel codice della pagina.
+Il codice per chiamare la funzione JavaScript deve precedere la mbox globale sulla pagina, sia che la mbox globale venga attivata come parte di at.js sia che venga inclusa manualmente nel codice della pagina.
 
 >[!NOTE]
 >
->Se desideri aggiungere parametri a tutte le mbox sulla pagina e non solo alla mbox globale, utilizza [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) funzione.
+>Se desideri aggiungere parametri a tutte le mbox sulla pagina e non solo alla mbox globale, utilizza la funzione [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md).
 
 Puoi trasmettere parametri a `target-global-mbox` utilizzando la funzione `targetPageParams()` in uno dei seguenti modi:
 
@@ -88,7 +88,7 @@ In questo esempio vengono inviati i seguenti dati all&#39;edge della mbox:
 
 ## JSON
 
-JSON è una potente modalità di trasferimento dei parametri. [!DNL Target] utilizza le chiavi oggetto di JSON per appiattire le strutture complesse in parametri semplici.
+JSON è una potente modalità di trasferimento dei parametri. [!DNL Target] utilizza le chiavi dell&#39;oggetto JSON per appiattire strutture complesse in parametri semplici.
 
 ```json {line-numbers="true"}
 <!--window.-->targetPageParams = function() { 

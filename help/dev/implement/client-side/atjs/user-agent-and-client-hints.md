@@ -6,8 +6,8 @@ feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -175,7 +175,7 @@ Le sezioni seguenti contengono ulteriori informazioni su come trasmettere gli Cl
 
 ### at.js versione 2.9.0 (o successiva)
 
-A partire dalla versione at.js 2.9.0, gli User Agent Client Hints vengono raccolti automaticamente dal browser e inviati a Target quando `getOffer/getOffers()` viene chiamato. Per impostazione predefinita, at.js raccoglie solo i Client Hints a “Bassa entropia”. Se esegui la segmentazione del pubblico o utilizzi script di profilo basati su dati classificati ad “Alta entropia” dalle sezioni precedenti, devi configurare at.js per raccogliere Client Hints ad “Alta Entropia” dal browser tramite `targetGlobalSettings`.
+A partire dalla versione at.js 2.9.0, gli User Agent Client Hints vengono raccolti automaticamente dal browser e inviati a Target quando viene chiamato `getOffer/getOffers()`. Per impostazione predefinita, at.js raccoglie solo i Client Hints a “Bassa entropia”. Se esegui la segmentazione del pubblico o utilizzi script di profilo basati su dati classificati ad “Alta entropia” dalle sezioni precedenti, devi configurare at.js per raccogliere Client Hints ad “Alta Entropia” dal browser tramite `targetGlobalSettings`.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### SDK lato server
 
-Per ulteriori informazioni su come trasmettere gli Client Hints tramite SDK lato server, vedi [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) in Documentazione sull’implementazione lato server.
+Per ulteriori informazioni su come trasmettere gli Client Hints tramite SDK lato server, vedi [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) nella documentazione dell&#39;implementazione lato server.

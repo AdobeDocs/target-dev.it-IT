@@ -1,13 +1,13 @@
 ---
 keywords: targetPageParams, targetpageparams, pageParams, pageparams, page params, page parameters, at.js, funzioni, funzione, targetPageParams0
-description: Utilizza il [!UICONTROL targetPageParams()] funzione per [!DNL Adobe Target] Libreria JavaScript at.js per allegare i parametri alla mbox globale dall'esterno del codice di richiesta.
-title: Come si utilizza [!UICONTROL targetPageParams()] Funzione?
+description: Utilizza la funzione [!UICONTROL targetPageParams()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per allegare i parametri alla mbox globale dall'esterno del codice di richiesta.
+title: Come si utilizza la funzione [!UICONTROL targetPageParams()]?
 feature: at.js
 exl-id: 274e4d1f-843a-443b-ad98-7139dc4a13f8
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 65%
+source-wordcount: '159'
+ht-degree: 68%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 65%
 
 Questo metodo consente di allegare i parametri alla mbox globale dall’esterno del codice di richiesta.
 
-Questa funzione è molto utile per includere lo stesso insieme di parametri su più chiamate alla mbox. La funzione deve essere definita dal cliente. Dovrebbe restituire un array di parametri che verranno passati solo alla richiesta mbox globale. Questa funzione può essere definita prima che at.js sia caricato o in **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** > **[!UICONTROL Modifica]** > **[!UICONTROL Intestazione libreria]**.
+Questa funzione è molto utile per includere lo stesso insieme di parametri su più chiamate alla mbox. La funzione deve essere definita dal cliente. Dovrebbe restituire un array di parametri che verranno passati solo alla richiesta mbox globale. Questa funzione può essere definita prima che at.js sia caricato o in **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Library Header]**.
 
 Puoi trasmettere parametri a target-global-mbox utilizzando la funzione `[!UICONTROL targetPageParams()]` in uno dei seguenti modi:
 

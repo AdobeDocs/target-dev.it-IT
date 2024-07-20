@@ -1,11 +1,11 @@
 ---
-title: Iscriviti agli eventi in [!DNL Adobe Target] SDK Python
-description: Scopri come abbonarti a vari eventi che si verificano nell’SDK di Python utilizzando [!UICONTROL OnDeviceDecisioningHandler] oggetto.
+title: Iscriviti agli eventi nell'SDK  [!DNL Adobe Target] Python
+description: Scopri come effettuare la sottoscrizione a vari eventi che si verificano nell’SDK Python utilizzando l’oggetto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '165'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Descrizione
 
-Quando [inizializzazione dell’SDK](initialize-sdk.md), il `options["events"]` dict è un oggetto facoltativo con chiavi di nome evento e valori della funzione di callback. Può essere utilizzato per abbonarsi a vari eventi che si verificano all&#39;interno dell&#39;SDK. Ad esempio, `client_ready` L&#39;evento può essere utilizzato con una funzione di callback che verrà richiamata quando l&#39;SDK sarà pronto per le chiamate ai metodi.
+Quando [viene inizializzato l&#39;SDK](initialize-sdk.md), il file dict `options["events"]` è un oggetto facoltativo con chiavi di nome evento e valori della funzione di callback. Può essere utilizzato per abbonarsi a vari eventi che si verificano all&#39;interno dell&#39;SDK. Ad esempio, l&#39;evento `client_ready` può essere utilizzato con una funzione di callback che verrà richiamata quando l&#39;SDK sarà pronto per le chiamate ai metodi.
 
-Quando `callback` viene chiamata la funzione, viene passato un oggetto evento. Ogni evento ha una `type` corrisponde al nome dell’evento e alcuni eventi includono proprietà aggiuntive con informazioni pertinenti.
+Quando viene chiamata la funzione `callback`, viene passato un oggetto evento. Ogni evento ha un `type` corrispondente al nome dell&#39;evento e alcuni eventi includono proprietà aggiuntive con informazioni pertinenti.
 
 ## Eventi
 
