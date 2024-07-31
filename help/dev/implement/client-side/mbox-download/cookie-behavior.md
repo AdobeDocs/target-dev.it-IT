@@ -4,7 +4,7 @@ description: Scopri il comportamento dei cookie di Target (cookie di prima parte
 title: Dove posso trovare informazioni sui cookie di Target?
 feature: at.js
 role: Developer
-source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 53%
@@ -118,6 +118,7 @@ Nel cookie è conservata una serie di valori per la gestione dell’esperienza d
 |--- |--- |
 | Domini di prima parte | Implementazione standard per i clienti Target. I cookie &quot;mbox&quot; sono impostati nel dominio del cliente. |
 | Tracciamento di terze parti | Il tracciamento di terze parti è importante per i casi di utilizzo di pubblicità e targeting in Target e in Adobe Audience Manager (AAM). Il tracciamento di terze parti richiede tecniche di scripting tra siti. Target utilizza due cookie, &quot;mboxSession&quot; e &quot;mboxPC&quot;, impostati nel dominio `clientcode.tt.omtrd.net`. |
+
 **Qual è l’approccio di Apple?**
 
 Da Apple:
