@@ -4,10 +4,10 @@ description: Utilizza la funzione adobe.target.triggerView() per la libreria Jav
 title: Come si utilizza la funzione adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 26%
+source-wordcount: '406'
+ht-degree: 21%
 
 ---
 
@@ -69,3 +69,29 @@ adobe.target.getOffers({
     console.log('AT: View triggered on : ' + pageView);
 });
 ```
+
+## Esempio: migliore compatibilità per `triggerView()` con [!UICONTROL Adobe Visual Editing Helper extension]
+
+Quando utilizzi l&#39;estensione [Helper per editing video Adobe](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}, considera quanto segue:
+
+A causa dei nuovi criteri V3 Manifest di [!DNL Googl]e per le estensioni [!DNL Chrome], [!UICONTROL Visual Editing Helper extension] deve attendere l&#39;evento `DOMContentLoaded` prima di caricare le librerie [!DNL Target] nel Compositore esperienza visivo. Questo ritardo potrebbe causare l&#39;attivazione della chiamata `triggerView()` da parte delle pagine Web prima che le librerie di authoring siano pronte, con conseguente mancato popolamento della visualizzazione al momento del caricamento.
+
+Per attenuare questo problema, utilizzare un listener per l&#39;evento pagina `load`.
+
+Di seguito un esempio di implementazione:
+
+```javascript
+function triggerViewIfLoaded() {
+    adobe.target.triggerView("homeView");
+}
+
+if (document.readyState === "complete") {
+    // If the page is already loaded
+    triggerViewIfLoaded();
+} else {
+    // If the page is not yet loaded, set up an event listener
+    window.addEventListener("load", triggerViewIfLoaded);
+}
+```
+
+
