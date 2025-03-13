@@ -4,10 +4,10 @@ description: Scopri quali browser Internet [!DNL Adobe Target] supportano per la
 title: Quali Browser Sono Supportati Da  [!DNL Target] ?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
+source-git-commit: 1b6dcb24d677b758ed1daf85dc0a7e9e5b42680d
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 23%
+source-wordcount: '421'
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,24 @@ Per ulteriori informazioni importanti su TLS, vedere [Modifiche alla crittografi
 
 L&#39;interfaccia [!DNL Target] supporta i seguenti browser e dispositivi:
 
+>[!NOTE]
+>
+>Target supporta la versione più recente di ciascun browser elencato e la versione più recente meno 1.
+
+
 | Tipo di dispositivo | Versione del browser |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>Google Chrome (più recente meno 1)</li><li>Mozilla Firefox (più recente, meno recente 1)</li></ul> |
-| Mac | <ul><li>Firefox (più recente meno 1)</li><li>Chrome (più recente meno 1)</li></ul> |
+| [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+
+## Requisiti di editing video
+
+Per poter aprire, creare e visualizzare in anteprima le pagine Web in modo affidabile nel [!UICONTROL Visual Experience Composer] (Compositore esperienza visivo), è necessario che nel browser Web sia installata l&#39;[estensione del browser Helper per editing video di Adobe Experience Cloud](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} oppure utilizzare [!UICONTROL Enhanced Experience Composer (EEC)].
+
+>[!NOTE]
+>
+>[!DNL Google Chrome] e [!DNL Microsoft Edge] sono attualmente gli unici browser che supportano la modifica visiva delle pagine Web in [!DNL Adobe Target].
+
 
 ## Consegna dei contenuti
 
