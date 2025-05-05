@@ -25,12 +25,12 @@ Nei video seguenti viene descritto il processo di debugging:
 
 ### Aggiungi il distintivo Panoramica dell&#39;estensione Adobe Experience Cloud Debugger ![](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/326674/?quality=12&captions=ita)
 
 ### Debug Adobe Target di base con Adobe Experience Cloud Debugger ![Icona Panoramica](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/326675/?quality=12&captions=ita)
 
 ### Mbox Trace ![Icona panoramica](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/326676/?quality=12&captions=ita)
