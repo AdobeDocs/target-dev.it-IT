@@ -14,11 +14,11 @@ ht-degree: 25%
 
 ## Panoramica
 
-I tipi di pubblico possono essere utilizzati per eseguire il targeting delle attività di sperimentazione e personalizzazione. [!DNL Adobe Target] supporta una miriade di potenti funzionalità di targeting del pubblico preconfigurate. I seguenti attributi sono disponibili per il [targeting di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html):
+I tipi di pubblico possono essere utilizzati per eseguire il targeting delle attività di sperimentazione e personalizzazione. [!DNL Adobe Target] supporta una miriade di potenti funzionalità di targeting del pubblico preconfigurate. I seguenti attributi sono disponibili per il [targeting di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=it):
 
 ### Libreria [!DNL Target]
 
-Per ulteriori informazioni, vedere [[!DNL Target] Libreria](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html).
+Per ulteriori informazioni, vedere [[!DNL Target] Libreria](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=it).
 &#x200B;
 * Referrer da Bing
 * Browser Chrome
@@ -36,7 +36,7 @@ Per ulteriori informazioni, vedere [[!DNL Target] Libreria](https://experiencele
 
 ### Geo
 
-Per ulteriori informazioni, vedere [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html).
+Per ulteriori informazioni, vedere [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it).
 &#x200B;&#x200B;
 * Paese/Area geografica
 * Stato
@@ -49,7 +49,7 @@ Per ulteriori informazioni, vedere [Geo](https://experienceleague.adobe.com/docs
 
 ### Rete
 
-Per ulteriori informazioni, vedere [Rete](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html).
+Per ulteriori informazioni, vedere [Rete](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=it).
 
 * ISP
 * Nome di dominio
@@ -57,7 +57,7 @@ Per ulteriori informazioni, vedere [Rete](https://experienceleague.adobe.com/doc
 
 ### Dispositivi mobili
 
-Per ulteriori informazioni, consulta [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html).
+Per ulteriori informazioni, consulta [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=it).
 
 * Nome marketing del dispositivo
 * Modello dispositivo
@@ -71,13 +71,13 @@ Per ulteriori informazioni, consulta [Mobile](https://experienceleague.adobe.com
 
 ### Personalizzato
 
-Per ulteriori informazioni, vedere [Parametri personalizzati](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html).
+Per ulteriori informazioni, vedere [Parametri personalizzati](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=it).
 
 * qualsiasi coppia chiave/valore
 
 ### Sistema operativo
 
-Per ulteriori informazioni, vedere [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html).
+Per ulteriori informazioni, vedere [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=it).
 
 * Linux
 * Macintosh
@@ -85,7 +85,7 @@ Per ulteriori informazioni, vedere [Sistema operativo](https://experienceleague.
 
 ### Pagine del sito
 
-Per ulteriori informazioni, vedere [Pagine del sito](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html).
+Per ulteriori informazioni, vedere [Pagine del sito](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=it).
 
 * Pagina corrente
 * Pagina precedente
@@ -94,7 +94,7 @@ Per ulteriori informazioni, vedere [Pagine del sito](https://experienceleague.ad
 
 ### Browser
 
-Per ulteriori informazioni, vedere [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html).
+Per ulteriori informazioni, vedere [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=it).
 
 * Tipo
 * Lingua
@@ -102,13 +102,13 @@ Per ulteriori informazioni, vedere [Browser](https://experienceleague.adobe.com/
 
 ### Profilo visitatore
 
-Per ulteriori informazioni, consulta [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
+Per ulteriori informazioni, consulta [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=it).
 
 * qualsiasi coppia chiave/valore, che viene mantenuta
 
 ### Origini del traffico
 
-Per ulteriori informazioni, vedere [Origini traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html).
+Per ulteriori informazioni, vedere [Origini traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=it).
 
 * Da Baidu
 * Da Bing
@@ -120,7 +120,7 @@ Per ulteriori informazioni, vedere [Origini traffico](https://experienceleague.a
 
 ### Arco temporale
 
-Per ulteriori informazioni, consulta [Intervallo di tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html).
+Per ulteriori informazioni, consulta [Intervallo di tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=it).
 
 * Data inizio / Data fine
 
@@ -197,17 +197,17 @@ La tabella seguente indica quali regole per il pubblico sono supportate o meno p
 
 | Regola pubblico | Decisioning sul dispositivo |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Sì |
-| [Rete](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | No |
-| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | No |
-| [Parametri personalizzati](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Sì |
-| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | Sì |
-| [Pagine del sito](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | Sì |
-| [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | Sì |
-| [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | No |
-| [Origini del traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | No |
-| [Arco temporale](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sì |
-| [Tipi di pubblico di Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (tipi di pubblico da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | No |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it) | Sì |
+| [Rete](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=it) | No |
+| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=it) | No |
+| [Parametri personalizzati](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=it) | Sì |
+| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=it) | Sì |
+| [Pagine del sito](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=it) | Sì |
+| [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=it) | Sì |
+| [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=it) | No |
+| [Origini del traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=it) | No |
+| [Arco temporale](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=it) | Sì |
+| [Tipi di pubblico di Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=it) (tipi di pubblico da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | No |
 
 ### Geotargeting per le decisioni su dispositivo
 
@@ -324,14 +324,14 @@ La tabella seguente indica quali regole per il pubblico sono supportate o meno p
 
 | Regola pubblico | Decisioning lato server |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Sì |
-| [Rete](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | Sì |
-| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | Sì |
-| [Parametri personalizzati](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Sì |
-| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | Sì |
-| [Pagine del sito](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | Sì |
-| [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | Sì |
-| [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Sì |
-| [Origini del traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Sì |
-| [Arco temporale](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sì |
-| [Tipi di pubblico di Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (tipi di pubblico da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | Sì |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it) | Sì |
+| [Rete](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=it) | Sì |
+| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=it) | Sì |
+| [Parametri personalizzati](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=it) | Sì |
+| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=it) | Sì |
+| [Pagine del sito](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=it) | Sì |
+| [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=it) | Sì |
+| [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=it) | Sì |
+| [Origini del traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=it) | Sì |
+| [Arco temporale](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=it) | Sì |
+| [Tipi di pubblico di Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=it) (tipi di pubblico da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | Sì |

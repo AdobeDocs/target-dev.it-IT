@@ -15,4 +15,4 @@ ht-degree: 3%
 
 [!DNL Adobe Target] offre un modello di distribuzione ibrida univoco per la personalizzazione, che combina implementazioni lato client e lato server. Questo modello ibrido consente agli utenti non tecnici di creare un’attività sperimentale o di personalizzazione utilizzando il Compositore esperienza visivo (VEC) WYSIWYG [!UICONTROL Visual Experience Composer] e di eseguire, distribuire e renderizzare l’esperienza lato server per una distribuzione altamente performante.
 
-Per ulteriori informazioni, vedere [Distribuzione ibrida Adobe](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html) in [Tutorials Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=it).
+Per ulteriori informazioni, vedere [Distribuzione ibrida Adobe](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=it) in [Tutorials Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=it).

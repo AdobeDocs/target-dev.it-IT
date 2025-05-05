@@ -33,7 +33,7 @@ L&#39;interfaccia [!DNL Target] supporta i seguenti browser e dispositivi:
 
 ## Requisiti di editing video
 
-Per poter aprire, creare e visualizzare in anteprima le pagine Web in modo affidabile nel [!UICONTROL Visual Experience Composer] (Compositore esperienza visivo), è necessario che nel browser Web sia installata l&#39;[estensione del browser Helper per editing video di Adobe Experience Cloud](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} oppure utilizzare [!UICONTROL Enhanced Experience Composer (EEC)].
+Per poter aprire, creare e visualizzare in anteprima le pagine Web in modo affidabile nel [!UICONTROL Visual Experience Composer] (Compositore esperienza visivo), è necessario che nel browser Web sia installata l&#39;[estensione del browser Helper per editing video di Adobe Experience Cloud](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} oppure utilizzare [!UICONTROL Enhanced Experience Composer (EEC)].
 
 >[!NOTE]
 >

@@ -17,7 +17,7 @@ Informazioni sull&#39;utilizzo dell&#39;estensione [!UICONTROL Adobe Experience 
 
 Puoi visualizzare rapidamente la configurazione della libreria, esaminare le richieste per verificare che i parametri personalizzati vengano passati correttamente, attivare la registrazione della console e disabilitare tutte le [!DNL Target] richieste. Autenticati in [!DNL Experience Cloud] per utilizzare lo strumento di traccia Mbox ed esaminare le tue attività, i requisiti del pubblico e il profilo visitatore.
 
-Rivedi la [panoramica di Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html){target=_blank}.
+Rivedi la [panoramica di Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=it){target=_blank}.
 
 ## Video di formazione
 

@@ -15,7 +15,7 @@ ht-degree: 62%
 
 Questa funzione genera una richiesta per segnalare le azioni dell&#39;utente, ad esempio clic e conversioni. Non recapita le attività nella risposta.
 
-Queste chiamate mbox registrazione eventi possono essere utilizzate per definire le metriche nelle attività. Per ulteriori informazioni, consulta [Metriche di successo](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) e [Tracciare le conversioni](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
+Queste chiamate mbox registrazione eventi possono essere utilizzate per definire le metriche nelle attività. Per ulteriori informazioni, consulta [Metriche di successo](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=it) e [Tracciare le conversioni](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
 
 Di seguito sono riportati i dettagli API:
 

@@ -19,7 +19,7 @@ Elenco delle domande frequenti sulle mbox globali.
 
 L&#39;account supporta un&#39;unica mbox globale.
 
-Puoi definire un limite per l&#39;esecuzione delle attività aggiungendo a queste delle regole URL. Per ulteriori informazioni, vedere [Includere la stessa esperienza in pagine simili](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html).
+Puoi definire un limite per l&#39;esecuzione delle attività aggiungendo a queste delle regole URL. Per ulteriori informazioni, vedere [Includere la stessa esperienza in pagine simili](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=it).
 
 Puoi anche trasmettere un parametro sulla pagina utilizzando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) e quindi selezionare tali parametri nella sezione &quot;Configura URL&quot; nel [!UICONTROL Visual Experience Composer] (VEC) o aggiungendo i parametri come &quot;perfezionamenti&quot; in [!UICONTROL Form-Based Experience Composer].
 

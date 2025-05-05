@@ -39,7 +39,7 @@ Per informazioni sulla selezione della configurazione corretta, consulta [Implem
 
      Deve essere codificata in URL e deve essere un riferimento assoluto. Per codificare rapidamente i tuoi URL, utilizza il [Riferimento di codifica URL di HTML](https://www.w3schools.com/tags/ref_urlencode.asp).
 
-1. Crea [offerte di reindirizzamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) per ogni immagine alternativa.
+1. Crea [offerte di reindirizzamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=it) per ogni immagine alternativa.
 
    >[!NOTE]
    >

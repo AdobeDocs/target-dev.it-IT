@@ -71,11 +71,11 @@ Collegamento agli attributi di entità per aggiornare il catalogo prodotti per [
 
 **Letture**
 
-* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=it){target=_blank}
 
 **Considerazioni**
 
-* Un modo alternativo per passare gli attributi di entità consiste nell&#39;aggiornare il catalogo prodotti nell&#39;interfaccia utente [!DNL Target] per utilizzare [feed prodotti Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
+* Un modo alternativo per passare gli attributi di entità consiste nell&#39;aggiornare il catalogo prodotti nell&#39;interfaccia utente [!DNL Target] per utilizzare [feed prodotti Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=it){target=_blank}.
 * Il passaggio degli attributi di entità è applicabile solo alle pagine in cui i dati del catalogo prodotti sono disponibili nel livello dati.
 * Il passaggio del parametro `entity.event.detailsOnly=true` in qualsiasi chiamata ha la priorità.
 

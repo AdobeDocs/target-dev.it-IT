@@ -51,7 +51,7 @@ Restituisce un valore `TargetDeliveryResponse` se chiamato in modo sincrono (imp
 | target_location_hint_cookie | dict | Cookie dell&#39;hint di posizione [!DNL Target] |
 | dettagli_analisi | list[AnalyticsResponse] | Payload di Analytics, in caso di utilizzo di Analytics lato client |
 | traccia | list[dict] | Dati di trace aggregati per tutte le mbox/visualizzazioni di richiesta |
-| response_tokens | list[dict] | Elenco di &#x200B;[Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
+| response_tokens | list[dict] | Elenco di &#x200B;[Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it) |
 | meta | dict | Metadati decisionali aggiuntivi da utilizzare con le decisioni sul dispositivo |
 
 `target_cookie` e `target_location_hint_cookie` oggetti utilizzati per restituire dati al browser hanno la seguente struttura:

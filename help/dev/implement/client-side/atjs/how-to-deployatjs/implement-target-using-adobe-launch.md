@@ -17,7 +17,7 @@ I tag in [!DNL Adobe Experience Platform] rappresentano la nuova generazione di 
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in [!DNL Adobe Experience Platform]. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Per un riferimento consolidato delle modifiche terminologiche, consulta il seguente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?).
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in [!DNL Adobe Experience Platform]. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Per un riferimento consolidato delle modifiche terminologiche, consulta il seguente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=it&).
 
 Nella tabella seguente sono elencate diverse risorse utili:
 

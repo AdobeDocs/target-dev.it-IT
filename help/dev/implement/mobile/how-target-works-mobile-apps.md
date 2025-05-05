@@ -24,7 +24,7 @@ ht-degree: 17%
 
 Una posizione *di destinazione* è indicata anche come mbox. È possibile abilitare una posizione identificata nell’app a scopo di testing o personalizzazione (ad esempio, per presentare il messaggio di benvenuto nella schermata iniziale). Queste posizioni vengono identificate durante il processo di creazione del test.
 
-Una *[metrica di successo](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)* è un&#39;azione eseguita dall&#39;utente che identifica l&#39;esito di una specifica attività (ad esempio la registrazione, un acquisto, la prenotazione di un biglietto e così via).
+Una *[metrica di successo](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=it)* è un&#39;azione eseguita dall&#39;utente che identifica l&#39;esito di una specifica attività (ad esempio la registrazione, un acquisto, la prenotazione di un biglietto e così via).
 
 ![Alt immagine](assets/mobile-target-location.png)
 

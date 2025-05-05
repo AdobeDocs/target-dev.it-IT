@@ -37,7 +37,7 @@ Adobe non memorizza dati personali (PII, Personally Identifiable Information) n�
 
 ### Come posso consentire o impedire che il mio sito venga incorporato come iFrame in domini esterni?
 
-Per consentire al [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) di incorporare il sito Web in un iFrame, è necessario modificare la CSP (se impostata) nell&#39;impostazione del server Web. [!DNL Adobe] domini devono essere inseriti nella whitelist e configurati.
+Per consentire al [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it){target=_blank} (VEC) di incorporare il sito Web in un iFrame, è necessario modificare la CSP (se impostata) nell&#39;impostazione del server Web. [!DNL Adobe] domini devono essere inseriti nella whitelist e configurati.
 
 Per motivi di sicurezza, potresti voler impedire che il tuo sito venga incorporato come iFrame in domini esterni.
 

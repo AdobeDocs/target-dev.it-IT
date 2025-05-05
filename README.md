@@ -15,13 +15,13 @@ Questo progetto ha adottato il [Codice di condotta Adobe Open Source](code-of-co
 
 ## Informazioni sui contributi ai contenuti Adobe
 
-Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 Il modo in cui contribuisci dipende da chi sei e dal tipo di modifiche con cui desideri contribuire:
 
 ### Modifiche minori
 
-Se contribuisci con piccoli aggiornamenti, visita l’articolo e fai clic sul collegamento **Modifica** nell’articolo, per passare alla sorgente dell’articolo su GitHub. Quindi, usa l’interfaccia utente GitHub per apportare le modifiche. Per ulteriori informazioni, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Se contribuisci con piccoli aggiornamenti, visita l’articolo e fai clic sul collegamento **Modifica** nell’articolo, per passare alla sorgente dell’articolo su GitHub. Quindi, usa l’interfaccia utente GitHub per apportare le modifiche. Per ulteriori informazioni, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 Le correzioni o i chiarimenti di minore entità inviati per la documentazione e gli esempi di codice in questo repository sono coperti dalle condizioni d’uso Adobe.
 
@@ -43,7 +43,7 @@ Se sei un autore dei contenuti, un program manager o sviluppatore del team del p
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per applicare modifiche di base o eseguire il fork del repository per lasciare contributi importanti.
 
-Per informazioni dettagliate, consulta [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Per informazioni dettagliate, consulta [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 ## Come utilizzare il linguaggio Markdown per formattare l’argomento
 

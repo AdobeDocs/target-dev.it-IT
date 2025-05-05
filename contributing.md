@@ -19,7 +19,7 @@ dovrai rispettare questo codice. Segnala comportamenti inaccettabili all’indir
 
 ## Documentazione della Guida per i collaboratori
 
-Consulta la [Guida per i collaboratori](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Consulta la [Guida per i collaboratori](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 ## Hai domande?
 
@@ -55,4 +55,4 @@ rivolgiti ai committer esistenti per parlarne con loro.
 
 ## Problemi di sicurezza
 
-I problemi relativi alla sicurezza non dovrebbero essere riportati in questo Issue tracker. Invece, [segnala un problema ai nostri esperti di sicurezza](https://helpx.adobe.com/security/alertus.html)
+I problemi relativi alla sicurezza non dovrebbero essere riportati in questo Issue tracker. Invece, [segnala un problema ai nostri esperti di sicurezza](https://helpx.adobe.com/it/security/alertus.html)

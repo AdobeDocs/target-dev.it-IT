@@ -124,7 +124,7 @@ All&#39;interno della risposta, viene visualizzato il campo `content` contenente
 
 ## Preacquisire mbox con `clickTrack` metriche quando si utilizza [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un&#39;integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it){target=_blank} (A4T) è un&#39;integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
 
 Il seguente frammento di codice è una risposta di un recupero preventivo di una mbox contenente `clickTrack` metriche per notificare a [!DNL Analytics] che è stato fatto clic su un&#39;offerta:
 
@@ -169,7 +169,7 @@ Il seguente frammento di codice è una risposta di un recupero preventivo di una
 
 ## Preacquisire le viste
 
-Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \

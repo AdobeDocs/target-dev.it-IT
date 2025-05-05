@@ -25,7 +25,7 @@ Gli SDK di Adobe Experience Platform Mobile supportano attualmente iOS, Android 
 
 ## Qual è la frequenza della funzione basata sulla posizione in termini di verifica della latitudine e della longitudine?
 
-Per ulteriori informazioni, consulta la [documentazione di Adobe Places](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank}.
+Per ulteriori informazioni, consulta la [documentazione di Adobe Places](https://experienceleague.adobe.com/docs/places/using/home.html?lang=it){target=_blank}.
 
 ## È necessario at.js per il funzionamento degli SDK di Adobe Experience Platform Mobile?
 
@@ -33,8 +33,8 @@ No, non è necessario at.js per utilizzare gli SDK per dispositivi mobili. at.js
 
 ## [!DNL Target] Mobile è una funzionalità solo di [!DNL Adobe Target] Premium Product SKU?
 
-No. Per i clienti [!DNL Adobe Target Standard], puoi utilizzare i nostri SDK per dispositivi mobili per le attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) solo con il componente aggiuntivo per app mobili [!DNL Target Standard]. Se desideri utilizzare [!UICONTROL Recommendations] o le funzionalità basate sull&#39;intelligenza artificiale nell&#39;app mobile, devi disporre di una licenza di [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium).
+No. Per i clienti [!DNL Adobe Target Standard], puoi utilizzare i nostri SDK per dispositivi mobili per le attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) solo con il componente aggiuntivo per app mobili [!DNL Target Standard]. Se desideri utilizzare [!UICONTROL Recommendations] o le funzionalità basate sull&#39;intelligenza artificiale nell&#39;app mobile, devi disporre di una licenza di [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=it#premium).
 
 ## Esiste un&#39;integrazione dell&#39;app mobile tra [!DNL Adobe Experience Manager] (AEM) e [!DNL Target] attività mobili?
 
-Attualmente, puoi condividere [Frammenti esperienza](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank} JSON dall&#39;AEM a [!DNL Target] e potresti utilizzarli in un&#39;attività di app mobile.
+Attualmente, puoi condividere [Frammenti esperienza](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=it){target=_blank} JSON dall&#39;AEM a [!DNL Target] e potresti utilizzarli in un&#39;attività di app mobile.

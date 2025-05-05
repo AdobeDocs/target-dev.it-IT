@@ -49,7 +49,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
    * `orderTotal`: totale ordine per l&#39;acquisto.
    * `orderId`: ID ordine dell&#39;acquisto.
 
-  La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} che deve essere attivata solo sulla pagina [!UICONTROL Confirmation].
+  La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} che deve essere attivata solo sulla pagina [!UICONTROL Confirmation].
 
   ![Pagina Configurazione azione](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +58,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
 **Letture**
 
 * [metodo adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds per i criteri basati sul carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
+* [cartIds per i criteri basati sul carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=it#cart-based){target=_blank}
 
 **Azioni**
 
