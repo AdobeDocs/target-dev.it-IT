@@ -1,6 +1,6 @@
 ---
 keywords: lato server, lato server, sdk, sdk, su dispositivo, decisioni, su dispositivo, ondispositivo, latenza zero, latenza vicino a zero, node.js, lato server3
-description: Scopri come utilizzare [!UICONTROL [!UICONTROL on-device decisioning] per memorizzare nella cache le attività  [!DNL Target] A/B e MVT sul server per eseguire le decisioni in memoria con latenza pressoché pari a zero.
+description: Scopri come utilizzare [!UICONTROL on-device decisioning] per memorizzare nella cache le attività  [!DNL Target] A/B e MVT sul server per eseguire le decisioni in memoria con latenza pressoché pari a zero.
 title: Cos’è Decisioning sul dispositivo?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649

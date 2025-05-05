@@ -317,7 +317,7 @@ I clienti possono specificare un nome di mbox globale tramite **[!UICONTROL Targ
 
 Sì, gli eventi personalizzati at.js sono applicabili anche a `triggerView()`.
 
-### Quando richiamo `triggerView()` con &amp;lbrace;`"page" : "true"`&amp;rbrace;, dice che invierà una notifica al backend [!DNL Target] e aumenterà le impression. Questo provocherà anche l’esecuzione degli script di profilo?
+### Quando richiamo `triggerView()` con &lbrace;`"page" : "true"`&rbrace;, dice che invierà una notifica al backend [!DNL Target] e aumenterà le impression. Questo provocherà anche l’esecuzione degli script di profilo?
 
 Quando si effettua una chiamata di preacquisizione al backend [!DNL Target], avviene l’esecuzione degli script di profilo. Successivamente, i dati del profilo interessati saranno crittografati e trasmessi nuovamente al lato client. Dopo la chiamata di `triggerView()` con `{"page": "true"}`, si invierà una notifica insieme ai dati di profilo codificati. Questo si verifica quando il backend [!DNL Target] deciderà di decodificare i dati di profilo e archiviarli nei database.
 

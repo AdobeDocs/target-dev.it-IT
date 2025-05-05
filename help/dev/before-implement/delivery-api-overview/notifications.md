@@ -19,7 +19,7 @@ Affinché le notifiche vengano inviate per la mbox o la visualizzazione corretta
 
 ## Notifiche per mbox preacquisite
 
-Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o un `display` per ogni mbox in modo che la `type` della notifica possa essere riflessa correttamente. Inoltre, passa un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite [!UICONTROL  Adobe Target Delivery API]. `timestamp` è inoltre importante da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una data mbox a scopo di reporting.
+Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o un `display` per ogni mbox in modo che la `type` della notifica possa essere riflessa correttamente. Inoltre, passa un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite [!UICONTROL &#x200B; Adobe Target Delivery API]. `timestamp` è inoltre importante da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una data mbox a scopo di reporting.
 
 ```
 curl -X POST \

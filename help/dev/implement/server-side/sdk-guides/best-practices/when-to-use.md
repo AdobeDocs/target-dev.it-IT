@@ -17,4 +17,4 @@ D’altra parte, le decisioni edge richiedono una chiamata di blocco della rete 
 
 ## Funzioni supportate
 
-Oltre a valutare i tuoi casi d&#39;uso e gli obiettivi aziendali, controlla quali funzionalità supporta il decisioning sul dispositivo [1} prima di decidere se utilizzare il decisioning sul dispositivo rispetto al decisioning Edge. ](../on-device-decisioning/supported-features.md) Attualmente, Edge Decisioning supporta tutti i tipi di attività, il targeting del pubblico e i metodi di allocazione.
+Oltre a valutare i tuoi casi d&#39;uso e gli obiettivi aziendali, controlla quali funzionalità supporta il decisioning sul dispositivo [1&rbrace; prima di decidere se utilizzare il decisioning sul dispositivo rispetto al decisioning Edge. ](../on-device-decisioning/supported-features.md) Attualmente, Edge Decisioning supporta tutti i tipi di attività, il targeting del pubblico e i metodi di allocazione.

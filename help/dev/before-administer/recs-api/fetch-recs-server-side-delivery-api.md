@@ -68,6 +68,7 @@ La sintassi per l&#39;[API di consegna](/help/dev/implement/delivery-api/overvie
    * gli oggetti **browser** e **address** sono stati rimossi da **Body**, poiché non sono necessari per casi di utilizzo non HTML
    * *api_charter* è elencato come nome della posizione in questo esempio
    * viene specificato entity.id, in quanto questo consiglio si basa sulla somiglianza dei contenuti, che richiede la trasmissione di una chiave dell&#39;elemento corrente a Target.
+
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 Ricorda di configurare correttamente i parametri di query. Ad esempio, assicurarsi di specificare `{{CLIENT_CODE}}` come necessario. &lt;!— Q: nella sintassi di chiamata aggiornata, entity.id è elencato come profileParameter invece di mboxParameter come nelle versioni precedenti. —> &lt;!— D: Immagine precedente ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Testo di accompagnamento precedente: &quot;Nota: questo consiglio si basa su prodotti simili di contenuto basati sul file entity.id inviato tramite mboxParameters.&quot; —>
      ![codice-client3](assets/client-code3.png)
