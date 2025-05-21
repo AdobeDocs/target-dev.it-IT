@@ -30,5 +30,5 @@ Quando utilizzi il metodo di preacquisizione con gli SDK mobili di iOS e Android
 
 Per ulteriori informazioni, inclusi i metodi di preacquisizione, le classi pubbliche e gli esempi di codice, vedi:
 
-* **iOS:** [Preacquisire il contenuto delle offerte in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) nella *Guida dell&#39;SDK iOS di Mobile Services*.
-* **Android:** [Preacquisire il contenuto delle offerte in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) nella *Guida dell&#39;SDK Android di Mobile Services*.
+* **iOS:** [Preacquisire il contenuto delle offerte in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=it) nella *Guida dell&#39;SDK iOS di Mobile Services*.
+* **Android:** [Preacquisire il contenuto delle offerte in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=it) nella *Guida dell&#39;SDK Android di Mobile Services*.

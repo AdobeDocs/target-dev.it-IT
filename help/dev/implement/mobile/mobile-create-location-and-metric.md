@@ -21,11 +21,11 @@ Per utilizzare [!DNL Target] nell&#39;app mobile, crea una posizione e una metri
 >
 >L&#39;SDK [Adobe Experience Platform per le app mobili](https://developer.adobe.com/client-sdks/documentation/){target=_blank} è la soluzione consigliata per alimentare le soluzioni e i servizi [!DNL Adobe Experience Cloud] nelle app mobili.
 
-Questa sezione include il codice di esempio che può essere utilizzato come modello per l&#39;app. Gli esempi in questa sezione contengono il codice per iOS. Gli stessi modelli si applicano ad Android. La sintassi specifica per Android si trova nella guida [SDK 4.x per Android, ad Experience Cloud per le soluzioni](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html).
+Questa sezione include il codice di esempio che può essere utilizzato come modello per l&#39;app. Gli esempi in questa sezione contengono il codice per iOS. Gli stessi modelli si applicano ad Android. La sintassi specifica per Android si trova nella guida [SDK 4.x per Android, ad Experience Cloud per le soluzioni](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=it).
 
 >[!NOTE]
 >
->Per un elenco di tutti i metodi [!DNL Target] disponibili, consulta la [documentazione di Mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html).
+>Per un elenco di tutti i metodi [!DNL Target] disponibili, consulta la [documentazione di Mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=it).
 
 Per creare una posizione [!DNL Target] nell&#39;app e effettuare una richiesta, esistono due metodi principali:
 
