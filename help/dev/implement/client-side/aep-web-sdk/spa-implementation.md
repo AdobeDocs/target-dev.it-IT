@@ -1,5 +1,5 @@
 ---
-title: Implementazione di un'applicazione a pagina singola per [!DNL  Adobe Experience Platform Web SDK]
+title: Implementazione di un'applicazione a pagina singola per [!DNL &#x200B; Adobe Experience Platform Web SDK]
 description: Scopri come creare un'implementazione di applicazione a pagina singola (SPA) di  [!DNL Adobe Experience Platform Web SDK]using [!DNL Target].
 keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;ciclo di vita SPA;lato client;test AB;AB;Targeting esperienza;XT;VEC
 feature: AEP Web SDK
