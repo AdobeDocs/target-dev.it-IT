@@ -11,24 +11,24 @@ ht-degree: 3%
 
 # Usa [!DNL Adobe Target] e [!DNL Web SDK] per la personalizzazione
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] può inviare ed eseguire il rendering di esperienze personalizzate gestite in [!DNL Adobe Target] al canale web. È possibile utilizzare un editor di WYSIWYG, denominato [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html), o un&#39;interfaccia non visiva, il [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] può inviare ed eseguire il rendering di esperienze personalizzate gestite in [!DNL Adobe Target] al canale web. È possibile utilizzare un editor di WYSIWYG, denominato [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it), o un&#39;interfaccia non visiva, il [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it), per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
 
 >[!IMPORTANT]
 >
 >Scopri come migrare l&#39;implementazione di [!DNL Target] in [!DNL Experience Platform Web SDK] con l&#39;esercitazione [Migrare Target da at.js 2.x ad Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=it).
 >
->Scopri come implementare [!DNL Target] per la prima volta con l&#39;esercitazione [Implementare Adobe Experience Cloud con Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=it). Per informazioni specifiche di [!DNL Target], vedere la sezione dell&#39;esercitazione dal titolo [Configurare Target con Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Scopri come implementare [!DNL Target] per la prima volta con l&#39;esercitazione [Implementare Adobe Experience Cloud con Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=it). Per informazioni specifiche di [!DNL Target], vedere la sezione dell&#39;esercitazione dal titolo [Configurare Target con Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=it).
 
 Le seguenti funzionalità sono state testate e sono attualmente supportate in [!DNL Target]:
 
-* [Test A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [Generazione di rapporti sulle impression e sulle conversioni A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Attività di Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Attività Targeting esperienza](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Test multivariati (TMV)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [Generazione di rapporti sulle impression e le conversioni di Target nativi](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [Supporto VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [Test A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it)
+* [Generazione di rapporti sulle impression e sulle conversioni A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it)
+* [Attività di Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
+* [Attività Targeting esperienza](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
+* [Test multivariati (TMV)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=it)
+* [Attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it)
+* [Generazione di rapporti sulle impression e le conversioni di Target nativi](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=it)
+* [Supporto VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it)
 
 ## Diagramma del sistema di [!DNL Web SDK]
 
@@ -51,27 +51,27 @@ Il diagramma seguente consente di comprendere il flusso di lavoro di [!DNL Targe
 
 Per abilitare [!DNL Target], eseguire le operazioni seguenti:
 
-1. Abilita [!DNL Target] nel [flusso di dati](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) con il codice client appropriato.
+1. Abilita [!DNL Target] nel [flusso di dati](https://experienceleague.adobe.com/it/docs/experience-platform/datastreams/overview) con il codice client appropriato.
 1. Aggiungi l&#39;opzione `renderDecisions` ai tuoi eventi.
 
 Quindi, facoltativamente, puoi anche aggiungere le seguenti opzioni:
 
 * **`decisionScopes`**: recupera attività specifiche (utili per le attività create con il compositore basato su moduli) aggiungendo questa opzione agli eventi.
-* **[Frammento pre-hiding](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**: consente di nascondere solo alcune parti della pagina.
+* **[Frammento pre-hiding](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/manage-flicker)**: consente di nascondere solo alcune parti della pagina.
 
 ## Utilizzo del Compositore esperienza visivo [!UICONTROL Adobe Target]
 
-Per utilizzare il Compositore esperienza visivo con un&#39;implementazione [!DNL Web SDK], installa e attiva l&#39;estensione [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper.
+Per utilizzare il Compositore esperienza visivo con un&#39;implementazione [!DNL Web SDK], installa e attiva l&#39;estensione [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper.
 
-Per ulteriori informazioni, consulta [Estensione helper per Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) nella *guida di Adobe Target*.
+Per ulteriori informazioni, consulta [Estensione helper per Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=it) nella *guida di Adobe Target*.
 
 ## Rendering di contenuti personalizzati
 
-Per ulteriori informazioni, consulta [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
+Per ulteriori informazioni, consulta [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
 
 ## Pubblico in XDM
 
-Quando definisci i tipi di pubblico per le attività [!DNL Target] distribuite tramite [!DNL Web SDK], è necessario definire e utilizzare [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Dopo aver definito schemi, classi e gruppi di campi dello schema XDM, puoi creare una regola di pubblico [!DNL Target] definita dai dati XDM per il targeting. All&#39;interno di [!DNL Target], i dati XDM vengono visualizzati in [!UICONTROL Audience Builder] come parametro personalizzato. XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
+Quando definisci i tipi di pubblico per le attività [!DNL Target] distribuite tramite [!DNL Web SDK], è necessario definire e utilizzare [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it). Dopo aver definito schemi, classi e gruppi di campi dello schema XDM, puoi creare una regola di pubblico [!DNL Target] definita dai dati XDM per il targeting. All&#39;interno di [!DNL Target], i dati XDM vengono visualizzati in [!UICONTROL Audience Builder] come parametro personalizzato. XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
 
 Se hai [!DNL Target] attività con tipi di pubblico predefiniti che utilizzano parametri personalizzati o un profilo utente, non vengono distribuite correttamente tramite SDK. Invece di utilizzare parametri personalizzati o il profilo utente, devi utilizzare XDM. Tuttavia, sono presenti campi di targeting del pubblico predefiniti supportati tramite [!DNL Web SDK] che non richiedono XDM. Questi campi sono disponibili nell&#39;interfaccia utente di [!DNL Target] che non richiedono XDM:
 
@@ -84,7 +84,7 @@ Se hai [!DNL Target] attività con tipi di pubblico predefiniti che utilizzano p
 * Origini del traffico
 * Arco temporale
 
-Per ulteriori informazioni, consulta [Categorie di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) nella *guida di Adobe Target*.
+Per ulteriori informazioni, consulta [Categorie di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=it) nella *guida di Adobe Target*.
 
 ### Token di risposta
 
@@ -287,7 +287,7 @@ alloy("sendEvent", {
 
 ## Eseguire il debug
 
-mboxTrace e mboxDebug sono stati dichiarati obsoleti. Utilizza invece un metodo di [debug di Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/use-cases/debugging).
+mboxTrace e mboxDebug sono stati dichiarati obsoleti. Utilizza invece un metodo di [debug di Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/use-cases/debugging).
 
 ## Terminologia 
 
