@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Accesso ai token di risposta
 
-Il contenuto Personalization restituito da [!DNL Adobe Target] include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
+Il contenuto Personalization restituito da [!DNL Adobe Target] include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
 
 Per accedere a qualsiasi contenuto di personalizzazione, fornisci una funzione di callback durante l’invio di un evento. Questo callback viene richiamato dopo che SDK ha ricevuto una risposta corretta dal server. Al callback viene fornito un oggetto `result`, che potrebbe contenere una proprietà `propositions` contenente eventuali contenuti di personalizzazione restituiti. Di seguito è riportato un esempio di fornitura di una funzione di callback.
 
@@ -27,7 +27,7 @@ alloy("sendEvent", {
   });
 ```
 
-In questo esempio, `result.propositions`, se esiste, è un array contenente proposte di personalizzazione relative all&#39;evento. Consulta [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) per ulteriori informazioni sul contenuto di `result.propositions.`
+In questo esempio, `result.propositions`, se esiste, è un array contenente proposte di personalizzazione relative all&#39;evento. Consulta [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) per ulteriori informazioni sul contenuto di `result.propositions.`
 
 Supponiamo di voler raccogliere tutti i nomi di attività da tutte le proposte di cui è stato eseguito il rendering automatico dal SDK web e inviarli in un singolo array. È quindi possibile inviare il singolo array a una terza parte. In questo caso:
 
