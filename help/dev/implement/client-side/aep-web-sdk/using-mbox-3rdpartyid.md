@@ -14,13 +14,13 @@ ht-degree: 16%
 
 `mbox3rdPartyId` in [!DNL Adobe Target] è l’ID visitatore della tua azienda, ad esempio l’D di iscrizione al programma fedeltà.
 
-Quando un visitatore accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)
+Quando un visitatore accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=it)
 
 ## Come utilizzare `mbox3rdPartyId` con [!DNL Platform Web SDK]
 
 ### Passaggio 1: configurare `Target Third Party ID Namespace`
 
-Configura `Target Third Party ID Namespace` nel [stream di dati](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview), utilizzando l&#39;ID dello spazio dei nomi che desideri utilizzare come ID di terze parti mbox. [Ulteriori informazioni sugli spazi dei nomi ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
+Configura `Target Third Party ID Namespace` nel [stream di dati](https://experienceleague.adobe.com/it/docs/experience-platform/datastreams/overview), utilizzando l&#39;ID dello spazio dei nomi che desideri utilizzare come ID di terze parti mbox. [Ulteriori informazioni sugli spazi dei nomi ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it)
 
 ![Interfaccia utente di Experience Platform con il campo spazio dei nomi dell&#39;ID di terze parti di Target.](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
