@@ -1,11 +1,11 @@
 ---
-title: Modello di implementazione di Recommendations utilizzando at.js
+title: Schema di implementazione di Recommendations utilizzando at.js
 description: Come utilizzare il modello di implementazione per Recommendations con at.js
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Schema di implementazione di [!DNL Recommendations] tramite panoramica di at.js
 
-Questo modello di implementazione consente di comprendere e creare l&#39;implementazione di [!DNL Adobe Target Recommendations] quando si utilizza la libreria JavaScript di [at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
+Questo modello di implementazione consente di comprendere e creare l&#39;implementazione di [!DNL Adobe Target Recommendations] quando si utilizza la libreria JavaScript di [at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md).
 
 Fare clic sull&#39;immagine per espandere a schermo intero.
 

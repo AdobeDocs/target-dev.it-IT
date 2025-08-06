@@ -3,14 +3,15 @@ title: Confronto di at.js con Experience Platform Web SDK
 description: Scopri le funzionalità di at.js rispetto a [!DNL Experience Platform Web SDK].
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;Decisions;scope;schema;diagramma di sistema;diagramma
 feature: AEP Web SDK
-source-git-commit: d6b93537692a1efbc2650a015f5a44d4fd1fd422
+exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
+source-git-commit: 158c45b824df8d3bd565ac7c654b65f1fd631e2c
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 5%
 
 ---
 
-# Confronto della libreria at.js con [!DNL Adobe Experience Platform Web SDK]
+# Confronta la libreria at.js con [!DNL Adobe Experience Platform Web SDK]
 
 ## Panoramica
 
@@ -26,7 +27,7 @@ Questo articolo fornisce una panoramica delle differenze tra la libreria `at.js`
 
 La versione predefinita è disponibile su una rete CDN. Puoi fare riferimento alla libreria sulla rete CDN direttamente sulla tua pagina, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e non minimizzati. La versione non minimizzata è utile a scopo di debug.
 
-Per ulteriori informazioni, vedere [Installare il Web SDK utilizzando la libreria JavaScript](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/install/library).
+Per ulteriori informazioni, vedere [Installare il Web SDK utilizzando la libreria JavaScript](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library).
 
 ## Configurazione delle librerie
 
@@ -72,7 +73,7 @@ window.adobe.target.init(window, document, {
 
 ### Configurazione di Platform Web SDK
 
-La configurazione per SDK viene eseguita con il comando [`configure`](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/configure/overview). Il comando `configure` è *always* chiamato per primo.
+La configurazione per SDK viene eseguita con il comando [`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview). Il comando `configure` è *always* chiamato per primo.
 
 ## Come richiedere ed eseguire automaticamente il rendering delle offerte di caricamento pagina [!DNL Target]
 
@@ -82,7 +83,7 @@ Utilizzando at.js 2.x, se abiliti l&#39;impostazione `pageLoadEnabled,` la libre
 
 ### Utilizzo di [!DNL PLatform Web SDK]
 
-Il contenuto creato in [!DNL Target] [Compositore esperienza visivo](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/visual-experience-composer) può essere recuperato e renderizzato automaticamente da SDK.
+Il contenuto creato in [!DNL Target] [Compositore esperienza visivo](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer) può essere recuperato e renderizzato automaticamente da SDK.
 
 Per richiedere ed eseguire automaticamente il rendering di [!DNL Target] offerte, utilizza il comando `sendEvent` e imposta l&#39;opzione `renderDecisions` su `true.` In questo modo SDK esegue automaticamente il rendering di qualsiasi contenuto personalizzato idoneo per il rendering automatico.
 
@@ -182,7 +183,7 @@ alloy("sendEvent", {
 }
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Come richiedere ed eseguire il rendering automatico di *NOT* delle offerte di Page Load Target
 
@@ -214,7 +215,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -261,7 +262,7 @@ alloy("sendEvent", {
   });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Richiedere mbox di Target basate su moduli specifiche
 
@@ -297,7 +298,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -418,7 +419,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Come applicare le attività [!DNL Target]
 
@@ -435,7 +436,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Ulteriori informazioni sul comando `applyOffers` sono disponibili nella [documentazione dedicata](https://experienceleague.adobe.com/it/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2).
+Ulteriori informazioni sul comando `applyOffers` sono disponibili nella [documentazione dedicata](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2).
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -449,7 +450,7 @@ alloy("applyPropositions", {
 });
 ```
 
-Ulteriori informazioni sul comando `applyPropositions` sono disponibili nella [documentazione dedicata](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
+Ulteriori informazioni sul comando `applyPropositions` sono disponibili nella [documentazione dedicata](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
 
 ## Come tenere traccia degli eventi
 
@@ -485,7 +486,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -603,7 +604,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **Esempio 3 - Tracciare un evento generato dopo l&#39;esecuzione di un&#39;azione**
 
@@ -685,7 +686,7 @@ alloy("sendEvent", {
 
 ## Come sfruttare [!UICONTROL Response Tokens]
 
-Il contenuto Personalization restituito da [!DNL Target] include [token di risposta](https://experienceleague.adobe.com/it/docs/target/using/administer/response-tokens). I token di risposta sono dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
+Il contenuto Personalization restituito da [!DNL Target] include [token di risposta](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens). I token di risposta sono dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
 
 ### Utilizzo di at.js
 
@@ -699,7 +700,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -707,7 +708,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Assicurarsi di utilizzare [!DNL Experience Platform Web SDK] versione 2.6.0 o successiva.
 
-I token di risposta vengono restituiti come parte di `propositions` esposti nel risultato del comando `sendEvent`. Ogni proposta contiene un array di `items,` e ogni elemento ha un oggetto `meta` popolato con token di risposta, se abilitati nell&#39;interfaccia utente di amministrazione di [!DNL Target]. [Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/target/using/administer/response-tokens)
+I token di risposta vengono restituiti come parte di `propositions` esposti nel risultato del comando `sendEvent`. Ogni proposta contiene un array di `items,` e ogni elemento ha un oggetto `meta` popolato con token di risposta, se abilitati nell&#39;interfaccia utente di amministrazione di [!DNL Target]. [Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
 
 **Esempio**
 
@@ -814,7 +815,7 @@ Quando questa opzione è impostata, il formato del payload restituito è simile 
 }
 ```
 
-Il payload può quindi essere inoltrato a [!DNL Analytics] tramite [!DNL &#x200B; Data Insertion API].
+Il payload può quindi essere inoltrato a [!DNL Analytics] tramite [!DNL  Data Insertion API].
 
 Esempio 2: configurazione in ogni funzione `getOffers`:
 
@@ -878,7 +879,7 @@ I dati scorrono quindi come segue:
 
 ![Diagramma che mostra il flusso di lavoro di registrazione lato server di Analytics](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -960,7 +961,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -1060,7 +1061,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -1140,7 +1141,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -1260,5 +1261,5 @@ Sono disponibili più funzionalità di debug quando si utilizza [!DNL Platform W
 * Utilizzo di [Assurance](https://experienceleague.adobe.com/it/docs/experience-platform/assurance/home)
 * [Debug di Web SDK abilitato](https://experienceleague.adobe.com/it/docs/experience-platform/assurance/home)
 * Utilizza [hook di monitoraggio di Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Usa [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/it/docs/experience-platform/debugger/home)
+* Usa [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 * Traccia di destinazione

@@ -4,7 +4,7 @@ description: Scopri come utilizzare le API del profilo di Adobe Target per invia
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 315e8fbe67938588c3c9a0135e0cd85fa1f12187
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Un profilo utente contiene informazioni demografiche e comportamentali relative 
 
 Le informazioni di profilo per ciascun visitatore vengono memorizzate nei cookie o nelle app di terze parti.
 
-Se la pagina Web implementa il codice [!DNL Target] ([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) o [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)), le informazioni sul profilo dei cookie vengono passate a [!DNL Target] utilizzando i parametri del profilo. [!DNL Target] identifica ogni visitatore in modo univoco tramite un `pcID` generato nei cookie del visitatore. Tuttavia, puoi trasmettere parametri di profilo da un&#39;app esterna tramite chiamate mbox utilizzando `mbox3rdPartyIds`.
+Se la pagina Web implementa il codice [!DNL Target] ([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md) o [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)), le informazioni sul profilo dei cookie vengono passate a [!DNL Target] utilizzando i parametri del profilo. [!DNL Target] identifica ogni visitatore in modo univoco tramite un `pcID` generato nei cookie del visitatore. Tuttavia, puoi trasmettere parametri di profilo da un&#39;app esterna tramite chiamate mbox utilizzando `mbox3rdPartyIds`.
 
 Utilizza le API di profilo [!DNL Adobe Target] quando disponi di dati di profilo sui visitatori da inviare a [!DNL Target] che non puoi o non desideri inviare come parte dell&#39;integrazione basata su pagina con [!DNL Target]. Potrebbero essere dati provenienti da un sistema CRM (Customer Relationship Management) o POS (Point of Sale) non disponibile nella pagina. Oppure questi dati potrebbero essere di natura più delicata e non avrebbe senso trasmetterli sulla pagina.
 
