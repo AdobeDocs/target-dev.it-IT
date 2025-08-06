@@ -815,7 +815,7 @@ Quando questa opzione è impostata, il formato del payload restituito è simile 
 }
 ```
 
-Il payload può quindi essere inoltrato a [!DNL Analytics] tramite [!DNL  Data Insertion API].
+Il payload può quindi essere inoltrato a [!DNL Analytics] tramite [!DNL &#x200B; Data Insertion API].
 
 Esempio 2: configurazione in ogni funzione `getOffers`:
 
