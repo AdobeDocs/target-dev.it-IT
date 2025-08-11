@@ -2,10 +2,10 @@
 user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
-source-git-commit: 8f24ffe82e16de0dbbd86d3baf0e76d826a98a9a
+source-git-commit: b1b0424bfe61fb8b4e88723e6bb2c565d75f8351
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 42%
+source-wordcount: '827'
+ht-degree: 40%
 
 ---
 
@@ -169,6 +169,10 @@ ht-degree: 42%
       + [Richieste asincrone (Python)](implement/server-side/python/asynchronous-requests.md)
       + [Logger (Python)](implement/server-side/python/logger.md)
 + [Implementazione ibrida](implement/hybrid/hybrid-overview.md)
++ Analytics for Target (A4T) con Experience Platform SDK {#a4t}
+   + [Registrazione di Adobe Analytics for Target (A4T) in Experience Platform Web SDK](/help/dev/implement/a4t/overview-a4t.md)
+   + [Registrazione lato client per i dati A4T in Experience Platform Web SDK](/help/dev/implement/a4t/client-side-logging.md)
+   + [Registrazione lato server per i dati A4T in Experience Platform Web SDK](/help/dev/implement/a4t/server-side-a4t.md)
 + [Implementazione della funzione Consigli](implement/recommendations/recommendations.md)
 + [Implementazione della funzione beta per la funzione Consigli](/help/dev/implement/recommendations/recommendations-beta.md)
 + Implementazione di un’app mobile {#mobile-apps}
