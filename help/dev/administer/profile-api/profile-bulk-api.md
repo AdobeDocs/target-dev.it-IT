@@ -4,10 +4,10 @@ description: Scopri come utilizzare  [!DNL Adobe Target] [!UICONTROL Bulk Profil
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 8%
+source-wordcount: '929'
+ht-degree: 7%
 
 ---
 
@@ -24,9 +24,13 @@ Utilizzando [!UICONTROL Bulk Profile Update API], puoi inviare in modo comodo da
 
 >[!NOTE]
 >
->La versione 2 (v2) di [!UICONTROL Bulk Profile Update API] è la versione corrente. [!DNL Target] supporta comunque la versione 1 (v1).
+>La versione 2 (v2) di [!DNL Bulk Profile Update API] è la versione corrente. Tuttavia, [!DNL Target] continua a supportare la versione 1 (v1).
+>
+>* **Implementazioni autonome che non si basano su `PCID`, utilizzare la versione 2**: se l&#39;implementazione di [!DNL Target] utilizza [!DNL Experience Cloud ID] (ECID) come identificatore di profilo per i visitatori anonimi, non è necessario utilizzare `pcId` come chiave in un file batch versione 2 (v2). L&#39;utilizzo di `pcId` con la versione 2 di [!DNL Bulk Profile Update API] è destinato alle implementazioni autonome di [!DNL Target] che non si basano su `ECID`.
+>
+>* **Implementazioni che si basano su `thirdPartID`, utilizzano la versione 1**: le implementazioni che utilizzano `ECID` per l&#39;identificazione del profilo devono utilizzare la versione 1 (v1) dell&#39;API se si desidera utilizzare `pcId` come chiave nel file batch. Se l&#39;implementazione utilizza `thirdPartyId` per l&#39;identificazione del profilo, si consiglia la versione 2 (v2) con `thirdPartyId` come chiave.
 
-## Vantaggi dell’API di aggiornamento del profilo in blocco
+## Vantaggi di [!UICONTROL Bulk Profile Update API]
 
 * Nessun limite al numero di attributi del profilo.
 * Gli attributi del profilo inviati tramite il sito possono essere aggiornati tramite l’API e in modo opposto.
@@ -43,13 +47,13 @@ Utilizzando [!UICONTROL Bulk Profile Update API], puoi inviare in modo comodo da
 
 Per aggiornare i dati del profilo in blocco, crea un file batch. Il file batch è un file di testo con valori separati da virgole simili al seguente file di esempio.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -71,9 +75,9 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 
 Effettuare una richiesta HTTP POST ai server perimetrali [!DNL Target] per elaborare il file. Di seguito è riportato un esempio di richiesta HTTP POST per il file batch.txt utilizzando il comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Dove:
 
@@ -81,7 +85,7 @@ BATCH.TXT è il nome del file. CLIENTCODE è il codice client [!DNL Target].
 
 Se non conosci il tuo codice client, nell&#39;interfaccia utente di [!DNL Target] fai clic su **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. Il codice client è visualizzato nella sezione [!UICONTROL Account Details].
 
-### Inspect la risposta
+### Ispezionare la risposta
 
 L’API Profiles restituisce lo stato di invio del batch per l’elaborazione insieme a un collegamento in &quot;batchStatus&quot; a un URL diverso che mostra lo stato generale di un particolare processo batch.
 
