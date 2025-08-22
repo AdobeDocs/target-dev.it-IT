@@ -4,9 +4,9 @@ description: Utilizzare [!UICONTROL Adobe Client Care] per implementare il suppo
 title: Come si utilizza CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: f894122217529cb40369c003a3b4ed5419fb0505
+source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Istruzioni per l&#39;utilizzo di [!DNL Adobe Client Care] per implementare il su
    >
    >DigiCert, l’autorità di certificazione di Adobe, non può rilasciare un certificato fino al completamento di questo passaggio. Pertanto, Adobe non può soddisfare la richiesta di implementazione di un CNAME fino al completamento di questo passaggio.
 
-1. [Compila questo modulo](assets/FPC_Request_Form.xlsx) e includilo quando [apri un ticket dell&#39;Assistenza clienti di Adobe per richiedere il supporto CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Compila questo modulo](assets/FPC_Request_Form.xlsx) e includilo quando [apri un ticket dell&#39;Assistenza clienti di Adobe per richiedere il supporto CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * Codice client [!DNL Adobe Target]:
    * Nomi host certificati SSL (esempio: `target.example.com target.example.org`):
@@ -96,8 +96,6 @@ Per impostazione predefinita, tutti i certificati sono RSA SHA-256 e le chiavi s
 Utilizza il seguente set di comandi (nel terminale della riga di comando macOS o Linux, utilizzando bash e curl >=7.49):
 
 1. Copiare e incollare la funzione bash nel terminale o incollarla nel file dello script di avvio bash (in genere `~/.bash_profile` o `~/.bashrc`) in modo che la funzione sia disponibile nelle sessioni terminale:
-
-   +++ Vedi i dettagli
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -242,8 +240,6 @@ Utilizza il seguente set di comandi (nel terminale della riga di comando macOS o
      echo
    }
    ```
-
-   +++
 
 1. Incolla questo comando (sostituendo `target.example.com` con il tuo nome host):
 
