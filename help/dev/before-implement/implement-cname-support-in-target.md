@@ -4,9 +4,9 @@ description: Utilizzare [!UICONTROL Adobe Client Care] per implementare il suppo
 title: Come si utilizza CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
+source-git-commit: 04dfc34bcd3e7efbf73cd167334b440d42cafd1b
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Istruzioni per l&#39;utilizzo di [!DNL Adobe Client Care] per implementare il su
 
 1. Determina l’elenco di nomi host necessari per il certificato SSL (consulta le domande frequenti di seguito).
 
-1. Per ogni nome host, crea un record CNAME nel DNS che punti al nome host `clientcode.tt.omtrdc.net` [!DNL Target] regolare.
+1. Per ogni nome host, crea un record CNAME nel DNS che punti al nome host [!DNL Target] `clientcode.tt.omtrdc.net` regolare.
 
    Ad esempio, se il codice client è &quot;namecustomer&quot; e il nome host proposto è `target.example.com`, il record CNAME DNS sarà simile al seguente:
 
@@ -31,7 +31,7 @@ Istruzioni per l&#39;utilizzo di [!DNL Adobe Client Care] per implementare il su
    >
    >DigiCert, l’autorità di certificazione di Adobe, non può rilasciare un certificato fino al completamento di questo passaggio. Pertanto, Adobe non può soddisfare la richiesta di implementazione di un CNAME fino al completamento di questo passaggio.
 
-1. [Compila questo modulo](assets/FPC_Request_Form.xlsx) e includilo quando [apri un ticket dell&#39;Assistenza clienti di Adobe per richiedere il supporto CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Compila questo modulo](assets/FPC_Request_Form.xlsx) e includilo quando [apri un ticket dell&#39;Assistenza clienti di Adobe per richiedere il supporto CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * Codice client [!DNL Adobe Target]:
    * Nomi host certificati SSL (esempio: `target.example.com target.example.org`):
@@ -96,6 +96,8 @@ Per impostazione predefinita, tutti i certificati sono RSA SHA-256 e le chiavi s
 Utilizza il seguente set di comandi (nel terminale della riga di comando macOS o Linux, utilizzando bash e curl >=7.49):
 
 1. Copiare e incollare la funzione bash nel terminale o incollarla nel file dello script di avvio bash (in genere `~/.bash_profile` o `~/.bashrc`) in modo che la funzione sia disponibile nelle sessioni terminale:
+
+   +++Vedi i dettagli
 
    ```
    function adobeTargetCnameValidation {
@@ -240,13 +242,15 @@ Utilizza il seguente set di comandi (nel terminale della riga di comando macOS o
    }
    ```
 
+   +++
+
 1. Incolla questo comando (sostituendo `target.example.com` con il tuo nome host):
 
-   ```
-   adobeTargetCnameValidation target.example.com
-   ```
+   ```adobeTargetCnameValidation target.example.com```
 
    Se l’implementazione è pronta, viene visualizzato un output simile al seguente. La parte importante è che tutte le righe dello stato di convalida mostrano `✅` anziché `🚫`. Ogni partizione CNAME edge di Target deve mostrare `CN=target.example.com`, che corrisponde al nome host primario nel certificato richiesto (in questo output non vengono stampati nomi host SAN aggiuntivi nel certificato).
+
+   +++Vedi i dettagli
 
    ```
    $ adobeTargetCnameValidation target.example.com
@@ -310,6 +314,8 @@ Utilizza il seguente set di comandi (nel terminale della riga di comando macOS o
        🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
+
++++
 
 >[!NOTE]
 >
