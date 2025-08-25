@@ -4,10 +4,10 @@ description: Quali considerazioni e limitazioni note devo tenere in considerazio
 keywords: api di consegna
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
-source-git-commit: 413b16ed0b098de6914558fa29b9ca59aaba958e
+source-git-commit: 94a4122244065384f487ca9a29dfa1b414168cb8
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 3%
+source-wordcount: '145'
+ht-degree: 6%
 
 ---
 
@@ -22,15 +22,3 @@ Nelle informazioni seguenti sono elencate considerazioni e limitazioni note sull
   Se utilizzi un endpoint che indirizza i visitatori attraverso la nostra nuova infrastruttura di load balancer, le loro connessioni vengono automaticamente aggiornate a HTTP/2. Questo processo di aggiornamento converte le intestazioni di richiesta in intestazioni minuscole in modo che non vengano considerate in formato non valido.
 
   Questo problema può potenzialmente rappresentare un problema per i clienti se le loro librerie sono configurate per cercare intestazioni di richiesta/risposta con distinzione tra maiuscole e minuscole (in particolare non con distinzione tra maiuscole e minuscole).
-
-* Presta attenzione quando aggiorni [!DNL Recommendations] [!UICONTROL Catalog] tramite [!DNL Delivery API]. [!DNL Delivery API] è pubblico, quindi evita di utilizzarlo per popolare gli elementi cliccabili nel catalogo dei consigli. In questo modo si possono introdurre contenuti invalidati e inquinare il catalogo.
-
-  **Best practice**:
-
-  Utilizza [!DNL Delivery API] solo per aggiornare gli attributi del catalogo che:
-   * Cambia frequentemente (ad esempio, prezzo, livello di azioni).
-   * Segui un formato predefinito che può essere facilmente convalidato sul tuo sito web.
-   * Non utilizzarlo per aggiungere o modificare elementi cliccabili o altri contenuti non verificati.
-   * Se necessario, puoi richiedere all’assistenza clienti di disabilitare gli aggiornamenti del catalogo tramite l’API di consegna.
-
-  Per ulteriori informazioni, vedere la documentazione di [[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}.
