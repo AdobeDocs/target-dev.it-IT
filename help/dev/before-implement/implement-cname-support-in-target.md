@@ -4,7 +4,7 @@ description: Utilizzare [!UICONTROL Adobe Client Care] per implementare il suppo
 title: Come si utilizza CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: d803ee9ddb58c73e089e938773ba264e03ef9b1b
+source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Istruzioni per l&#39;utilizzo di [!DNL Adobe Client Care] per implementare il su
    >
    >DigiCert, l’autorità di certificazione di Adobe, non può rilasciare un certificato fino al completamento di questo passaggio. Pertanto, Adobe non può soddisfare la richiesta di implementazione di un CNAME fino al completamento di questo passaggio.
 
-1. [Compila questo modulo](assets/FPC_Request_Form.xlsx) e includilo quando [apri un ticket dell&#39;Assistenza clienti di Adobe per richiedere il supporto CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Compila questo modulo](assets/FPC_Request_Form.xlsx) e includilo quando [apri un ticket dell&#39;Assistenza clienti di Adobe per richiedere il supporto CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * Codice client [!DNL Adobe Target]:
    * Nomi host certificati SSL (esempio: `target.example.com target.example.org`):
