@@ -14,7 +14,7 @@ ht-degree: 0%
 
 L&#39;artefatto della regola è una rappresentazione JSON delle attività [!DNL Adobe Target] [!UICONTROL on-device decisioning]. Viene generato da [!DNL Adobe Target] e propagato alla rete CDN Akamai per verificare che sia disponibile un artefatto di regola il più vicino possibile agli utenti finali. Contiene metadati che garantiscono l’esecuzione e la consegna precise delle attività, consentendo al contempo l’analisi in tempo reale tramite il tracciamento degli eventi. Gli SDK [!DNL Adobe Target] possono essere configurati in modo da consentire la gestione automatica dell&#39;artefatto della regola, tramite la quale possono essere scaricati o aggiornati in base a un intervallo di tempo specificato dall&#39;utente. Inoltre, puoi anche gestire la tua copia locale dell&#39;artefatto della regola utilizzando un sistema di caching della memoria distribuita come [Memcached](https://memcached.org/) per inizializzare l&#39;SDK [!DNL Adobe Target], in modo che i server senza stato possano servire le richieste immediatamente. Per ulteriori informazioni su queste opzioni, consulta le seguenti guide:
 
-* [Download, archiviazione e aggiornamento automatico dell&#39;artifact della regola tramite l&#39;SDK  [!DNL Adobe Target] ](rule-artifact-sdk.md)
+* [Download, archiviazione e aggiornamento automatico dell&#39;artifact della regola tramite l&#39;SDK  [!DNL Adobe Target] &#x200B;](rule-artifact-sdk.md)
 * [Download, archiviazione e aggiornamento dell’artefatto della regola tramite payload JSON](rule-artifact-json.md)
 
 ## Esempio di artefatto della regola

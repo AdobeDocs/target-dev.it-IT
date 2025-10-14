@@ -334,6 +334,6 @@ Questa etichetta non significa che l&#39;attività verrà sempre recapitata tram
 
    La prima generazione di artefatti con regole JSON può richiedere fino a 10 minuti.
 
-1. Creare e attivare un tipo di attività [ supportato da [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) e verificare che sia idoneo [!UICONTROL on-device decisioning].
+1. Creare e attivare un tipo di attività [&#x200B; supportato da [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) e verificare che sia idoneo [!UICONTROL on-device decisioning].
 1. Imposta **[!UICONTROL Decisioning Method]** su **[!UICONTROL "Hybrid"]** o **[!UICONTROL "On-device only"]** tramite l&#39;interfaccia utente delle impostazioni di at.js.
 1. Scarica e distribuisci at.js 2.5.0+ nelle tue pagine.
