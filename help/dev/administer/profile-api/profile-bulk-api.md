@@ -4,10 +4,10 @@ description: Scopri come utilizzare  [!DNL Adobe Target] [!UICONTROL Bulk Profil
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: dae198fd8ef3fc8473ad31807c146802339b1832
+source-git-commit: 38ed32560170e5a8f472aa191bb5a24d4e13cde7
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 7%
+source-wordcount: '1078'
+ht-degree: 6%
 
 ---
 
@@ -49,13 +49,13 @@ Utilizzando [!UICONTROL Bulk Profile Update API], puoi inviare in modo comodo da
 
 Per aggiornare i dati del profilo in blocco, crea un file batch. Il file batch è un file di testo con valori separati da virgole simili al seguente file di esempio.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 
 Effettuare una richiesta HTTP POST ai server perimetrali [!DNL Target] per elaborare il file. Di seguito è riportato un esempio di richiesta HTTP POST per il file batch.txt utilizzando il comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Dove:
 
@@ -144,3 +144,25 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
     <failedUpdates>0</failedUpdates>
 </response>
 ```
+
+## Chiarimento sulla gestione dei valori vuoti in [!DNL Bulk Profile Update API]
+
+Quando si utilizza [!DNL Target] [!DNL Bulk Profile Update API] (v1 o v2), è importante comprendere in che modo il sistema gestisce i valori vuoti dei parametri o degli attributi.
+
+### Comportamento previsto
+
+L’invio di valori vuoti (&quot;&quot;, campi nulli o mancanti) per parametri o attributi esistenti non reimposta o elimina tali valori nell’archivio dei profili. Questo è progettato.
+
+I valori vuoti vengono ignorati: l’API filtra i valori vuoti durante l’elaborazione per evitare aggiornamenti inutili o inutili.
+
+**Nessuna cancellazione dei dati esistenti**: se un parametro ha già un valore, l&#39;invio di un valore vuoto lo lascia invariato.
+
+**I batch solo vuoti vengono ignorati**: se un batch contiene solo valori vuoti o nulli, viene completamente ignorato e non vengono applicati aggiornamenti.
+
+### Note aggiuntive
+
+Questo comportamento si applica sia alla v1 che alla v2 di [!DNL Bulk Profile Update API].
+
+Il tentativo di cancellare o rimuovere un attributo inviando un valore vuoto non ha alcun effetto.
+
+Il supporto per la rimozione esplicita degli attributi è pianificato per una versione futura (v3) dell’API, ma non è attualmente disponibile.
