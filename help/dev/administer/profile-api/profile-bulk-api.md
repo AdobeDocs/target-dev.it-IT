@@ -4,9 +4,9 @@ description: Scopri come utilizzare  [!DNL Adobe Target] [!UICONTROL Bulk Profil
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 76b4add132d3e98f241b887dbce4170c90445be2
+source-git-commit: 892de7c241a165b55a5cf85ce8f472ad8e200ac3
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1086'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ Utilizzando [!UICONTROL Bulk Profile Update API], puoi inviare in modo comodo da
 
 Per aggiornare i dati del profilo in blocco, crea un file batch. Il file batch è un file di testo con valori separati da virgole simili al seguente file di esempio.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 * La prima intestazione deve essere `pcId` o `thirdPartyId`. [!UICONTROL Marketing Cloud visitor ID] non è supportato. [!UICONTROL pcId] è un visitorID generato da [!DNL Target]. `thirdPartyId` è un ID specificato dall&#39;applicazione client, passato a [!DNL Target] tramite una chiamata mbox come `mbox3rdPartyId`. Deve essere indicato qui come `thirdPartyId`.
 * I parametri e i valori specificati nel file batch devono essere codificati tramite URL utilizzando UTF-8 per motivi di sicurezza. I parametri e i valori possono essere inoltrati ad altri nodi edge per l’elaborazione tramite richieste HTTP.
 * I parametri devono essere solo nel formato `paramName`. I parametri vengono visualizzati in [!DNL Target] come `profile.paramName`.
-* Se si utilizza [!UICONTROL Bulk Profile Update API] v2, non è necessario specificare tutti i valori dei parametri per ogni `pcId`. I profili creati per qualsiasi `pcId` o `mbox3rdPartyId` non trovato in [!DNL Target]. Se utilizzi v1, i profili non vengono creati per pcIds o mbox3rdPartyIds mancanti.
+* Se si utilizza [!UICONTROL Bulk Profile Update API] v2, non è necessario specificare tutti i valori dei parametri per ogni `pcId`. I profili creati per qualsiasi `pcId` o `mbox3rdPartyId` non trovato in [!DNL Target]. Se utilizzi v1, i profili non vengono creati per pcIds o mbox3rdPartyIds mancanti. Per ulteriori informazioni, vedere [Gestione dei valori vuoti in  [!DNL Bulk Profile Update API]](#empty) di seguito.
 * La dimensione del file batch deve essere inferiore a 50 MB. Inoltre, il numero totale di righe non deve superare 500,000. Questo limite assicura che i server non vengano inondati da troppe richieste.
 * Puoi inviare più file. Tuttavia, la somma totale delle righe di tutti i file inviati in un giorno non deve superare un milione per ogni client.
 * Non esiste alcuna restrizione sul numero di attributi che è possibile caricare. Tuttavia, la dimensione totale dei dati del profilo esterno, che include Attributi del cliente, API del profilo, parametri del profilo In-Mbox e output degli script di profilo, non deve superare i 64 KB.
@@ -77,9 +77,9 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 
 Effettuare una richiesta HTTP POST ai server perimetrali [!DNL Target] per elaborare il file. Di seguito è riportato un esempio di richiesta HTTP POST per il file batch.txt utilizzando il comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Dove:
 
@@ -145,7 +145,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 </response>
 ```
 
-## Gestione dei valori vuoti in [!DNL Bulk Profile Update API]
+## Gestione dei valori vuoti in [!DNL Bulk Profile Update API] {#empty}
 
 Quando si utilizza [!DNL Target] [!DNL Bulk Profile Update API] (v1 o v2), è importante comprendere in che modo il sistema gestisce i valori vuoti dei parametri o degli attributi.
 
@@ -153,11 +153,11 @@ Quando si utilizza [!DNL Target] [!DNL Bulk Profile Update API] (v1 o v2), è im
 
 L’invio di valori vuoti (&quot;&quot;, campi nulli o mancanti) per parametri o attributi esistenti non reimposta o elimina tali valori nell’archivio dei profili. Questo è progettato.
 
-**I valori vuoti vengono ignorati**: l&#39;API esclude i valori vuoti durante l&#39;elaborazione per evitare aggiornamenti inutili o inutili.
+* **I valori vuoti vengono ignorati**: l&#39;API esclude i valori vuoti durante l&#39;elaborazione per evitare aggiornamenti inutili o inutili.
 
-**Nessuna cancellazione dei dati esistenti**: se un parametro ha già un valore, l&#39;invio di un valore vuoto lo lascia invariato.
+* **Nessuna cancellazione dei dati esistenti**: se un parametro ha già un valore, l&#39;invio di un valore vuoto lo lascia invariato.
 
-**I batch solo vuoti vengono ignorati**: se un batch contiene solo valori vuoti o nulli, viene completamente ignorato e non vengono applicati aggiornamenti.
+* **I batch solo vuoti vengono ignorati**: se un batch contiene solo valori vuoti o nulli, viene completamente ignorato e non vengono applicati aggiornamenti.
 
 ### Note aggiuntive
 
