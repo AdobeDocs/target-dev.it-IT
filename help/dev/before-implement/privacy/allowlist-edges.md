@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Informazioni e un elenco aggiornato di host per aiutarti a inserire nell&#39;elenco Consentiti i bordi di [!DNL Adobe Target] di cui hai bisogno.
 
-Un perimetro è un’architettura di servizio geograficamente distribuita che garantisce agli utenti finali che richiedono contenuti tempi di risposta ottimali, indipendentemente dall’area geografica in cui si trovano. Ogni nodo perimetrale dispone di tutte le informazioni necessarie per rispondere alla richiesta di contenuto dell’utente e per tenere traccia dei dati di analisi relativi a tale richiesta. Le richieste degli utenti vengono indirizzate al nodo edge più vicino. Per ulteriori informazioni, vedere [La rete Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Un perimetro è un’architettura di servizio geograficamente distribuita che garantisce agli utenti finali che richiedono contenuti tempi di risposta ottimali, indipendentemente dall’area geografica in cui si trovano. Ogni nodo perimetrale dispone di tutte le informazioni necessarie per rispondere alla richiesta di contenuto dell’utente e per tenere traccia dei dati di analisi relativi a tale richiesta. Le richieste degli utenti vengono indirizzate al nodo edge più vicino. Per ulteriori informazioni, vedere [La rete Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=it#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Inserire nell&#39;elenco Consentiti Se necessario, puoi [!DNL Target] nodi edge.
 
@@ -23,7 +23,7 @@ Inserire nell&#39;elenco Consentiti Se necessario, puoi [!DNL Target] nodi edge.
 >
 >Oltre a inserire nell&#39;elenco Consentiti gli indirizzi IP NAT (Network Address Translation) di [!DNL Target] edge e [!DNL Target] indirizzi IP edge di cui all&#39;articolo, è necessario anche inserire nell&#39;elenco Consentiti tutti i blocchi di indirizzi IP di [!DNL Adobe Analytics].
 >
->Per ulteriori informazioni, consulta [Tutti i blocchi di indirizzi IP di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} nella *note tecniche di Adobe Analytics* documentazione.
+>Per ulteriori informazioni, consulta [Tutti i blocchi di indirizzi IP di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=it#all-adobe-analytics-ip-address-blocks){target=_blank} nella *note tecniche di Adobe Analytics* documentazione.
 >
 >È in corso l&#39;aggiornamento dell&#39;infrastruttura [!DNL Adobe Target] e i clienti che desiderano inserire nell&#39;elenco Consentiti gli indirizzi devono utilizzare entrambi i set di IP. In caso contrario, i clienti che utilizzano implementazioni lato server o ibride in cui le chiamate API di Target per il recupero delle esperienze hanno origine dall’interno di una rete dietro un firewall configurato per l’utilizzo di un elenco Consentiti di.
 
