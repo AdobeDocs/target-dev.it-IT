@@ -3,7 +3,7 @@ title: Panoramica API dei modelli di Adobe
 description: Panoramica di Models API, che gli utenti possono utilizzare per impedire che le funzioni vengano incluse nei modelli di apprendimento automatico.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 L&#39;API Models, denominata anche API di Inserire nell&#39;elenco Bloccati, consente agli utenti di visualizzare e gestire l&#39;elenco delle funzionalità utilizzate nei modelli di apprendimento automatico per le attività [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se un utente desidera escludere una funzione dall’utilizzo da parte dei modelli per attività di AP o AT, può utilizzare l’API Models per aggiungere tale funzione al &quot;inserisco nell&#39;elenco Bloccati di&quot;.
 
-**[!UICONTROL blocklist]** definisce l&#39;insieme di funzionalità che [!DNL Adobe Target] escluderà dai propri modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=it).
+**[!UICONTROL blocklist]** definisce l&#39;insieme di funzionalità che [!DNL Adobe Target] escluderà dai propri modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
 
 È possibile definire i Inserisce nell&#39;elenco Bloccati per attività (livello di attività) o per tutte le attività all&#39;interno di un account [!DNL Target] (livello globale).
 
@@ -100,7 +100,7 @@ Nell’esempio mostrato qui, l’utente sta controllando per visualizzare l’el
 >
 >Per trovare l&#39;ID attività dell&#39;attività, passare all&#39;Elenco attività nell&#39;interfaccia utente [!DNL Target]. Fai clic sull’attività di interesse. L’ID attività viene visualizzato nel corpo della pagina Panoramica delle attività risultante e alla fine dell’URL della pagina.
 
-**[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=it).
+**[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
 
 **[!UICONTROL internalName]** è l&#39;identificatore effettivo della funzionalità. Viene creato anche da [!DNL Target], ma non può essere modificato. Inserire nell&#39;elenco Bloccati Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
 
@@ -166,7 +166,7 @@ Per aggiungere funzionalità al inserisco nell&#39;elenco Bloccati di, modificar
 | FOLLA | Dispositivi mobili |
 | CRS | Personalizzato - Attributi del cliente |
 | UPA | Personalizzato - Attributo profilo RT-CDP |
-| IAC | Aree di interesse visitatore |  |
+| IAC | Aree di interesse visitatore |
 
 >[!BEGINTABS]
 
@@ -197,7 +197,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-Nell&#39;esempio seguente, l&#39;utente sta bloccando due funzionalità, `SES_PREVIOUS_VISIT_COUNT` e `SES_TOTAL_SESSIONS`, che ha identificato in precedenza eseguendo una query sull&#39;elenco completo delle funzionalità per l&#39;attività il cui ID attività è 260480, come descritto in [Passaggio 1](#step1). Stanno inoltre bloccando tutte le funzionalità provenienti da segmenti Experience Cloud, operazione che si ottiene bloccando le funzionalità con il prefisso &quot;AAM&quot;, come descritto nella [tabella](#table) precedente.
+Nell&#39;esempio seguente, l&#39;utente sta bloccando due funzionalità, `SES_PREVIOUS_VISIT_COUNT` e `SES_TOTAL_SESSIONS`, che ha identificato in precedenza eseguendo una query sull&#39;elenco completo delle funzionalità per l&#39;attività il cui ID attività è 260480, come descritto in [Passaggio 1](#step1). Stanno inoltre bloccando tutte le funzionalità provenienti dai segmenti di Experience Cloud, operazione che si ottiene bloccando le funzionalità con il prefisso &quot;AAM&quot;, come descritto nella [tabella](#table) precedente.
 
 ![Passaggio 3](assets/models-api-step-3.png)
 
@@ -278,14 +278,14 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 >[!ENDTABS]
 
-Nella richiesta di esempio mostrata sopra, l’utente sta bloccando due funzionalità, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot;, per tutte le attività nel proprio account [!DNL Target]. Ciò significa che, indipendentemente dall’attività, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot; non saranno inclusi nei modelli di apprendimento automatico per questo account. Inoltre, l’utente blocca a livello globale anche tutte le funzioni il cui prefisso è &quot;AAM&quot;, &quot;PRO&quot; o &quot;ENV&quot;.
+Nella richiesta di esempio mostrata sopra, l’utente sta bloccando due funzioni, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot;, per tutte le attività nel proprio account [!DNL Target]. Ciò significa che, indipendentemente dall’attività, &quot;AAM_FEATURE_1&quot; e &quot;AAM_FEATURE_2&quot; non verranno inclusi nei modelli di apprendimento automatico per questo account. Inoltre, l’utente blocca a livello globale anche tutte le funzioni il cui prefisso è &quot;AAM&quot;, &quot;PRO&quot; o &quot;ENV&quot;.
 
 Domanda: l&#39;esempio di codice qui sopra non è ridondante?
 
-Risposta: Sì. È ridondante bloccare le funzioni con valori che iniziano con &quot;AAM&quot;, bloccando al contempo tutte le funzioni la cui origine è &quot;AAM&quot;. Il risultato netto è che tutte le funzioni originate dall’AAM (segmenti Experience Cloud) verranno bloccate. Pertanto, se l’obiettivo è quello di bloccare tutte le funzioni di Experience Cloud Segments, non è necessario specificare singolarmente alcune funzioni che iniziano con &quot;AAM&quot;, nell’esempio precedente.
+Risposta: Sì. È ridondante bloccare le funzioni con valori che iniziano con &quot;AAM&quot;, bloccando al contempo tutte le funzioni la cui origine è &quot;AAM&quot;. Il risultato netto è che tutte le funzioni originate da AAM (Segmenti Experience Cloud) verranno bloccate. Pertanto, se l’obiettivo è quello di bloccare tutte le funzioni dai segmenti di Experience Cloud, non è necessario specificare singolarmente alcune funzioni che iniziano con &quot;AAM&quot;, nell’esempio precedente.
 
 Passaggio finale: a livello di attività o globale, è consigliabile verificare il inserisco nell&#39;elenco Bloccati di aggiornamento dopo averlo modificato, per assicurarsi che contenga i valori previsti. Per eseguire questa operazione, modificare `PUT` in `GET`.
 
-La risposta di esempio mostrata di seguito indica che [!DNL Target] sta bloccando due singole funzionalità, più tutte quelle fornite da &quot;AAM&quot;, &quot;PRO&quot; e &quot;ENV&quot;.
+La risposta di esempio mostrata di seguito indica che [!DNL Target] sta bloccando due singole funzioni, più tutte quelle originate da &quot;AAM&quot;, &quot;PRO&quot; e &quot;ENV&quot;.
 
 ![Passaggio 5](assets/models-api-step-5.png)

@@ -4,7 +4,7 @@ description: Utilizza eventi personalizzati per la libreria JavaScript at.js di 
 title: Come si utilizzano gli eventi personalizzati at.js?
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 71%
@@ -50,4 +50,4 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 Guarda il video seguente per scoprire come utilizzare i token di risposta e gli eventi personalizzati at.js per condividere le informazioni del profilo da [!DNL Target] a sistemi di terze parti.
 
->[!VIDEO](https://video.tv.adobe.com/v/326685/?quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)

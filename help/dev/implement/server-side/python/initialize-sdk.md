@@ -1,19 +1,19 @@
 ---
-title: Inizializzare l’SDK di Python utilizzando il metodo create
-description: Scopri come utilizzare il metodo create per inizializzare l'SDK Python e creare un'istanza di [!UICONTROL TargetClient] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
+title: Inizializzare Python SDK utilizzando il metodo create
+description: Scopri come utilizzare il metodo create per inizializzare Python SDK e creare un'istanza di [!UICONTROL TargetClient] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 15%
 
 ---
 
-# Inizializzare l’SDK di Python
+# Inizializzare Python SDK
 
 Descrizione
-Utilizza il metodo `create` per inizializzare l&#39;SDK Python e creare un&#39;istanza di [!UICONTROL Target Client] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
+Utilizzare il metodo `create` per inizializzare Python SDK e creare un&#39;istanza di [!UICONTROL Target Client] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
 
 ## Metodo
 
@@ -32,9 +32,9 @@ TargetClient.create(options)
 | client | str | Sì | None (Nessuno) | [!UICONTROL Adobe Target client ID] |
 | organization_id | str | Sì | None (Nessuno) | [!UICONTROL Experience Cloud Organization ID] |
 | timeout | int | No | 3000 | Timeout in millisecondi |
-| server_domain | str | No | `client.tt.omtrdc.net` |  | Sostituisce il nome host predefinito |
+| server_domain | str | No | `client.tt.omtrdc.net` | Sostituisce il nome host predefinito |
 | protetto | booleano | No | true | Annulla l&#39;impostazione per applicare lo schema HTTP |
-| logger | oggetto | No | Registratore INFO |  | Sostituisce il logger INFO predefinito |
+| logger | oggetto | No | Registratore INFO | Sostituisce il logger INFO predefinito |
 | target_location_hint | str | No | None (Nessuno) | [!DNL Target] hint di posizione |
 | property_token | str | No | None (Nessuno) | Token di proprietà [!DNL Target]. Se specificato qui, tutte le chiamate get_offers utilizzeranno questo valore. |
 | decisioning_method | str | No | lato server | Determina il metodo decisionale da utilizzare ([sul dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), lato server, ibrido) |

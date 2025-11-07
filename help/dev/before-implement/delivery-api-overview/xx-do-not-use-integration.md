@@ -2,7 +2,7 @@
 title: Integrazione con Experience Cloud
 description: Integrazione con Experience Cloud
 keywords: api di consegna
-source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 6%
@@ -189,7 +189,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | `rsid` | Sì | ID suite di rapporti |
 | `pe` | Sì | Evento pagina. Sempre impostato su `tnt` |
 | `tnta` | Sì | Payload di Analytics restituito dal server di Target in `analytics` -> `payload` -> `tnta` |
-| `mid` | ID visitatore di Marketing Cloud |
+| `mid` | ID visitatore di Marketing Cloud |  |
 
 ### Valori intestazione richiesti
 
@@ -205,13 +205,13 @@ https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0?pe=tnt&tnta=285408:0:0
 
 ## Adobe Audience Manager
 
-I segmenti Adobe Audience Manager (AAM) possono essere utilizzati anche tramite le API di distribuzione di Adobe Target. Per sfruttare i segmenti AAM, è necessario fornire i seguenti campi:
+I segmenti di Adobe Audience Manager (AAM) possono essere utilizzati anche tramite le API di consegna di Adobe Target. Per sfruttare i segmenti di AAM, è necessario fornire i seguenti campi:
 
 | Nome campo | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `locationHint` | Sì | DCS Location Hint viene utilizzato per determinare quale endpoint DCS AAM colpire per recuperare il profilo. Deve essere >= 1. |
+| `locationHint` | Sì | DCS Location Hint viene utilizzato per determinare quale endpoint DCS di AAM deve raggiungere per recuperare il profilo. Deve essere >= 1. |
 | `marketingCloudVisitorId` | Sì | ID visitatore di Marketing Cloud |
-| `blob` | Sì | Il BLOB dell’AAM viene utilizzato per inviare dati aggiuntivi all’AAM. Non deve essere vuoto e le dimensioni devono essere &lt;= 1024. |
+| `blob` | Sì | Il BLOB di AAM viene utilizzato per inviare dati aggiuntivi ad AAM. Non deve essere vuoto e le dimensioni devono essere &lt;= 1024. |
 
 ```
 curl -X POST \
