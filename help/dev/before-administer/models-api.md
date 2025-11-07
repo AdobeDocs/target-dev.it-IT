@@ -14,7 +14,7 @@ ht-degree: 2%
 
 L&#39;API Models, denominata anche API di Inserire nell&#39;elenco Bloccati, consente agli utenti di visualizzare e gestire l&#39;elenco delle funzionalità utilizzate nei modelli di apprendimento automatico per le attività [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se un utente desidera escludere una funzione dall’utilizzo da parte dei modelli per attività di AP o AT, può utilizzare l’API Models per aggiungere tale funzione al &quot;inserisco nell&#39;elenco Bloccati di&quot;.
 
-**[!UICONTROL blocklist]** definisce l&#39;insieme di funzionalità che [!DNL Adobe Target] escluderà dai propri modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
+**[!UICONTROL blocklist]** definisce l&#39;insieme di funzionalità che [!DNL Adobe Target] escluderà dai propri modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=it).
 
 È possibile definire i Inserisce nell&#39;elenco Bloccati per attività (livello di attività) o per tutte le attività all&#39;interno di un account [!DNL Target] (livello globale).
 
@@ -100,7 +100,7 @@ Nell’esempio mostrato qui, l’utente sta controllando per visualizzare l’el
 >
 >Per trovare l&#39;ID attività dell&#39;attività, passare all&#39;Elenco attività nell&#39;interfaccia utente [!DNL Target]. Fai clic sull’attività di interesse. L’ID attività viene visualizzato nel corpo della pagina Panoramica delle attività risultante e alla fine dell’URL della pagina.
 
-**[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
+**[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=it).
 
 **[!UICONTROL internalName]** è l&#39;identificatore effettivo della funzionalità. Viene creato anche da [!DNL Target], ma non può essere modificato. Inserire nell&#39;elenco Bloccati Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
 
