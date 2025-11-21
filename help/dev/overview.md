@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # Guida per sviluppatori di [!DNL Adobe Target]
 
-**([Visualizza [!DNL Target] aggiornamenti della documentazione](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=it){target=_blank})**
+**([Visualizza [!DNL Target] aggiornamenti della documentazione](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
 Questa Guida per gli sviluppatori *[!DNL Adobe Target]* fornisce risorse e guide per gli sviluppatori [!DNL Target], inclusa la documentazione di API e SDK per implementare e amministrare [!DNL Target].
 
@@ -26,7 +26,7 @@ Questa Guida per gli sviluppatori *[!DNL Adobe Target]* fornisce risorse e guide
 >
 >* [*[!DNL Adobe Target] Tutorial *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=it){target=_blank}
 >
->Per informazioni sulla versione, consulta [Note sulla versione di Target (corrente)](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=it){target=_blank} nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
+>Per informazioni sulla versione, consulta [Note sulla versione di Target (corrente)](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
 
 ## Guida introduttiva all’implementazione
 
@@ -86,7 +86,7 @@ Questa Guida per gli sviluppatori *[!DNL Adobe Target]* fornisce risorse e guide
 
 [**API di Admin Console**](https://developer.adobe.com/umapi/): gestisci utenti e adesioni ai prodotti tramite le API Gestione utenti e Sincronizzazione utenti di Adobe.
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=it): utilizza l&#39;API [!DNL Adobe Experience Platform Edge Network Server] per diversi casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing.
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html): utilizza l&#39;API [!DNL Adobe Experience Platform Edge Network Server] per diversi casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing.
 
 ## Risorse
 
@@ -98,6 +98,6 @@ Questa Guida per gli sviluppatori *[!DNL Adobe Target]* fornisce risorse e guide
 * [Implementazione di Target](./before-implement/prepare-to-implement-target.md)
 * [Amministrazione di Target](./before-administer/target-api-overview.md)
 * [Archivio GitHub per documenti sviluppo Adobe Target](https://github.com/AdobeDocs/target-developers)
-* [Note sulla versione di Adobe Target](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=it)
+* [Note sulla versione di Adobe Target](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
 * [Guida utente di Adobe Target Business](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=it)
 
