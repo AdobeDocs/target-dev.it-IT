@@ -19,19 +19,19 @@ Gli SDK consentono di seguire le best practice per la gestione di sessioni e coo
 
 ## SDK di Node.js
 
-Per ulteriori informazioni, consulta [Panoramica dell&#39;SDK di Node.js](/help/dev/implement/server-side/node-js/overview.md).
+Per ulteriori informazioni, consulta [Panoramica di SDK su Node.js](/help/dev/implement/server-side/node-js/overview.md).
 
-L&#39;SDK [Node.js](https://github.com/adobe/target-nodejs-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni di utilizzo.
+[Node.js SDK](https://github.com/adobe/target-nodejs-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni di utilizzo.
 
-Leggi [changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md) per l&#39;SDK di Node.js.
+Leggi [changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md) per il SDK Node.js.
 
 ## SDK Java
 
-Per ulteriori informazioni, consulta [Panoramica dell&#39;SDK Java](/help/dev/implement/server-side/java/overview.md).
+Per ulteriori informazioni, vedere [Panoramica di Java SDK](/help/dev/implement/server-side/java/overview.md).
 
-[Java SDK](https://github.com/adobe/target-java-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni per l&#39;utilizzo.
+[Java SDK](https://github.com/adobe/target-java-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni di utilizzo.
 
-Leggi [changelog](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md) per l&#39;SDK Java.
+Leggi il [changelog](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md) per Java SDK.
 
 ## SDK .NET
 
@@ -39,14 +39,14 @@ Per ulteriori informazioni, vedere [.Net SDK overview](/help/dev/implement/serve
 
 [.NET SDK](https://github.com/adobe/target-dotnet-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni di utilizzo.
 
-Informazioni sulle [versioni di .NET SDK](https://github.com/adobe/target-dotnet-sdk/releases)
+Informazioni sulle [versioni](https://github.com/adobe/target-dotnet-sdk/releases) di .NET SDK
 
-## SDK Python
+## Python SDK
 
-Per ulteriori informazioni, consulta [Python SDK](/help/dev/implement/server-side/python/overview.md).
+Per ulteriori informazioni, vedere [Python SDK](/help/dev/implement/server-side/python/overview.md).
 
-L&#39;SDK [Python](https://github.com/adobe/target-python-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni di utilizzo.
+[Python SDK](https://github.com/adobe/target-python-sdk) è open source ed è gestito all&#39;interno di Github, dove puoi trovare la documentazione e le istruzioni di utilizzo.
 
-Leggi [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) per l&#39;SDK Python.
+Leggi [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) per Python SDK.
 
 &lt;!— Judy: rimuovere o modificare questa pagina? adeguatamente coperte altrove? Oppure, aggiungere collegamenti a informazioni analoghe per gli SDK .NET e Python? —>
