@@ -5,10 +5,10 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -32,13 +32,15 @@ Il numero del passaggio nell&#39;illustrazione seguente corrisponde alla sezione
 
 Questo passaggio ti aiuta a garantire che tutti gli eventi che devono essere inviati a [!DNL Target] siano inviati utilizzando il metodo `trackEvent`.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Attiva diagramma API di Adobe Target Track](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 Invii gli attributi di conversione dell&#39;ordine come indicato nella sezione *Prerequisiti* seguente. Il nome della mbox non ha importanza, ma la conversione deve utilizzare `orderConfirmPage`.
 
 Non è necessario includere gli attributi di conversione dell&#39;ordine in questa chiamata. Idealmente, queste chiamate registrano metriche di successo che possono essere considerate come eventi di mini-conversione prima degli eventi di conversione principali. `CardIds` deve essere incluso nei consigli basati su carrello in base all&#39;evento `Add to Cart`.
+
++++
 
 **Prerequisiti**
 
@@ -49,7 +51,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
    * `orderTotal`: totale ordine per l&#39;acquisto.
    * `orderId`: ID ordine dell&#39;acquisto.
 
-  La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} che deve essere attivata solo sulla pagina [!UICONTROL Confirmation].
+  La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} che deve essere attivata solo sulla pagina [!UICONTROL Confirmation].
 
   ![Pagina Configurazione azione](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +60,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
 **Letture**
 
 * [metodo adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds per i criteri basati sul carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=it#cart-based){target=_blank}
+* [cartIds per i criteri basati sul carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **Azioni**
 
