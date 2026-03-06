@@ -8,10 +8,10 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/target-dev.it-IT
 index: true
 role: Developer
-source-git-commit: 1d834edf4da94614e3a4be665ebd97399439ec98
+source-git-commit: babe8b1bc7b689eae179249c7e6e1ed25c51d542
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 60%
+source-wordcount: '53'
+ht-degree: 71%
 
 ---
 
@@ -20,4 +20,4 @@ ht-degree: 60%
 
 Il file metadata.md contiene metadati a livello di repository che passano nei file TOC.md della guida utente nel repository. Se desideri modificare il contenuto del file metadata.md per qualsiasi guida utente, esegui questa operazione in uno dei file TOC.md.
 
-Consulta [Metadati](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html) per un elenco di valori validi per **soluzione**, **prodotto**, e **tipo**.
+Per un elenco di valori validi per [soluzione](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html), **prodotto** e **tipo**, vedere **metadati**.
