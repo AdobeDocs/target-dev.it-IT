@@ -174,7 +174,7 @@ ht-degree: 40%
    + [Registrazione lato client per i dati A4T in Experience Platform Web SDK](/help/dev/implement/a4t/client-side-logging.md)
    + [Registrazione lato server per i dati A4T in Experience Platform Web SDK](/help/dev/implement/a4t/server-side-a4t.md)
 + [Implementazione della funzione Consigli](implement/recommendations/recommendations.md)
-+ {hide-from-toc}[Implementazione Recommendations beta](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocImplementazione Recommendations beta](/help/dev/implement/recommendations/recommendations-beta.md)
 + Implementazione di un’app mobile {#mobile-apps}
    + [Panoramica su Target per le app per dispositivi mobili](implement/mobile/overview.md)
    + [Anteprima mobile di Target](implement/mobile/target-mobile-preview.md)
