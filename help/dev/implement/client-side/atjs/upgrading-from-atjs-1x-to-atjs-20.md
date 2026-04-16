@@ -4,7 +4,7 @@ description: Scopri come aggiornare da [!DNL Adobe Target] at.js 1.x a at.js 2.x
 title: Come posso effettuare l’aggiornamento da at.js versione 1.x alla versione 2.x?
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 57%
@@ -19,7 +19,7 @@ Di seguito sono riportati alcuni vantaggi dell’utilizzo di at.js 2.*x* non dis
 
 * La capacità di memorizzare nella cache tutte le offerte al caricamento di pagina per ridurre più chiamate al server a una singola chiamata al server.
 * Migliora enormemente le esperienze degli utenti finali sul sito, in quanto le offerte appaiono immediatamente tramite la cache senza l’implementazione di chiamate al server tradizionali.
-* Una semplice riga di codice e una configurazione per sviluppatori una tantum per consentire agli esperti di marketing di creare ed eseguire attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) tramite il Compositore esperienza visivo sull’SPA.
+* Una semplice riga di codice e una configurazione per sviluppatori una tantum per consentire agli esperti di marketing di creare ed eseguire attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) tramite il Compositore esperienza visivo sulle applicazioni a pagina singola.
 
 ## at.js 2.*x* diagrammi di sistema
 
@@ -36,7 +36,7 @@ I seguenti diagrammi ti aiutano a comprendere il flusso di lavoro di at.js 2.*x*
 | 3 | Si effettua una richiesta di caricamento della pagina, con tutti i parametri configurati (MCID, SDID e ID cliente). |
 | 4 | Gli script di profilo vengono eseguiti e quindi inseriti nell’archivio profili. L&#39;archivio richiede tipi di pubblico idonei dalla libreria Pubblico (ad esempio, pubblici condivisi da [!DNL Adobe Analytics], [!DNL Audience Manager], ecc.).<P>Gli attributi del cliente vengono inviati all’archivio profili in un processo batch. |
 | 5 | In base ai parametri di richiesta dell’URL e ai dati di profilo, [!DNL Target] determina le attività ed esperienze da restituire al visitatore per la pagina corrente e le visualizzazioni future. |
-| 6 | Il contenuto di destinazione viene rinviato alla pagina, includendo facoltativamente i valori di profilo per ulteriore personalizzazione.<P>Il contenuto mirato sulla pagina corrente viene mostrato il più rapidamente possibile senza che venga visualizzato momentaneamente il contenuto predefinito.<P>Contenuto mirato per le viste mostrate come risultato delle azioni dell&#39;utente in un SPA memorizzato nella cache del browser, in modo da applicarlo immediatamente senza una chiamata al server aggiuntiva quando si attivano le viste tramite `triggerView()`. |
+| 6 | Il contenuto di destinazione viene rinviato alla pagina, includendo facoltativamente i valori di profilo per ulteriore personalizzazione.<P>Il contenuto mirato sulla pagina corrente viene mostrato il più rapidamente possibile senza che venga visualizzato momentaneamente il contenuto predefinito.<P>Contenuto mirato per le viste mostrate come risultato delle azioni dell&#39;utente in un&#39;applicazione a pagina singola memorizzata nella cache del browser, in modo da applicarla immediatamente senza una chiamata al server aggiuntiva quando si attivano le viste tramite `triggerView()`. |
 | 7 | I dati [!UICONTROL Analytics] vengono inviati ai server di raccolta dati. |
 | 8 | I dati di destinazione vengono confrontati con i dati [!UICONTROL Analytics] tramite SDID ed elaborati nell&#39;archivio dei report [!UICONTROL Analytics].<P>I dati di [!UICONTROL Analytics] possono quindi essere visualizzati sia in [!UICONTROL Analytics] che in [!DNL Target] tramite i report [!UICONTROL Analytics for Target] (A4T). |
 
@@ -290,7 +290,7 @@ Il tracciamento tra più domini consente di unire i visitatori di domini diversi
 
 In [!DNL Target], il cookie di terze parti è memorizzato in `<CLIENTCODE>.tt.omtrdc.net`. Il cookie di prime parti è memorizzato in `clientdomain.com`. La prima richiesta restituisce intestazioni di risposta HTTP che tentano di impostare cookie di terze parti denominati `mboxSession` e `mboxPC`, mentre viene inviata nuovamente una richiesta di reindirizzamento con un parametro aggiuntivo (`mboxXDomainCheck=true`). Se il browser accetta cookie di terze parti, la richiesta di reindirizzamento li include e viene restituita l’esperienza. Questo flusso di lavoro è possibile perché utilizziamo il metodo HTTP GET.
 
-In at.js 2.*x*, GET HTTP non utilizzato. Invece, HTTP POST viene utilizzato tramite at.js 2.*x* per inviare payload JSON a [!DNL Target] server Edge. L’utilizzo di HTTP POST comporta la richiesta di reindirizzamento per verificare se un browser supporta i cookie di terze parti. Infatti le richieste HTTP GET sono transazioni idempotenti, mentre HTTP POST non lo è e non deve essere ripetuto arbitrariamente. Di conseguenza, il tracciamento tra più domini in at.js 2.*x* (prima della versione 2.10) non è supportato come funzionalità integrata. Solo at.js 1.*x* supporta il tracciamento tra più domini come funzionalità integrata.
+In at.js 2.*x*, HTTP GET non è utilizzato. Invece, HTTP POST viene utilizzato tramite at.js 2.*x* per inviare payload JSON a [!DNL Target] server Edge. L’utilizzo di HTTP POST implica che la richiesta di reindirizzamento per verificare se un browser supporta i cookie di terze parti si interrompe. Infatti le richieste HTTP GET sono transazioni idempotenti, mentre HTTP POST non lo è e non deve essere ripetuto arbitrariamente. Di conseguenza, il tracciamento tra più domini in at.js 2.*x* (prima della versione 2.10) non è supportato come funzionalità integrata. Solo at.js 1.*x* supporta il tracciamento tra più domini come funzionalità integrata.
 
 Per utilizzare il tracciamento tra domini diversi per at.js v2.10 o versione successiva, puoi effettuare una delle seguenti operazioni:
 
@@ -319,7 +319,7 @@ Sì, gli eventi personalizzati at.js sono applicabili anche a `triggerView()`.
 
 ### Quando richiamo `triggerView()` con &lbrace;`"page" : "true"`&rbrace;, dice che invierà una notifica al backend [!DNL Target] e aumenterà le impression. Questo provocherà anche l’esecuzione degli script di profilo?
 
-Quando si effettua una chiamata di preacquisizione al backend [!DNL Target], avviene l’esecuzione degli script di profilo. Successivamente, i dati del profilo interessati saranno crittografati e trasmessi nuovamente al lato client. Dopo la chiamata di `triggerView()` con `{"page": "true"}`, si invierà una notifica insieme ai dati di profilo codificati. Questo si verifica quando il backend [!DNL Target] deciderà di decodificare i dati di profilo e archiviarli nei database.
+Quando si effettua una chiamata di preacquisizione al backend [!DNL Target], avviene l’esecuzione degli script di profilo. Successivamente, i dati del profilo interessati saranno crittografati e trasmessi nuovamente al lato client. Dopo la chiamata di `triggerView()` con `{"page": "true"}`, si invierà una notifica insieme ai dati di profilo crittografati. Questo si verifica quando il backend [!DNL Target] deciderà di decrittografare i dati di profilo e archiviarli nei database.
 
 ### Per gestire la visualizzazione temporanea di altri contenuti è necessario aggiungere codice per nasconderli preventivamente prima di richiamare `triggerView()`?
 
@@ -375,7 +375,7 @@ Le tabelle seguenti contengono una spiegazione di at.js. 2.*x* compatibilità co
 | Strumento di debug | Sì |
 | Auditor | Le regole per at.js 2 non sono ancora state aggiornate.*x* |
 | Supporto di Opt-in per [RGPD](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Questa funzione è supportata in [at.js versione 2.1.0](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) o successiva. |
-| Personalization avanzato AEM con tecnologia [!DNL Adobe Target] | No |
+| AEM Enhanced Personalization con tecnologia [!DNL Adobe Target] | No |
 
 ### Funzioni
 
@@ -768,8 +768,9 @@ La versione viene inviata come parametro della stringa di query tramite il param
 
 ## Video di formazione: at.js 2.*x* diagramma architetturale ![Icona panoramica](../../assets/overview.png)
 
-at.js 2.*x* migliora il supporto di Adobe [!DNL Target] per l&#39;SPA e si integra con altre soluzioni Experience Cloud. Questo video spiega come tutti questo elementi funzionano insieme.
+at.js 2.*x* migliora il supporto di Adobe [!DNL Target] per le applicazioni a pagina singola e si integra con altre soluzioni Experience Cloud. Questo video spiega come tutti questo elementi funzionano insieme.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
 Consulta [Informazioni su at.js 2.*x* funziona](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=it) per ulteriori informazioni.
+

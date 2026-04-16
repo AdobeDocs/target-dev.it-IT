@@ -4,7 +4,7 @@ description: Dettagli sulla gestione dei cookie da parte di  [!DNL Adobe Target]
 title: Cookie di at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 72%
@@ -21,7 +21,7 @@ Per at.js versione 2.x (fino alla versione 2.10.0, ma non inclusa), *sono suppor
 
 at.js genera un ID sessione e lo memorizza nel cookie. La prima risposta contiene tutte le informazioni relative all’attività, nonché il `TNT` o `PC ID` generato dai server [!DNL Target]. at.js quindi scrive il `TNT/PC ID` nel cookie.
 
-Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato dal servizio ID Experience Cloud, anche se `ECID` è passato in [!DNL Target] richieste.
+Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato dal servizio Experience Cloud ID, anche se `ECID` è passato in [!DNL Target] richieste.
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ I casi d’uso principali per i cookie sono tre:
 
    * Abilitare solo i cookie di terze parti.
 
-     Questo approccio è adatto solo nel raro caso in cui le implementazioni adBox vengano utilizzate senza destinazione sul sito.
+     Questo approccio è adatto solo nel raro caso in cui le implementazioni adBox vengano utilizzate senza targeting sul sito.
 
 ### Comportamento del cookie di prima parte
 
@@ -82,7 +82,7 @@ at.js genera un `mboxSession ID` e lo memorizza nel cookie. La prima risposta co
 
 >[!NOTE]
 >
->Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato con l&#39;ID visitatore Experience Cloud.
+>Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato con l&#39;ID visitatore di Experience Cloud.
 
 ### Comportamento dei cookie di terze parti
 
@@ -123,7 +123,7 @@ Nel cookie sono conservati una serie di valori per la gestione dell’esperienza
 | session ID | Un ID univoco per una sessione utente. Per impostazione predefinita, la sua durata è di 30 minuti. |
 | pc ID | Un ID semi-permanente per il browser di un visitatore. Dura 14 giorni. |
 | check | Un semplice valore di test utilizzato per determinare se un visitatore supporta i cookie. Impostato ogni volta che un visitatore richiede una pagina. |
-| disable | Impostato se il tempo di caricamento del visitatore supera il timeout configurato nel file at.js o Adobe Experience Platform Web SDK. Per impostazione predefinita, la sua durata è di 1 ora. |
+| disable | Impostato se il tempo di caricamento del visitatore supera il timeout configurato nel file Adobe Experience Platform Web SDK o at.js. Per impostazione predefinita, la sua durata è di 1 ora. |
 
 ## Impatto su [!DNL Target] per i visitatori di Safari a causa di modifiche nel monitoraggio di Apple WebKit
 
@@ -156,3 +156,4 @@ Da Apple:
 |--- |--- |
 | Supporto per rinuncia | Le modifiche di tracciamento WebKit di Apple interrompono il supporto dell’opzione di rinuncia.<P>La rinuncia a [!DNL Target] utilizza un cookie nel dominio `clientcode.tt.omtrdc.net`. Per ulteriori dettagli, consulta [Privacy](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] supporta due rinunce:<ul><li>Uno per il cliente (il cliente gestisce il collegamento di rinuncia).</li><li>Uno tramite Adobe che rifiuta all&#39;utente tutte le funzionalità [!DNL Target] per tutti i clienti.</li></ul>Entrambi i metodi utilizzano il cookie di terze parti. |
 | [!DNL Target] attività | I clienti possono scegliere la durata del profilo [&#128279;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=it) per i loro account [!DNL Target], fino a 90 giorni. Il problema è che se la durata del profilo dell&#39;account è più lunga di 30 giorni e il cookie di prima parte viene eliminato perché il dominio del cliente è stato contrassegnato come dominio di tracciamento degli utenti tra siti diversi, i visitatori Safari saranno interessati dalle seguenti aree in [!DNL Target]:<P>**[!DNL Target]report**: se un utente Safari entra in un&#39;attività, ritorna dopo 30 giorni e poi effettua la conversione, l&#39;utente conta come due visitatori e una conversione.<P>Questo comportamento è lo stesso per le attività che utilizzano [!DNL Analytics] come origine per la generazione di rapporti (A4T).<P>**Profilo e appartenenza all&#39;attività**:<ul><li>I dati del profilo vengono cancellati quando scade il cookie di prima parte.</li><li>L’appartenenza all’attività viene cancellata quando scade il cookie di prima parte.</li><li> [!DNL Target] non funziona in Safari per gli account che utilizzano un&#39;implementazione di cookie di terze parti o di cookie di prima parte e di terze parti. Questo comportamento non è una novità. Safari non consente i cookie di terze parti già da qualche tempo.</li></ul><P>**Suggerimenti**: se si teme che il dominio del cliente possa essere contrassegnato come dominio che tiene traccia dei visitatori attraverso sessioni diverse, è più sicuro impostare la durata del profilo su un massimo di 30 giorni in [!DNL Target]. In tal modo gli utenti verranno tracciati allo stesso modo in Safari e negli altri motori browser. |
+
