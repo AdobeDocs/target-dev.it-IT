@@ -4,9 +4,9 @@ description: Scopri come implementare [!DNL Adobe Target] per web lato client ut
 title: Come si implementa  [!DNL Target] per il Web lato client
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
-source-git-commit: 7e2f1620c839393051432485192a45ddda2390a0
+source-git-commit: ca53593287a5a58e6e0b9fe02b6e8b28788f9ff9
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '233'
 ht-degree: 28%
 
 ---
