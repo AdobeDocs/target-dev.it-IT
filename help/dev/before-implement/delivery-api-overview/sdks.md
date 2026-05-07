@@ -49,4 +49,4 @@ L’[SDK per Python](https://github.com/adobe/target-python-sdk) è open source 
 
 Consulta il [registro delle modifiche](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) dell’SDK per Python.
 
-&lt;!--- Judy: rimuovere o modificare questa pagina? è già stato trattato adeguatamente altrove? Oppure, aggiungere dei link a informazioni analoghe per gli SDK per .NET e Python? --->
+&lt;!-- Judy: remove or modify this page? è già stato trattato adeguatamente altrove? Oppure, aggiungere dei link a informazioni analoghe per gli SDK per .NET e Python? -->
