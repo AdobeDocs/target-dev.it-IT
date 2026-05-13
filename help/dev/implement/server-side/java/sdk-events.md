@@ -1,11 +1,14 @@
 ---
-title: Iscriviti agli eventi nell'SDK Java  [!DNL Adobe Target]
-description: Scopri come effettuare la sottoscrizione a vari eventi che si verificano nell’SDK Java utilizzando l’oggetto [!UICONTROL OnDeviceDecisioningHandler].
+title: Iscriviti agli eventi in  [!DNL Adobe Target] Java SDK
+description: Scopri come effettuare la sottoscrizione a vari eventi che si verificano all'interno di Java SDK utilizzando l'oggetto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: 134
 ht-degree: 5%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 5%
 
 ## Descrizione
 
-Quando [si inizializza l&#39;SDK](initialize-sdk.md), è possibile fornire un oggetto `OnDeviceDecisioningHandler` facoltativo sull&#39;oggetto `ClientConfig`. Può essere utilizzato per abbonarsi a vari eventi che si verificano all&#39;interno dell&#39;SDK. Ad esempio, l&#39;evento `onDeviceDecisioningReady` può essere utilizzato con una funzione di callback che verrà richiamata quando l&#39;SDK sarà pronto per le chiamate ai metodi.
+Quando [viene inizializzato SDK](initialize-sdk.md), è possibile fornire un oggetto `OnDeviceDecisioningHandler` facoltativo sull&#39;oggetto `ClientConfig`. Può essere utilizzato per abbonarsi a vari eventi che si verificano all’interno di SDK. Ad esempio, l&#39;evento `onDeviceDecisioningReady` può essere utilizzato con una funzione di callback che verrà richiamata quando SDK sarà pronto per le chiamate ai metodi.
 
 ## Eventi
 

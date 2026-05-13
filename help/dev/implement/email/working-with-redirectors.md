@@ -4,10 +4,16 @@ description: Scopri come utilizzare i redirector nelle implementazioni e-mail, i
 title: Come posso lavorare con i redirector?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 65%
+source-wordcount: 689
+ht-degree: 64%
 
 ---
 
@@ -56,13 +62,13 @@ Prima di poter utilizzare un redirector, è necessario crearlo.
 
    >[!WARNING]
    >
-   >Tieni presente che con Redirector puoi essere esposto a un rischio di vulnerabilità di reindirizzamento aperto. Per evitare l’uso non autorizzato dei collegamenti redirector da parte di terze parti, l’Adobe consiglia di utilizzare &quot;host autorizzati&quot; per inserire nell&#39;elenco Consentiti i domini URL di reindirizzamento predefiniti. [!DNL Target] utilizza gli host per inserire nell&#39;elenco Consentiti i domini ai quali si desidera consentire i reindirizzamenti. Inserire nell&#39;elenco Consentiti Per ulteriori informazioni, vedere [Creare che specificano gli host autorizzati per l&#39;invio di chiamate mbox a  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=it#allowlist) in *Host*.
+   >Tieni presente che con Redirector puoi essere esposto a un rischio di vulnerabilità di reindirizzamento aperto. Per evitare l’uso non autorizzato dei collegamenti redirector da parte di terze parti, Adobe consiglia di utilizzare &quot;host autorizzati&quot; per inserire nell&#39;elenco Consentiti i domini URL di reindirizzamento predefiniti. [!DNL Target] utilizza gli host per i domini ai quali desideri consentire i reindirizzamenti. Per ulteriori informazioni, vedere [Creare Elenchi Consentiti di che specificano gli host autorizzati per l&#39;invio di chiamate mbox a  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) in *Host*.
 
 1. Convalida il Redirector.
    1. *Best practice per la sicurezza*: assicurati che il dominio utilizzato nel redirector sia inserito nell&#39;elenco Consentiti, come indicato in precedenza. Se utilizzi un dominio non inserito nell&#39;elenco Consentiti, Adobe blocca qualsiasi chiamata a tale dominio per impedire ad attori dannosi di utilizzare il redirector per reindirizzare a domini potenzialmente dannosi.
    2. Inserisci l&#39;URL del redirector in un browser e aggiornalo.
    3. Accedi all&#39;account, aggiorna l’elenco di mbox e verifica che il nuovo redirector sia presente nell&#39;elenco come una mbox.
-1. Se esegui il test di destinazioni diverse per un annuncio, crea [offerte di reindirizzamento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=it) per ogni versione.
+1. Se esegui il test di destinazioni diverse per un annuncio, crea [offerte di reindirizzamento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) per ogni versione.
 1. Creare la campagna.
 
    Consulta [Implementazioni non basate su JavaScript](/help/dev/implement/email/overview.md) per l’installazione che permette di raggiungere gli obbiettivi.
@@ -80,7 +86,7 @@ Prima di poter utilizzare un redirector, è necessario crearlo.
 
    >[!NOTE]
    >
-   >I redirector non sono supportati dalla funzione Offerta anteprima o Sfoglia per mbox. Visualizza l’anteprima delle esperienze direttamente in un browser. Inoltre, `mboxDebug` non funziona con i redirector.
+   >I redirector non sono supportati dalla funzione Offerta anteprima o Sfoglia per mbox. Guarda in anteprima le esperienze direttamente in un browser. Inoltre, `mboxDebug` non funziona con i redirector.
 
 1. Invia l&#39;URL completo del redirector alla tua rete di visualizzazione annunci come destinazione dell&#39;annuncio.
 

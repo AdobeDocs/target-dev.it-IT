@@ -1,26 +1,31 @@
 ---
 title: Scarica, archivia e aggiorna automaticamente l’artefatto della regola di decisioning sul dispositivo
-description: Scopri come utilizzare l'artefatto della regola di decisioning sul dispositivo durante l'inizializzazione dell'SDK  [!DNL Adobe Target] .
+description: Scopri come utilizzare l'artefatto della regola di decisioning sul dispositivo durante l'inizializzazione di  [!DNL Adobe Target] SDK.
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: 354
 ht-degree: 0%
 
 ---
 
-# Download, archiviazione e aggiornamento automatico dell&#39;artefatto della regola tramite l&#39;SDK [!DNL Adobe Target]
+# Download, archiviazione e aggiornamento automatico dell&#39;artefatto della regola tramite il SDK [!DNL Adobe Target]
 
-Questo approccio è ideale quando è possibile inizializzare l&#39;SDK [!DNL Adobe Target] contemporaneamente all&#39;inizializzazione e all&#39;avvio del server Web. L&#39;artefatto della regola verrà scaricato dall&#39;SDK [!DNL Adobe Target] e memorizzato nella cache prima che l&#39;applicazione server Web inizi a servire le richieste. Quando l&#39;applicazione Web è in esecuzione, tutte le [!DNL Adobe Target] decisioni verranno eseguite utilizzando l&#39;artefatto della regola in memoria. L&#39;artefatto della regola memorizzata nella cache verrà aggiornato in base ai `pollingInterval` specificati durante il passaggio di inizializzazione dell&#39;SDK.
+Questo approccio è ideale quando è possibile inizializzare il SDK [!DNL Adobe Target] contemporaneamente all&#39;inizializzazione e all&#39;avvio del server Web. L&#39;artefatto della regola verrà scaricato dal SDK [!DNL Adobe Target] e memorizzato nella cache prima che l&#39;applicazione server Web inizi a gestire le richieste. Quando l&#39;applicazione Web è in esecuzione, tutte le [!DNL Adobe Target] decisioni verranno eseguite utilizzando l&#39;artefatto della regola in memoria. L&#39;artefatto della regola memorizzata nella cache verrà aggiornato in base ai `pollingInterval` specificati durante il passaggio di inizializzazione di SDK.
 
 ## Riepilogo dei passaggi
 
-1. Installare l’SDK
-1. Inizializzare l’SDK
+1. Installare SDK
+1. Inizializzare SDK
 1. Memorizza e utilizza l’artefatto della regola
 
-## 1. Installare l’SDK
+## &#x200B;1. Installare SDK
 
 >[!BEGINTABS]
 
@@ -42,9 +47,9 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. Inizializzare l’SDK
+## &#x200B;2. Inizializzare SDK
 
-1. Importa innanzitutto l’SDK. Importa nello stesso file da cui è possibile controllare l&#39;avvio del server.
+1. Importa innanzitutto il SDK. Importa nello stesso file da cui è possibile controllare l&#39;avvio del server.
 
    **Node.js**
 
@@ -59,7 +64,7 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. Per configurare l’SDK, utilizza il metodo create.
+1. Per configurare SDK, utilizzare il metodo create.
 
    **Node.js**
 
@@ -94,10 +99,10 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. È possibile recuperare sia il client che l&#39;OrganizationId da [!DNL Adobe Target] passando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, come illustrato di seguito.
 
-   &lt;!— Inserisci image-client-code.png —>
+   &lt;!— Insert image-client-code.png —>
    ![Pagina di implementazione in Amministrazione in Target](assets/asset-rule-artifact-3.png)
 
-## 3. Memorizzare e utilizzare l’artefatto della regola
+## &#x200B;3. Memorizzare e utilizzare l’artefatto della regola
 
 Non è necessario gestire autonomamente l’artefatto della regola; la chiamata ai metodi SDK deve essere semplice.
 
@@ -146,9 +151,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Nell&#39;esempio di codice precedente, l&#39;oggetto `TargetClient` contiene un riferimento all&#39;artefatto della regola in memoria. Quando utilizzi questo oggetto per richiamare i metodi SDK standard, utilizza l’artefatto della regola in memoria per le decisioni. Se l’applicazione è strutturata in modo tale da dover chiamare i metodi SDK in file diversi da quello che inizializza e ascolta le richieste dei client e se tali file non hanno accesso all’oggetto TargetClient, puoi scaricare il payload JSON e memorizzarlo in un file JSON locale da utilizzare su altri file, che devono inizializzare l’SDK. Questo è spiegato nella sezione successiva, relativa al [download dell&#39;artefatto della regola utilizzando un payload JSON](rule-artifact-json.md).
+>Nell&#39;esempio di codice precedente, l&#39;oggetto `TargetClient` contiene un riferimento all&#39;artefatto della regola in memoria. Quando si utilizza questo oggetto per richiamare i metodi SDK standard, viene utilizzato l&#39;artefatto della regola in memoria per le decisioni. Se l’applicazione è strutturata in modo tale da dover chiamare i metodi SDK in file diversi da quello che inizializza e ascolta le richieste dei client e se tali file non hanno accesso all’oggetto TargetClient, puoi scaricare il payload JSON e memorizzarlo in un file JSON locale da utilizzare su altri file, che devono inizializzare SDK. Questo è spiegato nella sezione successiva, relativa al [download dell&#39;artefatto della regola utilizzando un payload JSON](rule-artifact-json.md).
 
-Di seguito è riportato un esempio che avvia un&#39;applicazione Web dopo l&#39;inizializzazione dell&#39;SDK [!DNL Adobe Target].
+Nell&#39;esempio seguente viene avviata un&#39;applicazione Web dopo l&#39;inizializzazione del SDK [!DNL Adobe Target].
 
 >[!BEGINTABS]
 

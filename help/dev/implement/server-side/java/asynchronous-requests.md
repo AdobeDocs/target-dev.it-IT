@@ -1,11 +1,14 @@
 ---
-title: Come utilizzare le richieste asincrone nell'SDK Java  [!DNL Adobe Target]
-description: Scopri come l'SDK di Java  [!DNL Target]  supporta le richieste asincrone, riducendo a zero il tempo di destinazione effettivo.
+title: Come utilizzare le richieste asincrone in  [!DNL Adobe Target] Java SDK
+description: Scopri come  [!DNL Target] Java SDK supporta le richieste asincrone, riducendo a zero il tempo di destinazione effettivo.
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Y9oTl8aU4-4HpMajdmy5KfvAwEFOpV0y9vUg7BdBRk8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: 130
 ht-degree: 3%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 3%
 
 ## Descrizione
 
-Uno dei vantaggi dell&#39;integrazione lato server è la possibilità di sfruttare l&#39;enorme larghezza di banda e le risorse informatiche disponibili sul lato server utilizzando il parallelismo. L&#39;SDK Java [!DNL Target] supporta le richieste asincrone, che possono ridurre il tempo di destinazione effettivo a zero.
+Uno dei vantaggi dell&#39;integrazione lato server è la possibilità di sfruttare l&#39;enorme larghezza di banda e le risorse informatiche disponibili sul lato server utilizzando il parallelismo. [!DNL Target] Java SDK supporta le richieste asincrone, riducendo a zero il tempo di destinazione effettivo.
 
 ## Metodi supportati
 
@@ -73,6 +76,6 @@ public class TargetRestController {
 }
 ```
 
-L&#39;esempio presuppone che [abbiate inizializzato l&#39;SDK](initialize-sdk.md) come molla e che abbiate [metodi di utilità](utility-methods.md) disponibili.
+Nell&#39;esempio si presuppone che sia stato [inizializzato SDK](initialize-sdk.md) come primaverile e che siano disponibili [metodi di utilità](utility-methods.md).
 
 La richiesta [!DNL Target] viene attivata prima di `simulateIO` e al momento dell&#39;esecuzione anche il risultato di destinazione dovrebbe essere pronto. Anche se non lo è, nella maggior parte dei casi si otterranno risparmi significativi.

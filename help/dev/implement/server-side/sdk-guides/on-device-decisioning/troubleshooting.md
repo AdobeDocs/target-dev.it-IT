@@ -3,9 +3,14 @@ title: Risolvere i problemi relativi al decisioning sul dispositivo
 description: Scopri come risolvere i problemi di [!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
+TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: 1158
 ht-degree: 0%
 
 ---
@@ -20,15 +25,15 @@ ht-degree: 0%
 1. Assicurarsi che [!DNL Target] tracce siano abilitate
 1. Verificare che l&#39;artefatto [!UICONTROL on-device decisioning] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
 1. Convalidare la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL on-device decisioning] tramite il Compositore esperienza basato su moduli.
-1. Errori di notifica di invio Inspect
+1. Verifica gli errori di notifica di invio
 
-## 1. Verifica che il logger sia configurato
+## &#x200B;1. Verifica che il logger sia configurato
 
-Quando inizializzi l’SDK, accertati di abilitare la registrazione.
+Quando inizializzi SDK, accertati di abilitare la registrazione.
 
 **Node.js**
 
-Per l&#39;SDK di Node.js è necessario fornire un oggetto `logger`.
+Per SDK Node.js è necessario fornire un oggetto `logger`.
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -38,9 +43,9 @@ const CONFIG = {
 };
 ```
 
-**SDK Java**
+**Java SDK**
 
-Per l&#39;SDK Java `logRequests` su `ClientConfig` deve essere abilitato.
+Per Java SDK `logRequests` su `ClientConfig` deve essere abilitato.
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -56,7 +61,7 @@ Inoltre, la JVM deve essere avviata con il seguente parametro della riga di coma
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2. Assicurarsi che [!DNL Target]Tracce siano abilitate
+## &#x200B;2. Assicurati che [!DNL Target] tracce siano abilitate
 
 L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe Target] per quanto riguarda l&#39;artefatto delle regole.
 
@@ -113,9 +118,9 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3. Verificare che l&#39;artefatto [!UICONTROL on-device decisioning] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
+## &#x200B;3. Verificare che l&#39;artefatto [!UICONTROL on-device decisioning] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
 
-1. Attendi la durata dell&#39;intervallo di polling (il valore predefinito è 20 minuti) e assicurati che l&#39;artefatto venga recuperato dall&#39;SDK. Vengono generati gli stessi registri del terminale.
+1. Attendi la durata dell’intervallo di polling (il valore predefinito è 20 minuti) e assicurati che l’artefatto venga recuperato da SDK. Vengono generati gli stessi registri del terminale.
 
    Inoltre, le informazioni della traccia [!DNL Target]devono essere inviate al terminale con i dettagli dell&#39;artefatto della regola.
 
@@ -135,7 +140,7 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
      },
    ```
 
-## 4. Convalidare la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL on-device decisioning] tramite il Compositore esperienza basato su moduli
+## &#x200B;4. Convalidare la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL on-device decisioning] tramite il Compositore esperienza basato su moduli
 
 1. Passa all&#39;interfaccia utente [!DNL Target] in Experience Cloud
 
@@ -166,7 +171,7 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
    }
    ```
 
-   **SDK Java**
+   **Java SDK**
 
    ```js {line-numbers="true"}
    try {
@@ -201,9 +206,9 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
    Response:  <div>test</div>
    ```
 
-## Errori di notifica di invio Inspect
+## Verifica gli errori di notifica di invio
 
-Quando si utilizza il decisioning sul dispositivo, le notifiche vengono inviate automaticamente per le richieste di esecuzione getOffers. Queste richieste vengono inviate automaticamente in background. È possibile esaminare tutti gli errori sottoscrivendo un evento denominato `sendNotificationError`. Di seguito è riportato un esempio di codice che mostra come effettuare la sottoscrizione a errori di notifica utilizzando l’SDK di Node.js.
+Quando si utilizza il decisioning sul dispositivo, le notifiche vengono inviate automaticamente per le richieste di esecuzione getOffers. Queste richieste vengono inviate automaticamente in background. È possibile esaminare tutti gli errori sottoscrivendo un evento denominato `sendNotificationError`. Di seguito è riportato un esempio di codice che mostra come effettuare la sottoscrizione a errori di notifica utilizzando Node.js SDK.
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -320,7 +325,7 @@ Se un’attività di decisioning sul dispositivo non è in esecuzione, ma hai ve
    }};
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```js {line-numbers="true"}
 Context context = new Context()
@@ -490,4 +495,4 @@ Ci sono alcuni motivi per cui viene effettuata una chiamata al server anche se i
 
 * Quando la mbox utilizzata per un&#39;attività &quot;Idonea a Decisioning sul dispositivo&quot; viene utilizzata anche per altre attività che non sono &quot;Idonee a Decisioning sul dispositivo&quot;, la mbox è elencata nella sezione `remoteMboxes` dell&#39;artefatto `rules.json`. Quando una mbox è elencata in `remoteMboxes`, qualsiasi chiamata `getOffer(s)` a tale mbox genera una chiamata al server.
 
-* Se imposti un&#39;attività in un&#39;area di lavoro o in una proprietà e non includi gli stessi dati durante la configurazione dell&#39;SDK, ciò può causare il download di `rules.josn` dell&#39;area di lavoro predefinita, che può utilizzare la mbox nella sezione `remoteMboxes`.
+* Se imposti un&#39;attività in un&#39;area di lavoro o in una proprietà e non includi gli stessi dati durante la configurazione di SDK, ciò può causare il download di `rules.josn` dell&#39;area di lavoro predefinita, che può utilizzare la mbox nella sezione `remoteMboxes`.

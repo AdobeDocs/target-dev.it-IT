@@ -1,12 +1,17 @@
 ---
-title: Come configurare l'autenticazione per le API  [!DNL Adobe Target]
+title: 'Come configurare l''autenticazione per le API  [!DNL Adobe Target] '
 description: Come si generano i token di autenticazione necessari per interagire correttamente con le API  [!DNL Adobe Target] ?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1785'
-ht-degree: 0%
+source-wordcount: 1937
+ht-degree: 1%
 
 ---
 
@@ -22,7 +27,7 @@ Le API dell&#39;amministratore [!DNL Adobe Target], incluse le API [!DNL Recomme
 >
 >Per ulteriori informazioni e istruzioni dettagliate per la migrazione dell&#39;integrazione, vedere [Migrazione delle credenziali dall&#39;account di servizio (JWT) alle credenziali server-to-server OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/){target=_blank} nella documentazione di *Developer Console*.
 >
->Per informazioni sulla configurazione delle nuove credenziali OAuth, vedi [Implementazione delle credenziali da server a server OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/){target=_blank} nella documentazione di *Developer Console*.
+>Per informazioni sulla configurazione delle nuove credenziali OAuth, consulta [Implementazione delle credenziali da server a server OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/){target=_blank} nella documentazione di *Developer Console*.
 
 Di seguito sono riportati i passaggi preliminari necessari per generare i token di autenticazione JWT legacy necessari per interagire correttamente con le API [!DNL Adobe Target]:
 
@@ -36,15 +41,15 @@ Di seguito sono riportati i passaggi preliminari necessari per generare i token 
 | Risorsa | Dettagli |
 | --- | --- |
 | Postman | Per completare correttamente questi passaggi, ottieni l&#39;[app Postman](https://www.postman.com/downloads/) per il tuo sistema operativo. Postman basic è gratuito con la creazione dell&#39;account. Anche se non è necessario per utilizzare le API di [!DNL Adobe Target] in generale, Postman semplifica i flussi di lavoro API e [!DNL Adobe Target] fornisce diverse raccolte Postman per aiutarle a eseguire le API e a capire come funzionano. Il resto di questa guida presuppone una conoscenza operativa di Postman. Per assistenza, consulta la [documentazione di Postman](https://learning.getpostman.com/). |
-| Riferimenti | Per il resto di questa guida si presume che le risorse seguenti siano familiari:<ul><li>[Github Adobe I/O](https://github.com/adobeio)</li><li>[Documentazione API per l&#39;amministrazione di Target e il profilo](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentazione API Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
+| Riferimenti | Per il resto di questa guida si presume che le risorse seguenti siano familiari:<ul><li>[Github Adobe I/O](https://github.com/adobeio)</li><li>[Documentazione API per l&#39;amministrazione di Target e il profilo](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentazione API per la funzione Consigli](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
-## Creazione di un progetto di Adobe I/O
+## Creazione di un progetto Adobe I/O
 
 In questa sezione, accederai a [!DNL Adobe Developer Console] e creerai un progetto per [!DNL Adobe Target]. Per ulteriori informazioni, consulta la [documentazione sui progetti](https://developer.adobe.com/developer-console/docs/guides/projects/).
 
-&lt;!— (1) Genera la tua chiave privata e il certificato pubblico, in base alla [documentazione sull&#39;autenticazione](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (come descritto in **Passaggio 1** di [Come configurare Adobe IO: Authentication - Passaggio dopo passaggio](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). Dopo aver completato il passaggio 1, torna a questa guida e riprendi con il passaggio 2, di seguito. // Il risultato di questo passaggio deve essere la creazione di un file `private.key` e di un file `certificate_pub.crt`. Tornate a questa guida dopo aver generato questi due file.)—>
+&lt;!---(1. Genera la tua chiave privata e il tuo certificato pubblico, secondo la [documentazione sull&#39;autenticazione](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (come descritto in **Passaggio 1** di [Come configurare Adobe IO: Authentication - Passo dopo passo](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). Dopo aver completato il passaggio 1, torna a questa guida e riprendi con il passaggio 2, di seguito. // Il risultato di questo passaggio deve essere la creazione di un file `private.key` e di un file `certificate_pub.crt`. Tornate a questa guida dopo aver generato questi due file.)—>
 
-1. In [Adobe Admin Console](https://adminconsole.adobe.com/), assicurati che all&#39;account utente [!DNL Adobe] sia stato concesso l&#39;accesso di livello [Amministratore prodotto](https://helpx.adobe.com/it/enterprise/using/admin-roles.html) e [Sviluppatore](https://helpx.adobe.com/it/enterprise/using/manage-developers.html) a [!DNL Target].
+1. In [Adobe Admin Console](https://adminconsole.adobe.com/), assicurati che all&#39;account utente [!DNL Adobe] sia stato concesso l&#39;accesso di livello [Amministratore prodotto](https://helpx.adobe.com/enterprise/using/admin-roles.html) e [Sviluppatore](https://helpx.adobe.com/enterprise/using/manage-developers.html) a [!DNL Target].
 
 1. In [Adobe Developer Console](https://developer.adobe.com/console/home), selezionare [!UICONTROL Experience Cloud Organization] per cui si desidera creare questa integrazione. Si noti che è probabile che si abbia accesso solo a un singolo [!UICONTROL Experience Cloud Organization].
 
@@ -85,17 +90,17 @@ In questa sezione, accederai a [!DNL Adobe Developer Console] e creerai un proge
 
 >[!NOTE]
 >
->In questo esempio, il progetto viene denominato &quot;[!DNL Target] Integration.&quot; Se prevedi di utilizzare il progetto per più di [!DNL Adobe Target], potrebbe essere utile denominarlo di conseguenza. Ad esempio, puoi scegliere di denominarla &quot;API Adobe&quot; o &quot;API Experience Cloud&quot;, in quanto può essere utilizzata con altre soluzioni in Adobe Experience Cloud.
+>In questo esempio, il progetto viene denominato &quot;[!DNL Target] Integration.&quot; Se prevedi di utilizzare il progetto per più di [!DNL Adobe Target], potrebbe essere utile denominarlo di conseguenza. Ad esempio, puoi scegliere di denominarla &quot;API di Adobe&quot; o &quot;API di Experience Cloud&quot;, in quanto può essere utilizzata con altre soluzioni di Adobe Experience Cloud.
 
 ## Esporta dettagli progetto
 
-Ora che disponi di un progetto Adobe utilizzabile per accedere a [!DNL Target], devi assicurarti di inviare i dettagli del progetto insieme alle richieste API Adobe. Questi dettagli sono necessari per interagire con diverse API Adobe, tra cui diverse API [!DNL Target]. Ad esempio, i dettagli dell&#39;integrazione includono le informazioni di autorizzazione e autenticazione richieste dalle API amministratore [!DNL Target]. Pertanto, per utilizzare le API con Postman, è necessario inserire tali dettagli in Postman.
+Ora che disponi di un progetto Adobe utilizzabile per accedere a [!DNL Target], devi assicurarti di inviare i dettagli del progetto insieme alle richieste API di Adobe. Questi dettagli sono necessari per interagire con diverse API di Adobe, tra cui diverse API di [!DNL Target]. Ad esempio, i dettagli dell&#39;integrazione includono le informazioni di autorizzazione e autenticazione richieste dalle API amministratore [!DNL Target]. Pertanto, per utilizzare le API con Postman, è necessario inserire tali dettagli in Postman.
 
-Esistono diversi modi per specificare i dettagli del progetto in Postman, ma in questa sezione sfrutta alcune funzioni e raccolte predefinite. Innanzitutto (in questa sezione), esporterai i dettagli dell’integrazione in un ambiente Postman. Nella sezione successiva verrà generato un token di accesso Bearer per consentire l’accesso alle risorse Adobi necessarie.
+Esistono diversi modi per specificare i dettagli del progetto in Postman, ma in questa sezione sfrutta alcune funzioni e raccolte predefinite. Innanzitutto (in questa sezione), esporterai i dettagli dell’integrazione in un ambiente Postman. Nella sezione successiva verrà generato un token di accesso Bearer per consentire l’accesso alle risorse Adobe necessarie.
 
 >[!NOTE]
 >
->Per istruzioni video applicabili a qualsiasi soluzione Experience Cloud, incluso [!DNL Target], vedi [Utilizzare Postman con le API Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=it). Le sezioni seguenti sono rilevanti per le API [!DNL Target]: 1. Creazione ed esportazione di Experience Platform API in Postman 2. Generare un token di accesso con Postman. Questi passaggi sono descritti anche di seguito.
+>Per istruzioni video applicabili a qualsiasi soluzione Experience Cloud, incluso [!DNL Target], vedi [Utilizzare Postman con le API Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Le sezioni seguenti sono rilevanti per le API [!DNL Target]: 1. Creare ed esportare l’API di Experience Platform in Postman 2. Generare un token di accesso con Postman. Questi passaggi sono descritti anche di seguito.
 
 1. Sempre in [Adobe Developer Console](https://developer.adobe.com/console/home), passa a visualizzare le credenziali **[!UICONTROL Service Account (JWT)]** del nuovo progetto. Utilizzare la barra di navigazione a sinistra o la sezione **[!UICONTROL Credentials]** come illustrato.
 
@@ -129,7 +134,7 @@ Esistono diversi modi per specificare i dettagli del progetto in Postman, ma in 
 
    ![JWT6](assets/configure-io-target-jwt6.png)
 
-1. I valori delle note `CLIENT_SECRET` e `API_KEY` (insieme ad altre variabili) sono precompilati, presi dall&#39;integrazione definita in Adobe Developer Console. La variabile Postman `CLIENT_SECRET` deve corrispondere alla credenziale di Adobe `CLIENT SECRET` come visualizzata in Developer Console e `API_KEY` in Postman deve corrispondere a `CLIENT ID` in Developer Console. Le note `PRIVATE_KEY`, `JWT_TOKEN` e `ACCESS_TOKEN` sono invece vuote. Iniziamo fornendo il valore `PRIVATE_KEY`.
+1. I valori delle note `CLIENT_SECRET` e `API_KEY` (insieme ad altre variabili) sono precompilati, presi dall&#39;integrazione definita in Adobe Developer Console. La variabile Postman `CLIENT_SECRET` deve corrispondere alle credenziali Adobe `CLIENT SECRET` visualizzate in Developer Console e `API_KEY` in Postman deve corrispondere a `CLIENT ID` in Developer Console. Le note `PRIVATE_KEY`, `JWT_TOKEN` e `ACCESS_TOKEN` sono invece vuote. Iniziamo fornendo il valore `PRIVATE_KEY`.
 
    ![JWT7](assets/configure-io-target-jwt7.png)
 
@@ -149,9 +154,9 @@ Esistono diversi modi per specificare i dettagli del progetto in Postman, ma in 
 
 ## Genera il token di accesso bearer
 
-In questa sezione viene generato il token di accesso bearer, necessario per autenticare l&#39;interazione con le API [!DNL Adobe Target]. Per generare il token di accesso bearer, devi inviare i dettagli di integrazione (stabiliti nelle sezioni precedenti) al [servizio Identity Management Adobe (IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md). Esistono alcuni modi diversi per farlo, ma in questa guida utilizziamo una raccolta Postman contenente una chiamata IMS predefinita che rende il processo diretto e semplice. Dopo aver importato la raccolta, puoi riutilizzarla quando necessario, per generare nuovi token non solo per [!DNL Adobe Target], ma anche per altre API di Adobe.
+In questa sezione viene generato il token di accesso bearer, necessario per autenticare l&#39;interazione con le API [!DNL Adobe Target]. Per generare il token di accesso bearer, devi inviare i dettagli di integrazione (stabiliti nelle sezioni precedenti) al [servizio Adobe Identity Management (IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md). Esistono alcuni modi diversi per farlo, ma in questa guida utilizziamo una raccolta Postman contenente una chiamata IMS predefinita che rende il processo diretto e semplice. Dopo aver importato la raccolta, puoi riutilizzarla quando necessario, per generare nuovi token non solo per [!DNL Adobe Target], ma anche per altre API di Adobe.
 
-1. Passa alle [chiamate di Adobe dell&#39;API del servizio Identity Management](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims).
+1. Passa alle [chiamate di esempio dell&#39;API di Adobe Identity Management Service](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims).
 
    ![token1](assets/configure-io-target-generatetoken1.png)
 
@@ -167,7 +172,7 @@ In questa sezione viene generato il token di accesso bearer, necessario per aute
 
    ![token4](assets/configure-io-target-generatetoken4.png)
 
-1. Selezionare la richiesta **[!UICONTROL IMS: JWT Generate + Auth via User Token]** nell&#39;insieme Postman di generazione token di accesso Adobe I/O, verificare che l&#39;ambiente sia selezionato e fare clic su **[!UICONTROL Send]** per generare il token.
+1. Selezionare la richiesta **[!UICONTROL IMS: JWT Generate + Auth via User Token]** nella raccolta Postman di generazione token di accesso Adobe I/O, verificare che l&#39;ambiente sia selezionato e fare clic su **[!UICONTROL Send]** per generare il token.
 
    ![token5](assets/configure-io-target-generatetoken5.png)
 
@@ -183,9 +188,9 @@ In questa sezione viene generato il token di accesso bearer, necessario per aute
 
    ![token7](assets/configure-io-target-generatetoken7.png)
 
-Domanda: devo utilizzare la raccolta Postman di generazione del token di accesso Adobe I/O per generare il token web JSON (JWT) e il token di accesso bearer?
+Domanda: devo utilizzare la raccolta Postman di generazione del token di accesso di Adobe I/O per generare il token web JSON (JWT) e il token di accesso bearer?
 
-Risposta: No. L’insieme Postman Adobe I/O Access Token Generation è disponibile per semplificare la generazione del token di accesso JWT e bearer in Postman. In alternativa, puoi utilizzare le funzionalità di Adobe Developer Console per generare manualmente il token di accesso bearer.
+Risposta: No. La raccolta Postman per la generazione di token di accesso di Adobe I/O è disponibile per semplificare la generazione del token di accesso JWT e Bearer in Postman. In alternativa, puoi utilizzare le funzionalità di Adobe Developer Console per generare manualmente il token di accesso bearer.
 
 ## Verifica il token di accesso bearer
 
@@ -199,7 +204,7 @@ In questo esercizio utilizzerai il nuovo token di accesso bearer inviando una ri
 
    ![testtoken1](assets/configure-io-target-testtoken1.png)
 
-1. Variabili come `{{access_token}}` inizialmente non risolte. È possibile risolvere il problema in diversi modi, ad esempio definendo una nuova variabile di raccolta denominata `{{access_token}}`. In questa guida verrà invece modificata la richiesta API per sfruttare l&#39;ambiente Postman utilizzato in precedenza. Questo consentirà all’ambiente di continuare a fungere da consolidamento unico e coerente di tutte le variabili comuni tra le API Adobe.
+1. Variabili come `{{access_token}}` inizialmente non risolte. È possibile risolvere il problema in diversi modi, ad esempio definendo una nuova variabile di raccolta denominata `{{access_token}}`. In questa guida verrà invece modificata la richiesta API per sfruttare l&#39;ambiente Postman utilizzato in precedenza. Questo consentirà all’ambiente di continuare a fungere da consolidamento unico e coerente di tutte le variabili comuni tra le API di Adobe.
 
    ![testtoken2](assets/configure-io-target-testtoken2.png)
 
@@ -231,4 +236,4 @@ In questo esercizio utilizzerai il nuovo token di accesso bearer inviando una ri
 
    ![testtoken6](assets/configure-io-target-testtoken6.png)
 
-Dopo aver verificato l&#39;autenticazione Adobe, è possibile utilizzarla per interagire con le API [!DNL Adobe Target] (nonché con altre API Adobe). Ad esempio, puoi [utilizzare le API di Recommendations](recs-api/overview.md) per creare o gestire i consigli, oppure puoi utilizzarle con [API di consegna di Target](/help/dev/implement/delivery-api/overview.md).
+Dopo aver verificato l&#39;autenticazione Adobe, è possibile utilizzarla per interagire con le API [!DNL Adobe Target] (nonché con altre API Adobe). Ad esempio, puoi [utilizzare le API Recommendations](recs-api/overview.md) per creare o gestire i consigli, oppure puoi utilizzarle con [API di consegna Target](/help/dev/implement/delivery-api/overview.md).

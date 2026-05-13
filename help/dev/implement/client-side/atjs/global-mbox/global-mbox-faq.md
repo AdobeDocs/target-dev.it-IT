@@ -4,10 +4,16 @@ description: Leggi le domande frequenti e le risposte su Adobe [!DNL Target] mbo
 title: Quali sono le domande frequenti sulla mbox globale?
 feature: at.js
 exl-id: 7bcd1b67-809a-466a-b648-6e0e44386157
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/bxsjCqSQpp6M20StzZtMBrfxjJCKgPEPfS2OlBUP00A
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 39%
+source-wordcount: 309
+ht-degree: 32%
 
 ---
 
@@ -19,7 +25,7 @@ Elenco delle domande frequenti sulle mbox globali.
 
 L&#39;account supporta un&#39;unica mbox globale.
 
-Puoi definire un limite per l&#39;esecuzione delle attività aggiungendo a queste delle regole URL. Per ulteriori informazioni, vedere [Includere la stessa esperienza in pagine simili](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=it).
+Puoi definire un limite per l&#39;esecuzione delle attività aggiungendo a queste delle regole URL. Per ulteriori informazioni, vedere [Includere la stessa esperienza in pagine simili](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html).
 
 Puoi anche trasmettere un parametro sulla pagina utilizzando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) e quindi selezionare tali parametri nella sezione &quot;Configura URL&quot; nel [!UICONTROL Visual Experience Composer] (VEC) o aggiungendo i parametri come &quot;perfezionamenti&quot; in [!UICONTROL Form-Based Experience Composer].
 
@@ -43,4 +49,4 @@ Nelle opzioni dell’illustrazione precedente sono incluse le seguenti impostazi
 
 * **Cosa desideri misurare con questa attività:** Ricavi.
 * **Vista predefinita per rapporti:** Ricavo per visitatore (RPV).
-* **Qual è l&#39;azione intrapresa dal pubblico per indicare che l&#39;obiettivo è stato raggiunto?** Visualizzazione di una Mbox, target-global-mbox
+* **Qual è l&#39;azione intrapresa dal pubblico per indicare che l&#39;obiettivo è stato raggiunto?** Visualizzazione di una mbox, target-global-mbox

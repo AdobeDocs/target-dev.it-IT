@@ -1,11 +1,15 @@
 ---
-title: Invia notifiche di visualizzazione o clic a  [!DNL Adobe Target]  tramite l'SDK di Node.js
+title: Invia notifiche di visualizzazione o clic a [!DNL Adobe Target] tramite Node.js SDK
 description: Scopri come utilizzare sendNotifications() per inviare notifiche di visualizzazione o clic a  [!DNL Adobe Target]  per la misurazione e il reporting.
 feature: APIs/SDKs
 exl-id: 84bb6a28-423c-457f-8772-8e3f70e06a6c
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/-YiepZ5Rqm7JFTUuYKxQc2ISL5EZ9nvW-K0M-aoaleU
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: 246
 ht-degree: 4%
 
 ---

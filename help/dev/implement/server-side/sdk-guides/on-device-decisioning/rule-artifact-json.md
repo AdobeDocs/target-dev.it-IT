@@ -1,26 +1,31 @@
 ---
 title: Scarica, archivia e aggiorna l’artefatto della regola di decisioning sul dispositivo tramite payload JSON
-description: Questo approccio è ideale se l’applicazione è strutturata in modo da richiedere l’inizializzazione dell’SDK su ciascun file in cui utilizza i metodi SDK.
+description: Questo approccio è ideale se l'applicazione è strutturata in modo da richiedere l'inizializzazione di SDK in ogni file in cui utilizza i metodi SDK.
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e7840a7b-a94f-4256-aed0-4e94b08e157bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
 # Download, archiviazione e aggiornamento dell’artefatto della regola tramite payload JSON
 
-Questo approccio è ideale se l’applicazione è strutturata in modo da richiedere l’inizializzazione dell’SDK su ciascun file in cui utilizza i metodi SDK. Prima che l’applicazione web possa utilizzare il payload JSON dell’artefatto della regola durante l’inizializzazione dell’SDK, assicurati che il payload JSON sia stato scaricato e che sia disponibile per l’utilizzo da parte dell’applicazione.
+Questo approccio è ideale se l&#39;applicazione è strutturata in modo da richiedere l&#39;inizializzazione di SDK in ogni file in cui utilizza i metodi SDK. Prima che l’applicazione web possa utilizzare il payload JSON dell’artefatto della regola durante l’inizializzazione di SDK, assicurati che il payload JSON sia stato scaricato e che sia disponibile per l’utilizzo da parte dell’applicazione.
 
 ## Riepilogo dei passaggi
 
-1. Installare l’SDK
-1. Inizializzare l’SDK
+1. Installare SDK
+1. Inizializzare SDK
 1. Memorizzare e utilizzare il payload JSON
 
-## 1. Installare l’SDK
+## &#x200B;1. Installare SDK
 
 >[!BEGINTABS]
 
@@ -42,9 +47,9 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. Inizializzare l’SDK
+## &#x200B;2. Inizializzare SDK
 
-1. Importa innanzitutto l’SDK. Importa nello stesso file da cui è possibile controllare l&#39;avvio del server.
+1. Importa innanzitutto il SDK. Importa nello stesso file da cui è possibile controllare l&#39;avvio del server.
 
    **Node.js**
 
@@ -59,7 +64,7 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. Per configurare l’SDK, utilizza il metodo create.
+1. Per configurare SDK, utilizzare il metodo create.
 
    **Node.js**
 
@@ -115,10 +120,10 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Il client e `organizationId` possono essere recuperati da [!DNL Adobe Target] passando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, come illustrato di seguito.
 
-   &lt;!— Inserisci image-client-code.png —>
+   &lt;!— Insert image-client-code.png —>
    ![Alt immagine](assets/asset-rule-artifact-3.png)
 
-## 3. Memorizzare e riattivare il payload JSON
+## &#x200B;3. Memorizza e rimuovi il payload JSON
 
 Il meccanismo utilizzato per memorizzare il payload JSON dipende dall’architettura del sistema. È possibile utilizzare un file locale, un database o un sistema di memorizzazione nella cache degli oggetti di memoria, ad esempio Memcached. Devi essere in grado di leggere questo JSON dall’applicazione per l’utilizzo. In questa guida viene utilizzato un file locale come archivio.
 
@@ -162,7 +167,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Inizializzando l&#39;SDK [!DNL Adobe Target]tramite il payload JSON, il server è pronto a distribuire le richieste immediatamente con le attività di decisioning sul dispositivo, poiché l&#39;SDK [!DNL Adobe Target]non deve attendere che l&#39;artefatto della regola venga scaricato.
+>Inizializzando [!DNL Adobe Target]SDK tramite il payload JSON, il server è pronto a distribuire le richieste immediatamente con le attività di decisioning sul dispositivo, poiché [!DNL Adobe Target]SDK non deve attendere che l&#39;artefatto della regola venga scaricato.
 
 Ecco un esempio che illustra la funzionalità di inizializzazione del payload JSON.
 

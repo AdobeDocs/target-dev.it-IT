@@ -4,9 +4,15 @@ description: Scopri come at.js e [!DNL Target] impedire la visualizzazione momen
 title: Come gestisce at.js la visualizzazione momentanea di altri contenuti?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: 717
 ht-degree: 57%
 
 ---
@@ -21,13 +27,13 @@ La visualizzazione momentanea di altri contenuti si verifica quando il contenuto
 
 Se abiliti l’impostazione [Creazione automatica di una mbox globale](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) quando configuri at.js, at.js gestisce la visualizzazione momentanea di altri contenuti modificando l’impostazione di opacità durante il caricamento della pagina. Al caricamento di at.js, l&#39;impostazione di opacità dell&#39;elemento `<body>` verrà modificata in &quot;0&quot;, rendendo la pagina inizialmente invisibile ai visitatori. Dopo aver ricevuto una risposta da [!DNL Target], o se viene rilevato un errore con la richiesta [!DNL Target], at.js reimposta l&#39;opacità su &quot;1&quot;. In questo modo il visitatore vede la pagina solo dopo l&#39;applicazione del contenuto delle attività.
 
-Se si abilita l&#39;impostazione, quando si configura at.js, at.js imposta l&#39;elemento HTML “BODY” con un valore di opacità pari a 0. Dopo aver ricevuto una risposta da [!DNL Target], at.js reimposta su 1 l&#39;opacità del BODY del HTML.
+Se si abilita l&#39;impostazione, quando si configura at.js, at.js imposta l&#39;elemento HTML “BODY” con un valore di opacità pari a 0. Dopo aver ricevuto una risposta da [!DNL Target], at.js reimposta l&#39;opacità del BODY di HTML su 1.
 
 L&#39;opzione opacità impostata su 0 mantiene il contenuto della pagina nascosto per impedire la visualizzazione momentanea di altri contenuti, ma il browser esegue ancora il rendering della pagina e carica tutte le risorse necessarie come CSS, immagini e così via.
 
 Se `opacity: 0` non funziona nell&#39;implementazione, puoi anche gestire la visualizzazione momentanea di altri contenuti personalizzando `bodyHiddenStyle` e impostarlo su `body {visibility:hidden !important}`. Puoi utilizzare `body {opacity:0 !important}` o `body {visibility:hidden !important}`, a seconda di quale sia il migliore per il tuo caso specifico.
 
-La figura seguente mostra le chiamate per Nascondi corpo e Mostra corpo, sia in at.js 1.*x* che in at.js 2.x.
+La figura seguente mostra le chiamate per Nascondi corpo e Mostra corpo sia in at.js 1.*x* che in at.js 2.x.
 
 **at.js 2.x**
 
@@ -47,7 +53,7 @@ Per ulteriori informazioni sull’override di `bodyHiddenStyle`, consulta [targe
 
 Caricare at.js in modo asincrono è un ottimo modo per evitare di bloccare il rendering del browser; tuttavia, questa tecnica può portare alla visualizzazione momentanea di altri contenuti della pagina web.
 
-Puoi evitare questo fenomeno utilizzando uno snippet per nascondere le pagine che sarà visibile dopo che Target avrà personalizzato gli elementi HTML rilevanti.
+È possibile evitare questo fenomeno utilizzando uno snippet per nascondere le pagine che sarà visibile dopo che Target avrà personalizzato gli elementi HTML rilevanti.
 
 at.js può essere caricato in modo asincrono, direttamente incorporato nella pagina o tramite un gestore di tag (ad esempio Adobe Experience Platform Launch).
 

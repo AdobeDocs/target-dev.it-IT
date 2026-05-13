@@ -5,10 +5,16 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -18,7 +24,7 @@ Segui i passaggi nel diagramma *Esperienze di rendering* per assicurarti che tut
 
 >[!NOTE]
 >
->Se hai abilitato la richiesta automatica di caricamento pagina durante il passaggio [Configura richiesta automatica di caricamento pagina](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Inizializza SDKS* , puoi saltare questa attività a meno che non desideri chiamare l&#39;SDK di Adobe Target per eseguire il rendering di altre esperienze utilizzando una richiesta di posizione regionale.
+>Se hai abilitato la richiesta automatica di caricamento pagina durante il passaggio [Configura richiesta automatica di caricamento pagina](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Inizializza SDKS* , puoi saltare questa attività a meno che non desideri chiamare Adobe Target SDK per eseguire il rendering di altre esperienze utilizzando una richiesta di posizione regionale.
 
 >[!TIP]
 >
@@ -44,7 +50,7 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 * [3.6: Criteri personalizzati](#custom)
 * [3.7: Fornire gli attributi utilizzati nelle regole di inclusione](#inclusion)
 * [3.8: Fornire excludedIds](#exclude)
-* [3.9: fornire attributi di entità per aggiornare il catalogo prodotti per Recommendations](#entity-attributes)
+* [3.9: fornire attributi di entità per aggiornare il catalogo dei prodotti per la funzione Consigli](#entity-attributes)
 * [3.10: Fornire attributi di profilo utilizzati come chiavi per le regole di inclusione](#keys)
 * [3.11: Attivare la richiesta di caricamento pagina](#fire)
 * [3.12: richiesta di localizzazione regionale di un incendio](#location)
@@ -53,13 +59,13 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
 Aggiungi gli elementi in promozione e controllane il posizionamento nella progettazione dei consigli scegliendo Promozioni prima o dopo nell&#39;interfaccia utente [!DNL Target] durante la creazione dell&#39;attività.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Opzioni disponibili**
 
 * Promuovi per ID
-* [Promuovi per raccolta](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=it){target=_blank}
-* [Promuovi per attributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=it){target=_blank}
+* [Promuovi per raccolta](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Promuovi per attributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Parametri di entità richiesti**
 
@@ -67,7 +73,7 @@ Aggiungi gli elementi in promozione e controllane il posizionamento nella proget
 
 **Letture**
 
-* [Aggiungi promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=it){target=_blank}
+* [Aggiungere promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -77,7 +83,7 @@ Aggiungi gli elementi in promozione e controllane il posizionamento nella proget
 
 Creare consigli in base al contenuto del carrello dell’utente.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -91,7 +97,7 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Letture**
 
-* [Basato su carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato su carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -101,7 +107,7 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemento nel tuo sito o in base alla popolarità degli elementi nella categoria, nel brand, nel genere e così via preferiti o più visualizzati di un visitatore.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -120,7 +126,7 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Letture**
 
-* [Basato sulla popolarità](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato sulla popolarità](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -130,7 +136,7 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli di un elemento che l’utente sta visualizzando o che ha recentemente visualizzato.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -146,7 +152,7 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Letture**
 
-* [Basato su elemento](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato su elemento](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -156,7 +162,7 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 Creare consigli in base al comportamento dell’utente.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -169,7 +175,7 @@ Creare consigli in base al comportamento dell’utente.
 
 **Letture**
 
-* [Basato su utente](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato su utente](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -179,7 +185,7 @@ Creare consigli in base al comportamento dell’utente.
 
 Formulare raccomandazioni in base a un file personalizzato caricato.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -191,7 +197,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Letture**
 
-* [Criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -199,11 +205,11 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 ## 3.7: Fornire gli attributi utilizzati nelle regole di inclusione {#inclusion}
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Letture**
 
-* [Utilizzare regole di inclusione dinamiche e statiche](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=it){target=_blank}
+* [Utilizzare regole di inclusione dinamiche e statiche](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -213,11 +219,11 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi escludere gli articoli già presenti nel carrello.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Letture**
 
-* [È possibile escludere un&#39;entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=it#exclude){target=_blank}
+* [È possibile escludere un’entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -225,13 +231,13 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 ## 3.9: fornisci attributi di entità per aggiornare il catalogo prodotti per [!DNL Recommendations] {#entity-attributes}
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Letture**
 
-* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=it){target=_blank}
+* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Puoi eseguire questo passaggio anche creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=it){target=_blank} utilizzando l&#39;interfaccia utente [!DNL Target] per aggiornare il catalogo prodotti per [!DNL Recommendations].
+Puoi eseguire questo passaggio anche creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} utilizzando l&#39;interfaccia utente [!DNL Target] per aggiornare il catalogo prodotti per [!DNL Recommendations].
 
 +++
 
@@ -245,7 +251,7 @@ Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclu
 
 **Letture**
 
-* [Attributi del profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=it){target=_blank}
+* [Attributi del profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -253,9 +259,9 @@ Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclu
 
 ## 3.11: Attivare la richiesta di caricamento pagina {#fire}
 
-Questo passaggio attiva una chiamata [!DNL Delivery API] con payload `execute` > `pageLoad` nella richiesta. Il metodo `getOffers()` recupera l&#39;esperienza ed esegue il rendering di `applyOffers()` sulla pagina. La richiesta `pageLoad` è necessaria per il rendering delle esperienze create nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it){target=_blank} (VEC).
+Questo passaggio attiva una chiamata [!DNL Delivery API] con payload `execute` > `pageLoad` nella richiesta. Il metodo `getOffers()` recupera l&#39;esperienza ed esegue il rendering di `applyOffers()` sulla pagina. La richiesta `pageLoad` è necessaria per il rendering delle esperienze create nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank}.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Attiva diagramma richieste caricamento pagina](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
@@ -280,7 +286,7 @@ Questo passaggio attiva una chiamata [!DNL Delivery API] con payload `execute` >
 
 Questo passaggio attiva una chiamata [!DNL Delivery API] con `execute` > `mboxes` payload nella richiesta. Il metodo `getOffers` recupera l&#39;esperienza e `applyOffers` esegue il rendering dell&#39;esperienza nella pagina. Puoi inviare più di una mbox sotto il payload `execute` > `mboxes`.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Attiva diagramma di richiesta località regionale](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 

@@ -4,10 +4,15 @@ description: Ottieni dati in [!DNL Target] utilizzando i parametri di pagina.
 title: Come posso inserire dati in [!DNL Target] utilizzando i parametri di pagina?
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/CYhZOFnli-DmREOOZGE2aGNn3x7BJ7uwGA2vfwUSnOk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 32%
+source-wordcount: 397
+ht-degree: 31%
 
 ---
 
@@ -29,7 +34,7 @@ Ecco alcuni esempi di parametri di pagina
 
 ## Casi d’uso di esempio
 
-* **Pagine prodotto**: invia informazioni sul prodotto specifico visualizzato (questo metodo è il funzionamento di Recommendations)
+* **Pagine dei prodotti**: invia informazioni sul prodotto specifico visualizzato (questo metodo è il modo in cui funzionano i consigli)
 * **Dettagli ordine**: invia ID ordine, orderTotal e così via, per la raccolta ordini
 * **Affinità tra categorie**: invia informazioni visualizzate per categoria a [!DNL Target] per conoscere l&#39;affinità dell&#39;utente a particolari categorie di siti
 * **Dati di terze parti**: invia informazioni da fonti di dati di terze parti, ad esempio i provider di targeting del meteo, i dati dell’account (DemandBase), i dati demografici (ad esempio Experian) e altro ancora.
@@ -46,7 +51,7 @@ I dati vengono inviati a [!DNL Target] in tempo reale e possono essere utilizzat
 
   Oltre ai caratteri menzionati nel sito IETF, [!DNL Target] consente i seguenti caratteri nelle stringhe di query:
 
-  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers=&quot;true&quot;}
+  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers="true"}
 
   Tutto il resto deve avere la codifica URL. Lo standard specifica il seguente formato ( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) ), come illustrato di seguito:
 
@@ -68,8 +73,8 @@ targetPageParams (aggiunge i parametri alla MBOX globale nella pagina):
 
 ## Collegamenti alle informazioni rilevanti
 
-Consigli: [Implementazione in base al tipo di pagina](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=it)
+Consigli: [Implementazione in base al tipo di pagina](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
 
 Conferma ordine: [Tracciare le conversioni](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-Affinità tra categorie: [Affinità tra categorie](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=it)
+Affinità tra categorie: [Affinità tra categorie](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)

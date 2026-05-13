@@ -1,18 +1,21 @@
 ---
-title: Implementa la configurazione proxy nell'SDK  [!DNL Adobe Target] Node.js
-description: Scopri come configurare la configurazione proxy [!UICONTROL TargetClient] nell'SDK  [!DNL Adobe Target] Node.js.
+title: Implementa la configurazione proxy nel SDK  [!DNL Adobe Target] Node.js
+description: Scopri come configurare la configurazione proxy [!UICONTROL TargetClient] nel SDK  [!DNL Adobe Target] Node.js.
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/kaE-ZEOTteaVp5kWSHiVYCvEiHuQHSMqeWRq6r-mJaA
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: 102
 ht-degree: 0%
 
 ---
 
 # Configurazione proxy (Node.js)
 
-Per configurare un proxy per le richieste HTTP dell’SDK del nodo, sovrascrivi l’API di recupero utilizzata dall’SDK durante l’inizializzazione.
+Per configurare un proxy per le richieste HTTP di Node SDK, sovrascrivi l’API di recupero utilizzata da SDK durante l’inizializzazione.
 
 Di seguito è riportato un esempio di base che mostra come eseguire l&#39;override di `fetchApi` durante l&#39;inizializzazione di `TargetClient` per aggiungere un proxy:
 
@@ -34,5 +37,5 @@ client = TargetClient.create({
 ```
 
 Si noti che questo funziona solo per le versioni di Nodo 18.2+, in cui `undici.fetch` è il `fetch` predefinito per il nodo.
-Visita l&#39;archivio degli esempi dell&#39;SDK del [nodo](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
+Visita l&#39;archivio degli esempi di SDK del nodo [](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
 esempi di configurazione proxy per le versioni precedenti di node e ulteriori informazioni.

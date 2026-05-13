@@ -3,10 +3,15 @@ title: Distribuire personalizzazioni tramite SDK di Adobe Target
 description: Scopri come distribuire la personalizzazione utilizzando [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/IufE4ByFgQ8WwHZ5YVHbbyvN6jBBNGCK4IC98m9zGsc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -26,7 +31,7 @@ ht-degree: 0%
 
 Supponiamo di essere un&#39;azienda itinerante. Desideri offrire un’offerta personalizzata del 25% di sconto su alcuni pacchetti di viaggio. Affinché l’offerta possa risuonare con i tuoi utenti, decidi di mostrare un punto di riferimento della città di destinazione. Desideri inoltre garantire che la consegna delle offerte personalizzate venga eseguita con latenza vicina a zero, in modo che non influisca negativamente sulle esperienze utente e non distorca i risultati.
 
-## 1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
+## &#x200B;1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
 
 1. L’abilitazione del decisioning sul dispositivo garantisce che un’attività A/B venga eseguita con latenza vicina allo zero. Per abilitare questa funzione, passare a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** in [!DNL Adobe Target] e attivare/disattivare **[!UICONTROL On-Device Decisioning]**.
 
@@ -34,11 +39,11 @@ Supponiamo di essere un&#39;azienda itinerante. Desideri offrire un’offerta pe
 
    >[!NOTE]
    >
-   >Per abilitare o disabilitare l&#39;attivazione/disattivazione di [!UICONTROL On-Device Decisioning], è necessario disporre del ruolo utente [amministratore o approvatore](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=it).
+   >Per abilitare o disabilitare l&#39;attivazione/disattivazione di [!UICONTROL On-Device Decisioning], è necessario disporre del ruolo utente [amministratore o approvatore](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html).
 
    Dopo aver attivato l&#39;interruttore **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] inizia a generare *artefatti regola* per il client.
 
-## 2. Creare un&#39;attività [!UICONTROL Experience Targeting] (XT)
+## &#x200B;2. Crea un&#39;attività [!UICONTROL Experience Targeting] (XT)
 
 1. In [!DNL Adobe Target], passare alla pagina **[!UICONTROL Activities]**, quindi selezionare **[!UICONTROL Create Activity]** > **[!UICONTROL Experience Targeting]**.
 
@@ -48,7 +53,7 @@ Supponiamo di essere un&#39;azienda itinerante. Desideri offrire un’offerta pe
 
    ![Alt immagine](assets/asset-xt-next.png)
 
-## 3. Definire un’esperienza personalizzata per pubblico
+## &#x200B;3. Definire un’esperienza personalizzata per pubblico
 
 1. Nel passaggio **[!UICONTROL Experiences]** della creazione dell&#39;attività, fai clic su **[!UICONTROL Change Audience]** per creare un pubblico di visitatori che desiderano viaggiare a San Francisco, California.
 
@@ -58,7 +63,7 @@ Supponiamo di essere un&#39;azienda itinerante. Desideri offrire un’offerta pe
 
    ![Alt immagine](assets/asset-audience-sf.png)
 
-1. Sempre nel passaggio **[!UICONTROL Experiences]**, inserisci il nome della posizione (1) all&#39;interno dell&#39;applicazione in cui desideri eseguire il rendering di un&#39;offerta speciale relativa al Golden Gate Bridge, ma solo per quelli diretti a San Francisco. Nell&#39;esempio mostrato qui, homepage è la posizione selezionata per l&#39;offerta HTML (2), che è definita nell&#39;area **[!UICONTROL Content]**.
+1. Sempre nel passaggio **[!UICONTROL Experiences]**, inserisci il nome della posizione (1) all&#39;interno dell&#39;applicazione in cui desideri eseguire il rendering di un&#39;offerta speciale relativa al Golden Gate Bridge, ma solo per quelli diretti a San Francisco. Nell&#39;esempio riportato di seguito, homepage è la posizione selezionata per l&#39;offerta HTML (2), definita nell&#39;area **[!UICONTROL Content]**.
 
    ![Alt immagine](assets/asset-content-sf.png)
 
@@ -66,23 +71,23 @@ Supponiamo di essere un&#39;azienda itinerante. Desideri offrire un’offerta pe
 
    ![Alt immagine](assets/asset-content-ny.png)
 
-## 4. Verificare l’esperienza personalizzata per pubblico
+## &#x200B;4. Verificare l’esperienza personalizzata per pubblico
 
 Nel passaggio **[!UICONTROL Targeting]**, verifica di aver configurato l&#39;esperienza personalizzata desiderata per pubblico.
 
 ![Alt immagine](assets/asset-verify-sf-ny.png)
 
-## 5. Impostare la generazione rapporti
+## &#x200B;5. Configurare la generazione di rapporti
 
 Nel passaggio **[!UICONTROL Goals & Settings]**, scegli **[!UICONTROL Adobe Target]** come **[!UICONTROL Reporting Source]** per visualizzare i risultati dell&#39;attività nell&#39;interfaccia utente [!DNL Adobe Target] oppure scegli **[!UICONTROL Adobe Analytics]** per visualizzarli nell&#39;interfaccia utente di Adobe Analytics.
 
 ![Alt immagine](assets/asset-reporting-sf-ny.png)
 
-## 6. Aggiungere metriche per il tracciamento dei KPI
+## &#x200B;6. Aggiungere metriche per il tracciamento dei KPI
 
 Scegli un **[!UICONTROL Goal Metric]** per misurare il successo dell&#39;attività. In questo esempio, una conversione corretta dipende dal fatto che l’utente faccia clic sull’offerta di destinazione personalizzata.
 
-## 7. Implementa le offerte personalizzate nella tua applicazione
+## &#x200B;7. Implementare le offerte personalizzate nella tua applicazione
 
 >[!BEGINTABS]
 
@@ -146,7 +151,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## 8. Implementa il codice per tenere traccia degli eventi di conversione
+## &#x200B;8. Implementare il codice per tenere traccia degli eventi di conversione
 
 >[!BEGINTABS]
 
@@ -219,6 +224,6 @@ notificationDeliveryService.sendNotification(request);
 
 >[!ENDTABS]
 
-## 9. Attiva l’attività Targeting esperienze (XT)
+## &#x200B;9. Attivare l’attività Targeting esperienza (XT)
 
 ![Alt immagine](assets/asset-xt-activate.png)

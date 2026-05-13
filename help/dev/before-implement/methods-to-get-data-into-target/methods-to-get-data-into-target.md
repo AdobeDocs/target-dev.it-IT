@@ -4,10 +4,15 @@ description: Ottieni dati in  [!DNL Target] (parametri di pagina, attributi di p
 title: Come posso inserire dati in Target?
 feature: Implementation
 exl-id: a54e306a-ea8e-4d3f-bc5d-b5895b6b9a84
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/pmlPWRHb9tnrdSFm7s5OZ-RRsJJOxw-ntBY5AeswIcM
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 34%
+source-wordcount: 377
+ht-degree: 27%
 
 ---
 
@@ -20,7 +25,7 @@ I metodi disponibili includono:
 | Metodo | Dettagli |
 | --- | --- |
 | [Parametri pagina](page-parameters.md)<br />(detti anche &quot;parametri mbox&quot;) | I parametri di pagina sono coppie di nome e valore passate direttamente tramite codice di pagina che non sono memorizzati nel profilo del visitatore per un utilizzo futuro.<br />I parametri di pagina sono utili per inviare dati di pagina a [!DNL Target] che non devono essere memorizzati con il profilo del visitatore per utilizzi futuri di targeting. Questi valori vengono invece utilizzati per descrivere la pagina o l&#39;azione che l&#39;utente ha assunto nella pagina specifica. |
-| [Attributi di profilo nella pagina](in-page-profile-attributes.md)<br />(detti anche &quot;attributi di profilo nella mbox&quot;) | Gli attributi di profilo nella pagina sono coppie di nome e valore passate direttamente tramite il codice della pagina archiviato nel profilo del visitatore per un utilizzo futuro.<br />Gli attributi di profilo nella pagina consentono di memorizzare dati specifici dell&#39;utente nel profilo di Target per il targeting e la segmentazione successivi. |
+| [Attributi di profilo nella pagina](in-page-profile-attributes.md)<br />(detti anche &quot;attributi di profilo nella mbox&quot;) | Gli attributi del profilo nella pagina sono coppie nome/valore passate direttamente attraverso il codice della pagina e memorizzate nel profilo del visitatore per utilizzi futuri.<br />Gli attributi del profilo nella pagina consentono di memorizzare dati specifici dell&#39;utente nel profilo di Target per un targeting e una segmentazione successivi. |
 | [Attributi di profilo script](script-profile-attributes.md) | Gli attributi del profilo di script sono coppie nome/valore definite nella soluzione [!DNL Target]. Il valore è determinato dall&#39;esecuzione di un frammento JavaScript sul server di destinazione per ogni chiamata del server.<br />Gli utenti scrivono piccoli snippet di codice da eseguire per chiamata mbox e prima che un visitatore venga valutato per l&#39;appartenenza a un pubblico e a un&#39;attività. |
 | [Fornitori di dati](data-providers.md) | I fornitori di dati ti consentono di trasmettere facilmente i dati da terze parti a Target. |
 | [API di aggiornamento del profilo bulk](bulk-profile-update-api.md) | Tramite API, invia un file .csv a [!DNL Target] con gli aggiornamenti del profilo del visitatore per molti visitatori. Ogni profilo visitatore può essere aggiornato con più attributi di profilo nella pagina in una chiamata. |

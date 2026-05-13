@@ -1,12 +1,15 @@
 ---
-title: Usa [!UICONTROL getOffers()] in [!DNL Adobe Target] con SDK di Node.js
+title: Usa [!UICONTROL getOffers()] in [!DNL Adobe Target] con SDK Node.js
 description: Scopri come utilizzare [!UICONTROL getOffers()] per eseguire una decisione e recuperare un'esperienza da [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 21%
+source-wordcount: 326
+ht-degree: 20%
 
 ---
 
@@ -52,7 +55,7 @@ L&#39;oggetto `options` ha la seguente struttura:
 | targetCookie | Oggetto | Cookie [!DNL Target] |
 | targetLocationHintCookie | Oggetto | Cookie dell&#39;hint di posizione [!DNL Target] |
 | analyticsDetails | Array | Payload di Analytics, in caso di utilizzo di Analytics lato client |
-| responseTokens | Array | Elenco di [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it&). |
+| responseTokens | Array | Elenco di [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
 | traccia | Array | Dati di trace aggregati per tutte le mbox/visualizzazioni di richiesta |
 | status | Oggetto | Oggetto contenente lo stato della risposta. |
 | decisioningMethod | Stringa | Determina il metodo decisionale da utilizzare ([sul dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), lato server, ibrido) |
