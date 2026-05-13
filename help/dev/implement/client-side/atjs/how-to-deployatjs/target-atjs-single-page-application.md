@@ -333,12 +333,12 @@ Consulta la pagina relativa al [funzionamento di at.js 2.x](https://experiencele
 
 ### Implementare at.js 2.x in un’applicazione a pagina singola
 
->[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/328136/?captions=ita&quality=12)
 
 Per ulteriori informazioni, consulta [Implementare at.js 2.x di Adobe Target in un&#39;applicazione a pagina singola](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=it).
 
 ### Utilizzo del Compositore esperienza visivo per le applicazioni a pagina singola in [!DNL Adobe Target]
 
->[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/328139/?captions=ita&quality=12)
 
 Per ulteriori informazioni, vedere [Utilizzo del Compositore esperienza visivo per le applicazioni a pagina singola in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=it).
