@@ -5,16 +5,10 @@ keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni 
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
 TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1747
@@ -72,7 +66,7 @@ Il concetto di [!UICONTROL Views] può essere esteso molto oltre questo scenario
 
 È possibile sfruttare [!UICONTROL XDM Views] in [!DNL Target] per consentire agli addetti al marketing di eseguire test A/B e XT sulle applicazioni a pagina singola tramite [!UICONTROL Visual Experience Composer]. Per completare la configurazione di uno sviluppatore una tantum, è necessario eseguire i passaggi seguenti:
 
-1. Installa [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/install/overview).
+1. Installa [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 2. Determinare tutti i [!UICONTROL XDM Views] nell&#39;applicazione a pagina singola che si desidera personalizzare.
 3. Dopo aver definito [!UICONTROL XDM Views], per distribuire le attività A/B o XT del Compositore esperienza visivo, implementare la funzione `sendEvent()` con `renderDecisions` impostato su `true` e i corrispondenti [!UICONTROL XDM View] nell&#39;applicazione a pagina singola. [!UICONTROL XDM View] deve essere passato in `xdm.web.webPageDetails.viewName`. Questo passaggio consente agli esperti di marketing di sfruttare [!UICONTROL Visual Experience Composer] per avviare test A/B e XT per tali XDM.
 
@@ -232,7 +226,7 @@ Dopo aver definito [!UICONTROL XDM Views] e implementato `sendEvent()` con i [!U
 
 >[!NOTE]
 >
->Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [l&#39;estensione Chrome VEC Helper](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [l&#39;estensione Chrome VEC Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Pannello [!UICONTROL Modifications]
 

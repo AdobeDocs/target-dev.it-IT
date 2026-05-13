@@ -5,24 +5,11 @@ title: Come posso effettuare l’aggiornamento da at.js versione 1.x alla versio
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
 TQID: https://experienceleague.adobe.com/JGsuogzhCvThr4QGHJ5g4d8ZqGVZ8ClAf7hXuoh7X0Q
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 3037
@@ -336,7 +323,7 @@ I clienti possono specificare un nome di mbox globale tramite **[!UICONTROL Targ
 
 Sì, gli eventi personalizzati at.js sono applicabili anche a `triggerView()`.
 
-### Quando richiamo `triggerView()` con &lbrace;`"page" : "true"`&rbrace;, dice che invierà una notifica al backend [!DNL Target] e aumenterà le impression. Questo provocherà anche l’esecuzione degli script di profilo?
+### Quando richiamo `triggerView()` con &amp;lbrace;`"page" : "true"`&amp;rbrace;, dice che invierà una notifica al backend [!DNL Target] e aumenterà le impression. Questo provocherà anche l’esecuzione degli script di profilo?
 
 Quando si effettua una chiamata di preacquisizione al backend [!DNL Target], avviene l’esecuzione degli script di profilo. Successivamente, i dati del profilo interessati saranno crittografati e trasmessi nuovamente al lato client. Dopo la chiamata di `triggerView()` con `{"page": "true"}`, si invierà una notifica insieme ai dati di profilo crittografati. Questo si verifica quando il backend [!DNL Target] deciderà di decrittografare i dati di profilo e archiviarli nei database.
 
@@ -424,7 +411,7 @@ Le tabelle seguenti contengono una spiegazione di at.js. 2.*x* compatibilità co
 
 ## Token di risposta
 
-at.js 2.*x*, proprio come at.js 1.*x*, utilizza l&#39;evento personalizzato `at-request-succeeded` per ottenere i token di risposta. Per esempi di codice con l’evento `at-request-succeeded` personalizzato, consulta [Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it).
+at.js 2.*x*, proprio come at.js 1.*x*, utilizza l&#39;evento personalizzato `at-request-succeeded` per ottenere i token di risposta. Per esempi di codice con l’evento `at-request-succeeded` personalizzato, consulta [Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html).
 
 ## Parametri di at.js 1.*x* in corrispondenza del payload di at.js 2.*x*
 
@@ -791,5 +778,5 @@ at.js 2.*x* migliora il supporto di Adobe [!DNL Target] per le applicazioni a pa
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Per ulteriori informazioni, consulta [Informazioni sul funzionamento di at.js 2.*x*](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=it).
+Per ulteriori informazioni, consulta [Informazioni sul funzionamento di at.js 2.*x*](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html).
 

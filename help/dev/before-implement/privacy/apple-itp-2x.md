@@ -5,20 +5,11 @@ title: In che modo  [!DNL Target] gestisce il supporto ITP di Apple?
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
 TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 681
@@ -48,8 +39,8 @@ Apple ITP 2.x ha un impatto su [!DNL Target] nelle seguenti aree:
 | --- | --- |
 | Aumento potenziale dei conteggi di visitatori univoci | Poiché la finestra di scadenza è impostata su sette giorni (con ITP 2.1) e un giorno (con ITP 2.2 e ITP 2.3), potrebbe verificarsi un aumento di visitatori univoci provenienti dai browser Safari. Se i visitatori visitano di nuovo il tuo dominio dopo sette giorni (ITP 2.1) o un giorno (ITP 2.2 e ITP 2.3), [!DNL Target] è costretto a inserire un nuovo cookie [!DNL Target] nel tuo dominio al posto del cookie scaduto. Il nuovo cookie [!DNL Target] dà luogo a un nuovo visitatore univoco, nonostante si tratti sempre dello stesso visitatore. |
 | Periodi di lookback ridotti per le attività [!DNL Target] | I profili dei visitatori per le attività [!DNL Target] potrebbero avere un periodo di lookback ridotto per scopi decisionali. I cookie [!DNL Target] vengono utilizzati per identificare un visitatore e archiviare gli attributi del profilo utente ai fini della personalizzazione. Dato che i cookie [!DNL Target] possono scadere su Safari dopo sette giorni (ITP 2.1) o un giorno (ITP 2.2 e 2.3), i dati del profilo utente associati al cookie [!DNL Target] eliminato non possono essere più utilizzati a fini decisionali. |
-| Script di profilo basati su 3rdPartyID | Poiché la finestra di scadenza è impostata su sette giorni (con ITP 2.1) e un giorno (con ITP 2.2 e ITP 2.3), [gli script di profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=it) basati sul cookie 3rdPartyID cesseranno di funzionare alla scadenza. |
-| URL di controllo qualità/anteprima nei dispositivi iOS | Poiché l&#39;intervallo di scadenza è impostato su sette giorni (con ITP 2.1) e un giorno (con ITP 2.2 e ITP 2.3), [gli URL di controllo qualità/anteprima](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=it) cesseranno di funzionare alla scadenza perché gli URL sono basati sul cookie 3rdPartyID. |
+| Script di profilo basati su 3rdPartyID | Poiché la finestra di scadenza è impostata su sette giorni (con ITP 2.1) e un giorno (con ITP 2.2 e ITP 2.3), [gli script di profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html) basati sul cookie 3rdPartyID cesseranno di funzionare alla scadenza. |
+| URL di controllo qualità/anteprima nei dispositivi iOS | Poiché l&#39;intervallo di scadenza è impostato su sette giorni (con ITP 2.1) e un giorno (con ITP 2.2 e ITP 2.3), [gli URL di controllo qualità/anteprima](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) cesseranno di funzionare alla scadenza perché gli URL sono basati sul cookie 3rdPartyID. |
 
 ## La mia attuale implementazione [!DNL Target] è interessata?
 

@@ -7,12 +7,9 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 905
@@ -156,7 +153,7 @@ Se ricevi un errore che indica che l’entità non è stata trovata, come mostra
 
    >[!NOTE]
    >
-   >Se non viene specificato alcun ambiente in modo esplicito, Get Entity tenta di ottenere l&#39;entità solo dall&#39;[ambiente predefinito](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=it). Se desideri effettuare il pull da un ambiente diverso da quello predefinito, devi specificare l’ID ambiente.
+   >Se non viene specificato alcun ambiente in modo esplicito, Get Entity tenta di ottenere l&#39;entità solo dall&#39;[ambiente predefinito](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Se desideri effettuare il pull da un ambiente diverso da quello predefinito, devi specificare l’ID ambiente.
 
 1. Se necessario, aggiungi il parametro `environmentId` e invia nuovamente la richiesta.
 

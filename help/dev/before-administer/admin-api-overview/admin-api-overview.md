@@ -4,17 +4,10 @@ description: Panoramica di  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1400
@@ -28,7 +21,7 @@ Questo articolo fornisce una panoramica delle informazioni di base necessarie pe
 
 >[!NOTE]
 >
->Se desideri amministrare [!DNL Target] tramite l&#39;interfaccia utente, consulta la [sezione amministrazione della *Guida di Adobe Target Business Practitioner*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=it).
+>Se desideri amministrare [!DNL Target] tramite l&#39;interfaccia utente, consulta la [sezione amministrazione della *Guida di Adobe Target Business Practitioner*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 >
 >Le API amministratore e le API profilo sono spesso indicate collettivamente (&quot;API amministratore e API profilo&quot;), ma è possibile fare riferimento a esse separatamente (&quot;API amministratore&quot; e &quot;API profilo&quot;). L&#39;API Recommendations è un&#39;implementazione specifica di un&#39;API amministratore [!DNL Target].
 
@@ -86,11 +79,11 @@ Di seguito sono riportati i codici di risposta comuni per le API di amministrazi
 
 Un’attività ti consente di testare o personalizzare il contenuto per i tuoi utenti. Le attività possono essere di uno dei seguenti tipi:
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it)
-* [Targeting esperienza (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it)
-* [Consigli](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=it)
-* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
-* [Test multivariato (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=it)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [Targeting esperienza (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [Consigli](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Test multivariato (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## Aggiornamenti in blocco
 

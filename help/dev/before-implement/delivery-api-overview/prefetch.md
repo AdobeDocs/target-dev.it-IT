@@ -5,17 +5,10 @@ keywords: API Delivery
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 548
@@ -136,7 +129,7 @@ All&#39;interno della risposta, viene visualizzato il campo `content` contenente
 
 ## Preacquisire mbox con `clickTrack` metriche quando si utilizza [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it){target=_blank} (A4T) è un&#39;integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) è un&#39;integrazione tra soluzioni che consente di creare attività basate su [!DNL Analytics] metriche di conversione e segmenti di pubblico.
 
 Il seguente frammento di codice è una risposta di un recupero preventivo di una mbox contenente `clickTrack` metriche per notificare a [!DNL Analytics] che è stato fatto clic su un&#39;offerta:
 
@@ -181,7 +174,7 @@ Il seguente frammento di codice è una risposta di un recupero preventivo di una
 
 ## Preacquisire le viste
 
-Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o Mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per applicazioni a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o Mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per applicazioni a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \

@@ -5,18 +5,11 @@ title: Quali sono le domande più comuni su at.js, e le relative risposte?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 2981
@@ -161,7 +154,7 @@ Per supportare i visitatori Safari, un dominio X migliore sarebbe &quot;disabili
 
 ## È possibile utilizzare Target [!UICONTROL Visual Experience Composer] (VEC) nelle applicazioni a pagina singola?
 
-Sì, puoi utilizzare il Compositore esperienza visivo per la tua applicazione a pagina singola se utilizzi at.js 2.x. Per ulteriori informazioni, vedere [Compositore esperienza visivo per applicazione a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=it).
+Sì, puoi utilizzare il Compositore esperienza visivo per la tua applicazione a pagina singola se utilizzi at.js 2.x. Per ulteriori informazioni, vedere [Compositore esperienza visivo per applicazione a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
 
 ## Posso utilizzare il debugger di Adobe Experience Cloud con le implementazioni di at.js?
 
@@ -252,7 +245,7 @@ Tieni presente che per i token di risposta e gli ID sessione trasmessi in queste
 * Tiene traccia delle sessioni di comunicazione
 * Sono composti da caratteri casuali
 * Gli ID sessione sono validi per 30 minuti
-* I token di risposta possono essere disabilitati ([Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it))
+* I token di risposta possono essere disabilitati ([Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
 * Sono utili solo nell’ambiente delle soluzioni Adobe.
 
 È previsto che nelle richieste at.js venga visualizzata l’intestazione `Access-Control-Allow-Origin` con valore &quot;*&quot;, in quanto sono pubbliche, non è richiesta l’autenticazione e l’accesso ad Adobe Edge Network deve essere effettuato da qualsiasi dominio tramite chiamate JavaScript.

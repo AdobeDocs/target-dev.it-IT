@@ -5,23 +5,11 @@ title: Come si utilizza la funzione [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 2702
@@ -120,7 +108,7 @@ ht-degree: 56%
 
   Solo lato server è il metodo decisionale predefinito impostato automaticamente quando at.js 2.5+ viene implementato e distribuito sulle proprietà web.
 
-  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=it).
+  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html).
 
   Inoltre, migliorare le tue esperienze personalizzate utilizzando il profilo utente di [!DNL Target], che viene mantenuto tra sessioni e canali diversi, può fornire risultati potenti per la tua azienda.
 
@@ -302,8 +290,8 @@ I video che seguono contengono ulteriori informazioni:
 
 | Video | Descrizione |
 |--- |--- |
-| [Utilizzo di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=it) | Fornitori di dati è una funzionalità che ti permette di trasmettere facilmente dati da terze parti a Target. Un esempio di terza parte potrebbe essere un servizio meteo, un DMP o persino il tuo servizio web. Puoi utilizzare questi dati per generare tipi di pubblico e contenuti mirati e per arricchire il profilo del visitatore. |
-| [Implementazione di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=it) | Dettagli di implementazione ed esempi di utilizzo della funzionalità dataProvider di Adobe [!DNL Target] per recuperare dati da provider di dati di terze parti e trasmetterli nella richiesta [!DNL Target]. |
+| [Utilizzo di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | Fornitori di dati è una funzionalità che ti permette di trasmettere facilmente dati da terze parti a Target. Un esempio di terza parte potrebbe essere un servizio meteo, un DMP o persino il tuo servizio web. Puoi utilizzare questi dati per generare tipi di pubblico e contenuti mirati e per arricchire il profilo del visitatore. |
+| [Implementazione di Fornitori di dati in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | Dettagli di implementazione ed esempi di utilizzo della funzionalità dataProvider di Adobe [!DNL Target] per recuperare dati da provider di dati di terze parti e trasmetterli nella richiesta [!DNL Target]. |
 
 L’impostazione `window.targetGlobalSettings.dataProviders` è un array dei fornitori di dati.
 

@@ -7,15 +7,10 @@ thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 1449
@@ -52,9 +47,9 @@ Per utilizzare l’API di consegna per fornire esperienze Target, inclusi i cons
 
 ## Creare un consiglio utilizzando il Compositore esperienza basato su moduli
 
-Per creare consigli che possono essere utilizzati con l&#39;API di consegna, utilizza il [Compositore basato su modulo](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it).
+Per creare consigli che possono essere utilizzati con l&#39;API di consegna, utilizza il [Compositore basato su modulo](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-1. Innanzitutto, crea e salva una progettazione basata su JSON da utilizzare nei consigli. Per un esempio di JSON e informazioni generali su come restituire le risposte JSON durante la configurazione di un&#39;attività basata su modulo, consulta la documentazione su [Creazione di progettazioni per consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=it). In questo esempio, la progettazione è denominata *JSON semplice.*
+1. Innanzitutto, crea e salva una progettazione basata su JSON da utilizzare nei consigli. Per un esempio di JSON e informazioni generali su come restituire le risposte JSON durante la configurazione di un&#39;attività basata su modulo, consulta la documentazione su [Creazione di progettazioni per consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). In questo esempio, la progettazione è denominata *JSON semplice.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. In Target, passa a **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**, quindi seleziona **[!UICONTROL Form]**.
@@ -64,7 +59,7 @@ Per creare consigli che possono essere utilizzati con l&#39;API di consegna, uti
 1. Selezionare una proprietà e fare clic su **[!UICONTROL Next]**.
 1. Definisci il percorso in cui desideri che gli utenti ricevano la risposta del consiglio. Nell&#39;esempio seguente viene utilizzata una posizione denominata *api_charter*. Seleziona la progettazione basata su JSON, creata in precedenza, denominata *JSON semplice.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. Salva e attiva il consiglio. Genera risultati. [Una volta che i risultati sono pronti](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=it), puoi utilizzare l&#39;API di consegna per recuperarli.
+1. Salva e attiva il consiglio. Genera risultati. [Una volta che i risultati sono pronti](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html), puoi utilizzare l&#39;API di consegna per recuperarli.
 
 ## Utilizzare l’API di consegna
 
@@ -125,7 +120,7 @@ In una [sezione precedente](manage-catalog.md) abbiamo imparato a gestire le ent
 ## Documentazione di riferimento
 
 * [Documentazione API di consegna di Adobe Target](/help/dev/implement/delivery-api/overview.md)
-* [Integrare i Consigli con l’e-mail](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=it)
+* [Integrare i Consigli con l’e-mail](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## Riepilogo e revisione
 
