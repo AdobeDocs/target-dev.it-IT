@@ -44,7 +44,7 @@ TLS 1.2 è il valore predefinito dal 1° marzo 2020 e TLS 1.1 non sarà più sup
 
 Adobe sposterà i clienti a TLS 1.2 in modo graduale. Per coloro che sono già in possesso di domini conformi alla versione 1.2, verranno spostati in TLS 1.2 senza la necessità di apportare modifiche. La maggior parte dei domini dei clienti supporta già TLS 1.2; tuttavia, se il tuo dominio non supporta TLS 1.2, manterremo tali domini su TLS 1.1 come oggi (fino a marzo 2020).
 
-Non dovresti riscontrare alcun problema durante questa fase di migrazione. Se il Compositore esperienza visivo ha smesso di caricare un sito che prima funzionava, [apri un ticket dell&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) citando questa migrazione come possibile causa.
+Non dovresti riscontrare alcun problema durante questa fase di migrazione. Se il Compositore esperienza visivo ha smesso di caricare un sito che prima funzionava, [apri un ticket dell&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it&#reference_ACA3391A00EF467B87930A450050077C) citando questa migrazione come possibile causa.
 
 Tuttavia, se sei uno di quei clienti che usano TSL 1.1 senza supportare TLS 1.2, devi pianificare lo spostamento dei tuoi domini/dell’infrastruttura a TLS 1.2. Continueremo a supportare il protocollo TLS 1.1 fino al 1° marzo 2020. A partire dal 1° marzo 2020, [!DNL Target] non supporterà il protocollo TLS 1.1 da utilizzare per il Compositore esperienza visivo tramite la funzionalità Compositore esperienza avanzato.
 
