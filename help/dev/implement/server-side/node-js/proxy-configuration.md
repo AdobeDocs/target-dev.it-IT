@@ -4,8 +4,10 @@ description: Scopri come configurare la configurazione proxy [!UICONTROL TargetC
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
 TQID: https://experienceleague.adobe.com/kaE-ZEOTteaVp5kWSHiVYCvEiHuQHSMqeWRq6r-mJaA
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 102
@@ -37,5 +39,5 @@ client = TargetClient.create({
 ```
 
 Si noti che questo funziona solo per le versioni di Nodo 18.2+, in cui `undici.fetch` è il `fetch` predefinito per il nodo.
-Visita l&#39;archivio degli esempi di SDK del nodo [](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
+Visita l&#39;archivio degli esempi di SDK del nodo [&#128279;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
 esempi di configurazione proxy per le versioni precedenti di node e ulteriori informazioni.
