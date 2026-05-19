@@ -4,10 +4,24 @@ description: Scopri come [!DNL Adobe Target] rispetta le leggi sulla privacy dei
 title: In che modo Target gestisce i problemi relativi alla privacy, inclusi i PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
+TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 43%
+source-wordcount: 799
+ht-degree: 44%
 
 ---
 
@@ -25,7 +39,7 @@ L&#39;indirizzo IP di un visitatore del tuo sito Web viene trasmesso a un DPC (A
 
 ## Sostituzione dell’ultimo ottetto di indirizzi IP
 
-Adobe ha sviluppato un&#39;impostazione &quot;privacy by design&quot; che gli utenti possono abilitare, ad Adobe [!DNL Target]. Se attivato, l&#39;Adobe [!DNL Target] offusca immediatamente l&#39;ultimo ottetto (l&#39;ultima parte) dell&#39;indirizzo IP al momento della raccolta dell&#39;indirizzo IP. Questa forma di anonimizzazione viene eseguita prima di qualsiasi elaborazione dell’indirizzo IP, inclusa l’operazione di lookup geografico.
+Adobe ha sviluppato un&#39;impostazione &quot;privacy by design&quot; che gli utenti possono abilitare per Adobe [!DNL Target]. Quando è abilitato, Adobe [!DNL Target] offusca immediatamente l&#39;ultimo ottetto (l&#39;ultima parte) dell&#39;indirizzo IP al momento della raccolta dell&#39;indirizzo IP. Questa forma di anonimizzazione viene eseguita prima di qualsiasi elaborazione dell’indirizzo IP, inclusa l’operazione di lookup geografico.
 
 Quando questa funzione è abilitata, l’indirizzo IP è reso sufficientemente anonimo da non essere più identificabile come dato personale. Di conseguenza, [!DNL Target] può essere utilizzato in conformità con le leggi sulla privacy dei dati nei paesi che non consentono la raccolta di informazioni personali. L’ottenimento di informazioni a livello di città sarà probabilmente influenzato in modo significativo dall’oscuramento dell’indirizzo IP. L’ottenimento di informazioni a livello di area e nazionale dovrebbe essere influenzato solo leggermente.
 
@@ -74,6 +88,6 @@ Consulta [Normative sulla privacy e la protezione dei dati](/help/dev/before-imp
 
 ## Raccolta di dati sull’utilizzo delle funzioni
 
-I dati di utilizzo delle singole funzionalità vengono raccolti per Adobi interni per stabilire se [!DNL Target] funzionalità vengono eseguite come previsto o per identificare le funzionalità utilizzate poco. Vengono raccolte varie misurazioni della latenza per contribuire a risolvere i problemi legati alle prestazioni. I dati personali non vengono raccolti.
+I dati di utilizzo delle singole funzionalità vengono raccolti per uso interno di Adobe per stabilire se [!DNL Target] funzionalità vengono eseguite come previsto o per identificare le funzionalità utilizzate poco. Vengono raccolte varie misurazioni della latenza per contribuire a risolvere i problemi legati alle prestazioni. I dati personali non vengono raccolti.
 
 Puoi rinunciare al reporting dei dati di utilizzo nei nostri SDK impostando `telemetryEnabled` su false nelle opzioni di inizializzazione del client. Per ulteriori informazioni, consulta [telemetryEnabled in targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#telemetryenabled).

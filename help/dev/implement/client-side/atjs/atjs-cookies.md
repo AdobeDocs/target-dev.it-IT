@@ -4,20 +4,36 @@ description: Dettagli sulla gestione dei cookie da parte di  [!DNL Adobe Target]
 title: Cookie di at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
-source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
+TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 72%
+source-wordcount: 1830
+ht-degree: 67%
 
 ---
 
 # Cookie di at.js
 
-Informazioni su at.js 2.x e at.js 1.*x*: comportamento dei cookie.
+Informazioni sul comportamento dei cookie at.js 2.x e at.js 1.*x*.
 
 ## Comportamento dei cookie at.js 2.x
 
-Per at.js versione 2.x (fino alla versione 2.10.0, ma non inclusa), *sono supportati solo i cookie di prime parti*. Proprio come in at.js 1.*x*, il cookie di prime parti &quot;mbox&quot; è memorizzato in `clientdomain.com`, dove `clientdomain` è il tuo dominio.
+Per at.js versione 2.x (fino alla versione 2.10.0, ma non inclusa), *sono supportati solo i cookie di prime parti*. Proprio come in at.js 1.*x*, il cookie di prime parti, &quot;mbox&quot;, è memorizzato in `clientdomain.com`, dove `clientdomain` è il tuo dominio.
 
 at.js genera un ID sessione e lo memorizza nel cookie. La prima risposta contiene tutte le informazioni relative all’attività, nonché il `TNT` o `PC ID` generato dai server [!DNL Target]. at.js quindi scrive il `TNT/PC ID` nel cookie.
 
@@ -29,16 +45,16 @@ Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato dal servizio Ex
 
 ### Supporto per cookie di terze parti e monitoraggio tra più domini
 
-Il monitoraggio tra più domini consente di visualizzare sessioni su due siti correlati, ma con domini diversi, come una sessione singola. Ad esempio, potresti creare un&#39;attività [!DNL Target] che si espande su `siteA.com` e `siteB.com` con il visitatore che resta nella stessa esperienza quando passa da un dominio all&#39;altro. Questa funzionalità è legata alcomportamento dei cookie di terze parti e di prima parte di at.js 1.*x*.
+Il monitoraggio tra più domini consente di visualizzare sessioni su due siti correlati, ma con domini diversi, come una sessione singola. Ad esempio, potresti creare un&#39;attività [!DNL Target] che si espande su `siteA.com` e `siteB.com` con il visitatore che resta nella stessa esperienza quando passa da un dominio all&#39;altro. Questa funzionalità è legata al comportamento di cookie di terze parti e di prima parte di at.js 1.*x*.
 
 >[!NOTE]
 >
 >Per at.js versione 2.10.0 e successive, è disponibile il supporto sia dei cookie di terze parti che del tracciamento tra domini diversi.
 
 
-## at.js 1.Comportamento cookie *x*
+## Comportamento cookie at.js 1.*x*
 
-Per di at.js 1.*x*, il comportamento del cookie dipende dal fatto di essere un cookie di prima parte, un cookie di terze parti con un cookie di prima parte oppure un cookie di terze parti da solo.
+Per at.js versione 1.*x*, il comportamento del cookie dipende dal fatto di essere un cookie di prima parte, un cookie di terze parti con un cookie di prima parte oppure un cookie di terze parti da solo.
 
 ### Quando utilizzare un cookie di prima parte o di terze parti
 

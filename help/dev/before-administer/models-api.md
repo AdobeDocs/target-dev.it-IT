@@ -3,9 +3,20 @@ title: Panoramica API dei modelli di Adobe
 description: Panoramica di Models API, che gli utenti possono utilizzare per impedire che le funzioni vengano incluse nei modelli di apprendimento automatico.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: 1316
 ht-degree: 2%
 
 ---
@@ -45,7 +56,7 @@ Come gestire i inserisce nell&#39;elenco Bloccati di
 
 ## Passaggio 1: visualizzare l’elenco delle funzioni per un’attività {#step1}
 
-Prima di inserire nell&#39;elenco Bloccati una feature, è necessario visualizzare l&#39;elenco delle feature attualmente incluse nei modelli per tale attività.
+Prima di la creazione di una feature, visualizzate l&#39;elenco delle feature attualmente incluse nei modelli per tale attività.
 
 >[!BEGINTABS]
 
@@ -102,7 +113,7 @@ Nell’esempio mostrato qui, l’utente sta controllando per visualizzare l’el
 
 **[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=it).
 
-**[!UICONTROL internalName]** è l&#39;identificatore effettivo della funzionalità. Viene creato anche da [!DNL Target], ma non può essere modificato. Inserire nell&#39;elenco Bloccati Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
+**[!UICONTROL internalName]** è l&#39;identificatore effettivo della funzionalità. Viene creato anche da [!DNL Target], ma non può essere modificato. Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
 
 Tieni presente che, affinché l’elenco delle funzioni possa essere compilato con valori (ovvero, affinché non sia nullo), un’attività:
 
@@ -139,7 +150,7 @@ Nell’esempio mostrato qui, l’utente sta controllando l’elenco delle funzio
 
 >[!NOTE]
 >
->Potresti vedere risultati vuoti come questo, la prima volta che controlli l’intero inserisco nell&#39;elenco Bloccati di, prima di aggiungervi qualsiasi funzione. Tuttavia, una volta aggiunte (e successivamente rimosse) feature da un inserire nell&#39;elenco Bloccati inserisco nell&#39;elenco Bloccati di, è possibile che vengano visualizzati risultati leggermente diversi, in cui viene restituito un array di feature di feature di vuoto. Continua a leggere per vedere un esempio di questo in [Passaggio 4](#step4).
+>Potresti vedere risultati vuoti come questo, la prima volta che controlli l’intero inserisco nell&#39;elenco Bloccati di, prima di aggiungervi qualsiasi funzione. Tuttavia, una volta aggiunte (e successivamente rimosse) feature da un inserisco nell&#39;elenco Bloccati di, è possibile che vengano visualizzati risultati leggermente diversi, in cui viene restituito un array di feature di feature di vuoto. Continua a leggere per vedere un esempio di questo in [Passaggio 4](#step4).
 
 ## Passaggio 3: aggiungere funzioni al inserisco nell&#39;elenco Bloccati di dell’attività {#step3}
 
@@ -149,7 +160,7 @@ Per aggiungere funzionalità al inserisco nell&#39;elenco Bloccati di, modificar
 * Popolare `blockedFeatures` con valori identificati da `internalName`. Vedi [Passaggio 1](#step1).
 * Popolare `blockedFeatureSources` con i valori della tabella seguente.
 
-`blockedFeatureSources` indica la provenienza di una funzionalità. Ai fini della inserire nell&#39;elenco Bloccati dei gruppi di feature, questi vengono utilizzati come gruppi o categorie di feature che consentono agli utenti di bloccare interi insiemi di feature contemporaneamente. I valori di `blockedFeatureSources` corrispondono ai primi caratteri dell&#39;identificatore di una caratteristica (`blockedFeatures` o `internalName` valori), pertanto possono essere considerati anche &quot;prefissi di funzionalità&quot;.
+`blockedFeatureSources` indica la provenienza di una funzionalità. Ai fini dell&#39;inserire nell&#39;elenco Bloccati dei gruppi di feature, questi vengono utilizzati come gruppi o categorie di feature che consentono agli utenti di bloccare interi insiemi di feature contemporaneamente. I valori di `blockedFeatureSources` corrispondono ai primi caratteri dell&#39;identificatore di una caratteristica (`blockedFeatures` o `internalName` valori), pertanto possono essere considerati anche &quot;prefissi di funzionalità&quot;.
 
 ### Tabella di `blockedFeatureSources` valori {#table}
 
@@ -205,7 +216,7 @@ Dopo aver inserito nell&#39;elenco Bloccati una funzione, si consiglia di verifi
 
 ## Passaggio 4: (facoltativo) sblocca {#step4}
 
-Inserire nell&#39;elenco Bloccati Per sbloccare tutte le funzionalità, cancellare i valori da `blockedFeatureSources` o `blockedFeatures`.
+Per sbloccare tutte le funzionalità, cancellare i valori da `blockedFeatureSources` o `blockedFeatures`.
 
 >[!BEGINTABS]
 

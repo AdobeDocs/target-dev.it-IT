@@ -1,13 +1,24 @@
 ---
 keywords: at.js, debug at.js, adobe Experience Cloud debugger, experience cloud debugger, traccia mbox, evidenziazione mbox, debug, debug, 9 $
 description: Utilizza [!UICONTROL Adobe Experience Cloud Debugger] per visualizzare la configurazione della libreria, esaminare le richieste, attivare la registrazione della console, disabilitare [!DNL Target] le richieste di chiamata e altro ancora.
-title: Come posso eseguire il debug di at.Js con [!UICONTROL Adobe Experience Cloud Debugger]?
+title: Come eseguire il debug in.Js con [!UICONTROL Adobe Experience Cloud Debugger]?
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 7%
+source-wordcount: 162
+ht-degree: 6%
 
 ---
 
@@ -25,12 +36,12 @@ Nei video seguenti viene descritto il processo di debugging:
 
 ### Aggiungi il distintivo Panoramica dell&#39;estensione Adobe Experience Cloud Debugger ![](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/326674/?quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/326674/?captions=ita&quality=12)
 
 ### Debug Adobe Target di base con Adobe Experience Cloud Debugger ![Icona Panoramica](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/326675/?quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/326675/?captions=ita&quality=12)
 
 ### Mbox Trace ![Icona panoramica](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/326676/?quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/326676/?captions=ita&quality=12)

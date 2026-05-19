@@ -3,10 +3,22 @@ title: Quali funzioni sono supportate nel decisioning sul dispositivo?
 description: Scopri come distribuire i contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico utilizzando una chiamata al server live.
 feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Fgwu8Nh90i-tS1aCUVmQReGz6DYBP2GHdcNM7z17BSk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 13%
+source-wordcount: 710
+ht-degree: 9%
 
 ---
 
@@ -54,7 +66,7 @@ La tabella seguente indica quali regole di pubblico sono supportate o meno per [
 
 ### Geotargeting per [!UICONTROL on-device decisioning]
 
-Per mantenere una latenza prossima allo zero per le attività [!UICONTROL on-device decisioning] con pubblico basato su geotargeting, l&#39;Adobe consiglia di fornire personalmente i valori geografici nella chiamata a `getOffers`. A tale scopo, impostare l&#39;oggetto `Geo` in `Context` della richiesta. Ciò significa che il server dovrà essere in grado di determinare la posizione di ciascun utente finale. Ad esempio, il server potrebbe eseguire una ricerca IP-to-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
+Per mantenere una latenza prossima allo zero per le attività [!UICONTROL on-device decisioning] con pubblico basato su geotargeting, Adobe consiglia di fornire autonomamente i valori geografici nella chiamata a `getOffers`. A tale scopo, impostare l&#39;oggetto `Geo` in `Context` della richiesta. Ciò significa che il server dovrà essere in grado di determinare la posizione di ciascun utente finale. Ad esempio, il server potrebbe eseguire una ricerca IP-to-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
 
 >[!BEGINTABS]
 
@@ -114,7 +126,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-Tuttavia, se non hai la possibilità di eseguire ricerche IP-to-Geo sul server, ma desideri comunque eseguire [!UICONTROL on-device decisioning] per `getOffers` richieste che contengono tipi di pubblico basati su geotargeting, anche questo è supportato. Il lato negativo di questo approccio è che utilizzerà una ricerca remota IP-Geo, che aggiungerà latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` remota, poiché raggiunge una rete CDN vicina al server. È necessario fornire solo il campo `ipAddress` nell&#39;oggetto `Geo` nella `Context` della richiesta, affinché l&#39;SDK possa recuperare la geolocalizzazione dell&#39;indirizzo IP dell&#39;utente. Se viene fornito un altro campo oltre a `ipAddress`, l&#39;SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
+Tuttavia, se non hai la possibilità di eseguire ricerche IP-to-Geo sul server, ma desideri comunque eseguire [!UICONTROL on-device decisioning] per `getOffers` richieste che contengono tipi di pubblico basati su geotargeting, anche questo è supportato. Il lato negativo di questo approccio è che utilizzerà una ricerca remota IP-Geo, che aggiungerà latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` remota, poiché raggiunge una rete CDN vicina al server. È necessario fornire solo il campo `ipAddress` nell&#39;oggetto `Geo` nella `Context` della richiesta, affinché SDK possa recuperare la geolocalizzazione dell&#39;indirizzo IP dell&#39;utente. Se viene fornito un altro campo oltre a `ipAddress`, il SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
 
 
 >[!BEGINTABS]

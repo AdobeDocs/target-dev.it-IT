@@ -4,10 +4,22 @@ description: Utilizza la funzione [!UICONTROL adobe.target.applyOffers()] per la
 title: Come si utilizza la funzione [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 80%
+source-wordcount: 820
+ht-degree: 78%
 
 ---
 
@@ -17,12 +29,12 @@ Questa funzione ti consente di applicare più di un’offerta recuperata da `ado
 
 >[!NOTE]
 >
->Questa funzione è stata introdotta con at.js 2.*x*. Questa funzione non è disponibile per at.js versione 1.*x*.
+>Funzione introdotta con at.js 2.*x*. Funzione non disponibile per at.js versione 1.*x*.
 
 | Chiave | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
 | selector | Stringa | No | Elemento HTML o selettore CSS utilizzato per identificare l’elemento HTML in cui [!DNL Target] deve inserire il contenuto dell’offerta. Se non viene fornito un selettore, [!DNL Target] presuppone che l&#39;elemento HTML da utilizzare sia HTML HEAD. |
-| Risposta | Oggetto | Sì | Oggetto di risposta da `getOffers()`.<br />Vedi la tabella Richieste di seguito. |
+| Risposta | Oggetto | Sì | Oggetto di risposta da `getOffers()`.<br />Vedere la tabella Richieste di seguito. |
 
 ## Risposta
 

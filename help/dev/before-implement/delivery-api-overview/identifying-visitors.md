@@ -1,13 +1,21 @@
 ---
 title: API di consegna Adobe Target che identifica i visitatori
 description: Come posso identificare l'utente in  [!DNL Adobe Target]?
-keywords: api di consegna
+keywords: API Delivery
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 7%
+source-wordcount: 789
+ht-degree: 9%
 
 ---
 
@@ -22,7 +30,7 @@ Target utilizza tre identificatori:
 | `tntId` | `tntId` è l&#39;identificatore primario in [!DNL Target] per un utente. È possibile specificare questo ID oppure [!DNL Target] lo genererà automaticamente se la richiesta non ne contiene uno. |
 | `thirdPartyId` | `thirdPartyId` è l&#39;identificatore della tua azienda per l&#39;utente che puoi inviare con ogni chiamata. Quando un utente accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId` viene utilizzato per unire e condividere dati tra diverse soluzioni Adobe. `marketingCloudVisitorId` è richiesto per le integrazioni con Adobe Analytics e Adobe Audience Manager. |
-| `customerIds` | Oltre all&#39;ID visitatore Experience Cloud, è possibile utilizzare altri [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) e uno stato di autenticazione per ogni visitatore. |
+| `customerIds` | Oltre all&#39;ID visitatore di Experience Cloud, è possibile utilizzare altri [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) e uno stato di autenticazione per ogni visitatore. |
 
 ## ID [!DNL Target]
 
@@ -77,7 +85,7 @@ La chiamata di esempio precedente dimostra che non è necessario passare `tntId`
 
 ## ID visitatore di Marketing Cloud
 
-`marketingCloudVisitorId` è un ID universale e costante che identifica i visitatori in tutte le soluzioni dell&#39;Experience Cloud. Quando la tua organizzazione implementa il servizio ID, questo ID ti consente di identificare lo stesso visitatore del sito e i relativi dati in diverse soluzioni di Experience Cloud come Adobe Target, Adobe Analytics o Adobe Audience Manager. Tieni presente che `marketingCloudVisitorId` è richiesto per l&#39;utilizzo e l&#39;integrazione con Analytics e Audience Manager.
+`marketingCloudVisitorId` è un ID universale e costante che identifica i visitatori in tutte le soluzioni di Experience Cloud. Quando la tua organizzazione implementa il servizio ID, questo ID ti consente di identificare lo stesso visitatore del sito e i relativi dati in diverse soluzioni Experience Cloud come Adobe Target, Adobe Analytics o Adobe Audience Manager. Tieni presente che `marketingCloudVisitorId` è richiesto per l&#39;utilizzo e l&#39;integrazione con Analytics e Audience Manager.
 
 ```
 curl -X POST \
@@ -112,7 +120,7 @@ curl -X POST \
 }'
 ```
 
-La chiamata di esempio precedente illustra come un `marketingCloudVisitorId` recuperato dal servizio ID Experience Cloud viene passato ad Adobe Target. In questo scenario, [!DNL Target] genera un `tntId` poiché non è stato passato alla chiamata originale che verrà mappato al `marketingCloudVisitorId` fornito come mostrato nella risposta seguente.
+La chiamata di esempio precedente illustra come un `marketingCloudVisitorId` recuperato dal servizio Experience Cloud ID viene passato ad Adobe Target. In questo scenario, [!DNL Target] genera un `tntId` poiché non è stato passato alla chiamata originale che verrà mappato al `marketingCloudVisitorId` fornito come mostrato nella risposta seguente.
 
 ## ID di terze parti
 
@@ -169,7 +177,7 @@ La chiamata di esempio precedente mostra un `thirdPartyId`, che è un ID persist
 
 ## ID cliente
 
-È possibile aggiungere [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) e associarli a un ID visitatore Experience Cloud. Ogni volta che invii `customerIds` devi fornire anche `marketingCloudVisitorId`. Inoltre, è possibile fornire uno stato di autenticazione insieme a ogni `customerId` per ogni visitatore. È possibile prendere in considerazione il seguente stato di autenticazione:
+È possibile aggiungere [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) e associarli a un ID visitatore di Experience Cloud. Ogni volta che invii `customerIds` devi fornire anche `marketingCloudVisitorId`. Inoltre, è possibile fornire uno stato di autenticazione insieme a ogni `customerId` per ogni visitatore. È possibile prendere in considerazione il seguente stato di autenticazione:
 
 | Stato di autenticazione | Stato dell&#39;utente |
 | --- | --- |

@@ -1,31 +1,41 @@
 ---
-title: Integrazione con i segmenti AAM Experience Cloud
-description: Integrazione con Experience Cloud, integrazione Audience Manager
+title: Integrazione con i segmenti di Experience Cloud AAM
+description: Integrazione con Experience Cloud, integrazione con Audience Manager
 keywords: api di consegna, lato server, lato server, integrazione, audience manager, aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
-source-git-commit: e3f14e97fa48ffb1f07b29aca5711d16e75faa80
+TQID: https://experienceleague.adobe.com/mc55SxaUU8BJ81hKLji9xi0-OHCux3W4R0syuVoGrIo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: 431
 ht-degree: 4%
 
 ---
 
 # Segmenti AAM
 
-È possibile sfruttare [!DNL Adobe Audience Manager] segmenti tramite [!DNL Adobe Target] SDK. Per sfruttare i segmenti AAM, è necessario fornire i seguenti campi:
+È possibile sfruttare [!DNL Adobe Audience Manager] segmenti tramite [!DNL Adobe Target] SDK. Per sfruttare i segmenti di AAM, è necessario fornire i seguenti campi:
 
 >[!NOTE]
 >
->I segmenti AAM non sono supportati per le attività di decisione su dispositivo.
+>I segmenti di AAM non sono supportati per le attività di decisione su dispositivo.
 
 | Nome campo | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `locationHint` | Sì | DCS Location Hint viene utilizzato per determinare quale endpoint DCS AAM colpire per recuperare il profilo. Deve essere >= 1. |
+| `locationHint` | Sì | DCS Location Hint viene utilizzato per determinare quale endpoint DCS di AAM deve raggiungere per recuperare il profilo. Deve essere >= 1. |
 | `marketingCloudVisitorId` | Sì | ID visitatore di Marketing Cloud |
-| `blob` | Sì | Il BLOB dell’AAM viene utilizzato per inviare dati aggiuntivi all’AAM. Non deve essere vuoto e le dimensioni devono essere &lt;= 1024. |
+| `blob` | Sì | Il BLOB di AAM viene utilizzato per inviare dati aggiuntivi ad AAM. Non deve essere vuoto e le dimensioni devono essere &lt;= 1024. |
 
-L&#39;SDK compilerà automaticamente questi campi quando effettuerai una chiamata al metodo `getOffers`, ma dovrai verificare che sia fornito un cookie visitatore valido. Per ottenere questo cookie, devi implementare VisitorAPI.js nel browser.
+SDK compilerà automaticamente questi campi quando effettuerà una chiamata al metodo `getOffers`, ma dovrai verificare che sia fornito un cookie visitatore valido. Per ottenere questo cookie, devi implementare VisitorAPI.js nel browser.
 
 ## Guida all’implementazione
 
@@ -43,11 +53,11 @@ I cookie vengono utilizzati per correlare [!DNL Adobe Audience Manager] richiest
 Supponiamo che un utente inserisca un URL in un browser che invia una richiesta al server web. Nell’evadere tale richiesta:
 
 1. Il server legge i cookie del visitatore e di destinazione dalla richiesta.
-1. Il server effettua una chiamata al metodo `getOffers` dell&#39;SDK [!DNL Target], specificando i cookie visitatore e di destinazione, se disponibili.
+1. Il server effettua una chiamata al metodo `getOffers` del SDK [!DNL Target], specificando il visitatore e i cookie di destinazione, se disponibili.
 1. Quando la chiamata `getOffers` è soddisfatta, vengono utilizzati i valori per `targetCookie` e `visitorState` della risposta.
    1. Nella risposta è impostato un cookie con valori ottenuti da `targetCookie`. Questa operazione viene eseguita utilizzando l&#39;intestazione di risposta `Set-Cookie`, che indica al browser di rendere persistente il cookie di destinazione.
    1. È stata preparata una risposta di HTML che inizializza `VisitorAPI.js` e trasmette `visitorState` dalla risposta di destinazione.
-1. La risposta del HTML viene caricata nel browser...
+1. La risposta di HTML viene caricata nel browser...
    1. `VisitorAPI.js` è incluso nell&#39;intestazione del documento.
    1. VisitorAPI è inizializzato con `visitorState` dalla risposta SDK `getOffers`. In questo modo il cookie visitatore verrà impostato nel browser e quindi inviato al server per le richieste successive.
 

@@ -6,30 +6,37 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: 905
 ht-degree: 0%
 
 ---
 
-# Gestire il catalogo Recommendations tramite API
+# Gestire il catalogo dei consigli tramite API
 
-Mentre ti assicuri di soddisfare i [requisiti per utilizzare l&#39;API di Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites), hai imparato a [generare un token di accesso](/help/dev/before-administer/configure-authentication.md) utilizzando il flusso di autenticazione JWT per utilizzare le API di amministrazione [!DNL Adobe Target] su [Adobe Developer Console](https://developer.adobe.com/console/home).
+Mentre ti assicuri di soddisfare i [requisiti per utilizzare l&#39;API Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites), hai imparato a [generare un token di accesso](/help/dev/before-administer/configure-authentication.md) utilizzando il flusso di autenticazione JWT per utilizzare le API amministratore [!DNL Adobe Target] su [Adobe Developer Console](https://developer.adobe.com/console/home).
 
-È ora possibile utilizzare le [API Recommendations](https://developer.adobe.com/target/administer/recommendations-api/) per aggiungere, aggiornare o eliminare elementi nel catalogo dei consigli. Come per le altre API amministratore di Adobe Target, le API Recommendations richiedono l’autenticazione.
+È ora possibile utilizzare le [API Recommendations](https://developer.adobe.com/target/administer/recommendations-api/) per aggiungere, aggiornare o eliminare elementi nel catalogo dei consigli. Come per le altre API amministratore di Adobe Target, le API Consigli richiedono l’autenticazione.
 
 >[!NOTE]
 >
->Invia la richiesta **[!UICONTROL IMS: JWT Generate + Auth via User Token]** ogni volta che devi aggiornare il token di accesso per l&#39;autenticazione, poiché scade dopo 24 ore. Per istruzioni, consulta [Configurare l&#39;autenticazione API Adobe](../configure-authentication.md).
+>Invia la richiesta **[!UICONTROL IMS: JWT Generate + Auth via User Token]** ogni volta che devi aggiornare il token di accesso per l&#39;autenticazione, poiché scade dopo 24 ore. Per istruzioni, consulta [Configurare l&#39;autenticazione API di Adobe](../configure-authentication.md).
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-Prima di continuare, ottenere la [raccolta Postman di Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
+Prima di procedere, ottieni la [raccolta Postman Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## Creazione e aggiornamento di elementi con l’API Save Entities
 
-Per popolare il database di prodotti Recommendations utilizzando l&#39;API anziché un feed di prodotto CSV o richieste Target attivate sulle pagine dei prodotti, utilizza l&#39;[API Salva entità](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Questa richiesta aggiunge o aggiorna un elemento in un singolo ambiente Target. La sintassi è:
+Per popolare il database di prodotti Recommendations utilizzando l&#39;API anziché un feed di prodotto CSV o richieste Target che si attivano sulle pagine dei prodotti, utilizza l&#39;[API Salva entità](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Questa richiesta aggiunge o aggiorna un elemento in un singolo ambiente Target. La sintassi è:
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -201,4 +208,4 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 Congratulazioni! Ora puoi utilizzare le API di Recommendations per creare, aggiornare, eliminare e ottenere dettagli sulle entità nel catalogo. Nella sezione successiva verrà illustrato come gestire i criteri personalizzati.
 
-&lt;!— [Avanti &quot;Gestisci criteri personalizzati&quot; >](manage-custom-criteria.md) —>
+&lt;!— [Avanti &quot;Gestire criteri personalizzati&quot; >](manage-custom-criteria.md) —>

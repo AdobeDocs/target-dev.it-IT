@@ -1,21 +1,28 @@
 ---
 title: Come gestire i criteri personalizzati
-description: Passaggi necessari per utilizzare le API di Adobe Target per gestire, creare, elencare, modificare, ottenere ed eliminare i criteri di Adobe Target Recommendations.
+description: Passaggi necessari per utilizzare le API di Adobe Target per gestire, creare, elencare, modificare, ottenere ed eliminare i criteri di Consigli di Adobe Target.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: 930
 ht-degree: 0%
 
 ---
 
 # Gestisci criteri personalizzati
 
-A volte gli algoritmi forniti da Recommendations non sono in grado di individuare elementi particolari che desideri promuovere. In questa situazione, i criteri personalizzati consentono di fornire un set specifico di articoli consigliati per un determinato elemento o categoria chiave.
+A volte gli algoritmi forniti da Recommendations non sono in grado di far emergere elementi particolari che desideri promuovere. In questa situazione, i criteri personalizzati consentono di fornire un set specifico di articoli consigliati per un determinato elemento o categoria chiave.
 
 Per creare criteri personalizzati, definisci e importa la mappatura desiderata tra l’elemento o la categoria chiave e gli elementi consigliati. Questo processo è descritto nella [documentazione sui criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=it). Come indicato in tale documentazione, puoi creare, modificare ed eliminare i criteri personalizzati tramite l’interfaccia utente di Target. Tuttavia, Target fornisce anche un set di API di criteri personalizzati che consentono una gestione più dettagliata dei criteri personalizzati.
 
@@ -114,6 +121,6 @@ In questo caso, l’errore 404 previsto indica che non è possibile trovare i cr
 >
 >Come promemoria, i criteri non verranno rimossi dall’interfaccia utente di Target anche se sono stati eliminati, perché sono stati creati utilizzando l’API Create Custom Criteria.
 
-Congratulazioni! Ora puoi creare, elencare, modificare, eliminare e ottenere dettagli sui criteri personalizzati, utilizzando l’API Recommendations. Nella sezione successiva, utilizzerai l’API di consegna di Target per recuperare i consigli.
+Congratulazioni! Ora puoi creare, elencare, modificare, eliminare e ottenere dettagli sui criteri personalizzati, utilizzando l’API Recommendations (Consigli). Nella sezione successiva, utilizzerai l’API di consegna di Target per recuperare i consigli.
 
-&lt;!— [Avanti &quot;Recupera Recommendations con l&#39;API di distribuzione lato server&quot; >](fetch-recs-server-side-delivery-api.md) —>
+&lt;!— [Avanti &quot;Recuperare i consigli con l&#39;API di distribuzione lato server&quot; >](fetch-recs-server-side-delivery-api.md) —>

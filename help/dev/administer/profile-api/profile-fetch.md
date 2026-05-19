@@ -4,9 +4,14 @@ description: Scopri come utilizzare le API del profilo di Adobe Target per recup
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
+TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: 294
 ht-degree: 0%
 
 ---
@@ -65,7 +70,7 @@ Quando viene effettuata questa chiamata, [!DNL Target] tenta di individuare prim
 
 ## Autenticazione
 
-È possibile proteggere [!DNL Target Profile API] attivando l&#39;autenticazione dall&#39;interfaccia utente [!DNL Target] come descritto qui. Una volta attivata l’autenticazione, tutte le richieste API di profilo devono avere il token di autenticazione profilo impostato nelle intestazioni della richiesta. Il token può essere generato utilizzando l&#39;interfaccia utente [!DNL Target] o i passaggi descritti in precedenza nella sezione [Token di autenticazione profilo](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank}.
+È possibile proteggere [!DNL Target Profile API] attivando l&#39;autenticazione dall&#39;interfaccia utente [!DNL Target] come descritto qui. Una volta attivata l’autenticazione, tutte le richieste API di profilo devono avere il token di autenticazione profilo impostato nelle intestazioni della richiesta. Il token può essere generato utilizzando l&#39;interfaccia utente di [!DNL Target] o i passaggi descritti in precedenza nella sezione [Token di autenticazione profilo](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank}.
 
 ## Misurazione
 

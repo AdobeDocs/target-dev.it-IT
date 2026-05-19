@@ -4,16 +4,31 @@ description: Scopri le funzionalità supportate per [!UICONTROL on-device decisi
 title: Quali funzioni sono supportate in Decisioning sul dispositivo
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
-source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
+TQID: https://experienceleague.adobe.com/ummFURb6WnrNCbiQNDtzWmtZq05am9CMn9UXL0SPaXo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 12%
+source-wordcount: 720
+ht-degree: 8%
 
 ---
 
 # Funzioni supportate per [!UICONTROL on-device decisioning]
 
-L&#39;SDK JS di [!DNL Adobe Target] offre ai clienti la flessibilità di scegliere tra prestazioni e aggiornamento dei dati per le decisioni. In altre parole, se la distribuzione dei contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico è la cosa più importante per te, è necessario effettuare una chiamata al server live. Tuttavia, quando le prestazioni sono più importanti, è necessario prendere una decisione su dispositivo e in memoria. Affinché [!UICONTROL on-device decisioning] funzioni, fare riferimento alle sezioni seguenti in cui sono elencate le funzionalità supportate.
+Il SDK JS [!DNL Adobe Target] offre ai clienti la flessibilità di scegliere tra prestazioni e aggiornamento dei dati per le decisioni. In altre parole, se la distribuzione dei contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico è la cosa più importante per te, è necessario effettuare una chiamata al server live. Tuttavia, quando le prestazioni sono più importanti, è necessario prendere una decisione su dispositivo e in memoria. Affinché [!UICONTROL on-device decisioning] funzioni, fare riferimento alle sezioni seguenti in cui sono elencate le funzionalità supportate.
 
 ## Tipi di attività supportati
 
@@ -27,7 +42,7 @@ La tabella seguente indica quali [tipi di attività](https://experienceleague.ad
 | [Test multivariato](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=it) (MVT) | No |
 | [Targeting dell’esperienza](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it) (XT) | Sì |
 | [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it) ![Premium](../../../assets/premium.png) | No |
-| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it) ![Premium](../../../assets/premium.png) | No |
+| [Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it) ![Premium](../../../assets/premium.png) | No |
 | [Attività con Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it&) (A4T) | Sì |
 
 ## Targeting del pubblico
@@ -50,7 +65,7 @@ La tabella seguente indica quali regole di pubblico sono supportate o meno per [
 
 ### Geotargeting per [!UICONTROL on-device decisioning]
 
-Per mantenere una latenza minima per le attività [!UICONTROL on-device decisioning] con tipi di pubblico basati su geotargeting, l&#39;Adobe consiglia di fornire autonomamente i valori geografici nella chiamata a [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Imposta l’oggetto Geo nel contesto della richiesta. Questo significa dal browser, un modo per determinare la posizione di ogni visitatore. Ad esempio, puoi eseguire una ricerca IP-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
+Per mantenere una latenza minima per le attività [!UICONTROL on-device decisioning] con tipi di pubblico basati su geotargeting, Adobe consiglia di fornire autonomamente i valori geografici nella chiamata a [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Imposta l’oggetto Geo nel contesto della richiesta. Questo significa dal browser, un modo per determinare la posizione di ogni visitatore. Ad esempio, puoi eseguire una ricerca IP-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -72,7 +87,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-Tuttavia, è supportato anche se non è possibile eseguire ricerche IP-to-Geo nel server, ma si desidera comunque eseguire [!UICONTROL on-device decisioning] per [richieste getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) che contengono tipi di pubblico basati su geotargeting. Il lato negativo di questo approccio è che utilizza una ricerca remota IP-Geo, che aggiunge latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` con decisioni lato server, perché raggiunge una rete CDN vicina al server. Specifica solo il campo &quot;ipAddress&quot; nell’oggetto Geo nel contesto della richiesta per l’SDK di recuperare la geolocalizzazione dell’indirizzo IP del visitatore. Se viene fornito un altro campo oltre a &quot;ipAddress&quot;, l&#39;SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
+Tuttavia, è supportato anche se non è possibile eseguire ricerche IP-to-Geo nel server, ma si desidera comunque eseguire [!UICONTROL on-device decisioning] per [richieste getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) che contengono tipi di pubblico basati su geotargeting. Il lato negativo di questo approccio è che utilizza una ricerca remota IP-Geo, che aggiunge latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` con decisioni lato server, perché raggiunge una rete CDN vicina al server. Fornisci solo il campo &quot;ipAddress&quot; nell’oggetto Geo nel contesto della richiesta di SDK per recuperare la geolocalizzazione dell’indirizzo IP del visitatore. Se viene fornito un campo diverso da &quot;ipAddress&quot;, il SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 

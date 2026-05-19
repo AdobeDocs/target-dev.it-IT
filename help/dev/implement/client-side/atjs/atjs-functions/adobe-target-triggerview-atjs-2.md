@@ -1,23 +1,34 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, trigger view, at.js, funzioni, funzione, viewName, viewname, nome visualizzazione, adobe.target.triggerView1
-description: Utilizza la funzione adobe.target.triggerView() per la libreria JavaScript at.js di  [!DNL Adobe Target]  per l'utilizzo in applicazioni a pagina singola (SPA). (at.js 2.x)
+description: Utilizza la funzione adobe.target.triggerView() per la libreria JavaScript at.js di  [!DNL Adobe Target]  per l'utilizzo in applicazioni a pagina singola. (at.js 2.x)
 title: Come si utilizza la funzione adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
+TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 21%
+source-wordcount: 423
+ht-degree: 20%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. Implementare `adobe.target.triggerView()` per le applicazioni a pagina singola (SPA) per utilizzare [!UICONTROL Visual Experience Composer] (VEC) per creare [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) attività. Se `[!UICONTROL adobe.target.triggerView()]` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per l&#39;SPA. Per ulteriori informazioni, consulta [Implementazione di un’applicazione a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. Implementare `adobe.target.triggerView()` per le applicazioni a pagina singola per utilizzare [!UICONTROL Visual Experience Composer] (VEC) per creare [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) attività. Se `[!UICONTROL adobe.target.triggerView()]` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola. Per ulteriori informazioni, consulta [Implementazione di un’applicazione a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
->Questa funzione è stata introdotta con at.js 2.*x*. Questa funzione non è disponibile per at.js versione 1.*x*.
+>Funzione introdotta con at.js 2.*x*. Funzione non disponibile per at.js versione 1.*x*.
 
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
@@ -72,7 +83,7 @@ adobe.target.getOffers({
 
 ## Esempio: migliore compatibilità per `triggerView()` con [!UICONTROL Adobe Visual Editing Helper extension]
 
-Quando utilizzi l&#39;estensione [Helper per editing video Adobe](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}, considera quanto segue:
+Quando utilizzi l&#39;estensione [Adobe Visual Editing Helper](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}, tieni presente quanto segue:
 
 A causa dei nuovi criteri V3 Manifest di [!DNL Googl]e per le estensioni [!DNL Chrome], [!UICONTROL Visual Editing Helper extension] deve attendere l&#39;evento `DOMContentLoaded` prima di caricare le librerie [!DNL Target] nel Compositore esperienza visivo. Questo ritardo potrebbe causare l&#39;attivazione della chiamata `triggerView()` da parte delle pagine Web prima che le librerie di authoring siano pronte, con conseguente mancato popolamento della visualizzazione al momento del caricamento.
 

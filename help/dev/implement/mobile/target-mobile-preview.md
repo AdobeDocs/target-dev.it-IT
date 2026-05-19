@@ -4,10 +4,15 @@ description: Utilizza i collegamenti di anteprima mobile per eseguire un control
 title: Come si utilizzano i collegamenti di anteprima mobile in [!DNL Adobe Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
+TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 23%
+source-wordcount: 552
+ht-degree: 18%
 
 ---
 
@@ -19,22 +24,22 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
 
 ## Prerequisiti
 
-1. **Utilizza una versione supportata dell&#39;SDK:** La funzionalità di anteprima mobile richiede il download e l&#39;installazione della versione appropriata di [!DNL Adobe Mobile SDK] nelle applicazioni corrispondenti.
+1. **Utilizza una versione supportata di SDK:** Per la funzionalità di anteprima mobile è necessario scaricare e installare la versione appropriata di [!DNL Adobe Mobile SDK] nelle applicazioni corrispondenti.
 
-   Per istruzioni su come scaricare l&#39;SDK appropriato, vedi [Versioni SDK correnti](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} nella documentazione di *[!DNL Adobe Experience Platform Mobile SDK]*.
+   Per istruzioni su come scaricare il SDK appropriato, vedi [Versioni correnti di SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} nella documentazione di *[!DNL Adobe Experience Platform Mobile SDK]*.
 
 1. **Impostazione di uno schema URL:** il collegamento di anteprima utilizza uno schema URL per aprire l&#39;app. Specifica uno schema URL univoco per l’anteprima.
 
-   Per ulteriori informazioni, vedere [Anteprima visiva](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurare l&#39;estensione Target nell&#39;interfaccia utente di Connessione dati* nella documentazione di *[!DNL Mobile SDK]*.
+   Per ulteriori informazioni, vedere [Anteprima visiva](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurare l&#39;estensione Target nell&#39;interfaccia utente di Data Connection* nella documentazione di *[!DNL Mobile SDK]*.
 
    I seguenti collegamenti contengono ulteriori informazioni:
 
    * **iOs**: per ulteriori informazioni sull&#39;impostazione degli schemi URL per iOS, vedere [Definizione di uno schema URL personalizzato per l&#39;app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} nel sito Web *Apple Developer*.
-   * **Android**: per ulteriori informazioni sull&#39;impostazione degli schemi URL per Android, consulta [Creare collegamenti profondi al contenuto dell&#39;app](https://developer.android.com/training/app-links/deep-linking){target=_blank} sul sito Web *Android Developers*.
+   * **Android**: per ulteriori informazioni sull&#39;impostazione degli schemi URL per Android, consulta [Creare collegamenti profondi al contenuto dell&#39;app](https://developer.android.com/training/app-links/deep-linking){target=_blank} nel sito Web *Android Developers*.
 
 1. **Configura l&#39;API `collectLaunchInfo` (solo i0S)**
 
-   Per ulteriori informazioni, vedere [Anteprima visiva](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurare l&#39;estensione Target nell&#39;interfaccia utente di Connessione dati* nella documentazione di *[!DNL Mobile SDK]*.
+   Per ulteriori informazioni, vedere [Anteprima visiva](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurare l&#39;estensione Target nell&#39;interfaccia utente di Data Connection* nella documentazione di *[!DNL Mobile SDK]*.
 
 ## Generazione di un link di anteprima
 
@@ -77,7 +82,7 @@ Apri il link in un browser mobile su un dispositivo in cui hai installato l&#39;
    |![anteprima mobile 1](assets/mobile-preview-experience-selection-1.png)|![anteprima mobile 2](assets/mobile-preview-experience-result-1-france.png)|![anteprima mobile 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![anteprima mobile 4](assets/mobile-preview-experience-selection-2.png)|![anteprima mobile 5](assets/mobile-preview-experience-result-2-aus.png)|![anteprima mobile 6](assets/mobile-preview-experience-result-2-10off.png)|
 
-## Limitazioni 
+## Limitazioni
 
 * La visualizzazione deve caricare nuovamente per il nuovo contenuto da visualizzare dopo aver fatto clic sul pulsante **[!UICONTROL Launch Experiences]**. Il modo più semplice è quello di passare a una schermata diversa e poi tornare alla schermata in cui si prevede che il cambiamento avvenga.
 * L&#39;anteprima mobile non è supportata per le versioni Android prima di API-19 (KitKat).

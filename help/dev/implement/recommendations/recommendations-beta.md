@@ -5,10 +5,23 @@ title: Come Si Implementano [!UICONTROL Recommendations] Attività?
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: 760e6425fc2a32ec5c405094d144f173de1b6c07
+TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 17%
+source-wordcount: 1644
+ht-degree: 18%
 
 ---
 
@@ -29,11 +42,11 @@ Prima di configurare la prima attività [!UICONTROL Recommendations] in [!DNL Ad
 1. [Configura [!UICONTROL Recommendations] impostazioni](#configure-recommendations-settings).
 1. (Facoltativo) [Amministrare [!UICONTROL Recommendations] tramite le API amministratore](#administer-recommendations-using-admin-apis).
 
-## &#x200B;1. Implementare [!UICONTROL Target]
+## &#x200B;1. Implementa [!UICONTROL Target]
 
 [!DNL Target Recommendations] richiede l&#39;implementazione di [!DNL Adobe Experience Platform Web SDK] o at.js 0.9.2 (o versione successiva). Per ulteriori informazioni, consulta le [[!UICONTROL Target] guide all&#39;implementazione lato client](../client-side/overview.md).
 
-## &#x200B;2. Configurare il catalogo [!UICONTROL Recommendations]
+## &#x200B;2. Configura il catalogo [!UICONTROL Recommendations]
 
 Per fornire consigli di alta qualità, [!UICONTROL Target] deve conoscere i prodotti o i contenuti che desideri consigliare. I cataloghi in genere includono tre tipi di informazioni sugli elementi consigliati. Supponiamo che tu stia consigliando dei film. Includi quanto segue:
 
@@ -132,7 +145,7 @@ Quando si verifica un evento di acquisto, passa l’identità dell’articolo o 
 
 Escludi gli elementi a livello globale che non desideri consigliare a un visitatore. Consulta [Esclusioni](https://experienceleague.adobe.com/it/docs/target/using/recommendations/entities/exclusions) nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
 
-## &#x200B;5. Configurare le impostazioni di [!UICONTROL Recommendations]
+## &#x200B;5. Configura impostazioni [!UICONTROL Recommendations]
 
 Utilizza le impostazioni per gestire l’implementazione di [!UICONTROL Recommendations].
 
@@ -199,7 +212,7 @@ Nella sezione [!UICONTROL Product Catalog] sono disponibili le opzioni seguenti:
 
 #### [!UICONTROL Default Host Group]
 
-Seleziona il gruppo di host predefinito.
+Seleziona il gruppo host predefinito.
 
 Il gruppo di host può essere utilizzato per separare gli elementi disponibili nel catalogo per usi diversi. Ad esempio, puoi utilizzare i gruppi di host per ambienti di sviluppo e di produzione, marchi diversi o diverse aree geografiche. Per impostazione predefinita, i risultati dell&#39;anteprima in Ricerca nel catalogo, Raccolte ed Esclusioni si basano sul gruppo di host predefinito. Puoi anche selezionare un gruppo di host diverso per visualizzare in anteprima i risultati, utilizzando il filtro Ambiente. Per impostazione predefinita, gli elementi appena aggiunti sono disponibili in tutti i gruppi di host, a meno che non venga specificato un ID ambiente al momento della creazione o dell’aggiornamento dell’elemento. I consigli distribuiti dipendono dal gruppo di host specificato nella richiesta.
 

@@ -1,12 +1,24 @@
 ---
 title: Preacquisizione API di consegna Adobe Target
 description: Come si utilizza la preacquisizione in [!UICONTROL Adobe Target Delivery API]?
-keywords: api di consegna
+keywords: API Delivery
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
+TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: 548
 ht-degree: 0%
 
 ---
@@ -169,7 +181,7 @@ Il seguente frammento di codice è una risposta di un recupero preventivo di una
 
 ## Preacquisire le viste
 
-Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Le visualizzazioni supportano le applicazioni a pagina singola (SPA) e le applicazioni mobili in modo più semplice. Le visualizzazioni possono essere viste come un gruppo logico di elementi visivi che insieme formano un’esperienza SPA o Mobile. Ora, tramite l&#39;API di consegna, è possibile preacquisire le attività [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it){target=_blank} (X)T create dal Compositore esperienza visivo con modifiche su [Visualizzazioni per applicazioni a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -199,7 +211,7 @@ curl -X POST \
 }'
 ```
 
-La chiamata di esempio precedente recupera tutte le visualizzazioni create tramite il Compositore esperienza visivo SPA per [!UICONTROL A/B Test] e le attività XT da visualizzare per il Web `channel`. Si noti che la chiamata preacquisisce tutte le visualizzazioni dalle attività [!UICONTROL A/B Test] o XT per le quali un visitatore con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` che sta visitando il `url`:`https://target.enablementadobe.com/react/demo/#/` è idoneo.
+La chiamata di esempio precedente recupera tutte le visualizzazioni create tramite il Compositore esperienza visivo per applicazioni a pagina singola per [!UICONTROL A/B Test] e le attività XT da visualizzare per il Web `channel`. Si noti che la chiamata preacquisisce tutte le visualizzazioni dalle attività [!UICONTROL A/B Test] o XT per le quali un visitatore con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` che sta visitando il `url`:`https://target.enablementadobe.com/react/demo/#/` è idoneo.
 
 ```JSON  {line-numbers="true"}
 {

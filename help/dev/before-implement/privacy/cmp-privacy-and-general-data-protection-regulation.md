@@ -4,10 +4,26 @@ description: Scopri Target e il Regolamento generale sulla protezione dei dati (
 title: In che modo Target gestisce le normative sulla privacy e la protezione dei dati?
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 62%
+source-wordcount: 2432
+ht-degree: 61%
 
 ---
 
@@ -32,7 +48,7 @@ Per ulteriori informazioni, consulta:
 
 * [Panoramica di Adobe Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=it)
 * [Guida API di Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=it)
-* [Panoramica dell&#39;interfaccia utente di Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=it)
+* [Panoramica dell’interfaccia utente di Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=it)
 
 ## California Consumer Privacy Act (CCPA) - Panoramica
 
@@ -254,14 +270,14 @@ Un esempio di risposta API di accesso a Target potrebbe essere il seguente:
 
 | Campo | Descrizione |
 |--- |--- |
-| jobId | Indica l’ID del lavoro GDPR o CCPA dall’API GDPR centrale. |
+| jobId | Indica l’ID del processo GDPR o CCPA dall’API GDPR centrale. |
 | imsOrgID | Fornisce un identificatore univoco per la tua azienda. |
 | namespace | Denominato anche fonte di dati. Consulta “Quali ID sono supportati per aiutare i clienti a completare una richiesta di accesso ed eliminazione GDPR o CCPA per Target?” in questo argomento. |
 | type | Tipo di ID per il quale è stato richiesto l’accesso ai dati GDPR o CCPA. Target accetta diversi tipi di ID, alcuni dei quali sono standard e altri specifici di Target. Consulta “Quali ID sono supportati per aiutare i clienti a completare una richiesta di accesso ed eliminazione GDPR o CCPA per Target?” in questo argomento. |
 | value | L&#39;ID spazio dei nomi/sorgente dei dati. Consulta “Quali ID sono supportati per aiutare i clienti a completare una richiesta di accesso ed eliminazione GDPR o CCPA per Target?” per i valori accettati. |
 | integration code | I codici di integrazione sono nomi semplici per le origini dati e consentono di tracciarle più facilmente rispetto agli ID delle origini dati. |
 
-Quando vengono forniti più valori per identificare i profili, ogni identificatore valido ha un file di profilo. Uno o più file di profilo sono inviati al Azure Blob centrale per RGPD attraverso l’API centrale RGPD, sotto forma di risposta JSON per il profilo di Target.
+Quando vengono forniti più valori per identificare i profili, ogni identificatore valido ha un file di profilo. Uno o più file di profilo sono inviati al Blob Azure centrale per RGPD attraverso l’API centrale RGPD, sotto forma di risposta JSON per il profilo di Target.
 
 Un esempio di JSON profilo di Target potrebbe avere l&#39;aspetto seguente:
 

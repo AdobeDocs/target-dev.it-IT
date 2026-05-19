@@ -3,10 +3,21 @@ title: Eseguire test di funzionalità con attributi
 description: Eseguire test di funzionalità con attributi
 feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/y2Mwmnn2k91-LKBy1UmZ5a1s6dZeb5VMyHdyJc2lc34
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: 891
+ht-degree: 1%
 
 ---
 
@@ -30,7 +41,7 @@ ht-degree: 0%
 >
 >Supponiamo di essere una società di e-commerce per la vendita al dettaglio. Desideri aumentare il tasso di conversione quando i clienti sfogliano e ordinano il catalogo dei prodotti. Si ipotizza che alcuni algoritmi di ordinamento e strategie di impaginazione producano risultati migliori rispetto ad altri. Per testare questa teoria, decidi di eseguire un test di funzionalità che implica la riprogettazione del widget di ordinamento utilizzando diverse opzioni di ordinamento per gli utenti finali. Assicurati che questo test delle funzioni venga eseguito con latenza prossima allo zero, in modo che non influisca negativamente sulle esperienze utente e non distorca i risultati.
 
-## 1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
+## &#x200B;1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
 
 L’abilitazione del decisioning sul dispositivo garantisce che un’attività A/B venga eseguita con latenza vicina allo zero. Per abilitare questa funzione, passare a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** in [!DNL Adobe Target] e attivare/disattivare **[!UICONTROL On-Device Decisioning]**.
 
@@ -42,7 +53,7 @@ L’abilitazione del decisioning sul dispositivo garantisce che un’attività A
 
 Dopo aver attivato l&#39;interruttore **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] inizia a generare *artefatti regola* per il client.
 
-## 2. Creare un&#39;attività [!UICONTROL A/B Test]
+## &#x200B;2. Crea un&#39;attività [!UICONTROL A/B Test]
 
 1. In [!DNL Adobe Target], passare alla pagina **[!UICONTROL Activities]**, quindi selezionare **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -52,9 +63,9 @@ Dopo aver attivato l&#39;interruttore **[!UICONTROL On-Device Decisioning]**, [!
 
    ![Alt immagine](assets/asset-form.png)
 
-## 3. Definire A e B
+## &#x200B;3. Definire A e B
 
-1. Nel passaggio **[!UICONTROL Experiences]** della creazione di attività, fornisci un nome per l&#39;attività (1) e aggiungi una seconda esperienza, Esperienza B, facendo clic sul pulsante **[!UICONTROL Add Experience]** (2). Inserisci il nome della posizione (3) all’interno dell’applicazione in cui desideri eseguire il test delle funzioni con gli attributi. Nell&#39;esempio seguente, `product-results-page` è la posizione definita per l&#39;Esperienza A. È anche la posizione definita per l&#39;Esperienza B.
+1. Nel passaggio **[!UICONTROL Experiences]** della creazione di attività, fornisci un nome per l&#39;attività (1) e aggiungi una seconda esperienza, Esperienza B, facendo clic sul pulsante **[!UICONTROL Add Experience]** (2). Inserisci il nome della posizione (3) all’interno dell’applicazione in cui desideri eseguire il test delle funzioni con gli attributi. Nell&#39;esempio seguente, `product-results-page` è la posizione definita per l&#39;Esperienza A. (È anche la posizione definita per l’Esperienza B.)
 
    ![Alt immagine](assets/asset-location.png)
 
@@ -88,35 +99,35 @@ Dopo aver attivato l&#39;interruttore **[!UICONTROL On-Device Decisioning]**, [!
 
    ![Alt immagine](assets/asset-sorting-b.png)
 
-## 4. Aggiungere un pubblico
+## &#x200B;4. Aggiungere un pubblico
 
 Nel passaggio **[!UICONTROL Targeting]**, mantieni il pubblico **[!UICONTROL All Visitors]**. Questo consente di comprendere l’impatto della funzione di ordinamento, nonché l’algoritmo e il numero di elementi che influenzano meglio i risultati.
 
 ![Alt immagine](assets/asset-audience-b.png)
 
-## 5. Impostare l’allocazione del traffico
+## &#x200B;5. Imposta allocazione traffico
 
 Definisci la percentuale di visitatori rispetto alla quale desideri testare gli algoritmi di ordinamento e la strategia di impaginazione. In altre parole, a quale percentuale degli utenti desideri eseguire il test? In questo esempio, per distribuire il test a tutti gli utenti connessi, mantieni l’allocazione del traffico al 100%.
 
 ![Alt immagine](assets/asset-allocation-100.png)
 
-## 6. Impostare la distribuzione del traffico sulle varianti
+## &#x200B;6. Impostare la distribuzione del traffico sulle varianti
 
 Definisci la percentuale di visitatori che vedranno l’algoritmo di ordinamento consigliato rispetto a quello dei best seller, con un limite di 50 prodotti per pagina. In questo esempio, mantieni la distribuzione del traffico come suddivisione 50/50 tra le esperienze A e B.
 
 ![Alt immagine](assets/asset-variations-50.png)
 
-## 7. Impostare la generazione rapporti
+## &#x200B;7. Configurare la generazione di rapporti
 
 Nel passaggio **[!UICONTROL Goals & Settings]**, scegli **[!UICONTROL Adobe Target]** come **[!UICONTROL Reporting Source]** per visualizzare i risultati del test A/B nell&#39;interfaccia utente [!DNL Adobe Target] oppure scegli **[!UICONTROL Adobe Analytics]** per visualizzarli nell&#39;interfaccia utente di Adobe Analytics.
 
 ![Alt immagine](assets/asset-reporting-b.png)
 
-## 8. Aggiungere metriche per il tracciamento dei KPI
+## &#x200B;8. Aggiungere metriche per il tracciamento dei KPI
 
 Scegliere un **[!UICONTROL Goal Metric]** per misurare il test delle funzionalità con gli attributi. In questo esempio, il successo si basa sull’acquisto di un prodotto da parte dell’utente, a seconda dell’algoritmo di ordinamento e della strategia di impaginazione mostrati.
 
-## 9. Implementare nell’applicazione i test delle funzioni con gli attributi
+## &#x200B;9. Implementare nell’applicazione test di funzionalità con attributi
 
 >[!BEGINTABS]
 
@@ -173,7 +184,7 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 10. Implementa il codice per tenere traccia degli eventi di conversione
+## &#x200B;10. Implementare il codice per tenere traccia degli eventi di conversione
 
 >[!BEGINTABS]
 
@@ -242,6 +253,6 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 11. Attivare i test delle funzioni con gli attributi
+## &#x200B;11. Attivare i test delle funzioni con gli attributi
 
 ![Alt immagine](assets/asset-activate.png)

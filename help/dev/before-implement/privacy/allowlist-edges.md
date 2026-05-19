@@ -1,27 +1,40 @@
 ---
-keywords: implementa, implementa, whitelist, whitelist, inserisce nell'elenco Consentiti di, elenco consentiti, edge, edge, 9 $
-description: Visualizza un elenco di host per aiutarti a inserire nell'elenco Consentiti [!DNL Adobe Target] gli spigoli (nodi di servizio geograficamente distribuiti che garantiscono tempi di risposta ottimali agli utenti finali).
-title: Inserire nell'elenco Consentiti Come posso  [!DNL Target] nodi Edge?
+keywords: implementa, implementa, whitelist, white list, inserisce nell'elenco Consentiti di, elenco consentiti, edge, edge, 9 $
+description: Visualizza un elenco di host per aiutarti ad inserire nell'elenco Consentiti i  [!DNL Adobe Target] nodi di server geograficamente distribuiti che garantiscono tempi di risposta ottimali agli utenti finali.
+title: Come posso Inserire nell'elenco Consentiti nodi di  [!DNL Target] Edge?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 662d415bc3c216bcd038f07dcaa0fd83f6518690
+TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: 373
 ht-degree: 0%
 
 ---
 
 # Inserire nell&#39;elenco Consentiti [!DNL Target] nodi edge
 
-Informazioni e un elenco aggiornato di host per aiutarti a inserire nell&#39;elenco Consentiti i bordi di [!DNL Adobe Target] di cui hai bisogno.
+Informazioni e un elenco aggiornato di host per aiutarti a inserire nell&#39;elenco Consentiti i bordi di [!DNL Adobe Target] di cui hai bisogno per l aggiornamento.
 
 Un perimetro è un’architettura di servizio geograficamente distribuita che garantisce agli utenti finali che richiedono contenuti tempi di risposta ottimali, indipendentemente dall’area geografica in cui si trovano. Ogni nodo perimetrale dispone di tutte le informazioni necessarie per rispondere alla richiesta di contenuto dell’utente e per tenere traccia dei dati di analisi relativi a tale richiesta. Le richieste degli utenti vengono indirizzate al nodo edge più vicino. Per ulteriori informazioni, vedere [La rete Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=it#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
-Inserire nell&#39;elenco Consentiti Se necessario, puoi [!DNL Target] nodi edge.
+Se necessario, è possibile inserire nell&#39;elenco Consentiti i nodi edge di [!DNL Target], se necessario.
 
 >[!IMPORTANT]
 >
->Oltre a inserire nell&#39;elenco Consentiti gli indirizzi IP NAT (Network Address Translation) di [!DNL Target] edge e [!DNL Target] indirizzi IP edge di cui all&#39;articolo, è necessario anche inserire nell&#39;elenco Consentiti tutti i blocchi di indirizzi IP di [!DNL Adobe Analytics].
+>Oltre a inserire nell&#39;elenco Consentiti gli indirizzi IP NAT (Network Address Translation) di [!DNL Target] edge e [!DNL Target] indirizzi IP edge descritti nell&#39;articolo, è necessario anche inserire nell&#39;elenco Consentiti tutti i blocchi di indirizzi IP di [!DNL Adobe Analytics].
 >
 >Per ulteriori informazioni, consulta [Tutti i blocchi di indirizzi IP di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=it#all-adobe-analytics-ip-address-blocks){target=_blank} nella *note tecniche di Adobe Analytics* documentazione.
 >
@@ -46,9 +59,9 @@ Il servizio proxy instrada dinamicamente il traffico tra più aree utilizzando i
 | Stati Uniti orientali (us-east-2) | `ethos.pub.ethos11-prod-va7.ethos.adobe.net` |
 | Stati Uniti orientali (us-east-1) | `ethos.pub.ethos11-prod-aus5.ethos.adobe.net` |
 
-## Inserire nell&#39;elenco Consentiti Voci di consigliate
+## Voci di inserisce nell&#39;elenco Consentiti consigliate per l&#39;
 
-Inserire nell&#39;elenco Consentiti Per garantire una connettività affidabile, i seguenti nomi host:
+Per garantire una connettività affidabile, i seguenti nomi host:
 
 * `ethos.pub.ethos11-prod-nld2.ethos.adobe.net`
 * `ethos.pub.ethos11-prod-va7.ethos.adobe.net`
@@ -56,6 +69,6 @@ Inserire nell&#39;elenco Consentiti Per garantire una connettività affidabile, 
 
 ## Facoltativo: individuazione IP
 
-Se i criteri di rete richiedono la inserisce nell&#39;elenco Consentiti di un&#39;basata su IP, è possibile visualizzare gli indirizzi IP pubblici correnti associati al servizio proxy utilizzando questo strumento:
+Se i criteri di rete richiedono l&#39;inserisce nell&#39;elenco Consentiti di una basata su IP, è possibile visualizzare gli indirizzi IP pubblici correnti associati al servizio proxy utilizzando questo strumento:
 
 * `DNSChecker – A Record Lookup for tnt-web-proxy.adobe.io`

@@ -4,9 +4,20 @@ description: Scopri come creare un'implementazione di applicazione a pagina sing
 keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;ciclo di vita SPA;lato client;test AB;AB;Targeting esperienza;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: 1747
 ht-degree: 2%
 
 ---
@@ -235,7 +246,7 @@ Facendo clic su un’azione viene evidenziato l’elemento del sito in cui quest
 |---|---|
 | Informazioni | Visualizza i dettagli dell’azione. |
 | Modifica | Ti consente di modificare direttamente le proprietà dell’azione. |
-| Clona | Clona l&#39;azione in uno o più [!UICONTROL Views] presenti nel pannello [!UICONTROL Modifications] o in uno o più [!UICONTROL Views] a cui sei passato nel Compositore esperienza visivo. L&#39;azione non deve necessariamente essere presente nel pannello [!UICONTROL Modifications].<br/><br/>**Nota:** dopo un&#39;operazione di clonazione, è necessario passare a [!UICONTROL View] nel Compositore esperienza visivo tramite [!UICONTROL Browse] per verificare se l&#39;azione clonata è un&#39;operazione valida. Se l&#39;azione non può essere applicata a [!UICONTROL View], viene visualizzato un errore. |
+| Clona | Clona l&#39;azione in uno o più [!UICONTROL Views] presenti nel pannello [!UICONTROL Modifications] o in uno o più [!UICONTROL Views] a cui sei passato nel Compositore esperienza visivo. L&#39;azione non deve necessariamente esistere nel pannello [!UICONTROL Modifications].<br/><br/>**Nota:** Dopo un&#39;operazione di clonazione, è necessario passare a [!UICONTROL View] nel Compositore esperienza visivo tramite [!UICONTROL Browse] per verificare se l&#39;azione clonata è un&#39;operazione valida. Se l&#39;azione non può essere applicata a [!UICONTROL View], viene visualizzato un errore. |
 | Sposta | Sposta l&#39;azione in un [!UICONTROL Page Load Event] o in un altro [!UICONTROL View] già esistente nel pannello [!UICONTROL Modifications].<br/><br/>**Evento di caricamento pagina:** Tutte le azioni corrispondenti all&#39;evento di caricamento pagina vengono applicate al caricamento iniziale della pagina dell&#39;applicazione Web. <br/><br/>**Nota:** dopo un&#39;operazione di spostamento, è necessario passare a [!UICONTROL View] nel Compositore esperienza visivo tramite [!UICONTROL Browse] per verificare se lo spostamento è un&#39;operazione valida. Se l&#39;azione non può essere applicata a [!UICONTROL View], viene visualizzato un errore. |
 | Elimina | Elimina l’azione. |
 

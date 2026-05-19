@@ -3,10 +3,22 @@ title: Gestire i rollout per i test delle funzioni
 description: Scopri come gestire i rollout per i test di funzionalità utilizzando [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -22,7 +34,7 @@ ht-degree: 0%
 1. Attivare l’attività A/B
 1. Regola rollout e allocazione del traffico in base alle esigenze
 
-## 1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
+## &#x200B;1. Abilita [!UICONTROL on-device decisioning] per la tua organizzazione
 
 L’abilitazione del decisioning sul dispositivo garantisce che un’attività A/B venga eseguita con latenza vicina allo zero. Per abilitare questa funzione, passare a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** in [!DNL Adobe Target] e attivare/disattivare **[!UICONTROL On-Device Decisioning]**.
 
@@ -34,7 +46,7 @@ L’abilitazione del decisioning sul dispositivo garantisce che un’attività A
 
 Dopo aver attivato l&#39;interruttore [!UICONTROL On-Device Decisioning], [!DNL Adobe Target] inizia a generare *artefatti regola* per il client.
 
-## 2. Creare un&#39;attività [!UICONTROL A/B Test]
+## &#x200B;2. Crea un&#39;attività [!UICONTROL A/B Test]
 
 1. In [!DNL Adobe Target], passare alla pagina **[!UICONTROL Activities]**, quindi selezionare **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -44,7 +56,7 @@ Dopo aver attivato l&#39;interruttore [!UICONTROL On-Device Decisioning], [!DNL 
 
    ![Alt immagine](assets/asset-form.png)
 
-## 3. Definisci la funzione e le impostazioni di rollout
+## &#x200B;3. Definire la funzione e le impostazioni di rollout
 
 Nel passaggio **[!UICONTROL Experiences]** della creazione di attività, fornisci un nome per l&#39;attività (1). Immetti il nome della posizione (2) all&#39;interno dell&#39;applicazione in cui desideri gestire i rollout per la funzione. Ad esempio, `ondevice-rollout` o `homepage-addtocart-rollout` sono nomi di posizione che indicano le destinazioni per la gestione dei rollout di funzionalità. Nell&#39;esempio seguente, `ondevice-rollout` è la posizione definita per l&#39;Esperienza A. Facoltativamente, puoi aggiungere perfezionamenti del pubblico (4) per limitare la qualifica all’attività.
 
@@ -74,7 +86,7 @@ Nel passaggio **[!UICONTROL Experiences]** della creazione di attività, fornisc
 
    ![Alt immagine](assets/asset-conv-rollout.png)
 
-## 4. Implementare ed eseguire il rendering della funzione nell’applicazione
+## &#x200B;4. Implementare ed eseguire il rendering della funzione nell’applicazione
 
 >[!BEGINTABS]
 
@@ -103,7 +115,7 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
 
 >[!ENDTABS]
 
-## 5. Implementa il tracciamento degli eventi nell’applicazione
+## &#x200B;5. Implementa il tracciamento degli eventi nell’applicazione
 
 Dopo aver reso disponibile nell’applicazione la variabile flag di funzione, puoi utilizzarla per abilitare qualsiasi funzione che fa già parte dell’applicazione. Se un visitatore non è idoneo per l’attività, significa che non è stato incluso nel bucket del 10% definito come pubblico.
 
@@ -155,11 +167,11 @@ else {
 
 >[!ENDTABS]
 
-## 6. Attivare l’attività di rollout
+## &#x200B;6. Attivare l’attività di rollout
 
 ![Alt immagine](assets/asset-activate-rollout.png)
 
-## 7. Regola il rollout e l’allocazione del traffico in base alle esigenze
+## &#x200B;7. Regola rollout e allocazione del traffico in base alle esigenze
 
 Dopo aver attivato l’attività, modificala in qualsiasi momento per aumentare o ridurre l’allocazione del traffico in base alle esigenze.
 

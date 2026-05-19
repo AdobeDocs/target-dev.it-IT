@@ -5,16 +5,32 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 5%
+source-wordcount: 1797
+ht-degree: 4%
 
 ---
 
 # Inizializzare gli SDK
 
-Segui i passaggi descritti nel diagramma *Initialize SDK* per assicurarti che tutte le attività necessarie per caricare la libreria at.js JavaScript di [!DNL Adobe Target] vengano eseguite nella sequenza corretta.
+Segui i passaggi nel diagramma *Inizializza SDK* per assicurarti che tutte le attività necessarie per caricare la libreria at.js JavaScript di [!DNL Adobe Target] vengano eseguite nella sequenza corretta.
 
 >[!TIP]
 >
@@ -32,7 +48,7 @@ Per le applicazioni multipagina, questo flusso si verifica ogni volta che la pag
 
 Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 
-* [1.1: Caricare l’SDK dell’API visitatore](#load)
+* [1.1: Caricare l’API SDK del visitatore](#load)
 * [1.2: Imposta ID cliente](#set)
 * [1.3: Configurare la richiesta di caricamento pagina automatico](#automatic)
 * [1.4: Configurare la gestione dello sfarfallio](#flicker)
@@ -49,18 +65,18 @@ Fai clic sui seguenti collegamenti per passare alle sezioni desiderate:
 * [1.15: Configurare la mappatura dei dati remoti](#remote)
 * [1.16: Caricare at.js](#web)
 
-## 1.1: Caricare l’SDK dell’API visitatore {#load}
+## 1.1: Caricare l’API SDK del visitatore {#load}
 
 Questo passaggio garantisce che la libreria `VisitorAPI.js` sia caricata, configurata e inizializzata correttamente.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Carica diagramma SDK API visitatore](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
 * Per utilizzare il servizio ID visitatore/API, la società deve essere abilitata per [!DNL Adobe Experience Cloud] e disporre di [!UICONTROL Organization ID]. Per ulteriori informazioni, consulta [Requisiti di Experience Cloud: ID organizzazione](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=it&){target=_blank} nella *Guida del servizio Identity*.
-* È necessario il file `VisitorAPI.js`. Questo file dovrebbe essere già presente se sono stati implementati [!DNL Adobe Analytics]. Questo file può anche essere aggiunto tramite l&#39;estensione [[!DNL Adobe Experience Platform] tags](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} o scaricato da [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=it){target=_blank}.
+* È necessario il file `VisitorAPI.js`. Questo file dovrebbe essere già presente se sono stati implementati [!DNL Adobe Analytics]. Questo file può essere aggiunto anche tramite l&#39;estensione [[!DNL Adobe Experience Platform] tags](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} o scaricato da [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=it){target=_blank}.
 
 **Configura e fai riferimento a VisitorAPI.js**
 
@@ -89,7 +105,7 @@ Per ulteriori informazioni, vedere [Implementare il servizio Experience Cloud pe
 
 Questo passaggio garantisce che gli ID noti dei visitatori (ID CRM, ID utente e così via) siano associati all&#39;ID anonimo di [!DNL Adobe] per la personalizzazione tra dispositivi diversi.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Imposta ID cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id-combined.png){width="400" zoomable="yes"}
 
@@ -116,7 +132,7 @@ Per ulteriori informazioni, vedere [setCustomerIDs](https://experienceleague.ado
 
 Questo passaggio consente a at.js di recuperare tutte le esperienze di cui è necessario eseguire il rendering sulla pagina durante il caricamento del file della libreria JavaScript at.js.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Configura richiesta di caricamento pagina automatico](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
@@ -145,7 +161,7 @@ Informazioni sull&#39;impostazione `pageLoadEnabled` in [targetGlobalSettings()]
 
 Questo passaggio consente di evitare la visualizzazione momentanea di altri contenuti della pagina durante la distribuzione delle esperienze.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Configura diagramma gestione sfarfallio](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
@@ -178,18 +194,18 @@ Se `bodyHidingEnabled` è stato disabilitato perché non si desidera attivare l&
 
 Questo passaggio garantisce che tutti i dati che devono essere inviati a [!DNL Target] siano impostati.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Diagramma mappatura dati](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Prerequisiti**
 
 * Il livello dati deve essere pronto con tutti i dati che devono essere inviati a [!DNL Target].
-* Recommendations: arricchisci profilo.
+* Consigli: arricchire il profilo.
    * Passa `entity.id` per acquisire i dati per gli elementi e i criteri visualizzati di recente in base ai criteri dell&#39;ultimo prodotto visualizzato.
    * Passa `entity.id` per acquisire i dati per i criteri di popolarità in base alla categoria preferita.
    * Passa l’attributo di profilo se i criteri personalizzati sono basati su di esso o utilizzati nel filtro della regola di inclusione in qualsiasi criterio.
-* Recommendations: acquisire i dati di prodotto.
+* Consigli: acquisire i dati di prodotto.
    * Altri parametri di entità (riservati e personalizzati) possono essere passati per acquisire o aggiornare il catalogo prodotti in [!DNL Recommendations].
    * È inoltre possibile aggiornare il catalogo prodotti utilizzando feed di entità tramite l&#39;interfaccia utente o l&#39;API [!DNL Target].
 
@@ -201,7 +217,7 @@ Per ulteriori informazioni, vedere [targetPageParams()](/help/dev/implement/clie
 
 * [targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)
 * [Pianificare e implementare la funzione Consigli](/help/dev/implement/recommendations/recommendations.md)
-* [Configurare il catalogo Recommendations](/help/dev/implement/recommendations/recommendations.md)
+* [Configurare il catalogo Consigli](/help/dev/implement/recommendations/recommendations.md)
 
 **Azioni**
 
@@ -215,7 +231,7 @@ Per ulteriori informazioni, vedere [targetPageParams()](/help/dev/implement/clie
 
 Aggiungi elementi promossi e controllane il posizionamento nelle [!DNL Target Recommendations] [progettazioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=it){target=_blank}.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Opzioni disponibili**
 
@@ -235,7 +251,7 @@ Aggiungi elementi promossi e controllane il posizionamento nelle [!DNL Target Re
 
 Creare consigli in base al contenuto del carrello dell’utente.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -259,7 +275,7 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemento nel tuo sito o in base alla popolarità degli elementi nella categoria, nel brand, nel genere e così via preferiti o più visualizzati di un utente.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -288,7 +304,7 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli di un elemento che l’utente sta visualizzando o che ha recentemente visualizzato.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -313,7 +329,7 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 Creare consigli in base al comportamento dell’utente.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -336,7 +352,7 @@ Creare consigli in base al comportamento dell’utente.
 
 Formulare raccomandazioni in base a un file personalizzato caricato.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Criteri disponibili**
 
@@ -356,7 +372,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 ## 1.12: Fornire gli attributi utilizzati nelle regole di inclusione {#inclusion}
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Letture**
 
@@ -370,11 +386,11 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi escludere gli articoli già presenti nel carrello.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Letture**
 
-* [È possibile escludere un&#39;entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=it#exclude){target=_blank}
+* [È possibile escludere un’entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=it#exclude){target=_blank}
 
 +++
 
@@ -384,7 +400,7 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 Utilizzare gli attributi di entità per passare informazioni su prodotti o contenuti a [!DNL Target Recommendations].
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 **Letture**
 
@@ -398,7 +414,7 @@ Utilizzare gli attributi di entità per passare informazioni su prodotti o conte
 
 Questo passaggio assicura che tutti i dati che devono essere inviati a [!DNL Target] siano impostati.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Diagramma di mappatura dati remoti](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
@@ -426,7 +442,7 @@ Utilizzare la funzione `targetPageParams()` per impostare tutti i dati richiesti
 
 Questo passaggio assicura che la libreria JavaScript at.js sia caricata e inizializzata.
 
-+++Consulta i dettagli
++++Vedi i dettagli
 
 ![Carica diagramma at.js di Adobe Target](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
@@ -436,7 +452,7 @@ Questo passaggio assicura che la libreria JavaScript at.js sia caricata e inizia
 
 *Letture*
 
-* [Funzionamento di Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=it){target=_blank}
+* [Come funziona Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=it){target=_blank}
 * [Funzionamento di at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [Implementare Target senza un sistema per la gestione dei tag](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 

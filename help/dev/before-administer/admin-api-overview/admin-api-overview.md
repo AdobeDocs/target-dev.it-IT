@@ -3,9 +3,21 @@ title: Panoramica dell’API di amministrazione di Adobe Target
 description: Panoramica di  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: 1400
 ht-degree: 2%
 
 ---
@@ -75,9 +87,9 @@ Di seguito sono riportati i codici di risposta comuni per le API di amministrazi
 Un’attività ti consente di testare o personalizzare il contenuto per i tuoi utenti. Le attività possono essere di uno dei seguenti tipi:
 
 * [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it)
-* [Targeting delle esperienze (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it)
-* [Raccomandazioni](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=it)
-* [Personalizzazione automatizzata](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
+* [Targeting esperienza (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it)
+* [Consigli](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=it)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
 * [Test multivariato (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=it)
 
 ## Aggiornamenti in blocco

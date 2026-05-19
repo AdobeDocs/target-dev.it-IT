@@ -3,10 +3,18 @@ title: Identificazione utente e bucket
 description: Identificazione utente e bucket
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 3%
+source-wordcount: 1172
+ht-degree: 4%
 
 ---
 
@@ -21,7 +29,7 @@ Un utente può essere identificato in più modi in [!DNL Adobe Target]. [!UICONT
 | `tntID` | `tntId` è l&#39;identificatore primario in [!DNL Target] per un utente. È possibile specificare questo ID oppure [!DNL Target] lo genererà automaticamente se la richiesta non ne contiene uno. |
 | `thirdPartyId` | `thirdPartyId` è l&#39;identificatore dell&#39;utente della tua società, che puoi inviare con ogni chiamata. Quando un utente accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId` viene utilizzato per unire e condividere dati tra diverse soluzioni Adobe. MarketingCloudVisitorId è richiesto per le integrazioni con Adobe Analytics e Adobe Audience Manager. |
-| `customerIds` | Oltre all&#39;ID visitatore Experience Cloud, è possibile utilizzare [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) aggiuntivi e uno stato autenticato per ogni visitatore. |
+| `customerIds` | Oltre all&#39;ID visitatore di Experience Cloud, è possibile utilizzare [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) aggiuntivi e uno stato di autenticazione per ogni visitatore. |
 
 ## ID [!DNL Target] (tntID)
 
@@ -56,7 +64,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -135,7 +143,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -167,9 +175,9 @@ In questo scenario, [!DNL Adobe Target] genererà un `tntId` poiché non è stat
 
 ## ID visitatore Marketing Cloud (marketingCloudVisitorId)
 
-`marketingCloudVisitorId` è un ID universale e costante che identifica i visitatori in tutte le soluzioni di Adobe Experience Cloud. Quando l&#39;organizzazione implementa il servizio ID, questo ID consente di identificare lo stesso visitatore del sito e i relativi dati in diverse soluzioni di Experience Cloud, tra cui [!DNL Adobe Target], Adobe Analytics e Adobe Audience Manager. Si noti che `marketingCloudVisitorId` è obbligatorio per l&#39;integrazione di [!DNL Target] con [!DNL Adobe Analytics] e [!DNL Adobe Audience Manager].
+`marketingCloudVisitorId` è un ID universale e costante che identifica i visitatori in tutte le soluzioni di Adobe Experience Cloud. Quando l&#39;organizzazione implementa il servizio ID, questo ID consente di identificare lo stesso visitatore del sito e i relativi dati in diverse soluzioni Experience Cloud, tra cui [!DNL Adobe Target], Adobe Analytics e Adobe Audience Manager. Si noti che `marketingCloudVisitorId` è obbligatorio per l&#39;integrazione di [!DNL Target] con [!DNL Adobe Analytics] e [!DNL Adobe Audience Manager].
 
-La seguente chiamata di esempio dimostra come un `marketingCloudVisitorId` recuperato dal servizio ID Experience Cloud viene passato a [!DNL Target].
+La seguente chiamata di esempio dimostra come un `marketingCloudVisitorId` recuperato dal servizio Experience Cloud ID viene passato a [!DNL Target].
 
 >[!BEGINTABS]
 
@@ -201,7 +209,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -278,7 +286,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -349,7 +357,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()

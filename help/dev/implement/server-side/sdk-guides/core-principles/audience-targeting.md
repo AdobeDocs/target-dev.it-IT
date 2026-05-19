@@ -1,12 +1,23 @@
 ---
 title: Targeting del pubblico
-description: I tipi di pubblico possono essere utilizzati per eseguire il targeting delle attività di sperimentazione e personalizzazione. [!DNL Adobe Target] supporta una miriade di potenti funzionalità di targeting del pubblico.
+description: I tipi di pubblico possono essere utilizzati per eseguire il targeting delle attività di sperimentazione e personalizzazione. [!DNL Adobe Target] supporta una miriade di potenti funzionalità di targeting del pubblico pronte all'uso.
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 25%
+source-wordcount: 1069
+ht-degree: 17%
 
 ---
 
@@ -36,7 +47,7 @@ Per ulteriori informazioni, vedere [[!DNL Target] Libreria](https://experiencele
 
 ### Geo
 
-Per ulteriori informazioni, vedere [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it).
+Per ulteriori informazioni, consulta [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it).
 &#x200B;&#x200B;
 * Paese/Area geografica
 * Stato
@@ -130,7 +141,7 @@ Per ulteriori informazioni, consulta [Intervallo di tempo](https://experiencelea
 
 ### Come trasmettere gli Client Hints a [!DNL Adobe Target]
 
-A partire da Node.js SDK v2.4.0 e Java SDK v2.3.0, gli Client Hints possono essere inviati a [!DNL Target] tramite chiamate `getOffers()`. Gli Client Hints devono essere inclusi nell&#39;oggetto `request.context` insieme all&#39;agente utente.
+A partire da Node.js SDK v2.4.0 e Java SDK v2.3.0, gli Client Hints possono essere inviati a [!DNL Target] tramite `getOffers()` chiamate. Gli Client Hints devono essere inclusi nell&#39;oggetto `request.context` insieme all&#39;agente utente.
 
 >[!BEGINTABS]
 
@@ -163,7 +174,7 @@ targetClient.getOffers({
 });
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```javascript {line-numbers="true"}
 import com.adobe.target.delivery.v1.model.ClientHints; 
@@ -211,7 +222,7 @@ La tabella seguente indica quali regole per il pubblico sono supportate o meno p
 
 ### Geotargeting per le decisioni su dispositivo
 
-Per mantenere una latenza prossima allo zero per le attività di decisioning sul dispositivo con tipi di pubblico basati su geotargeting, l’Adobe consiglia di fornire autonomamente i valori geografici nella chiamata a `getOffers`. A tale scopo, impostare l&#39;oggetto `Geo` in `Context` della richiesta. Ciò significa che il server dovrà essere in grado di determinare la posizione di ciascun utente finale. Ad esempio, il server potrebbe eseguire una ricerca IP-to-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
+Per mantenere una latenza prossima allo zero per le attività di decisioning sul dispositivo con tipi di pubblico basati su geotargeting, Adobe consiglia di fornire autonomamente i valori geografici nella chiamata a `getOffers`. A tale scopo, impostare l&#39;oggetto `Geo` in `Context` della richiesta. Ciò significa che il server dovrà essere in grado di determinare la posizione di ciascun utente finale. Ad esempio, il server potrebbe eseguire una ricerca IP-to-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
 
 >[!BEGINTABS]
 
@@ -244,7 +255,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```javascript {line-numbers="true"}
 public class TargetRequestUtils {
@@ -270,7 +281,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-Tuttavia, è supportato anche se non si dispone della capacità di eseguire ricerche IP-to-Geo sul server, ma si desidera comunque eseguire decisioni sul dispositivo per `getOffers` richieste che contengono tipi di pubblico basati su geotargeting. Il lato negativo di questo approccio è che utilizzerà una ricerca remota IP-Geo, che aggiungerà latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` remota, poiché raggiunge una rete CDN vicina al server. È necessario **only** fornire il campo `ipAddress` nell&#39;oggetto `Geo` in `Context` della richiesta, affinché l&#39;SDK possa recuperare la geolocalizzazione dell&#39;indirizzo IP dell&#39;utente. Se viene fornito un altro campo oltre a `ipAddress`, l&#39;SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
+Tuttavia, è supportato anche se non si dispone della capacità di eseguire ricerche IP-to-Geo sul server, ma si desidera comunque eseguire decisioni sul dispositivo per `getOffers` richieste che contengono tipi di pubblico basati su geotargeting. Il lato negativo di questo approccio è che utilizzerà una ricerca remota IP-Geo, che aggiungerà latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` remota, poiché raggiunge una rete CDN vicina al server. È necessario **only** fornire il campo `ipAddress` nell&#39;oggetto `Geo` in `Context` della richiesta, affinché SDK possa recuperare la geolocalizzazione dell&#39;indirizzo IP dell&#39;utente. Se viene fornito un altro campo oltre a `ipAddress`, il SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
 
 >[!BEGINTABS]
 
@@ -299,7 +310,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```javascript {line-numbers="true"}
 public class TargetRequestUtils {

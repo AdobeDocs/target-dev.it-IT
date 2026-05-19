@@ -1,13 +1,31 @@
 ---
-keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, global settings, global settings, at.js, funzioni, funzione, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, globalMboxAutoCreate, visitor ApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiesDomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optoutEnabled, out, opt out, selectorsPollingTimeout, dataProviders, Personalization ibrido, deviceIdLifetime
+keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, global settings, global settings, at.js, funzioni, funzione, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optoutout optout, opt out, selectorsPollingTimeout, dataProviders, Personalization ibrido, deviceIdLifetime
 description: Utilizza la funzione [!UICONTROL targetGlobalSettings()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per ignorare le impostazioni invece di utilizzare le API REST o l'interfaccia utente di  [!DNL Target] .
 title: Come si utilizza la funzione [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
+TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 58%
+source-wordcount: 2702
+ht-degree: 56%
 
 ---
 
@@ -102,11 +120,11 @@ ht-degree: 58%
 
   Solo lato server è il metodo decisionale predefinito impostato automaticamente quando at.js 2.5+ viene implementato e distribuito sulle proprietà web.
 
-  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=it).
+  Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=it).
 
   Inoltre, migliorare le tue esperienze personalizzate utilizzando il profilo utente di [!DNL Target], che viene mantenuto tra sessioni e canali diversi, può fornire risultati potenti per la tua azienda.
 
-  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi tramite i segmenti Audience Manager e Adobe Analytics.
+  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi tramite i segmenti di Audience Manager e Adobe Analytics.
 
   **Solo su dispositivo**:
 
@@ -186,7 +204,7 @@ ht-degree: 58%
 * **Valore predefinito**: true (true a partire dalla versione 1.6.2 di at.js)
 * **Descrizione**: indica se è necessario utilizzare il dominio `<clientCode>.tt.omtrdc.net` o `mboxedge<clusterNumber>.tt.omtrdc.net`.
 
-  Se questo valore è true, il dominio `mboxedge<clusterNumber>.tt.omtrdc.net` verrà salvato in un cookie. Attualmente non funziona con [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) quando utilizzi versioni di at.js precedenti ad at.js 1.8.2 e at.js 2.3.1. Se questo è un problema, valuta l’[aggiornamento di at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) a una versione più recente e supportata.
+  Se questo valore è true, il dominio `mboxedge<clusterNumber>.tt.omtrdc.net` verrà salvato in un cookie. Attualmente non funziona con [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) quando utilizzi versioni di at.js precedenti ad at.js 1.8.2 e at.js 2.3.1. Se si tratta di un problema, considera l&#39;aggiornamento di [at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) a una versione più recente e supportata.
 
 ### overrideMboxEdgeServerTimeout
 
@@ -238,7 +256,7 @@ ht-degree: 58%
 
 * **Tipo**: booleano
 * **Valore predefinito**: true
-* **Descrizione**: se abilitata, Adobe raccoglie dati di telemetria relativi all&#39;utilizzo delle funzionalità SDK e alle prestazioni. I dati personali non vengono raccolti.
+* **Descrizione**: se abilitata, Adobe raccoglie dati di telemetria relativi all&#39;utilizzo delle funzionalità e alle prestazioni di SDK. I dati personali non vengono raccolti.
 
 ### timeout
 
@@ -250,7 +268,7 @@ ht-degree: 58%
 
 * **Tipo**: booleano
 * **Valore predefinito**: true
-* **Descrizione**: se abilitata, le visualizzazioni vengono recuperate automaticamente al caricamento della pagina. Quando viene chiamato `triggerView`, le visualizzazioni applicabili vengono visualizzate nel browser. Se questa opzione è disabilitata, le visualizzazioni non vengono recuperate al momento del caricamento della pagina e `triggerView` non esegue alcuna operazione. Le visualizzazioni sono supportate in at.js 2.*x.*
+* **Descrizione**: se abilitata, le visualizzazioni vengono recuperate automaticamente al caricamento della pagina. Quando viene chiamato `triggerView`, le visualizzazioni applicabili vengono visualizzate nel browser. Se questa opzione è disabilitata, le visualizzazioni non vengono recuperate al momento del caricamento della pagina e `triggerView` non esegue alcuna operazione. Le visualizzazioni sono supportate solo in at.js 2.*x*.
 
 ### visitorApiTimeout
 
@@ -272,7 +290,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-## Fornitori dati  {#data-providers}
+## Fornitori dati {#data-providers}
 
 Questa impostazione consente ai clienti di raccogliere dati da provider di dati di terze parti, come Demandbase, BlueKai e servizi personalizzati, e di passare i dati a [!DNL Target] come parametri mbox nella richiesta mbox globale. Supporta la raccolta di dati da più provider tramite richieste sincrone e asincrone. L&#39;utilizzo di questo approccio semplifica la gestione della visualizzazione momentanea del contenuto della pagina predefinito, inclusi i timeout indipendenti per ogni provider per limitare l&#39;impatto sulle prestazioni della pagina.
 
@@ -414,7 +432,7 @@ Dopo aver specificato le impostazioni `cspScriptNonce` e `cspStyleNonce`, at.js 
 
 ## Personalizzazione ibrida
 
-`serverState` è un&#39;impostazione disponibile in at.js v2.2+ che può essere utilizzata per ottimizzare le prestazioni della pagina quando viene implementata un&#39;integrazione ibrida di [!DNL Target]. Per integrazione ibrida si intende l&#39;utilizzo sia di at.js v2.2+ sul lato client che dell&#39;API di consegna o di un SDK [!DNL Target] sul lato server per distribuire le esperienze. `serverState` consente a at.js v2.2+ di applicare le esperienze direttamente dal contenuto recuperato sul lato server e restituito al client come parte della pagina trasmessa.
+`serverState` è un&#39;impostazione disponibile in at.js v2.2+ che può essere utilizzata per ottimizzare le prestazioni della pagina quando viene implementata un&#39;integrazione ibrida di [!DNL Target]. Per integrazione ibrida si intende l’utilizzo sia di at.js v2.2+ sul lato client che dell’API di consegna o di un SDK [!DNL Target] sul lato server per distribuire le esperienze. `serverState` consente a at.js v2.2+ di applicare le esperienze direttamente dal contenuto recuperato sul lato server e restituito al client come parte della pagina trasmessa.
 
 ### Prerequisiti
 
@@ -537,7 +555,7 @@ Quando utilizzi `serverState`, tieni presente quanto segue:
    * Attività create dal Compositore esperienza visivo che vengono eseguite al caricamento della pagina.
    * Visualizzazioni preacquisite.
 
-     Nel caso di SPA che utilizza [!DNL Target] visualizzazioni e `triggerView()` nell&#39;API at.js, at.js v2.2 memorizza nella cache il contenuto di tutte le visualizzazioni preacquisite sul lato server e le applica non appena ogni visualizzazione viene attivata tramite `triggerView()`, di nuovo senza attivare altre chiamate al recupero contenuti per [!DNL Target].
+     Nel caso di applicazioni a pagina singola che utilizzano [!DNL Target] visualizzazioni e `triggerView()` nell&#39;API at.js, at.js v2.2 memorizza in cache il contenuto di tutte le visualizzazioni preacquisite sul lato server e le applica non appena ogni visualizzazione viene attivata tramite `triggerView()`, di nuovo senza attivare altre chiamate per il recupero dei contenuti a [!DNL Target].
 
    * **Nota**: attualmente, le mbox recuperate sul lato server non sono supportate in `serverState`.
 
@@ -545,7 +563,7 @@ Quando utilizzi `serverState`, tieni presente quanto segue:
 
   Per attivare queste impostazioni, attivare l&#39;opzione in **Amministrazione > Implementazione > Modifica > Caricamento pagina abilitato**.
 
-  ![Impostazioni per Caricamento pagina attivato](../../assets/page-load-enabled-setting.png)
+  ![Impostazioni per Caricamento pagina abilitato](../../assets/page-load-enabled-setting.png)
 
 * Se utilizzi i tag `serverState` e `<script>` nel contenuto restituito, assicurati che il contenuto HTML utilizzi `<\/script>` invece di `</script>`. Se utilizzi `</script>`, il browser interpreta `</script>` come fine di uno SCRIPT in linea e potrebbe interrompere la pagina HTML.
 

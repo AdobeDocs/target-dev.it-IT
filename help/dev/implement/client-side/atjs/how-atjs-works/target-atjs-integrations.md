@@ -4,10 +4,29 @@ description: Vedi le integrazioni supportate (e non supportate) da  [!DNL Adobe 
 title: Quali integrazioni sono supportate da at.js?
 feature: at.js
 exl-id: d2c61e77-5fc7-4c35-905b-76b8c4f9df4b
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/RdcxcIGufo2O5aKPqIAJVINkCzZ1Brcv8EXiX1n4buc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e6ff21d3-dec6-4298-8590-7c749fffaf78
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 57%
+source-wordcount: 486
+ht-degree: 56%
 
 ---
 
@@ -25,8 +44,8 @@ Se hai bisogno di un&#39;integrazione non supportata o menzionata qui, contatta 
 | [!UICONTROL Profiles & Audiences] (P&amp;A) | Vedi [Tipi di pubblico](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html?lang=it) nella *Guida utente dei servizi di base*. |
 | [!UICONTROL Experience Cloud ID Service] | Vedi la [documentazione del Servizio Adobe Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it). |
 | [!UICONTROL Tags in Adobe Experience Platform] | [!UICONTROL Tags in Adobe Experience Platform] sono la nuova generazione di funzionalità di gestione tag di [!DNL Adobe]. [!UICONTROL Tags] offre ai clienti un modo semplice di implementare e gestire i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate. Vedi [Implementare [!DNL Target] utilizzando Adobe Experience Platform](../how-to-deployatjs/implement-target-using-adobe-launch.md). |
-| Cloud Service [!UICONTROL Adobe Experience Manager] (AEM) | [!UICONTROL AEM Cloud Service] abilita la creazione di [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] attività all&#39;interno del flusso di lavoro AEM. Supporta at.js con [!UICONTROL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive). Per ulteriori informazioni, vedere [Integrazione con [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=it) e selezionare la versione dell&#39;AEM. |
-| [!UICONTROL AEM Experience Fragments] | I frammenti di esperienza creati nell&#39;AEM nelle attività [!DNL Target] consentono di combinare la facilità d&#39;uso e la potenza dell&#39;AEM con le potenti capacità di intelligenza automatizzata (AI) e apprendimento automatico (ML) in [!DNL Target] per testare e personalizzare le esperienze su larga scala.  AEM riunisce tutti i contenuti e le risorse in una posizione centrale per alimentare la tua strategia di personalizzazione. AEM consente di creare facilmente contenuti per desktop, tablet e dispositivi mobili in un&#39;unica posizione senza scrivere codice. Non è necessario creare pagine per ogni dispositivo: l’AEM regola automaticamente ogni esperienza utilizzando il contenuto.  Consulta [Frammenti di esperienza AEM](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=it). |
+| Cloud Service [!UICONTROL Adobe Experience Manager] (AEM) | [!UICONTROL AEM Cloud Service] abilita la creazione di [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] attività all&#39;interno del flusso di lavoro di AEM. Supporta at.js con [!UICONTROL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive). Per ulteriori informazioni, consulta [Integrazione con [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=it) e seleziona la tua versione di AEM. |
+| [!UICONTROL AEM Experience Fragments] | I frammenti di esperienza creati in AEM nelle attività [!DNL Target] consentono di combinare la facilità d&#39;uso e la potenza di AEM con le potenti capacità di intelligenza automatizzata (AI) e apprendimento automatico (ML) di [!DNL Target] per testare e personalizzare le esperienze su larga scala.  AEM riunisce tutti i contenuti e le risorse in una posizione centrale per alimentare la tua strategia di personalizzazione. AEM consente di creare facilmente contenuti per desktop, tablet e dispositivi mobili in un&#39;unica posizione senza scrivere codice. Non è necessario creare pagine per ogni dispositivo: AEM regola automaticamente ogni esperienza utilizzando i contenuti.  Consulta [Frammenti di esperienza AEM](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=it). |
 
 ## Integrazioni non supportate
 

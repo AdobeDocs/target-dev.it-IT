@@ -4,9 +4,29 @@ description: Scopri come eseguire [!UICONTROL on-device decisioning] con la libr
 title: Come funziona il decisioning sul dispositivo con la libreria JavaScript at.js?
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/5cYQQDwAwUbKanR3Wbt7ckKnGwHvz3arqn0zjdz6SBc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '3478'
+source-wordcount: 3621
 ht-degree: 4%
 
 ---
@@ -25,10 +45,10 @@ A partire dalla versione 2.5.0, at.js offre [!UICONTROL on-device decisioning]. 
 
 I vantaggi di [!UICONTROL on-device decisioning] includono:
 
-* **Offri esperienze e decisioni rapide e sorprendenti.** Il bucket e le decisioni vengono eseguiti in memoria e nel browser per evitare il blocco delle richieste di rete.
-* **Miglioramento delle prestazioni dell&#39;applicazione.** Esegui esperimenti e fornisci personalizzazione ai tuoi clienti e utenti senza compromettere le esperienze degli utenti finali.
+* **Fornisci esperienze e decisioni rapide e sorprendenti.** Il bucket e il decisioning vengono eseguiti in memoria e sul browser per evitare il blocco delle richieste di rete.
+* **Migliora le prestazioni dell&#39;applicazione.** Esegui esperimenti e fornisci personalizzazione ai clienti e agli utenti senza compromettere le esperienze degli utenti finali.
 * **Miglioramento del punteggio di qualità del sito Google.** Con le decisioni prese in memoria, migliora il punteggio di qualità del sito Google del tuo business online per renderlo più individuabile dai consumatori.
-* **Scopri le funzionalità di analisi in tempo reale.** Ottieni informazioni dalle prestazioni dell&#39;attività in tempo reale tramite il reporting di [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it) (A4T). A4T consente di ruotare la strategia nei momenti critici.
+* **Scopri da analisi in tempo reale.** Ottieni informazioni sulle prestazioni dell&#39;attività in tempo reale tramite il reporting di [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it) (A4T). A4T consente di ruotare la strategia nei momenti critici.
 
 ## Funzioni supportate
 
@@ -76,7 +96,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 | 2 | La libreria at.js viene caricata in modo sincrono e nasconde il corpo del documento.<br />   La libreria at.js può anche essere caricata in modo asincrono con un eventuale snippet prenascosto implementato sulla pagina. |
 | 3 | La libreria at.js nasconde il corpo per evitare sfarfallii. |
 | 4 | Viene effettuata una richiesta di caricamento della pagina che include tutti i parametri configurati, ad esempio (ECID, ID cliente, parametri personalizzati, profilo utente e così via). |
-| 5 | Gli script di profilo vengono eseguiti e quindi inseriti nell’archivio profili.<br />L&#39;archivio profili richiede un pubblico idoneo dalla libreria Pubblico (ad esempio, un pubblico condiviso da Adobe Analytics, Adobe Audience Manager e così via).<br />Gli attributi del cliente vengono inviati all’archivio profili in un processo batch. |
+| 5 | Gli script di profilo vengono eseguiti e quindi inseriti nell&#39;archivio profili.<br />L&#39;archivio profili richiede tipi di pubblico idonei dalla libreria Pubblico (ad esempio, tipi di pubblico condivisi da Adobe Analytics, Adobe Audience Manager e così via).<br />Gli attributi del cliente vengono inviati all&#39;archivio profili in un processo batch. |
 | 6 | L’archivio profili viene utilizzato per la qualifica del pubblico e il bucket per filtrare le attività. |
 | 7 | Il contenuto risultante viene selezionato dopo che l&#39;esperienza è determinata dalle attività live di [!DNL Target]. |
 | 8 | La libreria at.js nasconde gli elementi corrispondenti sulla pagina che sono associati all’esperienza di cui è necessario eseguire il rendering. |
@@ -122,7 +142,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 | 9 | La libreria at.js manipola il DOM per eseguire il rendering dell’esperienza dall’artefatto della regola JSON memorizzato nella cache. |
 | 10 | L’esperienza viene riprodotta per il visitatore. |
 | 11 | Viene caricata l’intera pagina web. |
-| 12 | I dati di Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
+| 12 | I dati Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
 
 Il diagramma seguente illustra l’interazione tra il visitatore, il browser, at.js 2.5.0+, e l’artefatto della regola JSON memorizzato nella cache per l’hit pagina o la visita di ritorno del visitatore. Poiché l’artefatto delle regole JSON è già memorizzato nella cache e disponibile sul browser, la decisione viene presa immediatamente senza una chiamata di rete di blocco. Questo diagramma di flusso acquisisce la navigazione successiva della pagina o i visitatori di ritorno.
 
@@ -147,7 +167,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 | 7 | La libreria at.js manipola il DOM per eseguire il rendering dell’esperienza dall’artefatto della regola JSON memorizzato nella cache. |
 | 8 | L’esperienza viene riprodotta per il visitatore. |
 | 9 | Viene caricata l’intera pagina web. |
-| 10 | I dati di Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
+| 10 | I dati Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
 
 ### Ibrido
 
@@ -187,7 +207,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 | 12 | La libreria at.js modifica il DOM per eseguire il rendering dell&#39;esperienza dall&#39;Edge Network [!DNL Target]. |
 | 13 | L’esperienza viene riprodotta per il visitatore. |
 | 14 | Viene caricata l’intera pagina web. |
-| 15 | I dati di Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
+| 15 | I dati Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
 
 Il diagramma seguente illustra l’interazione tra il visitatore, il browser, at.js 2.5.0+, e l’artefatto delle regole JSON memorizzate nella cache per una navigazione di pagina successiva o per una visita di ritorno. In questo diagramma, concentra l’attenzione solo sul caso d’uso in cui viene presa una decisione sul dispositivo per la successiva navigazione della pagina o visita di ritorno. Tieni presente che, a seconda delle attività live per determinate pagine, è possibile effettuare una chiamata lato server per eseguire decisioni lato server.
 
@@ -213,7 +233,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 | 8 | La libreria at.js manipola il DOM per eseguire il rendering dell’esperienza dall’artefatto della regola JSON memorizzato nella cache. |
 | 9 | L’esperienza viene riprodotta per il visitatore. |
 | 10 | Viene caricata l’intera pagina web. |
-| 11 | I dati di Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
+| 11 | I dati Analytics vengono inviati ai server di raccolta dati. I dati di destinazione vengono confrontati con i dati di Analytics tramite SDID ed elaborati nell’archivio dei rapporti di Analytics. I dati di Analytics possono quindi essere visualizzati sia in Analytics che in [!DNL Target] tramite i rapporti [!UICONTROL Analytics for Target] (A4T). |
 
 ## Come si abilita [!UICONTROL on-device decisioning]?
 
