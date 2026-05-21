@@ -14,9 +14,9 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 86209eb483ca69d40615c632ba435d27fec78f36
 workflow-type: tm+mt
-source-wordcount: 278
+source-wordcount: 266
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
 
 1. Passa all’interfaccia utente di Target.
 
-   &lt;!— Insert image-target-ui-1.png —>
+   <!-- Insert image-target-ui-1.png -->
    ![Alt immagine](assets/asset-rule-artifact-1.png)
 
 1. Passare a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** e fare clic su **[!UICONTROL Generate New Authorization Token]**.
 
-   &lt;!— Insert image-target-ui-2.png —>
+   <!-- Insert image-target-ui-2.png -->
    ![Alt immagine](assets/asset-rule-artifact-2.png)
 
 1. Copia il token di autorizzazione appena generato negli Appunti e aggiungilo alla richiesta Target.
