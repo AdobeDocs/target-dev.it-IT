@@ -4,9 +4,9 @@ description: Scopri come integrare  [!DNL Adobe Target] Prehide SDK per eliminar
 title: Guida all’integrazione di Prehide SDK
 feature: Implementation
 hide: true
-source-git-commit: 81818370d32ee8c3f3538e5d8d942f66c13e6a13
+source-git-commit: 2f7a53b667990474dfab7ca66a8ea93d2e946548
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,6 @@ Una piccola libreria sincrona JavaScript che impedisce lo sfarfallio visivo caus
    ```html
    <script>
      window.PrehideConfig = {
-       org: "your-client-code",
        sdk: "alloy"            // or "atjs" (defaults to "alloy")
      };
    </script>
@@ -110,26 +109,13 @@ Esistono due modi per includere `prehide.min.js`:
 
 SDK accetta la configurazione da due origini, in ordine di priorità. Viene letto quello disponibile per primo.
 
-### A: Segnaposto per il download (nessuna configurazione di runtime)
-
-Quando si scarica `prehide.min.js` dall&#39;interfaccia utente di Gestione sfarfallii, il server sostituisce tre segnaposto all&#39;interno del bundle:
-
-| Segnaposto | Sostituito con | Fallback se non viene sostituito |
-| --- | --- | --- |
-| `__FM_CLIENT_CODE__` | Il codice client (ad esempio, `"acmecorp"`) | Legge `window.PrehideConfig.org` |
-| `__FM_TIMEOUT__` | Durata del timer di guardia in ms (ad esempio, `"3000"`) | `5000` ms |
-| `__FM_VERSION__` | Versione SDK (ad esempio, `"1.0.0"`) | `"0.0.0-dev"` |
-
-Se utilizzi il bundle scaricato dall&#39;interfaccia utente, non è necessario alcun blocco `PrehideConfig`. Solo allineare il copione.
-
-### B: Runtime `window.PrehideConfig` (integrazione manuale)
+### Runtime `window.PrehideConfig` (integrazione manuale)
 
 Per i bundle self-hosted o non modificati, dichiarate un oggetto config prima dell&#39;esecuzione dello script prehide:
 
 ```html
 <script>
   window.PrehideConfig = {
-    org: "acmecorp",        // required (or rely on baked-in __FM_CLIENT_CODE__)
     sdk: "alloy"             // optional: "alloy" (default) or "atjs"
   };
 </script>
@@ -137,7 +123,6 @@ Per i bundle self-hosted o non modificati, dichiarate un oggetto config prima de
 
 | Campo | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
-| `org` | stringa | Sì (a meno che non sia cotto al forno) | Il codice cliente del cliente. Utilizzato come segmento dell’organizzazione dell’URL CDN da cui vengono recuperate le regole di pre-nascondere. |
 | `sdk` | `"alloy"` \| `"atjs"` | No | Il SDK di Adobe caricato sulla pagina. Vedi [Selezione SDK](#sdk-selection). |
 
 ## Selezione SDK {#sdk-selection}
@@ -149,12 +134,16 @@ Per i bundle self-hosted o non modificati, dichiarate un oggetto config prima de
 | `"alloy"` *(predefinito)* | `<style id="alloy-prehiding">` | Alloy SDK su personalize-complete | Stai caricando Alloy / Adobe Web SDK su questa pagina. |
 | `"atjs"` | `<style id="at-body-style">` | at.js su personalize-complete | Stai caricando la libreria at.js classica su questa pagina. |
 
+>[!NOTE]
+>
+>Per at.js SDK, è supportata solo la versione 2.x e successive.
+
 ### Come impostarlo
 
 ```html
 <!-- For at.js -->
 <script>
-  window.PrehideConfig = { org: "acmecorp", sdk: "atjs" };
+  window.PrehideConfig = { sdk: "atjs" };
 </script>
 <script> /* prehide.min.js inline */ </script>
 <script src="https://cdn.adobe.com/.../at.js"></script>
