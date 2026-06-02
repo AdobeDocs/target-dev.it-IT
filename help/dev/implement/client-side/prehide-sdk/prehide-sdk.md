@@ -4,7 +4,7 @@ description: Scopri come integrare  [!DNL Adobe Target] Prehide SDK per eliminar
 title: Guida all’integrazione di Prehide SDK
 feature: Implementation
 hide: true
-source-git-commit: 2f7a53b667990474dfab7ca66a8ea93d2e946548
+source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
