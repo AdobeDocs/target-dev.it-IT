@@ -6,21 +6,14 @@ level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
 TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +32,7 @@ Segui i passaggi nel diagramma *Esperienze di rendering* per assicurarti che tut
 
 ## Diagramma esperienze di rendering {#diagram}
 
-La gestione automatica della visualizzazione momentanea di altri contenuti pronta all&#39;uso con at.js ha senso solo se è stato abilitato [!UICONTROL Automatic Page Load Request]. Questa opzione nasconde l&#39;intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
+La gestione automatica della visualizzazione momentanea di altri contenuti pronta all&#39;uso con at.js ha senso solo se è abilitata [!UICONTROL Richiesta di caricamento pagina automatico]. Questa opzione nasconde l&#39;intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
 
 >[!NOTE]
 >
@@ -71,8 +64,8 @@ Aggiungi gli elementi in promozione e controllane il posizionamento nella proget
 **Opzioni disponibili**
 
 * Promuovi per ID
-* [Promuovi per raccolta](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=it){target=_blank}
-* [Promuovi per attributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=it){target=_blank}
+* [Promuovi per raccolta](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Promuovi per attributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Parametri di entità richiesti**
 
@@ -80,7 +73,7 @@ Aggiungi gli elementi in promozione e controllane il posizionamento nella proget
 
 **Letture**
 
-* [Aggiungere promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=it){target=_blank}
+* [Aggiungere promozioni](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -94,9 +87,9 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Le Persone Che Hanno Visualizzato Questi Hanno Visualizzato Quelli]
+* [!UICONTROL Chi ha visualizzato questi ha acquistato anche quelli]
+* [!UICONTROL Chi ha comprato questi ha acquistato anche quelli]
 
 **Parametri di entità richiesti**
 
@@ -104,7 +97,7 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Letture**
 
-* [Basato su carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato su carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -118,13 +111,13 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Criteri disponibili**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Più visualizzati nel sito]
+* [!UICONTROL Più visualizzati per categoria]
+* [!UICONTROL Più visualizzati per attributo elemento]
+* [!UICONTROL Più venduti nel sito]
+* [!UICONTROL Più venduti per categoria]
+* [!UICONTROL Più venduti per attributo articolo]
+* [!UICONTROL Primi per metrica di Analytics]
 
 **Parametri di entità richiesti**
 
@@ -133,7 +126,7 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Letture**
 
-* [Basato sulla popolarità](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato sulla popolarità](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -147,10 +140,10 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Criteri disponibili**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Chi ha visualizzato questo ha visualizzato anche quello]
+* [!UICONTROL Chi ha visualizzato questo ha acquistato anche quello]
+* [!UICONTROL Chi ha acquistato questo ha acquistato anche quello]
+* [!UICONTROL Elementi con attributi simili]
 
 **Parametri di entità richiesti**
 
@@ -159,7 +152,7 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Letture**
 
-* [Basato su elemento](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato su elemento](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -173,8 +166,8 @@ Creare consigli in base al comportamento dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Elementi visualizzati di recente]
+* [!UICONTROL Consigliato per te]
 
 **Parametri di entità richiesti**
 
@@ -182,7 +175,7 @@ Creare consigli in base al comportamento dell’utente.
 
 **Letture**
 
-* [Basato su utente](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basato su utente](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -196,7 +189,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Criteri disponibili**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizzato]
 
 **Parametri di entità richiesti**
 
@@ -204,7 +197,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Letture**
 
-* [Criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=it#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +209,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Letture**
 
-* [Utilizzare regole di inclusione dinamiche e statiche](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=it){target=_blank}
+* [Utilizzare regole di inclusione dinamiche e statiche](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -230,7 +223,7 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 **Letture**
 
-* [È possibile escludere un’entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=it#exclude){target=_blank}
+* [È possibile escludere un’entità in modo dinamico?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -242,9 +235,9 @@ Passa gli ID entità per le entità da escludere dai consigli. Ad esempio, puoi 
 
 **Letture**
 
-* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=it){target=_blank}
+* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Puoi eseguire questo passaggio anche creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=it){target=_blank} utilizzando l&#39;interfaccia utente [!DNL Target] per aggiornare il catalogo prodotti per [!DNL Recommendations].
+Puoi eseguire questo passaggio anche creando [feed di prodotto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} utilizzando l&#39;interfaccia utente [!DNL Target] per aggiornare il catalogo prodotti per [!DNL Recommendations].
 
 +++
 
@@ -258,7 +251,7 @@ Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclu
 
 **Letture**
 
-* [Attributi del profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=it){target=_blank}
+* [Attributi del profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -266,7 +259,7 @@ Fornisci gli attributi del profilo utilizzati come chiavi per le regole di inclu
 
 ## 3.11: Attivare la richiesta di caricamento pagina {#fire}
 
-Questo passaggio attiva una chiamata [!DNL Delivery API] con payload `execute` > `pageLoad` nella richiesta. Il metodo `getOffers()` recupera l&#39;esperienza ed esegue il rendering di `applyOffers()` sulla pagina. La richiesta `pageLoad` è necessaria per il rendering delle esperienze create nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it){target=_blank}.
+Questo passaggio attiva una chiamata [!DNL Delivery API] con payload `execute` > `pageLoad` nella richiesta. Il metodo `getOffers()` recupera l&#39;esperienza ed esegue il rendering di `applyOffers()` sulla pagina. La richiesta `pageLoad` è necessaria per il rendering delle esperienze create nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank}.
 
 +++Vedi i dettagli
 

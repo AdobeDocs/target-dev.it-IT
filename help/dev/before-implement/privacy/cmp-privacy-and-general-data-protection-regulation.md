@@ -5,21 +5,11 @@ title: In che modo Target gestisce le normative sulla privacy e la protezione de
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
 TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 2432
@@ -89,7 +79,7 @@ Esistono tre scenari da considerare quando si utilizza l’opt-in:
 
 1. **Il tag di Target è stato pre-approvato tramite Adobe Experience Platform (o l&#39;interessato ha già approvato Target):** Il tag di Target non viene trattenuto per il consenso e funziona come previsto.
 1. **Il tag di Target NON è pre-approvato e `bodyHidingEnabled` è FALSE:** il tag di Target viene attivato solo dopo il consenso del cliente. Prima della raccolta del consenso, è disponibile solo il contenuto predefinito. Dopo aver ricevuto il consenso, Target viene chiamato e il contenuto personalizzato è disponibile per l&#39;interessato (visitatore). Poiché solo i contenuti predefiniti sono disponibili prima del consenso, è importante usare una strategia appropriata, come ad esempio una pagina iniziale che copre qualsiasi parte della pagina o del contenuto che potrebbe essere personalizzato. Questo processo garantisce che l’esperienza rimanga coerente per l’interessato (visitatore).
-1. **Il tag di Target NON è pre-approvato e `bodyHidingEnabled` è TRUE:** il tag di Target viene attivato solo dopo il consenso del cliente. Prima della raccolta del consenso, è disponibile solo il contenuto predefinito. Tuttavia, poiché `bodyHidingEnabled` è impostato su true, `bodyHiddenStyle` determina quale contenuto della pagina è nascosto fino a quando il tag di Target non viene attivato (o l&#39;interessato rifiuta di effettuare l’opt-in, nel qual caso viene visualizzato il contenuto predefinito). Per impostazione predefinita, `bodyHiddenStyle` è impostato su `body { opacity:0;}`, che nasconde il tag corpo HTML. Di seguito si trova la configurazione di pagina consigliata da Adobe affinché l’intero corpo della pagina, a eccezione della finestra di dialogo di gestione del consenso, sia nascosto inserendo il contenuto della pagina in un contenitore e la finestra di dialogo di gestione del consenso in un contenitore separato. Questa configurazione imposta Target affinché nasconda solo il contenitore del contenuto della pagina. Consulta la pagina [Privacy Service overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=it&) (Panoramica di Privacy Service).
+1. **Il tag di Target NON è pre-approvato e `bodyHidingEnabled` è TRUE:** il tag di Target viene attivato solo dopo il consenso del cliente. Prima della raccolta del consenso, è disponibile solo il contenuto predefinito. Tuttavia, poiché `bodyHidingEnabled` è impostato su true, `bodyHiddenStyle` determina quale contenuto della pagina è nascosto fino a quando il tag di Target non viene attivato (o l&#39;interessato rifiuta di effettuare l’opt-in, nel qual caso viene visualizzato il contenuto predefinito). Per impostazione predefinita, `bodyHiddenStyle` è impostato su `body { opacity:0;}`, che nasconde il tag corpo HTML. Di seguito si trova la configurazione di pagina consigliata da Adobe affinché l’intero corpo della pagina, a eccezione della finestra di dialogo di gestione del consenso, sia nascosto inserendo il contenuto della pagina in un contenitore e la finestra di dialogo di gestione del consenso in un contenitore separato. Questa configurazione imposta Target affinché nasconda solo il contenitore del contenuto della pagina. Consulta la pagina [Privacy Service overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?) (Panoramica di Privacy Service).
 
    La configurazione consigliata della pagina per lo scenario 3 è:
 
@@ -135,7 +125,7 @@ Tutte le richieste relative ai requisiti RGPD per le soluzioni Experience Cloud,
 
 ### Quali informazioni Adobe consente ai clienti di eliminare, in risposta a una richiesta dell’interessato/utente?
 
-Le informazioni relative a un singolo visitatore all&#39;interno di Target sono contenute nel Profilo del visitatore di Target. Target consente ai clienti di eliminare tutti i dati associati a un ID nel loro profilo visitatore. Per esempi dei dati del profilo memorizzati da Target, consulta [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=it).
+Le informazioni relative a un singolo visitatore all&#39;interno di Target sono contenute nel Profilo del visitatore di Target. Target consente ai clienti di eliminare tutti i dati associati a un ID nel loro profilo visitatore. Per esempi dei dati del profilo memorizzati da Target, consulta [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
 
 I dati aggregati o anonimi (ad esempio, i dati di segnalazione) che non identificano una persona particolare oppure i dati che non sono correlati a una persona specifica (ad esempio, i dati sul contenuto) esulano dall’ambito di una richiesta di cancellazione da parte dell’utente.
 
@@ -147,7 +137,7 @@ Target supporta i seguenti tipi di ID per individuare un profilo cliente:
 
 | ID utente | Tipo ID dello spazio dei nomi | ID dello spazio dei nomi | Definizione |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID, precedentemente noto come ID visitatore o Experience Cloud ID. È possibile utilizzare l’API JavaScript per individuare questo ID (consulta i dettagli di seguito). |
+| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID precedentemente noto come ID visitatore o Experience Cloud ID. È possibile utilizzare l’API JavaScript per individuare questo ID (consulta i dettagli di seguito). |
 | ID TnT/ID cookie (TNTID) | Standard | 9 | Identificatore di Target impostato come cookie nel browser del visitatore. È possibile utilizzare l’API JavaScript per individuare questo ID (consulta i dettagli di seguito). |
 | ID di terze parti/ID CRM (THIRDPARTYID) | Specifico di Target | N/D | Se si fornisce a Target il proprio CRM o altre informazioni di identificazione univoche per i propri clienti. |
 
@@ -163,7 +153,7 @@ Attualmente, Adobe non offre una soluzione per la gestione dei consensi, ma sul 
 
 Target fornisce supporto per la funzionalità opt-in tramite Adobe Experience Platform per supportare la strategia di gestione dei consensi. La funzionalità opt-in consente ai clienti di controllare come e quando viene attivato il tag di Target. È inoltre disponibile un’opzione tramite Adobe Experience Platform per pre-approvare il tag di Target. L’utilizzo di Adobe Experience Platform per gestire l’opt-in rappresenta l’approccio consigliato. Esiste un ulteriore controllo granulare in Adobe Experience Platform per nascondere alcuni elementi della pagina prima dell’attivazione di Target che potrebbe essere utile da utilizzare come parte della strategia di consenso.
 
-Per ulteriori informazioni su RGPD, CCPA e Adobe Experience Platform, consulta [Libreria JavaScript di Adobe Privacy e RGPD](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=it&). Inoltre, consulta la sezione precedente *Funzionalità di opt-in di Adobe Target e Adobe Experience Platform*.
+Per ulteriori informazioni su RGPD, CCPA e Adobe Experience Platform, consulta [Libreria JavaScript di Adobe Privacy e RGPD](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). Inoltre, consulta la sezione precedente *Funzionalità di opt-in di Adobe Target e Adobe Experience Platform*.
 
 ### `AdobePrivacy.js` invia informazioni all’API GDPR?
 
@@ -302,7 +292,7 @@ La tabella seguente contiene la descrizione dei campi JSON del profilo illustrat
 | Sample_Parameter | Molte informazioni nel profilo di Target sono caricate o fornite direttamente dal Titolare del trattamento dei dati. In questo esempio, è stato caricato un parametro nel profilo di Target, utilizzando l&#39;API di aggiornamento del profilo. Per ulteriori informazioni, consulta [Metodi per ottenere dati in Target](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md). |
 | user.ReturnTimeOfDay | Questo campo standard include l’ora del giorno dell’ultima visita di ritorno di un utente. |
 | firstSessionStart | Questo campo standard include l’ora del giorno in cui è iniziata la prima sessione dell’utente. |
-| user.sessionCountScript | Molte informazioni nel profilo di Target sono caricate o fornite direttamente dal Titolare del trattamento dei dati. In questo esempio, uno script di profilo incrementa il numero di sessioni che il visitatore ha effettuato sul sito del titolare del trattamento dei dati. Per ulteriori informazioni, consulta [Attributi del profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=it). |
+| user.sessionCountScript | Molte informazioni nel profilo di Target sono caricate o fornite direttamente dal Titolare del trattamento dei dati. In questo esempio, uno script di profilo incrementa il numero di sessioni che il visitatore ha effettuato sul sito del titolare del trattamento dei dati. Per ulteriori informazioni, consulta [Attributi del profilo](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html). |
 
 >[!NOTE]
 >

@@ -6,15 +6,10 @@ level: Experienced
 role: Developer
 exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
 TQID: https://experienceleague.adobe.com/fg3xJnwYAVyz-N-xzT5Piu35Ajd2UMEvuTvTQs2wj3c
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 401
@@ -81,11 +76,11 @@ Collegamento agli attributi di entità per aggiornare il catalogo prodotti per [
 
 **Letture**
 
-* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=it){target=_blank}
+* [Attributi di entità](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Considerazioni**
 
-* Un modo alternativo per passare gli attributi di entità consiste nell&#39;aggiornare il catalogo dei prodotti nell&#39;interfaccia utente [!DNL Target] per utilizzare [feed di prodotto Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=it){target=_blank}.
+* Un modo alternativo per passare gli attributi di entità consiste nell&#39;aggiornare il catalogo dei prodotti nell&#39;interfaccia utente [!DNL Target] per utilizzare [feed di prodotto Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
 * Il passaggio degli attributi di entità è applicabile solo alle pagine in cui i dati del catalogo prodotti sono disponibili nel livello dati.
 * Il passaggio del parametro `entity.event.detailsOnly=true` in qualsiasi chiamata ha la priorità.
 

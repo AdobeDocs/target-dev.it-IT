@@ -5,21 +5,11 @@ title: Cookie di at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 1830
@@ -58,7 +48,7 @@ Per at.js versione 1.*x*, il comportamento del cookie dipende dal fatto di esser
 
 ### Quando utilizzare un cookie di prima parte o di terze parti
 
-Il cookie da utilizzare dipende dalla configurazione del sito. Per comprendere i cookie di prima parte e di terze parti, è utile capire come funziona [!DNL Target]. Consulta [Come [!DNL Adobe Target] funziona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=it) per ulteriori informazioni.
+Il cookie da utilizzare dipende dalla configurazione del sito. Per comprendere i cookie di prima parte e di terze parti, è utile capire come funziona [!DNL Target]. Consulta [Come [!DNL Adobe Target] funziona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) per ulteriori informazioni.
 
 I casi d’uso principali per i cookie sono tre:
 
@@ -98,7 +88,7 @@ at.js genera un `mboxSession ID` e lo memorizza nel cookie. La prima risposta co
 
 >[!NOTE]
 >
->Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato con l&#39;ID visitatore di Experience Cloud.
+>Il cookie di prime parti `AMCV_###@AdobeOrg` è sempre impostato con l&#39;ID visitatore di Experience Cloud.
 
 ### Comportamento dei cookie di terze parti
 
@@ -171,5 +161,5 @@ Da Apple:
 | Funzionalità interessate | Dettagli |
 |--- |--- |
 | Supporto per rinuncia | Le modifiche di tracciamento WebKit di Apple interrompono il supporto dell’opzione di rinuncia.<P>La rinuncia a [!DNL Target] utilizza un cookie nel dominio `clientcode.tt.omtrdc.net`. Per ulteriori dettagli, consulta [Privacy](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] supporta due rinunce:<ul><li>Uno per il cliente (il cliente gestisce il collegamento di rinuncia).</li><li>Uno tramite Adobe che rifiuta all&#39;utente tutte le funzionalità [!DNL Target] per tutti i clienti.</li></ul>Entrambi i metodi utilizzano il cookie di terze parti. |
-| [!DNL Target] attività | I clienti possono scegliere la durata del profilo [&#128279;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=it) per i loro account [!DNL Target], fino a 90 giorni. Il problema è che se la durata del profilo dell&#39;account è più lunga di 30 giorni e il cookie di prima parte viene eliminato perché il dominio del cliente è stato contrassegnato come dominio di tracciamento degli utenti tra siti diversi, i visitatori Safari saranno interessati dalle seguenti aree in [!DNL Target]:<P>**[!DNL Target]report**: se un utente Safari entra in un&#39;attività, ritorna dopo 30 giorni e poi effettua la conversione, l&#39;utente conta come due visitatori e una conversione.<P>Questo comportamento è lo stesso per le attività che utilizzano [!DNL Analytics] come origine per la generazione di rapporti (A4T).<P>**Profilo e appartenenza all&#39;attività**:<ul><li>I dati del profilo vengono cancellati quando scade il cookie di prima parte.</li><li>L’appartenenza all’attività viene cancellata quando scade il cookie di prima parte.</li><li> [!DNL Target] non funziona in Safari per gli account che utilizzano un&#39;implementazione di cookie di terze parti o di cookie di prima parte e di terze parti. Questo comportamento non è una novità. Safari non consente i cookie di terze parti già da qualche tempo.</li></ul><P>**Suggerimenti**: se si teme che il dominio del cliente possa essere contrassegnato come dominio che tiene traccia dei visitatori attraverso sessioni diverse, è più sicuro impostare la durata del profilo su un massimo di 30 giorni in [!DNL Target]. In tal modo gli utenti verranno tracciati allo stesso modo in Safari e negli altri motori browser. |
+| [!DNL Target] attività | I clienti possono scegliere la durata del profilo [](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) per i loro account [!DNL Target], fino a 90 giorni. Il problema è che se la durata del profilo dell&#39;account è più lunga di 30 giorni e il cookie di prima parte viene eliminato perché il dominio del cliente è stato contrassegnato come dominio di tracciamento degli utenti tra siti diversi, i visitatori Safari saranno interessati dalle seguenti aree in [!DNL Target]:<P>**[!DNL Target]report**: se un utente Safari entra in un&#39;attività, ritorna dopo 30 giorni e poi effettua la conversione, l&#39;utente conta come due visitatori e una conversione.<P>Questo comportamento è lo stesso per le attività che utilizzano [!DNL Analytics] come origine per la generazione di rapporti (A4T).<P>**Profilo e appartenenza all&#39;attività**:<ul><li>I dati del profilo vengono cancellati quando scade il cookie di prima parte.</li><li>L’appartenenza all’attività viene cancellata quando scade il cookie di prima parte.</li><li> [!DNL Target] non funziona in Safari per gli account che utilizzano un&#39;implementazione di cookie di terze parti o di cookie di prima parte e di terze parti. Questo comportamento non è una novità. Safari non consente i cookie di terze parti già da qualche tempo.</li></ul><P>**Suggerimenti**: se si teme che il dominio del cliente possa essere contrassegnato come dominio che tiene traccia dei visitatori attraverso sessioni diverse, è più sicuro impostare la durata del profilo su un massimo di 30 giorni in [!DNL Target]. In tal modo gli utenti verranno tracciati allo stesso modo in Safari e negli altri motori browser. |
 

@@ -5,22 +5,15 @@ title: Come si utilizza la funzione [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 60%
+source-wordcount: 1357
+ht-degree: 57%
 
 ---
 
@@ -51,7 +44,7 @@ Questa funzione ti consente di recuperare più offerte passando più mbox. Inolt
 | Request > id > thirdPartyId | No | Dimensione massima = 128. |  |
 | Request > experienceCloud | No |  |  |
 | Request > experienceCloud > analytics | No |  | Integrazione di Adobe Analytics |
-| Request > experienceCloud > analytics > logging | No | I seguenti elementi devono essere implementati sulla pagina:<ul><li>Servizio ID visitatori</li><li>Appmeasurement.js</li></ul> | Sono supportati i seguenti valori:<P>**client_side**: se specificato, verrà restituito un payload di Analytics al chiamante che deve essere utilizzato per inviare a [!UICONTROL Adobe Analytics] tramite [!UICONTROL Data Insertion API].<P>**lato server**: questo è il valore predefinito, in cui il backend [!DNL Target] e [!DNL Analytics] utilizzeranno l&#39;identificatore SDID per unire le chiamate a scopo di reporting. |
+| Request > experienceCloud > analytics > logging | No | I seguenti elementi devono essere implementati sulla pagina:<ul><li>Servizio ID visitatori</li><li>Appmeasurement.js</li></ul> | Sono supportati i seguenti valori:<P>**client_side**: se specificato, verrà restituito un payload di Analytics al chiamante che deve essere utilizzato per inviare a [!UICONTROL Adobe Analytics] tramite l&#39;[!UICONTROL API di inserimento dati].<P>**lato server**: questo è il valore predefinito, in cui il backend [!DNL Target] e [!DNL Analytics] utilizzeranno l&#39;identificatore SDID per unire le chiamate a scopo di reporting. |
 | Request > prefetch | No |  |  |
 | Request > prefetch > views | No | Numero massimo: 50.<P>Nome non vuoto.<P>Lunghezza nome `<=` 128.<P>Lunghezza valore `<=` 5000.<P>Il nome non deve iniziare con &quot;profile&quot;.<P>Nomi non consentiti: &quot;orderId&quot;, &quot;orderTotal&quot;, &quot;productPurchasedId&quot;. | Passa i parametri da utilizzare per recuperare le visualizzazioni rilevanti nelle attività attive. |
 | Request > prefetch > views > profileParameters | No | Numero massimo: 50.<P>Nome non vuoto.<P>Lunghezza nome `<=` 128.<P>Lunghezza valore `<=` 5000.<P>Accetta solo valori String.<P>Il nome non deve iniziare con &quot;profile&quot;. | Passa i parametri di profilo da utilizzare per recuperare le visualizzazioni rilevanti nelle attività attive. |
@@ -86,7 +79,7 @@ Questa funzione ti consente di recuperare più offerte passando più mbox. Inolt
 | Request > execute > mboxes > mbox > order > total | No | `>=` 0. | Recupera le offerte per una data mbox con i totali dell’ordine specificati. |
 | Request > execute > mboxes > mbox > order > purchasedProductIds | No | Nessun valore vuoto.<P>Lunghezza massima di ogni valore = 50.<P>Concatenato e separato da virgole.<P>Lunghezza totale ID prodotto `<=` 250. | Recupera le offerte per una data mbox con gli ID dei prodotti acquistati dell’ordine specificati. |
 
-## Richiama [!UICONTROL getOffers()] per tutte le visualizzazioni
+## Chiama [!UICONTROL getOffers()] per tutte le visualizzazioni
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -117,7 +110,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## Richiama [!UICONTROL getOffers()] per recuperare le visualizzazioni più recenti con i parametri e i parametri del profilo passati
+## Chiama [!UICONTROL getOffers()] per recuperare le visualizzazioni più recenti con i parametri e i parametri del profilo passati
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -138,7 +131,7 @@ adobe.target.getOffers({
 });
 ```
 
-## Richiama [!UICONTROL getOffers()] per recuperare mbox con parametri e parametri di profilo passati.
+## Chiamare [!UICONTROL getOffers()] per recuperare mbox con parametri e parametri di profilo passati.
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -298,7 +291,7 @@ Questo esempio utilizza la variabile count per creare i selettori CSS. In uno sc
 
 Questo esempio utilizza `prefetch > mboxes`, ma puoi anche utilizzare `execute > mboxes`. Se utilizzi la preacquisizione in `getOffers()`, devi anche usare la preacquisizione nella chiamata di `applyOffers()`.
 
-## Chiamare [!UICONTROL getOffers()] per eseguire un pageLoad
+## Chiama [!UICONTROL getOffers()] per eseguire un pageLoad
 
 L&#39;esempio seguente mostra come eseguire un pageLoad utilizzando [!UICONTROL getOffers()] con at.js 2.*x*
 

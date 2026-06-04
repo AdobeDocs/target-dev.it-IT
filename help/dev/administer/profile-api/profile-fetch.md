@@ -5,13 +5,11 @@ contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
 TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 297
 ht-degree: 0%
 
 ---
@@ -30,7 +28,7 @@ L’URL si presenta come nell’esempio seguente:
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-Sostituisci `<clientCode>` con [!DNL Target] [!UICONTROL Client Code] e `<ECID>` con [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
+Sostituisci `<clientCode>` con [!DNL Target] [!UICONTROL Codice client] e `<ECID>` con [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
 
 ## Utilizzo di un tntid
 
@@ -60,7 +58,7 @@ L&#39;esempio seguente mostra il formato della richiesta per recuperare un profi
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-Sostituisci `<your-client-code>` e `your-thirdpartyid` e attiva una richiesta GET. Di seguito è riportato un esempio di chiamata di recupero del profilo che utilizza [!UICONTROL thirdpartyid]:
+Sostituisci `<your-client-code>` e `your-thirdpartyid` e attiva una richiesta GET. Di seguito è riportato un esempio di chiamata di recupero del profilo che utilizza un [!UICONTROL thirdpartyid]:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>

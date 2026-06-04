@@ -5,14 +5,12 @@ title: Come si utilizzano i collegamenti di anteprima mobile in [!DNL Adobe Targ
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
 TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 552
-ht-degree: 18%
+source-wordcount: 578
+ht-degree: 24%
 
 ---
 
@@ -43,15 +41,15 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
 
 ## Generazione di un link di anteprima
 
-1. Nell&#39;interfaccia utente [!DNL Target], fare clic sull&#39;icona **[!UICONTROL More Options]** (puntini di sospensione verticali), quindi selezionare **[!UICONTROL Create Mobile Preview Link]**.
+1. Nell&#39;interfaccia utente [!DNL Target], fai clic sull&#39;icona **[!UICONTROL Altre opzioni]** (puntini di sospensione verticali), quindi seleziona **[!UICONTROL Crea collegamento di anteprima mobile]**.
 
    ![Alt immagine](assets/mobile-preview-create.png)
 
-1. Selezionare le attività da visualizzare in anteprima, quindi fare clic su **[!UICONTROL Generate Mobile Preview Link]**.
+1. Seleziona le attività da visualizzare in anteprima, quindi fai clic su **[!UICONTROL Genera collegamento di anteprima mobile]**.
 
    >[!NOTE]
    >
-   >È possibile selezionare solo le attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] basate su moduli.
+   >È possibile selezionare solo attività [!UICONTROL Test A/B] e [!UICONTROL Targeting esperienza] (XT) basate su moduli.
 
    ![Alt immagine](assets/mobile-preview-select-activities.png)
 
@@ -61,7 +59,7 @@ La funzionalità di anteprima mobile consente di testare completamente le attivi
 
    ![Alt immagine](assets/mobile-preview-enter-url-scheme.png)
 
-1. Fai clic su **[!UICONTROL Generate Mobile Preview Link]**, quindi copia il collegamento.
+1. Fai clic su **[!UICONTROL Genera collegamento di anteprima mobile]**, quindi copia il collegamento.
 
    ![Alt immagine](assets/mobile-preview-generate-and-copy.png)
 
@@ -75,14 +73,14 @@ Apri il link in un browser mobile su un dispositivo in cui hai installato l&#39;
 
    |![collegamento diretto anteprima 1](assets/mobile-preview-open-deeplink.png)|![collegamento diretto anteprima 2](assets/mobile-preview-open-app.png)|
 
-   L&#39;app apre e avvia [!DNL Target] [!UICONTROL Mobile Preview Mode].
+   L&#39;app apre e avvia la [!DNL Target] [!UICONTROL modalità anteprima mobile].
 
-1. Selezionare la combinazione di esperienze da visualizzare, quindi fare clic su **[!UICONTROL Launch Experiences]**.
+1. Seleziona la combinazione di esperienze da visualizzare, quindi fai clic su **[!UICONTROL Avvia esperienze]**.
 
    |![anteprima mobile 1](assets/mobile-preview-experience-selection-1.png)|![anteprima mobile 2](assets/mobile-preview-experience-result-1-france.png)|![anteprima mobile 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![anteprima mobile 4](assets/mobile-preview-experience-selection-2.png)|![anteprima mobile 5](assets/mobile-preview-experience-result-2-aus.png)|![anteprima mobile 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitazioni
 
-* La visualizzazione deve caricare nuovamente per il nuovo contenuto da visualizzare dopo aver fatto clic sul pulsante **[!UICONTROL Launch Experiences]**. Il modo più semplice è quello di passare a una schermata diversa e poi tornare alla schermata in cui si prevede che il cambiamento avvenga.
+* La visualizzazione deve caricare nuovamente per il nuovo contenuto da visualizzare dopo aver fatto clic sul pulsante **[!UICONTROL Avvia esperienze]**. Il modo più semplice è quello di passare a una schermata diversa e poi tornare alla schermata in cui si prevede che il cambiamento avvenga.
 * L&#39;anteprima mobile non è supportata per le versioni Android prima di API-19 (KitKat).

@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
 TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
-source-wordcount: 921
+source-wordcount: 890
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ ht-degree: 0%
 
 A volte gli algoritmi forniti da Recommendations non sono in grado di far emergere elementi particolari che desideri promuovere. In questa situazione, i criteri personalizzati consentono di fornire un set specifico di articoli consigliati per un determinato elemento o categoria chiave.
 
-Per creare criteri personalizzati, definisci e importa la mappatura desiderata tra l’elemento o la categoria chiave e gli elementi consigliati. Questo processo è descritto nella [documentazione sui criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=it). Come indicato in tale documentazione, puoi creare, modificare ed eliminare i criteri personalizzati tramite l’interfaccia utente di Target. Tuttavia, Target fornisce anche un set di API di criteri personalizzati che consentono una gestione più dettagliata dei criteri personalizzati.
+Per creare criteri personalizzati, definisci e importa la mappatura desiderata tra l’elemento o la categoria chiave e gli elementi consigliati. Questo processo è descritto nella [documentazione sui criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Come indicato in tale documentazione, puoi creare, modificare ed eliminare i criteri personalizzati tramite l’interfaccia utente di Target. Tuttavia, Target fornisce anche un set di API di criteri personalizzati che consentono una gestione più dettagliata dei criteri personalizzati.
 
 >[!WARNING]
 >
@@ -38,11 +35,11 @@ Per creare criteri personalizzati utilizzando l&#39;API [Crea criteri personaliz
 
 >[!WARNING]
 >
->I criteri personalizzati creati utilizzando l’API Crea criteri personalizzati, come descritto in questo esercizio, verranno visualizzati nell’interfaccia utente e persisteranno. Non potrai modificarli o eliminarli dall’interfaccia utente. Puoi modificarli o eliminarli **tramite API**, ma in entrambi i casi continueranno a essere visualizzati nell&#39;interfaccia utente di Target. Per mantenere l&#39;opzione di modifica o eliminazione dall&#39;interfaccia utente, crea i criteri personalizzati utilizzando l&#39;interfaccia utente per [la documentazione](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=it), anziché utilizzare l&#39;API Crea criteri personalizzati.
+>I criteri personalizzati creati utilizzando l’API Crea criteri personalizzati, come descritto in questo esercizio, verranno visualizzati nell’interfaccia utente e persisteranno. Non potrai modificarli o eliminarli dall’interfaccia utente. Puoi modificarli o eliminarli **tramite API**, ma in entrambi i casi continueranno a essere visualizzati nell&#39;interfaccia utente di Target. Per mantenere l&#39;opzione di modifica o eliminazione dall&#39;interfaccia utente, crea i criteri personalizzati utilizzando l&#39;interfaccia utente per [la documentazione](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html), anziché utilizzare l&#39;API Crea criteri personalizzati.
 
 Procedi solo con i seguenti passaggi dopo aver letto l’avviso precedente e hai familiarità con la creazione di nuovi criteri personalizzati che non possono essere successivamente eliminati dall’interfaccia utente.
 
-1. Verificare che `TENANT_ID` e `API_KEY` per **[!UICONTROL Create custom criteria]** facciano riferimento alle variabili di ambiente Postman stabilite in precedenza. Utilizza l’immagine seguente per il confronto.
+1. Verificare `TENANT_ID` e `API_KEY` per **[!UICONTROL Creare criteri personalizzati]** fanno riferimento alle variabili di ambiente Postman stabilite in precedenza. Utilizza l’immagine seguente per il confronto.
 
    ![CreaCriteriPersonalizzati1](assets/CreateCustomCriteria1.png)
 
@@ -54,11 +51,11 @@ Procedi solo con i seguenti passaggi dopo aver letto l’avviso precedente e hai
 
    ![CreaCriteriPersonalizzati3](assets/CreateCustomCriteria3.png)
 
-1. Per verificare che i criteri personalizzati siano stati creati, passa a **[!UICONTROL Recommendations > Criteria]** all&#39;interno di Adobe Target e cerca i criteri in base al nome, oppure utilizza **[!UICONTROL List Custom Criteria API]** nel passaggio successivo.
+1. Per verificare che i criteri personalizzati siano stati creati, passa a **[!UICONTROL Consigli > Criteri]** in Adobe Target e cerca i criteri per nome, oppure utilizza l&#39;API **[!UICONTROL Elenca criteri personalizzati]** nel passaggio successivo.
 
    ![CreaCriteriPersonalizzati4](assets/CreateCustomCriteria4.png)
 
-In questo caso, abbiamo un errore. Esaminiamo l&#39;errore esaminando più attentamente i criteri personalizzati, utilizzando **[!UICONTROL List Custom Criteria API]**.
+In questo caso, abbiamo un errore. Esaminiamo l&#39;errore esaminando più attentamente i criteri personalizzati, utilizzando l&#39;**[!UICONTROL Elenco criteri personalizzati API]**.
 
 ## Elencare criteri personalizzati
 
@@ -89,7 +86,7 @@ Per modificare i dettagli di una definizione di criteri personalizzati, utilizza
 1. Invia la richiesta e annota la risposta.
    ![ModificaCriteriPersonalizzati4](assets/EditCustomCriteria4.png)
 
-Verifichiamo il successo dei criteri personalizzati aggiornati, utilizzando **[!UICONTROL Get Custom Criteria API]**.
+Verifichiamo il successo dei criteri personalizzati aggiornati, utilizzando l&#39;API **[!UICONTROL Get Custom Criteria]**.
 
 ## Ottieni criteri personalizzati
 
@@ -110,7 +107,7 @@ Utilizzando l&#39;ID criteri indicato in precedenza, elimina i criteri personali
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. Specifica l’ID del criterio personalizzato (singolo) da eliminare. Fare clic su **[!UICONTROL Send]**.
+1. Specifica l’ID del criterio personalizzato (singolo) da eliminare. Fai clic su **[!UICONTROL Invia]**.
    ![EliminaCriteriPersonalizzati1](assets/DeleteCustomCriteria1.png)
 
 1. Verifica che i criteri siano stati eliminati utilizzando Ottieni criteri personalizzati.

@@ -5,23 +5,14 @@ title: In che modo Target gestisce i problemi relativi alla privacy, inclusi i P
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
 TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 799
-ht-degree: 44%
+source-wordcount: 814
+ht-degree: 43%
 
 ---
 
@@ -43,11 +34,11 @@ Adobe ha sviluppato un&#39;impostazione &quot;privacy by design&quot; che gli ut
 
 Quando questa funzione è abilitata, l’indirizzo IP è reso sufficientemente anonimo da non essere più identificabile come dato personale. Di conseguenza, [!DNL Target] può essere utilizzato in conformità con le leggi sulla privacy dei dati nei paesi che non consentono la raccolta di informazioni personali. L’ottenimento di informazioni a livello di città sarà probabilmente influenzato in modo significativo dall’oscuramento dell’indirizzo IP. L’ottenimento di informazioni a livello di area e nazionale dovrebbe essere influenzato solo leggermente.
 
-Nell&#39;interfaccia utente di [!DNL Target] sono disponibili le impostazioni seguenti passando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**:
+Nell&#39;interfaccia utente di [!DNL Target] sono disponibili le impostazioni seguenti passando a **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**:
 
-* [!UICONTROL Last octet obfuscation]: [!DNL Target] nasconde l&#39;ultimo ottetto dell&#39;indirizzo IP.
-* [!UICONTROL Entire IP obfuscation]: [!DNL Target] nasconde l&#39;intero indirizzo IP.
-* [!UICONTROL None]: [!DNL Target] non nasconde alcuna parte dell&#39;indirizzo IP.
+* [!UICONTROL Offuscamento ultimo ottetto]: [!DNL Target] nasconde l&#39;ultimo ottetto dell&#39;indirizzo IP.
+* [!UICONTROL Intera offuscamento IP]: [!DNL Target] nasconde l&#39;intero indirizzo IP.
+* [!UICONTROL Nessuno]: [!DNL Target] non nasconde alcuna parte dell&#39;indirizzo IP.
 
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
@@ -55,9 +46,9 @@ Nell&#39;interfaccia utente di [!DNL Target] sono disponibili le impostazioni se
 
 ### Offuscamento IP a livello di stream di dati quando si utilizza [!DNL Adobe Experience Platform Web SDK] {#aep}
 
-Quando si utilizza [!DNL Platform Web SDK] (versione 23.4 o successiva), l&#39;impostazione di offuscamento dell&#39;IP a livello di flusso di dati ha la precedenza su qualsiasi opzione di offuscamento dell&#39;IP impostata in [!DNL Target]. Ad esempio, se l&#39;opzione di offuscamento dell&#39;IP a livello di flusso di dati è impostata su [!UICONTROL Full] e l&#39;opzione di offuscamento dell&#39;IP [!DNL Target] è impostata su [!UICONTROL Last octet obfuscation], [!DNL Target] riceve un IP completamente offuscato.
+Quando si utilizza [!DNL Platform Web SDK] (versione 23.4 o successiva), l&#39;impostazione di offuscamento dell&#39;IP a livello di flusso di dati ha la precedenza su qualsiasi opzione di offuscamento dell&#39;IP impostata in [!DNL Target]. Ad esempio, se l&#39;opzione di offuscamento dell&#39;IP a livello di flusso di dati è impostata su [!UICONTROL Completo] e l&#39;opzione di offuscamento dell&#39;IP [!DNL Target] è impostata su [!UICONTROL Ultima offuscamento ottetto], [!DNL Target] riceve un IP completamente offuscato.
 
-Per ulteriori informazioni, vedere [!UICONTROL IP Obfuscation] in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it){target=_blank} nella *[!DNL Adobe Experience Platfrom]Guida allo stream di dati*.
+Per ulteriori informazioni, vedere [!UICONTROL IP Obfuscation] in [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it){target=_blank} in *[!DNL Adobe Experience Platfrom]Datastreams Guide*.
 
 ## Geosegmentazione
 

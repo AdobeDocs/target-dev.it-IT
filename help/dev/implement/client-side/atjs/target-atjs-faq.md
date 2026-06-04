@@ -5,22 +5,15 @@ title: Quali sono le domande più comuni su at.js, e le relative risposte?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2981
-ht-degree: 66%
+source-wordcount: 2994
+ht-degree: 64%
 
 ---
 
@@ -63,7 +56,7 @@ Le sezioni seguenti illustrano la sequenza di azioni per i visitatori nuovi e pe
    * Crea un&#39;istanza dell&#39;oggetto Visitatore.
    * La libreria [!DNL Target] tenta di recuperare i dati ID visitatore di Experience Cloud.
    * Poiché si tratta di un nuovo visitatore, l’API Visitor genera una richiesta cross-domain a demdex.net.
-   * Dopo il recupero dei dati dell&#39;ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
+   * Dopo il recupero dei dati ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
 
 ### Visitatori di ritorno
 
@@ -74,7 +67,7 @@ Le sezioni seguenti illustrano la sequenza di azioni per i visitatori nuovi e pe
    * Crea un&#39;istanza dell&#39;oggetto Visitatore.
    * La libreria [!DNL Target] tenta di recuperare i dati ID visitatore di Experience Cloud.
    * L&#39;API dei visitatori recupera i dati dai cookie.
-   * Dopo il recupero dei dati dell&#39;ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
+   * Dopo il recupero dei dati ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
 
 >[!NOTE]
 >
@@ -123,7 +116,7 @@ Caricare at.js in modo asincrono è un ottimo modo per evitare di bloccare il re
 
 Puoi evitare sfarfallii utilizzando uno snippet che nasconde preventivamente la pagina (o specifiche porzioni), quindi la rivela dopo il caricamento di at.js e della richiesta globale. Lo snippet deve essere aggiunto prima del caricamento di at.js.
 
-Se distribuisci at.js tramite un’implementazione asincrona di [!UICONTROL Adobe Experience Platform], assicurati di includere lo snippet per nascondere le pagine direttamente, prima di implementare [!DNL Target] utilizzando il codice da incorporare di [!UICONTROL Adobe Experience Platform].
+Se distribuisci at.js tramite un&#39;implementazione asincrona di [!UICONTROL Adobe Experience Platform], assicurati di includere lo snippet per nascondere le pagine direttamente, prima di implementare [!DNL Target] utilizzando il codice di incorporamento di [!UICONTROL Adobe Experience Platform].
 
 Durante l’implementazione di at.js tramite un’implementazione sincrona di DTM, puoi aggiungere lo snippet tramite una regola di caricamento della pagina attivata nella parte superiore della pagina.
 
@@ -131,7 +124,7 @@ Per ulteriori informazioni, consulta [Gestione at.js della visualizzazione momen
 
 ## at.js è compatibile con l’integrazione [!DNL Adobe Experience Manager] (Experience Manager)?
 
-[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive) ora supporta le implementazioni at.js con la relativa integrazione [!UICONTROL Adobe Target Cloud Services].
+[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive) ora supporta le implementazioni at.js con la relativa integrazione di [!UICONTROL Adobe Target Cloud Services].
 
 ## Come posso evitare la visualizzazione momentanea di altri contenuti al caricamento pagina, utilizzando at.js?
 
@@ -159,9 +152,9 @@ No, se l’attraversamento di più domini è impostato su &quot;solo x&quot; e i
 
 Per supportare i visitatori Safari, un dominio X migliore sarebbe &quot;disabilitato&quot; (imposta solo un cookie di prima parte) o &quot;abilitato&quot; (imposta solo un cookie di prima parte su Safari, mentre imposta i cookie di prima e terze parti su altri browser).
 
-## È possibile utilizzare Target [!UICONTROL Visual Experience Composer] (VEC) nelle applicazioni a pagina singola?
+## È possibile utilizzare il [!UICONTROL Compositore esperienza visivo] di Target nelle applicazioni a pagina singola?
 
-Sì, puoi utilizzare il Compositore esperienza visivo per la tua applicazione a pagina singola se utilizzi at.js 2.x. Per ulteriori informazioni, vedere [Compositore esperienza visivo per applicazione a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=it).
+Sì, puoi utilizzare il Compositore esperienza visivo per la tua applicazione a pagina singola se utilizzi at.js 2.x. Per ulteriori informazioni, vedere [Compositore esperienza visivo per applicazione a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
 
 ## Posso utilizzare il debugger di Adobe Experience Cloud con le implementazioni di at.js?
 
@@ -252,7 +245,7 @@ Tieni presente che per i token di risposta e gli ID sessione trasmessi in queste
 * Tiene traccia delle sessioni di comunicazione
 * Sono composti da caratteri casuali
 * Gli ID sessione sono validi per 30 minuti
-* I token di risposta possono essere disabilitati ([Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it))
+* I token di risposta possono essere disabilitati ([Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
 * Sono utili solo nell’ambiente delle soluzioni Adobe.
 
 È previsto che nelle richieste at.js venga visualizzata l’intestazione `Access-Control-Allow-Origin` con valore &quot;*&quot;, in quanto sono pubbliche, non è richiesta l’autenticazione e l’accesso ad Adobe Edge Network deve essere effettuato da qualsiasi dominio tramite chiamate JavaScript.

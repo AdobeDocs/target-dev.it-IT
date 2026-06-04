@@ -5,20 +5,15 @@ title: Come si crea un AdBox per un’immagine?
 feature: Implement Email
 exl-id: ad1eb6c4-7a16-4054-ae76-57971261e931
 TQID: https://experienceleague.adobe.com/OPo9T2Eb7afF8Ir8PAlY62OX83zhxtruUMKWCfUthxY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 335
-ht-degree: 68%
+source-wordcount: 337
+ht-degree: 67%
 
 ---
 
@@ -40,7 +35,7 @@ Per informazioni sulla selezione della configurazione corretta, consulta [Implem
 
    * Dove `myClientCode` è il codice client dell’azienda. Il codice cliente della tua azienda è tutto minuscolo e non ha caratteri speciali.
 
-     Il codice client è disponibile nella parte superiore della pagina **[!UICONTROL Administation]** > **[!UICONTROL Implementation]** dell&#39;interfaccia [!DNL Target].
+     Il codice client è disponibile nella parte superiore della pagina **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** dell&#39;interfaccia [!DNL Target].
 
    * Dove `image` è il tipo di chiamata. In questo caso è un&#39;immagine.
 
@@ -50,7 +45,7 @@ Per informazioni sulla selezione della configurazione corretta, consulta [Implem
 
      Deve essere codificata in URL e deve essere un riferimento assoluto. Per codificare rapidamente i tuoi URL, utilizza il [Riferimento per la codifica degli URL di HTML](https://www.w3schools.com/tags/ref_urlencode.asp).
 
-1. Crea [offerte di reindirizzamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=it) per ogni immagine alternativa.
+1. Crea [offerte di reindirizzamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) per ogni immagine alternativa.
 
    >[!NOTE]
    >

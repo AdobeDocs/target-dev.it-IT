@@ -5,20 +5,18 @@ keywords: API Delivery
 exl-id: fc3996e6-8945-437c-9574-cc3f1a406f54
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/ctDEksYd-dwv5oe9QC1NMGsGUVoTdsxXDtoxg-ah2ks
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 262
-ht-degree: 100%
+source-wordcount: 265
+ht-degree: 91%
 
 ---
 
 # SDK
 
-[!DNL Adobe Target] offre [SDK lato server](../../implement/server-side/server-side-overview.md) per interagire con [!DNL Target Delivery API] e facilitare l’integrazione di [!UICONTROL Target] con altre soluzioni [!DNL Adobe Experience Cloud] come [!UICONTROL Adobe Analytics] e [!DNL Adobe Audience Manager].
+[!DNL Adobe Target] offre [SDK lato server](../../implement/server-side/server-side-overview.md) per interagire con [!DNL Target Delivery API] e facilitare l&#39;integrazione di [!UICONTROL Target] con altre soluzioni [!DNL Adobe Experience Cloud] come [!UICONTROL Adobe Analytics] e [!DNL Adobe Audience Manager].
 
 Gli SDK ti aiutano a seguire le best practice nella gestione di sessioni e cookie. Si consiglia vivamente di utilizzare un SDK per semplificare le complessità e prevenire un utilizzo improprio dell’API.
 

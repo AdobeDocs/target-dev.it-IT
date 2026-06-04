@@ -5,25 +5,14 @@ keywords: target;adobe target;activity.id;experience.id;renderDecisions;decision
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
 TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2303
+source-wordcount: 2308
 ht-degree: 5%
 
 ---
@@ -38,13 +27,13 @@ Questo articolo fornisce una panoramica delle differenze tra la libreria `at.js`
 
 ### Installazione di at.js
 
-[!DNL Adobe] consente ai clienti di scaricare la libreria direttamente dalla scheda [!DNL Adobe Experience Cloud], [!UICONTROL Implementation]. La libreria at.js è personalizzata con impostazioni simili a quelle del cliente: clientCode, imsOrgId, ecc.
+[!DNL Adobe] consente ai clienti di scaricare la libreria direttamente dalla scheda [!DNL Adobe Experience Cloud], [!UICONTROL Implementazione]. La libreria at.js è personalizzata con impostazioni simili a quelle del cliente: clientCode, imsOrgId, ecc.
 
 ### Installazione del Web SDK
 
 La versione predefinita è disponibile su una rete CDN. Puoi fare riferimento alla libreria sulla rete CDN direttamente sulla tua pagina, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e non minimizzati. La versione non minimizzata è utile a scopo di debug.
 
-Per ulteriori informazioni, vedere [Installare il Web SDK utilizzando la libreria JavaScript](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/install/library).
+Per ulteriori informazioni, vedere [Installare il Web SDK utilizzando la libreria JavaScript](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library).
 
 ## Configurazione delle librerie
 
@@ -90,7 +79,7 @@ window.adobe.target.init(window, document, {
 
 ### Configurazione di Platform Web SDK
 
-La configurazione per SDK viene eseguita con il comando [`configure`](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/configure/overview). Il comando `configure` è *always* chiamato per primo.
+La configurazione per SDK viene eseguita con il comando [`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview). Il comando `configure` è *always* chiamato per primo.
 
 ## Come richiedere ed eseguire automaticamente il rendering delle offerte di caricamento pagina [!DNL Target]
 
@@ -100,7 +89,7 @@ Utilizzando at.js 2.x, se abiliti l&#39;impostazione `pageLoadEnabled,` la libre
 
 ### Utilizzo di [!DNL PLatform Web SDK]
 
-Il contenuto creato in [!DNL Target] [Compositore esperienza visivo](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/visual-experience-composer) può essere recuperato e renderizzato automaticamente da SDK.
+Il contenuto creato in [!DNL Target] [Compositore esperienza visivo](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer) può essere recuperato e renderizzato automaticamente da SDK.
 
 Per richiedere ed eseguire automaticamente il rendering di [!DNL Target] offerte, utilizza il comando `sendEvent` e imposta l&#39;opzione `renderDecisions` su `true.` In questo modo SDK esegue automaticamente il rendering di qualsiasi contenuto personalizzato idoneo per il rendering automatico.
 
@@ -200,7 +189,7 @@ alloy("sendEvent", {
 }
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Come richiedere ed eseguire il rendering automatico di *NOT* delle offerte di Page Load Target
 
@@ -279,7 +268,7 @@ alloy("sendEvent", {
   });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Richiedere mbox di Target basate su moduli specifiche
 
@@ -319,7 +308,7 @@ adobe.target.getOffers({
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
-È possibile recuperare [!UICONTROL Form-Based Composer] attività basate sul comando `sendEvent` e passare i nomi mbox nell&#39;opzione `decisionScopes`. Il comando `sendEvent` restituisce una promessa che viene risolta con un oggetto contenente le attività/proposte richieste:
+È possibile recuperare le attività basate su [!UICONTROL Compositore basato su modulo] utilizzando il comando `sendEvent` e passando i nomi mbox nell&#39;opzione `decisionScopes`. Il comando `sendEvent` restituisce una promessa che viene risolta con un oggetto contenente le attività/proposte richieste:
 
 Questo frammento di codice è l&#39;aspetto dell&#39;array `propositions`:
 
@@ -436,7 +425,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Come applicare le attività [!DNL Target]
 
@@ -467,7 +456,7 @@ alloy("applyPropositions", {
 });
 ```
 
-Ulteriori informazioni sul comando `applyPropositions` sono disponibili nella [documentazione dedicata](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
+Ulteriori informazioni sul comando `applyPropositions` sono disponibili nella [documentazione dedicata](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
 
 ## Come tenere traccia degli eventi
 
@@ -621,7 +610,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **Esempio 3 - Tracciare un evento generato dopo l&#39;esecuzione di un&#39;azione**
 
@@ -670,7 +659,7 @@ alloy("sendEvent", {
 
 ### Utilizzo di at.js
 
-Utilizzare la funzione `adobe.target.triggerView`. È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. La funzione `adobe.target.triggerView()` deve essere implementata affinché le applicazioni a pagina singola utilizzino il Compositore esperienza visiva [!UICONTROL Visual Experience Composer] per creare attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT). Se `adobe.target.triggerView()` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola.
+Utilizzare la funzione `adobe.target.triggerView`. È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. La funzione `adobe.target.triggerView()` deve essere implementata per le applicazioni a pagina singola per utilizzare il [!UICONTROL Compositore esperienza visivo] (VEC) per creare [!UICONTROL attività Test A/B] e [!UICONTROL Targeting esperienza] (XT). Se `adobe.target.triggerView()` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola.
 
 **Esempio**
 
@@ -682,7 +671,7 @@ adobe.target.triggerView("homeView")
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
-Per attivare o segnalare un&#39;applicazione a pagina singola [!UICONTROL View Change], impostare la proprietà `web.webPageDetails.viewName` nell&#39;opzione `xdm` del comando `sendEvent`. [!DNL Platform Web SDK] controlla la cache di visualizzazione. Se sono presenti offerte per `viewName` specificate in `sendEvent`, le esegue e invia un evento di notifica di visualizzazione.
+Per attivare o segnalare un&#39;applicazione a pagina singola [!UICONTROL Modifica visualizzazione], impostare la proprietà `web.webPageDetails.viewName` nell&#39;opzione `xdm` del comando `sendEvent`. [!DNL Platform Web SDK] controlla la cache di visualizzazione. Se sono presenti offerte per `viewName` specificate in `sendEvent`, le esegue e invia un evento di notifica di visualizzazione.
 
 **Esempio**
 
@@ -701,9 +690,9 @@ alloy("sendEvent", {
 
 [Ulteriori informazioni](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## Come sfruttare [!UICONTROL Response Tokens]
+## Come sfruttare [!UICONTROL Token di risposta]
 
-Il contenuto Personalization restituito da [!DNL Target] include [token di risposta](https://experienceleague.adobe.com/it/docs/target/using/administer/response-tokens). I token di risposta sono dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
+Il contenuto Personalization restituito da [!DNL Target] include [token di risposta](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens). I token di risposta sono dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
 
 ### Utilizzo di at.js
 
@@ -717,7 +706,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -725,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Assicurarsi di utilizzare [!DNL Experience Platform Web SDK] versione 2.6.0 o successiva.
 
-I token di risposta vengono restituiti come parte di `propositions` esposti nel risultato del comando `sendEvent`. Ogni proposta contiene un array di `items,` e ogni elemento ha un oggetto `meta` popolato con token di risposta, se abilitati nell&#39;interfaccia utente di amministrazione di [!DNL Target]. [Ulteriori informazioni](https://experienceleague.adobe.com/it/docs/target/using/administer/response-tokens)
+I token di risposta vengono restituiti come parte di `propositions` esposti nel risultato del comando `sendEvent`. Ogni proposta contiene un array di `items,` e ogni elemento ha un oggetto `meta` popolato con token di risposta, se abilitati nell&#39;interfaccia utente di amministrazione di [!DNL Target]. [Ulteriori informazioni](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
 
 **Esempio**
 
@@ -832,7 +821,7 @@ Quando questa opzione è impostata, il formato del payload restituito è simile 
 }
 ```
 
-Il payload può quindi essere inoltrato a [!DNL Analytics] tramite [!DNL &#x200B; Data Insertion API].
+Il payload può quindi essere inoltrato a [!DNL Analytics] tramite [!DNL  Data Insertion API].
 
 Esempio 2: configurazione in ogni funzione `getOffers`:
 
@@ -896,7 +885,7 @@ I dati scorrono quindi come segue:
 
 ![Diagramma che mostra il flusso di lavoro di registrazione lato server di Analytics](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=it)
+[Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
@@ -1278,5 +1267,5 @@ Sono disponibili più funzionalità di debug quando si utilizza [!DNL Platform W
 * Utilizzo di [Assurance](https://experienceleague.adobe.com/it/docs/experience-platform/assurance/home)
 * [Debug di Web SDK abilitato](https://experienceleague.adobe.com/it/docs/experience-platform/assurance/home)
 * Utilizza [hook di monitoraggio di Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Usa [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/it/docs/experience-platform/debugger/home)
+* Usa [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 * Traccia di destinazione

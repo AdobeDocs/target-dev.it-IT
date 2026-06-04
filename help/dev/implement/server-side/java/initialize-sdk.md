@@ -4,15 +4,12 @@ description: Scopri come utilizzare il metodo create per inizializzare Java SDK 
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
 TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 460
+source-wordcount: 471
 ht-degree: 16%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 16%
 
 ## Descrizione
 
-Utilizza il metodo `create` per inizializzare Java SDK e creare un&#39;istanza di [!UICONTROL Target Client] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
+Utilizza il metodo `create` per inizializzare Java SDK e creare un&#39;istanza del client [!UICONTROL Target] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
 
 ## Metodo
 
@@ -45,8 +42,8 @@ ClientConfigBuilder ClientConfig.builder()
 
 | Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| client | Stringa | Sì | None (Nessuno) | [!UICONTROL Target Client Id] |
-| organizationId | Stringa | Sì | None (Nessuno) | [!UICONTROL Experience Cloud Organization ID] |
+| client | Stringa | Sì | None (Nessuno) | [!UICONTROL ID client di destinazione] |
+| organizationId | Stringa | Sì | None (Nessuno) | [!UICONTROL ID organizzazione Experience Cloud] |
 | connectTimeout | Numero | No | 10000 | Timeout della connessione per tutte le richieste in millisecondi |
 | socketTimeout | Numero | No | 10000 | Timeout socket per tutte le richieste in millisecondi |
 | maxConnectionsPerHost | Numero | No | 100 | Numero massimo di connessioni per host [!DNL Target] |

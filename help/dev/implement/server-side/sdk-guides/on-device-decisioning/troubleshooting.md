@@ -1,27 +1,21 @@
 ---
 title: Risolvere i problemi relativi al decisioning sul dispositivo
-description: Scopri come risolvere i problemi di [!UICONTROL on-device decisioning]
+description: Scopri come risolvere i problemi di [!UICONTROL decisioning sul dispositivo]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# Risoluzione dei problemi [!UICONTROL on-device decisioning]
+# Risoluzione dei problemi di [!UICONTROL decisioning sul dispositivo]
 
 ## Convalida della configurazione
 
@@ -29,8 +23,8 @@ ht-degree: 0%
 
 1. Verifica che `logger` sia configurato
 1. Assicurarsi che [!DNL Target] tracce siano abilitate
-1. Verificare che l&#39;artefatto [!UICONTROL on-device decisioning] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
-1. Convalidare la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL on-device decisioning] tramite il Compositore esperienza basato su moduli.
+1. Verificare che l&#39;elemento [!UICONTROL decisioning sul dispositivo] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
+1. Convalida la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL decisioning sul dispositivo] tramite il Compositore esperienza basato su moduli.
 1. Verifica gli errori di notifica di invio
 
 ## &#x200B;1. Verifica che il logger sia configurato
@@ -75,7 +69,7 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
 
    ![Alt immagine](assets/asset-target-ui-1.png)
 
-1. Passare a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** e fare clic su **[!UICONTROL Generate New Authorization Token]**.
+1. Passa a **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** e fai clic su **[!UICONTROL Genera nuovo token di autorizzazione]**.
 
    ![Alt immagine](assets/asset-target-ui-2.png)
 
@@ -124,7 +118,7 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. Verificare che l&#39;artefatto [!UICONTROL on-device decisioning] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
+## &#x200B;3. Verificare che l&#39;elemento [!UICONTROL decisioning sul dispositivo] *regola* sia stato recuperato e memorizzato nella cache in base all&#39;intervallo di polling definito.
 
 1. Attendi la durata dell’intervallo di polling (il valore predefinito è 20 minuti) e assicurati che l’artefatto venga recuperato da SDK. Vengono generati gli stessi registri del terminale.
 
@@ -146,7 +140,7 @@ L&#39;abilitazione delle tracce genererà ulteriori informazioni da [!DNL Adobe 
      },
    ```
 
-## &#x200B;4. Convalidare la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL on-device decisioning] tramite il Compositore esperienza basato su moduli
+## &#x200B;4. Convalida la distribuzione dei contenuti tramite l&#39;artefatto della regola memorizzata nella cache creando un&#39;attività di test [!UICONTROL decisioning sul dispositivo] tramite il Compositore esperienza basato su moduli
 
 1. Passa all&#39;interfaccia utente [!DNL Target] in Experience Cloud
 
@@ -250,11 +244,11 @@ client = TargetClient.create({
 
 ## Scenari comuni per la risoluzione dei problemi
 
-Verificare le [funzionalità supportate](supported-features.md) per [!UICONTROL on-device decisioning] quando si verificano problemi.
+Assicurati di rivedere [funzionalità supportate](supported-features.md) per [!UICONTROL decisioning sul dispositivo] in caso di problemi.
 
 ### Attività di decisioning sul dispositivo non in esecuzione a causa di un pubblico o di un’attività non supportata
 
-Un problema comune che può verificarsi è rappresentato dalle attività [!UICONTROL on-device decisioning] non in esecuzione a causa del pubblico in uso o del tipo di attività non supportato.
+Un problema comune che può verificarsi è [!UICONTROL attività di decisioning sul dispositivo] non in esecuzione a causa del pubblico in uso o del tipo di attività non supportato.
 
 (1) Utilizzando l’output del logger, controlla le voci nella proprietà trace nell’oggetto di risposta. Identifica in modo specifico la proprietà delle campagne:
 

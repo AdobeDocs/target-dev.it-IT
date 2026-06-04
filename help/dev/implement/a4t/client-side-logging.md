@@ -7,33 +7,26 @@ keywords: target;a4t;logging;web sdk;experience;platform;
 feature: Implementation
 exl-id: fef34eec-128f-4433-a557-42f1347cf2c3
 TQID: https://experienceleague.adobe.com/A-6Z757zzqoIW12ICTs9WBwXjHbapgLArhGSoIgMulo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1139
+source-wordcount: 1166
 ht-degree: 0%
 
 ---
 
 # Registrazione lato client per i dati A4T in [!DNL Experience Platform Web SDK]
 
-[!DNL Adobe Experience Platform Web SDK] ti consente di raccogliere i dati di [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it) sul lato client dell&#39;applicazione Web.
+[!DNL Adobe Experience Platform Web SDK] ti consente di raccogliere i dati di [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) sul lato client dell&#39;applicazione Web.
 
-La registrazione lato client indica che i dati [!DNL Target] rilevanti vengono restituiti sul lato client, consentendo di raccogliere i dati e condividerli con [!DNL Analytics]. Questa opzione deve essere abilitata se intendi inviare manualmente i dati ad Analytics utilizzando l&#39;[API di inserimento dati](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=it).
+La registrazione lato client indica che i dati [!DNL Target] rilevanti vengono restituiti sul lato client, consentendo di raccogliere i dati e condividerli con [!DNL Analytics]. Questa opzione deve essere abilitata se intendi inviare manualmente i dati ad Analytics utilizzando l&#39;[API di inserimento dati](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
 
 >[!NOTE]
 >
->Un metodo per eseguire questa operazione utilizzando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it) è attualmente in fase di sviluppo e sarà disponibile nel prossimo futuro.
+>Un metodo per eseguire questa operazione utilizzando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) è attualmente in fase di sviluppo e sarà disponibile nel prossimo futuro.
 
 Questo documento descrive i passaggi per configurare la registrazione A4T lato client per [!DNL Platform Web SDK] e fornisce esempi di implementazione per i casi d&#39;uso comuni.
 
@@ -41,9 +34,9 @@ Questo documento descrive i passaggi per configurare la registrazione A4T lato c
 
 Questo tutorial presuppone che tu abbia familiarità con i concetti e i processi fondamentali relativi all&#39;utilizzo di [!DNL Platform Web SDK] a scopo di personalizzazione. Se hai bisogno di un’introduzione, consulta la seguente documentazione:
 
-* [Configurazione del Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/configure/overview)
-* [Invio di eventi](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [Configurazione del Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
+* [Invio di eventi](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Configura [!DNL Analytics] registrazione lato client {#set-up-client-side-logging}
 
@@ -51,13 +44,13 @@ Nelle sottosezioni seguenti viene descritto come abilitare la registrazione lato
 
 ### Abilita [!DNL Analytics] registrazione lato client {#enable-analytics-client-side-logging}
 
-Per considerare abilitata la registrazione lato client di [!DNL Analytics] per l&#39;implementazione, è necessario disabilitare la configurazione di [!DNL Adobe Analytics] nel [flusso di dati](https://experienceleague.adobe.com/it/docs/experience-platform/datastreams/overview).
+Per considerare abilitata la registrazione lato client di [!DNL Analytics] per l&#39;implementazione, è necessario disabilitare la configurazione di [!DNL Adobe Analytics] nel [flusso di dati](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
 
 ![Configurazione dello stream di dati di Analytics disabilitata](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### Recupera i dati di [!DNL A4T] da SDK e inviali a [!DNL Analytics] {#a4t-to-analytics}
 
-Per il corretto funzionamento di questo metodo di reporting, è necessario inviare i dati correlati a [!DNL A4T] recuperati dal comando [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/sendevent/overview) nell&#39;hit [!DNL Analytics].
+Per il corretto funzionamento di questo metodo di reporting, è necessario inviare i dati correlati a [!DNL A4T] recuperati dal comando [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview) nell&#39;hit [!DNL Analytics].
 
 Quando [!DNL Target] Edge calcola una risposta di proposte, controlla se la registrazione lato client di [!DNL Analytics] è abilitata (ad esempio, se [!DNL Analytics] è disabilitato nello stream di dati). Se la registrazione lato client è abilitata, il sistema aggiunge un token [!DNL Analytics] a ogni proposta nella risposta.
 
@@ -147,7 +140,7 @@ Di seguito è riportato un esempio di risposta `interact` quando è abilitata la
 }
 ```
 
-Le proposte per le attività [!UICONTROL Form-based Experience Composer] possono contenere sia elementi di contenuto che elementi di metrica di clic nella stessa proposta. Pertanto, invece di avere un singolo token di analisi per la visualizzazione del contenuto nella proprietà `scopeDetails.characteristics.analyticsToken`, è possibile che nelle proprietà `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` siano specificati sia un token di analisi dei clic che un token di analisi dei clic.
+Le proposte per le attività del [!UICONTROL Compositore esperienza basato su moduli] possono contenere sia elementi di contenuto che elementi di metrica di clic nella stessa proposta. Pertanto, invece di avere un singolo token di analisi per la visualizzazione del contenuto nella proprietà `scopeDetails.characteristics.analyticsToken`, è possibile che nelle proprietà `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` siano specificati sia un token di analisi dei clic che un token di analisi dei clic.
 
 ```json
 {
@@ -215,7 +208,7 @@ Le proposte per le attività [!UICONTROL Form-based Experience Composer] possono
 }
 ```
 
-Tutti i valori da `scopeDetails.characteristics.analyticsToken`, così come `scopeDetails.characteristics.analyticsDisplayToken` (per il contenuto visualizzato) e `scopeDetails.characteristics.analyticsClickToken` (per le metriche di clic) sono i payload A4T che devono essere raccolti e inclusi come tag `tnta` nella chiamata dell&#39;API di inserimento dati [5&rbrace;.](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
+Tutti i valori da `scopeDetails.characteristics.analyticsToken`, così come `scopeDetails.characteristics.analyticsDisplayToken` (per il contenuto visualizzato) e `scopeDetails.characteristics.analyticsClickToken` (per le metriche di clic) sono i payload A4T che devono essere raccolti e inclusi come tag `tnta` nella chiamata dell&#39;API di inserimento dati [5}.](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 
 >[!IMPORTANT]
 >
@@ -236,13 +229,13 @@ Tutti i valori da `scopeDetails.characteristics.analyticsToken`, così come `sco
 
 Nelle sottosezioni seguenti viene illustrato come implementare la registrazione lato client di [!DNL Analytics] per i casi d&#39;uso comuni.
 
-### [!UICONTROL Form-Based Experience Composer] attività {#form-based-composer}
+### [!UICONTROL Attività del Compositore esperienza basato su moduli] {#form-based-composer}
 
-È possibile utilizzare [!DNL Platform Web SDK] per controllare l&#39;esecuzione delle proposte dalle attività [Compositore esperienza basato su Adobe Target Form](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it).
+È possibile utilizzare [!DNL Platform Web SDK] per controllare l&#39;esecuzione delle proposte dalle attività [Compositore esperienza basato su Adobe Target Form](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 Quando si richiedono proposte per un ambito decisionale specifico, la proposta restituita contiene il token [!DNL Analytics] appropriato. Si consiglia di concatenare il comando [!DNL Experience Platform Web SDK] `sendEvent` e di scorrere le proposte restituite per eseguirle durante la raccolta dei token [!DNL Analytics] contemporaneamente.
 
-È possibile attivare un comando `sendEvent` per un ambito attività [!UICONTROL Form-Based Experience Composer] come:
+È possibile attivare un comando `sendEvent` per un ambito di attività [!UICONTROL Compositore esperienza basato su moduli] come riportato di seguito:
 
 ```javascript
 alloy("sendEvent", {
@@ -402,7 +395,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-Una proposta può avere diversi tipi di elementi, come indicato dalla proprietà `schema` dell&#39;elemento in questione. Sono supportati quattro schemi di elementi di proposta per [!UICONTROL Form-Based Experience Composer] attività:
+Una proposta può avere diversi tipi di elementi, come indicato dalla proprietà `schema` dell&#39;elemento in questione. Sono supportati quattro schemi di elementi di proposta per le attività di [!UICONTROL Compositore esperienza basato su moduli]:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -432,9 +425,9 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Riepilogo dell’implementazione {#implementation-summary}
 
-In sintesi, è necessario eseguire i seguenti passaggi quando si applicano [!UICONTROL Form-Based Experience Composer] attività con [!DNL Experience Platform Web SDK]:
+In sintesi, è necessario eseguire i seguenti passaggi quando si applicano le attività [!UICONTROL Compositore esperienza basato su moduli] con [!DNL Experience Platform Web SDK]:
 
-1. Invia un evento che recupera [!UICONTROL Form-Based Experience Composer] offerte di attività;
+1. Invia un evento che recupera le offerte dell&#39;attività [!UICONTROL Compositore esperienza basato su moduli];
 1. Applica le modifiche al contenuto della pagina;
 1. Invia l&#39;evento di notifica `decisioning.propositionDisplay`;
 1. Raccogliere i token di visualizzazione [!DNL Analytics] dalla risposta di SDK e creare un payload per l&#39;hit [!DNL Analytics];
@@ -476,9 +469,9 @@ alloy("sendEvent", {
 });
 ```
 
-### [!UICONTROL Visual Experience Composer] attività (VEC) {#visual-experience-composer-acitivties}
+### [!UICONTROL Attività del Compositore esperienza visivo] {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK] consente di gestire le offerte create con [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it).
+[!DNL Platform Web SDK] consente di gestire le offerte create con [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 
 >[!NOTE]
 >

@@ -5,20 +5,14 @@ title: Quali Browser Sono Supportati Da  [!DNL Target] ?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
 TQID: https://experienceleague.adobe.com/xYilaZkJzo4zLIJ4uvIxkuRkhl5E1D52OFmf1eZNtDs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 443
 ht-degree: 19%
 
 ---
@@ -45,7 +39,7 @@ L&#39;interfaccia [!DNL Target] supporta i seguenti browser e dispositivi:
 
 ## Requisiti di editing video
 
-Per poter aprire, creare e visualizzare in anteprima le pagine Web in modo affidabile nel [!UICONTROL Visual Experience Composer] (Compositore esperienza visivo), è necessario che nel browser Web sia installata l&#39;[estensione del browser Helper per editing video di Adobe Experience Cloud](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} o che sia possibile utilizzare [!UICONTROL Enhanced Experience Composer (EEC)].
+Per poter aprire, creare e visualizzare in anteprima le pagine Web in modo affidabile nel [!UICONTROL Compositore esperienza visivo] (VEC), è necessario che nel browser sia installata l&#39;estensione del browser Helper per [Adobe Experience Cloud per editing video](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} o che sia installato il [!UICONTROL Compositore esperienza avanzato].
 
 >[!NOTE]
 >

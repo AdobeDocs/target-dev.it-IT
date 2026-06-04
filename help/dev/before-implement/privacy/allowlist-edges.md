@@ -5,18 +5,11 @@ title: Come posso Inserire nell'elenco Consentiti nodi di  [!DNL Target] Edge?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
 TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: a94ced60-8199-4549-b453-ede2acb4101e
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 373
@@ -28,7 +21,7 @@ ht-degree: 0%
 
 Informazioni e un elenco aggiornato di host per aiutarti a inserire nell&#39;elenco Consentiti i bordi di [!DNL Adobe Target] di cui hai bisogno per l aggiornamento.
 
-Un perimetro è un’architettura di servizio geograficamente distribuita che garantisce agli utenti finali che richiedono contenuti tempi di risposta ottimali, indipendentemente dall’area geografica in cui si trovano. Ogni nodo perimetrale dispone di tutte le informazioni necessarie per rispondere alla richiesta di contenuto dell’utente e per tenere traccia dei dati di analisi relativi a tale richiesta. Le richieste degli utenti vengono indirizzate al nodo edge più vicino. Per ulteriori informazioni, vedere [La rete Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=it#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Un perimetro è un’architettura di servizio geograficamente distribuita che garantisce agli utenti finali che richiedono contenuti tempi di risposta ottimali, indipendentemente dall’area geografica in cui si trovano. Ogni nodo perimetrale dispone di tutte le informazioni necessarie per rispondere alla richiesta di contenuto dell’utente e per tenere traccia dei dati di analisi relativi a tale richiesta. Le richieste degli utenti vengono indirizzate al nodo edge più vicino. Per ulteriori informazioni, vedere [La rete Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Se necessario, è possibile inserire nell&#39;elenco Consentiti i nodi edge di [!DNL Target], se necessario.
 
@@ -36,7 +29,7 @@ Se necessario, è possibile inserire nell&#39;elenco Consentiti i nodi edge di [
 >
 >Oltre a inserire nell&#39;elenco Consentiti gli indirizzi IP NAT (Network Address Translation) di [!DNL Target] edge e [!DNL Target] indirizzi IP edge descritti nell&#39;articolo, è necessario anche inserire nell&#39;elenco Consentiti tutti i blocchi di indirizzi IP di [!DNL Adobe Analytics].
 >
->Per ulteriori informazioni, consulta [Tutti i blocchi di indirizzi IP di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=it#all-adobe-analytics-ip-address-blocks){target=_blank} nella *note tecniche di Adobe Analytics* documentazione.
+>Per ulteriori informazioni, consulta [Tutti i blocchi di indirizzi IP di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} nella *note tecniche di Adobe Analytics* documentazione.
 >
 >È in corso l&#39;aggiornamento dell&#39;infrastruttura [!DNL Adobe Target] e i clienti che desiderano inserire nell&#39;elenco Consentiti gli indirizzi devono utilizzare entrambi i set di IP. In caso contrario, i clienti che utilizzano implementazioni lato server o ibride in cui le chiamate API di Target per il recupero delle esperienze hanno origine dall’interno di una rete dietro un firewall configurato per l’utilizzo di un elenco Consentiti di.
 
