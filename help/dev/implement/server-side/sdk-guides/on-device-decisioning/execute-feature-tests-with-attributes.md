@@ -49,7 +49,7 @@ L’abilitazione del decisioning sul dispositivo garantisce che un’attività A
 
 >[!NOTE]
 >
->Per abilitare o disabilitare l&#39;opzione **[!UICONTROL Decisioning sul dispositivo]**, è necessario disporre del ruolo utente [utente](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) amministratore o approvatore.
+>Per abilitare o disabilitare l&#39;opzione **[!UICONTROL Decisioning sul dispositivo]**, è necessario disporre del ruolo utente [utente](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=it) amministratore o approvatore.
 
 Dopo aver attivato l&#39;interruttore **[!UICONTROL Decisioning sul dispositivo]**, [!DNL Adobe Target] inizia a generare *artefatti regola* per il client.
 

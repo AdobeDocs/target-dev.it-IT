@@ -26,9 +26,9 @@ Questo processo consente di ridurre il tempo di caricamento, evita l’esecuzion
 Quando utilizzi il metodo di preacquisizione con gli SDK mobili di iOS e Android, considera le seguenti limitazioni:
 
 * Il contenuto di preacquisizione non rimane tra un avvio dell’app e quello successivo. Viene memorizzato nella cache per tutto il tempo in cui l’app rimane attiva oppure fino alla chiamata del metodo `clearPrefetchCache()`.
-* La funzionalità di preacquisizione non è supportata per i metodi di allocazione del traffico [!UICONTROL Allocazione automatica] e [!UICONTROL Targeting automatico], per i tipi di attività [!UICONTROL Automated Personalization] o [!UICONTROL Recommendations] o per le [offerte Recommendations in un&#39;attività A/B o XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html).
+* La funzionalità di preacquisizione non è supportata per i metodi di allocazione del traffico [!UICONTROL Allocazione automatica] e [!UICONTROL Targeting automatico], per i tipi di attività [!UICONTROL Automated Personalization] o [!UICONTROL Recommendations] o per le [offerte Recommendations in un&#39;attività A/B o XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=it).
 
 Per ulteriori informazioni, inclusi i metodi di preacquisizione, le classi pubbliche e gli esempi di codice, vedi:
 
-* **iOS:** [Preacquisire il contenuto delle offerte in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) nella *Guida di iOS SDK per Mobile Services*.
-* **Android:** [Preacquisire il contenuto delle offerte in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) nella *Guida di Android SDK per Mobile Services*.
+* **iOS:** [Preacquisire il contenuto delle offerte in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=it) nella *Guida di iOS SDK per Mobile Services*.
+* **Android:** [Preacquisire il contenuto delle offerte in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=it) nella *Guida di Android SDK per Mobile Services*.

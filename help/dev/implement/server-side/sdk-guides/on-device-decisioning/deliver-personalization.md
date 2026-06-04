@@ -46,7 +46,7 @@ Supponiamo di essere un&#39;azienda itinerante. Desideri offrire un’offerta pe
 
    >[!NOTE]
    >
-   >Per abilitare o disabilitare l&#39;opzione [!UICONTROL Decisioning sul dispositivo], è necessario disporre del ruolo utente [utente](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) amministratore o approvatore.
+   >Per abilitare o disabilitare l&#39;opzione [!UICONTROL Decisioning sul dispositivo], è necessario disporre del ruolo utente [utente](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=it) amministratore o approvatore.
 
    Dopo aver attivato l&#39;interruttore **[!UICONTROL Decisioning sul dispositivo]**, [!DNL Adobe Target] inizia a generare *artefatti regola* per il client.
 

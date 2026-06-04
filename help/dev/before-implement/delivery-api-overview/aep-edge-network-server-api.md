@@ -29,4 +29,4 @@ L&#39;[!UICONTROL Edge Network] di Adobe Experience Platform consente ai clienti
 
 L&#39;[!UICONTROL API server di Edge Network] può essere utilizzata per diversi casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. L’API server può essere utilizzata su server, dispositivi IoT, set-top box e molti altri dispositivi.
 
-Per ulteriori informazioni, consulta [Panoramica dell&#39;API di Edge Network Server](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html){target=_blank} nella *documentazione dell&#39;API di Edge Server*.
+Per ulteriori informazioni, consulta [Panoramica dell&#39;API di Edge Network Server](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=it){target=_blank} nella *documentazione dell&#39;API di Edge Server*.

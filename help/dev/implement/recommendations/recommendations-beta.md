@@ -31,7 +31,7 @@ Informazioni utili per pianificare e implementare [!DNL Adobe Target Recommendat
 
 >[!NOTE]
 >
->Oltre a questo articolo, la [Guida di Adobe Target Business Practitioner](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank} contiene informazioni approfondite su [Target Recommendations](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}.
+>Oltre a questo articolo, la [Guida di Adobe Target Business Practitioner](https://experienceleague.adobe.com/it/docs/target/using/target-home){target=_blank} contiene informazioni approfondite su [Target Recommendations](https://experienceleague.adobe.com/it/docs/target/using/recommendations/recommendations){target=_blank}.
 
 Prima di configurare la prima attività [!UICONTROL Recommendations] in [!DNL Adobe Target], completa i passaggi seguenti:
 
@@ -58,7 +58,7 @@ Per fornire consigli di alta qualità, [!UICONTROL Target] deve conoscere i prod
 
 | Metodo | Che cos’è | Quando utilizzarlo | Informazioni aggiuntive |
 | --- | --- | --- | --- |
-| Feed catalogo | Pianifica il caricamento e l&#39;acquisizione giornaliera di un feed (CSV, [!DNL Google] Product XML o [!UICONTROL Classificazioni di prodotto Analytics]). | Per inviare informazioni su più elementi alla volta. Per l’invio di informazioni che non cambiano frequentemente. | Consulta [Feed](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds). |
+| Feed catalogo | Pianifica il caricamento e l&#39;acquisizione giornaliera di un feed (CSV, [!DNL Google] Product XML o [!UICONTROL Classificazioni di prodotto Analytics]). | Per inviare informazioni su più elementi alla volta. Per l’invio di informazioni che non cambiano frequentemente. | Consulta [Feed](https://experienceleague.adobe.com/it/docs/target/using/recommendations/entities/feeds). |
 | API entità | Chiama un’API per inviare aggiornamenti immediati per un singolo elemento. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta la documentazione per gli sviluppatori API [Entities](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Trasmettere gli aggiornamenti sulla pagina | Invia aggiornamenti al minuto per un singolo elemento tramite JavaScript sulla pagina o utilizzando l’API di consegna. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta [Visualizzazioni elemento/pagine prodotto](#item-views-or-product-pages) di seguito. |
 
@@ -121,7 +121,7 @@ function targetPageParams() {
 }
 ```
 
-Per ulteriori informazioni sui consigli basati su carrello, consulta [In base al carrello](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based) nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
+Per ulteriori informazioni sui consigli basati su carrello, consulta [In base al carrello](https://experienceleague.adobe.com/it/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based) nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
 
 ### Escludere gli elementi già presenti nel carrello del visitatore
 
@@ -143,7 +143,7 @@ Quando si verifica un evento di acquisto, passa l’identità dell’articolo o 
 
 ## &#x200B;4. Configurare le esclusioni globali
 
-Escludi gli elementi a livello globale che non desideri consigliare a un visitatore. Consulta [Esclusioni](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions) nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
+Escludi gli elementi a livello globale che non desideri consigliare a un visitatore. Consulta [Esclusioni](https://experienceleague.adobe.com/it/docs/target/using/recommendations/entities/exclusions) nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
 
 ## &#x200B;5. Configura impostazioni [!UICONTROL Consigli]
 
@@ -181,7 +181,7 @@ Conoscere il settore verticale del tuo sito aiuta Target a scegliere i criteri p
 
 I criteri in [!DNL Recommendations] sono regole che determinano quali prodotti o contenuti consigliare in base a un set predeterminato di comportamenti dei visitatori. I criteri possono essere basati sulle tendenze popolari, sui comportamenti attuali e passati di un visitatore o su prodotti e contenuti simili. È possibile sottoporre e test più tipi di consigli tra loro aggiungendo più criteri.
 
-Per ulteriori informazioni, vedere [Criteri](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank} nella *Guida di Adobe Target Business Practitioner.*
+Per ulteriori informazioni, vedere [Criteri](https://experienceleague.adobe.com/it/docs/target/using/recommendations/criteria/algorithms){target=_blank} nella *Guida di Adobe Target Business Practitioner.*
 
 Nella sezione [!UICONTROL Criteri] sono disponibili le impostazioni seguenti:
 
@@ -204,7 +204,7 @@ In generale, è consigliabile mostrare solo i criteri compatibili. Tuttavia, se 
 
 Adobe consiglia di disabilitare questa opzione se utilizzi una soluzione di gestione tag.
 
-Per ulteriori informazioni su questa opzione, vedere [[!UICONTROL Domande frequenti su Recommendations]](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
+Per ulteriori informazioni su questa opzione, vedere [[!UICONTROL Domande frequenti su Recommendations]](https://experienceleague.adobe.com/it/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
 
 ### [!UICONTROL Catalogo prodotti]
 
@@ -231,7 +231,7 @@ Il filtro **[!UICONTROL Ambiente]** è disponibile nelle seguenti posizioni nell
 * Finestra di dialogo Crea esclusione (**[!UICONTROL Recommendations]** > **[!UICONTROL Esclusioni]** > **[!UICONTROL Crea esclusione]**)
 * Finestra di dialogo Aggiorna esclusione (**[!UICONTROL Consigli]** > **[!UICONTROL Esclusioni]** > **[!UICONTROL Modifica]**)
 
-Per ulteriori informazioni, vedere [Host](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank} nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
+Per ulteriori informazioni, vedere [Host](https://experienceleague.adobe.com/it/docs/target/using/administer/hosts){target=_blank} nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
 
 #### [!UICONTROL Base miniature]
 

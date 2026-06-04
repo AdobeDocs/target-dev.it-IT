@@ -72,7 +72,7 @@ Il concetto di [!UICONTROL visualizzazioni] può essere esteso molto oltre quest
 
 È possibile sfruttare [!UICONTROL le visualizzazioni XDM] in [!DNL Target] per consentire agli addetti al marketing di eseguire test A/B e XT nelle applicazioni a pagina singola tramite il [!UICONTROL Compositore esperienza visivo]. Per completare la configurazione di uno sviluppatore una tantum, è necessario eseguire i passaggi seguenti:
 
-1. Installa [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
+1. Installa [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/install/overview).
 2. Determina tutte le [!UICONTROL visualizzazioni XDM] nell&#39;applicazione a pagina singola che desideri personalizzare.
 3. Dopo aver definito le [!UICONTROL visualizzazioni XDM], per distribuire le attività VEC A/B o XT, implementare la funzione `sendEvent()` con `renderDecisions` impostato su `true` e la corrispondente [!UICONTROL visualizzazione XDM] nell&#39;applicazione a pagina singola. La [!UICONTROL visualizzazione XDM] deve essere passata in `xdm.web.webPageDetails.viewName`. Questo passaggio consente agli esperti di marketing di sfruttare il [!UICONTROL Compositore esperienza visivo] per avviare test A/B e XT per tali XDM.
 
@@ -232,7 +232,7 @@ Dopo aver definito le [!UICONTROL visualizzazioni XDM] e implementato `sendEvent
 
 >[!NOTE]
 >
->Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [l&#39;estensione Chrome VEC Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [l&#39;estensione Chrome VEC Helper](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Pannello [!UICONTROL Modifiche]
 
