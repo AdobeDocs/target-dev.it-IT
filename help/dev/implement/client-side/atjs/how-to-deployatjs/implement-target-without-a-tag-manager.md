@@ -23,8 +23,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1739
-ht-degree: 33%
+source-wordcount: 1785
+ht-degree: 32%
 
 ---
 
@@ -36,7 +36,7 @@ Informazioni sull&#39;implementazione di [!DNL Adobe Target] senza l&#39;utilizz
 >
 >I tag in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sono il metodo preferito per implementare [!DNL Target] e la libreria at.js. Le informazioni seguenti non sono applicabili quando si utilizzano i tag in [!DNL Adobe Experience Platform] per implementare [!DNL Target].
 
-Per accedere alla pagina Implementazione, fare clic su **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+Per accedere alla pagina Implementazione, fare clic su **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**.
 
 In questa pagina è possibile specificare le impostazioni seguenti:
 
@@ -56,10 +56,10 @@ Puoi visualizzare i seguenti dettagli dell’account. Queste impostazioni non po
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Client Code] | Il codice client è una sequenza di caratteri specifica del client spesso necessaria quando si utilizzano le API [!DNL Target]. |
-| [!UICONTROL IMS Organization ID] | Questo ID collega l’implementazione al tuo account Adobe Experience Cloud. |
-| [!UICONTROL On-Device Decisioning] | Per abilitare il decisioning sul dispositivo, fai scorrere l’interruttore su &quot;on&quot;.<p>Le attività di decisioning sul dispositivo consentono di memorizzare nella cache le campagne A/B e Targeting esperienza (XT) sul server ed eseguire attività di decisioning in memoria con latenza pressoché pari a zero. Per ulteriori informazioni, vedere [Introduzione alle decisioni sul dispositivo](../../../server-side/sdk-guides/on-device-decisioning/overview.md). |
-| [!UICONTROL Include all existing on-device decisioning qualified activities in the artifact] | (Condizionale) Questa opzione viene visualizzata se abiliti le decisioni sul dispositivo.<p>Attiva l&#39;opzione se desideri includere automaticamente nell&#39;artefatto tutte le attività live di [!DNL Target] idonee per le decisioni su dispositivo.<p>Lasciando questa opzione disattivata, è necessario ricreare e attivare tutte le attività decisionali sul dispositivo affinché vengano incluse nell’artefatto delle regole generato. |
+| [!UICONTROL Codice client] | Il codice client è una sequenza di caratteri specifica del client spesso necessaria quando si utilizzano le API [!DNL Target]. |
+| [!UICONTROL ID organizzazione IMS] | Questo ID collega l’implementazione al tuo account Adobe Experience Cloud. |
+| [!UICONTROL Decisioning Sul Dispositivo] | Per abilitare il decisioning sul dispositivo, fai scorrere l’interruttore su &quot;on&quot;.<p>Le attività di decisioning sul dispositivo consentono di memorizzare nella cache le campagne A/B e Targeting esperienza (XT) sul server ed eseguire attività di decisioning in memoria con latenza pressoché pari a zero. Per ulteriori informazioni, vedere [Introduzione alle decisioni sul dispositivo](../../../server-side/sdk-guides/on-device-decisioning/overview.md). |
+| [!UICONTROL Includi nell&#39;artefatto tutte le attività qualificate per il decisioning sul dispositivo esistenti] | (Condizionale) Questa opzione viene visualizzata se abiliti le decisioni sul dispositivo.<p>Attiva l&#39;opzione se desideri includere automaticamente nell&#39;artefatto tutte le attività live di [!DNL Target] idonee per le decisioni su dispositivo.<p>Lasciando questa opzione disattivata, è necessario ricreare e attivare tutte le attività decisionali sul dispositivo affinché vengano incluse nell’artefatto delle regole generato. |
 
 ## Metodi di implementazione
 
@@ -73,10 +73,10 @@ Le seguenti impostazioni possono essere configurate nel pannello Metodi di imple
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Page load enabled (Auto-create global mbox)] | Seleziona se incorporare la chiamata mbox globale nel file at.js in modo che si attivi automaticamente al caricamento di ogni pagina. |
-| [!UICONTROL Global mbox] | Seleziona un nome per la mbox globale. Per impostazione predefinita, il nome è target-global-mbox.<p>Nei nomi delle mbox in at.js è possibile utilizzare caratteri speciali, tra cui il simbolo &amp;. |
-| [!UICONTROL Timeout (seconds)] | Se [!DNL Target] non risponde con il contenuto entro il periodo definito, la chiamata al server riceve un timeout e viene visualizzato il contenuto predefinito. Durante la sessione del visitatore vengono ripetuti ulteriori tentativi di chiamata. Il valore predefinito è 5 secondi.<p>La libreria at.js utilizza l&#39;impostazione di timeout in `XMLHttpRequest`. Il timeout viene avviato quando la richiesta viene attivata e si arresta quando [!DNL Target] riceve una risposta dal server. Per ulteriori informazioni, vedere [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) in Mozilla Developer Network.<p>Se il timeout specificato si verifica prima della ricezione della risposta, viene visualizzato il contenuto predefinito e il visitatore potrebbe essere conteggiato come partecipante a un&#39;attività, perché la raccolta dei dati viene eseguita sul server Edge [!DNL Target]. Se la richiesta raggiunge il server Edge [!DNL Target], il visitatore viene conteggiato.<p>Quando configuri l’impostazione di timeout, tieni presente quanto segue:<ul><li>Se il valore è troppo basso, gli utenti potrebbero visualizzare il contenuto predefinito la maggior parte delle volte, nonostante il visitatore venga conteggiato come partecipante all’attività.</li><li>Se il valore è troppo alto, i visitatori potrebbero visualizzare aree vuote nella pagina web o pagine vuote (se utilizzi la funzione per nascondere il corpo) per periodi di tempo prolungati.</li></ul>Per comprendere meglio i tempi di risposta della mbox, guarda la scheda Rete negli strumenti di sviluppo del tuo browser. Puoi anche utilizzare strumenti di terze parti per il monitoraggio delle prestazioni web, ad esempio Catchpoint.<p>**Nota**: l&#39;impostazione [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) garantisce che [!DNL Target] non attenda troppo a lungo la risposta dell&#39;API visitatore. Questa impostazione e l’impostazione Timeout per at.js qui descritta non entrano in contrasto. |
-| [!UICONTROL Profile Lifetime] | Questa impostazione determina per quanto tempo vengono memorizzati i profili visitatore. Per impostazione predefinita, i profili vengono memorizzati per due settimane. Questa impostazione può essere aumentata fino a 90 giorni.<p>Per modificare l&#39;impostazione della durata del profilo, contattare [l&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it#reference_ACA3391A00EF467B87930A450050077C). |
+| [!UICONTROL Caricamento pagina abilitato (creazione automatica mbox globale)] | Seleziona se incorporare la chiamata mbox globale nel file at.js in modo che si attivi automaticamente al caricamento di ogni pagina. |
+| [!UICONTROL Mbox globale] | Seleziona un nome per la mbox globale. Per impostazione predefinita, il nome è target-global-mbox.<p>Nei nomi delle mbox in at.js è possibile utilizzare caratteri speciali, tra cui il simbolo &amp;. |
+| [!UICONTROL Timeout (secondi)] | Se [!DNL Target] non risponde con il contenuto entro il periodo definito, la chiamata al server riceve un timeout e viene visualizzato il contenuto predefinito. Durante la sessione del visitatore vengono ripetuti ulteriori tentativi di chiamata. Il valore predefinito è 5 secondi.<p>La libreria at.js utilizza l&#39;impostazione di timeout in `XMLHttpRequest`. Il timeout viene avviato quando la richiesta viene attivata e si arresta quando [!DNL Target] riceve una risposta dal server. Per ulteriori informazioni, vedere [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) in Mozilla Developer Network.<p>Se il timeout specificato si verifica prima della ricezione della risposta, viene visualizzato il contenuto predefinito e il visitatore potrebbe essere conteggiato come partecipante a un&#39;attività, perché la raccolta dei dati viene eseguita sul server Edge [!DNL Target]. Se la richiesta raggiunge il server Edge [!DNL Target], il visitatore viene conteggiato.<p>Quando configuri l’impostazione di timeout, tieni presente quanto segue:<ul><li>Se il valore è troppo basso, gli utenti potrebbero visualizzare il contenuto predefinito la maggior parte delle volte, nonostante il visitatore venga conteggiato come partecipante all’attività.</li><li>Se il valore è troppo alto, i visitatori potrebbero visualizzare aree vuote nella pagina web o pagine vuote (se utilizzi la funzione per nascondere il corpo) per periodi di tempo prolungati.</li></ul>Per comprendere meglio i tempi di risposta della mbox, guarda la scheda Rete negli strumenti di sviluppo del tuo browser. Puoi anche utilizzare strumenti di terze parti per il monitoraggio delle prestazioni web, ad esempio Catchpoint.<p>**Nota**: l&#39;impostazione [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) garantisce che [!DNL Target] non attenda troppo a lungo la risposta dell&#39;API visitatore. Questa impostazione e l’impostazione Timeout per at.js qui descritta non entrano in contrasto. |
+| [!UICONTROL Durata profilo] | Questa impostazione determina per quanto tempo vengono memorizzati i profili visitatore. Per impostazione predefinita, i profili vengono memorizzati per due settimane. Questa impostazione può essere aumentata fino a 90 giorni.<p>Per modificare l&#39;impostazione della durata del profilo, contattare [l&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it#reference_ACA3391A00EF467B87930A450050077C). |
 
 ### Metodo di implementazione principale
 
@@ -86,7 +86,7 @@ Le seguenti impostazioni possono essere configurate nel pannello Metodi di imple
 
 Per scaricare la versione at.js desiderata, fai clic sul pulsante **Scarica** appropriato.
 
-Per modificare l&#39;impostazione di at.js, fai clic su **[!UICONTROL Edit]** accanto alla versione di at.js desiderata.
+Per modificare l&#39;impostazione di at.js, fai clic su **[!UICONTROL Modifica]** accanto alla versione di at.js desiderata.
 
 >[!WARNING]
 >
@@ -108,7 +108,7 @@ Per ulteriori informazioni, vedere [Impostazioni API profilo](/help/dev/before-i
 
 ### Strumenti di debug
 
-Generare un token di autorizzazione per utilizzare gli strumenti di debug avanzati di [!DNL Target]. Fare clic su **[!UICONTROL Generate New Authentication Token]**.
+Generare un token di autorizzazione per utilizzare gli strumenti di debug avanzati di [!DNL Target]. Fare clic su **[!UICONTROL Genera nuovo token di autenticazione]**.
 
 ![Generare un nuovo token di autenticazione](../../../../before-implement/methods-to-get-data-into-target/assets/debugger-auth-token.png)
 
@@ -142,8 +142,8 @@ Istruzioni per scaricare la libreria utilizzando l&#39;interfaccia [!DNL Target]
 
 Per scaricare at.js dall&#39;interfaccia [!DNL Target]:
 
-1. Fare clic su **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
-1. Dalla sezione Metodi di implementazione, fai clic sul pulsante **[!UICONTROL Download]** accanto alla versione at.js desiderata.
+1. Fare clic su **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**.
+1. Dalla sezione Metodi di implementazione, fai clic sul pulsante **[!UICONTROL Scarica]** accanto alla versione at.js desiderata.
 
 ### Scarica at.js utilizzando l&#39;API di download [!DNL Target]
 
@@ -151,7 +151,7 @@ Per scaricare at.js utilizzando l’API.
 
 1. Ottieni il tuo codice cliente.
 
-   Il codice client è disponibile nella parte superiore della pagina **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** dell&#39;interfaccia [!DNL Target].
+   Il codice client è disponibile nella parte superiore della pagina **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** dell&#39;interfaccia [!DNL Target].
 
 1. Ottieni il tuo numero di amministratore.
 
@@ -250,7 +250,7 @@ Un&#39;implementazione tipica di [!DNL Target] che non utilizza un gestore di ta
 Considera le seguenti note importanti:
 
 * Deve essere utilizzato il Doctype HTML5, ad esempio `<!doctype html>`. I doctype non supportati o meno recenti potrebbero impedire a [!DNL Target] di effettuare una richiesta.
-* Preconnessione e Preacquisizione sono opzioni che potrebbero consentire di caricare più rapidamente le pagine Web. Se utilizzi queste configurazioni, assicurati di sostituire `<client code>` con il tuo codice client, che puoi ottenere dalla pagina **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+* Preconnessione e Preacquisizione sono opzioni che potrebbero consentire di caricare più rapidamente le pagine Web. Se utilizzi queste configurazioni, assicurati di sostituire `<client code>` con il tuo codice client, che puoi ottenere dalla pagina **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**.
 * Se si dispone di un livello dati, è ottimale definirlo il più possibile nel `<head>` delle pagine prima di caricare at.js. Questo posizionamento offre la massima capacità di utilizzare queste informazioni in [!DNL Target] per la personalizzazione.
 * Le funzioni speciali di [!DNL Target], come `targetPageParams()`, `targetPageParamsAll()`, Data Provider e `targetGlobalSettings()`, devono essere definite dopo il livello dati e prima del caricamento di at.js. In alternativa, queste funzioni possono essere salvate nella sezione Intestazione libreria della pagina Modifica impostazioni at.js e salvate come parte della libreria at.js stessa. Per ulteriori informazioni su queste funzioni, vedi [Funzioni at.js](/help/dev/implement/client-side/atjs/atjs-functions/atjs-functions.md).
 * Se si utilizzano librerie di supporto di JavaScript, ad esempio jQuery, includerle prima di [!DNL Target] in modo da poterne utilizzare la sintassi e i metodi durante la creazione di [!DNL Target] esperienze.

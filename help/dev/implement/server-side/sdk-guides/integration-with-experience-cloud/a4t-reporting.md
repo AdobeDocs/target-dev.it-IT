@@ -1,6 +1,6 @@
 ---
-title: Integrazione con il reporting di Experience Cloud A4T
-description: Integrazione con Experience Cloud, reporting A4T, integrazione con Analytics for Target
+title: Integrazione con la generazione di rapporti di Experience Cloud A4T
+description: Integrazione con Experience Cloud, Generazione di rapporti per A4T, Integrazione con Analytics for Target
 keywords: api di consegna, lato server, lato server, integrazione, a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
@@ -14,12 +14,12 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 5%
 
 ---
 
-# Generazione rapporti per [!UICONTROL Analytics for Target] (A4T)
+# [!UICONTROL Generazione rapporti di Analytics for Target] (A4T)
 
 [!DNL Adobe Target] supporta il reporting A4T sia per le attività di decisioning sul dispositivo che per le attività [!DNL Target] lato server. Esistono due opzioni di configurazione per abilitare il reporting A4T:
 
@@ -33,7 +33,7 @@ ht-degree: 5%
 ## Prerequisiti
 
 1. Configurare l&#39;attività nell&#39;interfaccia utente di [!DNL Adobe Target] con [!DNL Adobe Analytics] come origine per la generazione di rapporti e assicurarsi che gli account siano abilitati per A4T.
-1. L&#39;utente API genera l&#39;Adobe [!UICONTROL Marketing Cloud Visitor ID] e garantisce che questo ID sia disponibile quando viene eseguita la richiesta [!DNL Target].
+1. L&#39;utente API genera l&#39;ID visitatore Adobe [!UICONTROL Marketing Cloud] e assicura che questo ID sia disponibile quando viene eseguita la richiesta [!DNL Target].
 
 ## [!DNL Adobe Target] inoltra automaticamente il payload [!DNL Analytics]
 

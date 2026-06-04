@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1797
+source-wordcount: 1879
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ Questo passaggio garantisce che la libreria `VisitorAPI.js` sia caricata, config
 
 **Prerequisiti**
 
-* Per utilizzare il servizio ID visitatore/API, la società deve essere abilitata per [!DNL Adobe Experience Cloud] e disporre di [!UICONTROL Organization ID]. Per ulteriori informazioni, consulta [Requisiti di Experience Cloud: ID organizzazione](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=it&){target=_blank} nella *Guida del servizio Identity*.
+* Per utilizzare il servizio ID visitatore/API, la società deve essere abilitata per [!DNL Adobe Experience Cloud] e disporre di un [!UICONTROL ID organizzazione]. Per ulteriori informazioni, consulta [Requisiti di Experience Cloud: ID organizzazione](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=it&){target=_blank} nella *Guida del servizio Identity*.
 * È necessario il file `VisitorAPI.js`. Questo file dovrebbe essere già presente se sono stati implementati [!DNL Adobe Analytics]. Questo file può essere aggiunto anche tramite l&#39;estensione [[!DNL Adobe Experience Platform] tags](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} o scaricato da [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=it){target=_blank}.
 
 **Configura e fai riferimento a VisitorAPI.js**
@@ -255,9 +255,9 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Le Persone Che Hanno Visualizzato Questi Hanno Visualizzato Quelli]
+* [!UICONTROL Chi ha visualizzato questi ha acquistato anche quelli]
+* [!UICONTROL Chi ha comprato questi ha acquistato anche quelli]
 
 **Parametri di entità richiesti**
 
@@ -279,13 +279,13 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Criteri disponibili**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Più visualizzati nel sito]
+* [!UICONTROL Più visualizzati per categoria]
+* [!UICONTROL Più visualizzati per attributo elemento]
+* [!UICONTROL Più venduti nel sito]
+* [!UICONTROL Più venduti per categoria]
+* [!UICONTROL Più venduti per attributo articolo]
+* [!UICONTROL Primi per metrica di Analytics]
 
 **Parametri di entità richiesti**
 
@@ -308,10 +308,10 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Criteri disponibili**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Chi ha visualizzato questo ha visualizzato anche quello]
+* [!UICONTROL Chi ha visualizzato questo ha acquistato anche quello]
+* [!UICONTROL Chi ha acquistato questo ha acquistato anche quello]
+* [!UICONTROL Elementi con attributi simili]
 
 **Parametri di entità richiesti**
 
@@ -333,8 +333,8 @@ Creare consigli in base al comportamento dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Elementi visualizzati di recente]
+* [!UICONTROL Consigliato per te]
 
 **Parametri di entità richiesti**
 
@@ -356,7 +356,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Criteri disponibili**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizzato]
 
 **Parametri di entità richiesti**
 

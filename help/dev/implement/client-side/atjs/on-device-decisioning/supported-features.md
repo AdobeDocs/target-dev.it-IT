@@ -1,6 +1,6 @@
 ---
 keywords: implementazione, libreria javascript, js, atjs, decisioning sul dispositivo, decisioning sul dispositivo, funzionalità supportate, $ 8
-description: Scopri le funzionalità supportate per [!UICONTROL on-device decisioning].
+description: Scopri le funzionalità supportate per [!UICONTROL le decisioni su dispositivo].
 title: Quali funzioni sono supportate in Decisioning sul dispositivo
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
@@ -21,18 +21,18 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 720
+source-wordcount: 747
 ht-degree: 8%
 
 ---
 
-# Funzioni supportate per [!UICONTROL on-device decisioning]
+# Funzioni supportate per [!UICONTROL decisioning sul dispositivo]
 
-Il SDK JS [!DNL Adobe Target] offre ai clienti la flessibilità di scegliere tra prestazioni e aggiornamento dei dati per le decisioni. In altre parole, se la distribuzione dei contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico è la cosa più importante per te, è necessario effettuare una chiamata al server live. Tuttavia, quando le prestazioni sono più importanti, è necessario prendere una decisione su dispositivo e in memoria. Affinché [!UICONTROL on-device decisioning] funzioni, fare riferimento alle sezioni seguenti in cui sono elencate le funzionalità supportate.
+Il SDK JS [!DNL Adobe Target] offre ai clienti la flessibilità di scegliere tra prestazioni e aggiornamento dei dati per le decisioni. In altre parole, se la distribuzione dei contenuti personalizzati più rilevanti e coinvolgenti tramite l’apprendimento automatico è la cosa più importante per te, è necessario effettuare una chiamata al server live. Tuttavia, quando le prestazioni sono più importanti, è necessario prendere una decisione su dispositivo e in memoria. Affinché [!UICONTROL le decisioni sul dispositivo] funzionino, consulta le sezioni seguenti che elencano le funzionalità supportate.
 
 ## Tipi di attività supportati
 
-La tabella seguente indica quali [tipi di attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=it) creati dal [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) o [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it) sono supportati o non supportati per [!UICONTROL on-device decisioning].
+La tabella seguente indica quali [tipi di attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=it) creati dal [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) o [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it) sono supportati o non supportati per [!UICONTROL decisioning sul dispositivo].
 
 | Tipo di attività | Supportate? |
 | --- | --- |
@@ -47,7 +47,7 @@ La tabella seguente indica quali [tipi di attività](https://experienceleague.ad
 
 ## Targeting del pubblico
 
-La tabella seguente indica quali regole di pubblico sono supportate o meno per [!UICONTROL on-device decisioning].
+La tabella seguente indica quali regole di pubblico sono supportate o meno per [!UICONTROL le decisioni su dispositivo].
 
 | Regola pubblico | Supportate? |
 | --- | --- |
@@ -61,11 +61,11 @@ La tabella seguente indica quali regole di pubblico sono supportate o meno per [
 | [Profilo visitatore](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=it) | No |
 | [Origini del traffico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=it) | No |
 | [Arco temporale](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=it) | Sì |
-| Pubblico Adobe Experience Cloud<P>([!DNL Audiences from Adobe Analytics], [!DNL Adobe Audience Manager] e [!DNL Adobe Experience Manager]) | No |
+| Adobe Experience Cloud Audiences<P>([!DNL Audiences from Adobe Analytics], [!DNL Adobe Audience Manager] e [!DNL Adobe Experience Manager]) | No |
 
-### Geotargeting per [!UICONTROL on-device decisioning]
+### Geotargeting per [!UICONTROL decisioning sul dispositivo]
 
-Per mantenere una latenza minima per le attività [!UICONTROL on-device decisioning] con tipi di pubblico basati su geotargeting, Adobe consiglia di fornire autonomamente i valori geografici nella chiamata a [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Imposta l’oggetto Geo nel contesto della richiesta. Questo significa dal browser, un modo per determinare la posizione di ogni visitatore. Ad esempio, puoi eseguire una ricerca IP-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
+Per mantenere una latenza minima per le attività [!UICONTROL decisioning sul dispositivo] con pubblico basato su geotargeting, Adobe consiglia di fornire i valori geografici nella chiamata a [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Imposta l’oggetto Geo nel contesto della richiesta. Questo significa dal browser, un modo per determinare la posizione di ogni visitatore. Ad esempio, puoi eseguire una ricerca IP-Geo utilizzando un servizio configurato. Alcuni provider di hosting, come Google Cloud, forniscono questa funzionalità tramite intestazioni personalizzate in ogni `HttpServletRequest`.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -87,7 +87,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-Tuttavia, è supportato anche se non è possibile eseguire ricerche IP-to-Geo nel server, ma si desidera comunque eseguire [!UICONTROL on-device decisioning] per [richieste getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) che contengono tipi di pubblico basati su geotargeting. Il lato negativo di questo approccio è che utilizza una ricerca remota IP-Geo, che aggiunge latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` con decisioni lato server, perché raggiunge una rete CDN vicina al server. Fornisci solo il campo &quot;ipAddress&quot; nell’oggetto Geo nel contesto della richiesta di SDK per recuperare la geolocalizzazione dell’indirizzo IP del visitatore. Se viene fornito un campo diverso da &quot;ipAddress&quot;, il SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
+Tuttavia, è supportato anche se non sei in grado di eseguire ricerche IP-to-Geo sul server, ma desideri comunque eseguire [!UICONTROL decisioning sul dispositivo] per [richieste getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) che contengono tipi di pubblico basati su Geo. Il lato negativo di questo approccio è che utilizza una ricerca remota IP-Geo, che aggiunge latenza a ogni chiamata `getOffers`. Questa latenza deve essere inferiore a una chiamata `getOffers` con decisioni lato server, perché raggiunge una rete CDN vicina al server. Fornisci solo il campo &quot;ipAddress&quot; nell’oggetto Geo nel contesto della richiesta di SDK per recuperare la geolocalizzazione dell’indirizzo IP del visitatore. Se viene fornito un campo diverso da &quot;ipAddress&quot;, il SDK [!DNL Target] non recupererà i metadati di geolocalizzazione per la risoluzione.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -107,7 +107,7 @@ window.adobe.target.getOffers({
 
 ### Metodo di allocazione
 
-La tabella seguente indica i metodi di allocazione supportati o non supportati per [!UICONTROL on-device decisioning].
+La tabella seguente indica quali metodi di allocazione sono supportati o meno per [!UICONTROL decisioning sul dispositivo].
 
 | Metodo di allocazione | Supportate? |
 | --- | --- |

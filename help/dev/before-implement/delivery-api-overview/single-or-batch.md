@@ -1,6 +1,6 @@
 ---
 title: API di consegna Adobe Target Consegna singola o in batch
-description: Come si utilizzano [!UICONTROL Adobe Target Delivery API] chiamate di consegna singole o in batch?
+description: Come si utilizzano [!UICONTROL le chiamate di consegna singole o in batch dell'API di consegna di Adobe Target]?
 keywords: API Delivery
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
@@ -11,20 +11,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # Consegna singola o in batch
 
-[!UICONTROL Adobe Target Delivery API] supporta una chiamata di consegna singola o batch. È possibile effettuare una richiesta al server per contenuto per una o più mbox.
+L&#39;[!UICONTROL API di consegna di Adobe Target] supporta una chiamata di consegna singola o batch. È possibile effettuare una richiesta al server per contenuto per una o più mbox.
 
 Quando si decide di effettuare una singola chiamata rispetto a una chiamata in batch, è necessario valutare i costi delle prestazioni. Se conosci tutti i contenuti che devono essere visualizzati per un utente, la best practice consiste nel recuperare contenuti per tutte le mbox con una singola chiamata di consegna in batch, al fine di evitare di effettuare più chiamate di consegna singole.
 
 ## Chiamata di consegna singola
 
-È possibile recuperare un&#39;esperienza da visualizzare all&#39;utente per una mbox tramite [!UICONTROL Adobe Target Delivery API]. Tieni presente che se effettui una singola chiamata di consegna, dovrai avviare un’altra chiamata al server per recuperare contenuto aggiuntivo per una mbox per un utente. Questo può diventare molto costoso nel tempo, quindi assicurati di valutare il tuo approccio quando utilizzi la singola chiamata API di consegna.
+Puoi recuperare un&#39;esperienza da mostrare all&#39;utente per una mbox tramite [!UICONTROL Adobe Target Delivery API]. Tieni presente che se effettui una singola chiamata di consegna, dovrai avviare un’altra chiamata al server per recuperare contenuto aggiuntivo per una mbox per un utente. Questo può diventare molto costoso nel tempo, quindi assicurati di valutare il tuo approccio quando utilizzi la singola chiamata API di consegna.
 
 ```
 curl -X POST \

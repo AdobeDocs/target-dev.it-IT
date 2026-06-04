@@ -2,10 +2,11 @@
 title: Utilizza  [!DNL Adobe Target] con [!DNL Web SDK] per la personalizzazione.
 description: Scopri come eseguire il rendering dei contenuti personalizzati con  [!DNL Experience Platform Web SDK] using [!DNL Adobe Target].
 feature: AEP Web SDK
-source-git-commit: 1fe6adc25604612ed9fa090f1f68c18b9c0bdf63
+exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
+source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 3%
+source-wordcount: '1560'
+ht-degree: 4%
 
 ---
 
@@ -22,12 +23,12 @@ ht-degree: 3%
 Le seguenti funzionalità sono state testate e sono attualmente supportate in [!DNL Target]:
 
 * [Test A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it)
-* [Generazione di rapporti sulle impression e sulle conversioni A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it)
+* [Generazione di rapporti su impressioni e conversione per A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it)
 * [Attività di Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
 * [Attività Targeting esperienza](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it)
-* [Test multivariati (TMV)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=it)
-* [Attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it)
-* [Generazione di rapporti sulle impression e le conversioni di Target nativi](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=it)
+* [Test multivariati (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=it)
+* [Attività di Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it)
+* [Generazione di rapporti sulle impression e le conversioni del Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=it)
 * [Supporto VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it)
 
 ## Diagramma del sistema di [!DNL Web SDK]
@@ -41,9 +42,9 @@ Il diagramma seguente consente di comprendere il flusso di lavoro di [!DNL Targe
 | 1 | Il dispositivo carica [!DNL Web SDK]. [!DNL Web SDK] invia una richiesta ad Edge Network con i dati XDM, l&#39;ID ambiente Datastreams, i parametri immessi e l&#39;ID cliente (facoltativo). La pagina (o i contenitori) è pre-nascosta. |
 | 2 | Edge Network invia la richiesta ai servizi Edge di per arricchirla con l’ID visitatore, il consenso e altre informazioni contestuali sul visitatore, come la geolocalizzazione e i nomi descrittivi dei dispositivi. |
 | 3 | Edge Network invia la richiesta di personalizzazione arricchita al server Edge [!DNL Target] con l&#39;ID visitatore e i parametri immessi. |
-| 4 | Gli script di profilo vengono eseguiti e quindi inseriti nell&#39;archivio dei profili [!DNL Target]. L&#39;archiviazione del profilo recupera i segmenti da [!UICONTROL Audience Library] (ad esempio, i segmenti condivisi da [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
+| 4 | Gli script di profilo vengono eseguiti e quindi inseriti nell&#39;archivio dei profili [!DNL Target]. L&#39;archiviazione dei profili recupera i segmenti dalla [!UICONTROL Libreria tipi di pubblico] (ad esempio, i segmenti condivisi da [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
 | 5 | In base ai parametri di richiesta dell&#39;URL e ai dati di profilo, [!DNL Target] determina le attività ed esperienze da visualizzare per il visitatore per la visualizzazione della pagina corrente e per le visualizzazioni preacquisite future. [!DNL Target] invia quindi di nuovo questo messaggio ad Edge Network. |
-| 6 | a. Edge Network invia nuovamente la risposta di personalizzazione alla pagina, includendo facoltativamente i valori di profilo per ulteriore personalizzazione. Il contenuto personalizzato nella pagina corrente viene mostrato il più rapidamente possibile senza che venga visualizzato momentaneamente il contenuto predefinito.<br> b. Il contenuto personalizzato per le viste mostrate come risultato delle azioni dell’utente in un’applicazione a pagina singola viene memorizzato in cache, in modo da applicarlo immediatamente senza una chiamata al server aggiuntiva quando si attivano le viste. <br>c. L’Edge Network invia l’ID visitatore e altri valori nei cookie, come consenso, ID sessione, identità, controllo dei cookie, personalizzazione. |
+| 6 | a. Edge Network invia nuovamente la risposta di personalizzazione alla pagina, includendo facoltativamente i valori di profilo per ulteriore personalizzazione. Il contenuto personalizzato nella pagina corrente viene mostrato il più rapidamente possibile senza che venga visualizzato momentaneamente il contenuto predefinito.<br>b. Il contenuto personalizzato per le viste mostrate come risultato delle azioni dell’utente in un’applicazione a pagina singola viene memorizzato in cache, in modo da applicarlo immediatamente senza una chiamata al server aggiuntiva quando si attivano le viste. <br>c. L’Edge Network invia l’ID visitatore e altri valori nei cookie, come consenso, ID sessione, identità, controllo dei cookie, personalizzazione. |
 | 7 | Il Web SDK invia la notifica dal dispositivo all&#39;Edge Network. |
 | 8 | Edge Network inoltra i dettagli di [!UICONTROL Analytics for Target] (A4T) (metadati di attività, esperienza e conversione) al server Edge di [!DNL Analytics]. |
 
@@ -59,7 +60,7 @@ Quindi, facoltativamente, puoi anche aggiungere le seguenti opzioni:
 * **`decisionScopes`**: recupera attività specifiche (utili per le attività create con il compositore basato su moduli) aggiungendo questa opzione agli eventi.
 * **[Frammento pre-hiding](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/manage-flicker)**: consente di nascondere solo alcune parti della pagina.
 
-## Utilizzo del Compositore esperienza visivo [!UICONTROL Adobe Target]
+## Utilizzo del Compositore esperienza visivo di [!UICONTROL Adobe Target]
 
 Per utilizzare il Compositore esperienza visivo con un&#39;implementazione [!DNL Web SDK], installa e attiva l&#39;estensione [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper.
 
@@ -71,7 +72,7 @@ Per ulteriori informazioni, consulta [Rendering del contenuto di personalizzazio
 
 ## Pubblico in XDM
 
-Quando definisci i tipi di pubblico per le attività [!DNL Target] distribuite tramite [!DNL Web SDK], è necessario definire e utilizzare [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it). Dopo aver definito schemi, classi e gruppi di campi dello schema XDM, puoi creare una regola di pubblico [!DNL Target] definita dai dati XDM per il targeting. All&#39;interno di [!DNL Target], i dati XDM vengono visualizzati in [!UICONTROL Audience Builder] come parametro personalizzato. XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
+Quando definisci i tipi di pubblico per le attività [!DNL Target] distribuite tramite [!DNL Web SDK], è necessario definire e utilizzare [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it). Dopo aver definito schemi, classi e gruppi di campi dello schema XDM, puoi creare una regola di pubblico [!DNL Target] definita dai dati XDM per il targeting. All&#39;interno di [!DNL Target], i dati XDM vengono visualizzati nel [!UICONTROL Generatore di pubblico] come parametro personalizzato. XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
 
 Se hai [!DNL Target] attività con tipi di pubblico predefiniti che utilizzano parametri personalizzati o un profilo utente, non vengono distribuite correttamente tramite SDK. Invece di utilizzare parametri personalizzati o il profilo utente, devi utilizzare XDM. Tuttavia, sono presenti campi di targeting del pubblico predefiniti supportati tramite [!DNL Web SDK] che non richiedono XDM. Questi campi sono disponibili nell&#39;interfaccia utente di [!DNL Target] che non richiedono XDM:
 
@@ -160,7 +161,7 @@ Quando il rendering automatico è disattivato, l’array delle proposte contiene
 
 #### Al caricamento della pagina:
 
-* [!DNL Form-based Composer] basato su `propositions` con flag `renderAttempted` impostato su `false`
+* `propositions` basato su [!DNL Form-based Composer] con flag `renderAttempted` impostato su `false`
 * Proposizioni basate su [!DNL Visual Experience Composer] con flag `renderAttempted` impostato su `false`
 * Proposte basate su [!DNL Visual Experience Composer] per la visualizzazione di un&#39;applicazione a pagina singola con il flag `renderAttempted` impostato su `false`
 
@@ -289,7 +290,7 @@ alloy("sendEvent", {
 
 mboxTrace e mboxDebug sono stati dichiarati obsoleti. Utilizza invece un metodo di [debug di Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/use-cases/debugging).
 
-## Terminologia 
+## Terminologia
 
 **Proposte**: in [!DNL Target], le proposte sono correlate all&#39;esperienza selezionata da un&#39;attività.
 

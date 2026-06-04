@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
 workflow-type: tm+mt
-source-wordcount: 359
-ht-degree: 15%
+source-wordcount: 369
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 15%
 
 ## Descrizione
 
-Utilizzare il metodo `Create` per inizializzare .NET SDK e creare un&#39;istanza di [!UICONTROL Target Client] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
+Utilizzare il metodo `Create` per inizializzare .NET SDK e creare un&#39;istanza del client [!UICONTROL Target] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
 
 Quando si utilizza l&#39;iniezione di dipendenze .NET, è sufficiente aggiungere il passaggio di configurazione SDK at service chiamando `services.AddTargetLibrary()`;, quindi inserire `ITargetClient targetClient` nel costruttore dell&#39;app.
 
@@ -49,8 +49,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| Client | stringa | Sì | None (Nessuno) | [!UICONTROL Target Client Id] |
-| OrganizationId | stringa | Sì | None (Nessuno) | [!UICONTROL Experience Cloud Organization ID] |
+| Client | stringa | Sì | None (Nessuno) | [!UICONTROL ID client di destinazione] |
+| OrganizationId | stringa | Sì | None (Nessuno) | [!UICONTROL ID organizzazione Experience Cloud] |
 | Timeout | int | No | 10000 | Timeout per tutte le richieste in millisecondi |
 | Proxy | WebProxy | No | nulle | Proxy per tutte le [!DNL Target] richieste |
 | Criterio nuovo tentativo | Policy | No | nulle | Criterio per nuovo tentativo per tutte le [!DNL Target] richieste |

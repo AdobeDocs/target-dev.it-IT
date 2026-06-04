@@ -18,13 +18,13 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 119
 ht-degree: 7%
 
 ---
 
 # Implementazione ibrida
 
-[!DNL Adobe Target] offre un modello di distribuzione ibrida univoco per la personalizzazione, che combina implementazioni lato client e lato server. Questo modello ibrido consente agli utenti non tecnici di creare un&#39;attività sperimentale o di personalizzazione utilizzando il Compositore esperienza visivo di WYSIWYG [!UICONTROL Visual Experience Composer] e di eseguire, distribuire e renderizzare l&#39;esperienza lato server per una distribuzione altamente performante.
+[!DNL Adobe Target] offre un modello di distribuzione ibrida univoco per la personalizzazione, che combina implementazioni lato client e lato server. Questo modello ibrido consente agli utenti non tecnici di creare un’attività sperimentale o di personalizzazione utilizzando il [!UICONTROL Compositore esperienza visivo] di WYSIWYG e di eseguire, distribuire e renderizzare l’esperienza lato server per una distribuzione altamente performante.
 
 Per ulteriori informazioni, vedere [Distribuzione ibrida di Adobe](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=it) nelle [esercitazioni di Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=it).

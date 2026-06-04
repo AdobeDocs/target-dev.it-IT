@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffers, applica offerte, at.js, funzioni, funzione,
-description: Utilizza la funzione [!UICONTROL adobe.target.applyOffers()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per applicare più offerte nella risposta. (at.js 2.x)
+description: Utilizza la funzione [!UICONTROL adobe.target.applyOffers()] per la libreria JavaScript at.js [!DNL Adobe Target] per applicare più offerte nella risposta. (at.js 2.x)
 title: Come si utilizza la funzione [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
@@ -18,7 +18,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: 825
 ht-degree: 78%
 
 ---

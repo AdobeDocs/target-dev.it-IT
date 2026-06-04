@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 463
-ht-degree: 72%
+source-wordcount: 472
+ht-degree: 71%
 
 ---
 
@@ -36,11 +36,11 @@ Puoi utilizzarlo con `[!UICONTROL adobe.target.applyOffer()]` per elaborare la r
 | params | Oggetto | No | Parametri mbox. Un oggetto di coppie chiave-valore che presenta la struttura seguente:<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | Funzione | Sì | Callback da eseguire quando abbiamo ricevuto una risposta dal server. La funzione di callback di successo riceverà un singolo parametro che rappresenta un array di oggetti di offerta. Esempio di callback di successo:<P>`function handleSuccess(response){......}`<P>Vedi le risposte qui sotto per i dettagli. |
 | error | Funzione | Sì | Callback da eseguire quando visualizziamo un errore. Ci sono alcuni casi che sono considerati di errore:<ul><li>Codice di stato HTTP diverso da 200 OK</li><li>La risposta non può essere analizzata. Ad esempio abbiamo generato in modo non corretto JSON o HTML invece di JSON.</li><li>La risposta contiene la chiave “Errore”. Ad esempio, è stata lanciata un&#39;eccezione sull&#39;Edge di una richiesta che non è stato possibile elaborare correttamente. Potremmo ricevere un errore quando una mbox è bloccata e non è stato possibile recuperare alcun contenuto per essa, ecc. La funzione di callback di errore riceverà due parametri: stato ed errore. Esempio di callback di errore: `function handleError(status, error){......}`</li></ul>Vedi le risposte di errore qui sotto per i dettagli. |
-| timeout | Numero | No | Timeout in millisecondi. Se non viene specificato, verrà utilizzato il timeout predefinito in at.js.<P>Il timeout predefinito può essere impostato dall&#39;interfaccia utente [!DNL Target] in [!UICONTROL Administration] > [!UICONTROL Implementation]. |
+| timeout | Numero | No | Timeout in millisecondi. Se non viene specificato, verrà utilizzato il timeout predefinito in at.js.<P>Il timeout predefinito può essere impostato dall&#39;interfaccia utente [!DNL Target] in [!UICONTROL Amministrazione] > [!UICONTROL Implementazione]. |
 
 ## Esempi
 
-Aggiunta di parametri con [!UICONTROL getOffer()] e utilizzo di [!UICONTROL applyOffer()] per la gestione del successo:
+Aggiunta di parametri con [!UICONTROL getOffer()] e utilizzo di [!UICONTROL applyOffer()] per la gestione dei risultati:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   

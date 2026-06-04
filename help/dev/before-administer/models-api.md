@@ -16,16 +16,16 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1316
+source-wordcount: 1321
 ht-degree: 2%
 
 ---
 
 # Panoramica di Models API
 
-L&#39;API Models, denominata anche API di Inserire nell&#39;elenco Bloccati, consente agli utenti di visualizzare e gestire l&#39;elenco delle funzionalità utilizzate nei modelli di apprendimento automatico per le attività [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se un utente desidera escludere una funzione dall’utilizzo da parte dei modelli per attività di AP o AT, può utilizzare l’API Models per aggiungere tale funzione al &quot;inserisco nell&#39;elenco Bloccati di&quot;.
+L&#39;API Models, denominata anche API di Inserire nell&#39;elenco Bloccati, consente agli utenti di visualizzare e gestire l&#39;elenco di funzionalità utilizzate nei modelli di apprendimento automatico per le attività [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se un utente desidera escludere una funzione dall’utilizzo da parte dei modelli per attività di AP o AT, può utilizzare l’API Models per aggiungere tale funzione al &quot;inserisco nell&#39;elenco Bloccati di&quot;.
 
-**[!UICONTROL blocklist]** definisce l&#39;insieme di funzionalità che [!DNL Adobe Target] escluderà dai propri modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=it).
+Un **[!UICONTROL inserisco nell&#39;elenco Bloccati di apprendimento automatico]** definisce l&#39;insieme di funzionalità che verranno escluse da [!DNL Adobe Target] dai modelli di apprendimento automatico. Per ulteriori informazioni sulle funzionalità, vedere [Dati utilizzati da [!DNL Target] algoritmi di apprendimento automatico](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=it).
 
 È possibile definire i Inserisce nell&#39;elenco Bloccati per attività (livello di attività) o per tutte le attività all&#39;interno di un account [!DNL Target] (livello globale).
 
@@ -111,7 +111,7 @@ Nell’esempio mostrato qui, l’utente sta controllando per visualizzare l’el
 >
 >Per trovare l&#39;ID attività dell&#39;attività, passare all&#39;Elenco attività nell&#39;interfaccia utente [!DNL Target]. Fai clic sull’attività di interesse. L’ID attività viene visualizzato nel corpo della pagina Panoramica delle attività risultante e alla fine dell’URL della pagina.
 
-**[!UICONTROL externalName]** è un nome descrittivo per una funzionalità. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=it).
+**[!UICONTROL externalName]** è un nome descrittivo per una caratteristica. Viene creato da [!DNL Target] ed è possibile che questo valore cambi nel tempo. Gli utenti possono visualizzare questi nomi descrittivi nel [rapporto Approfondimenti Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=it).
 
 **[!UICONTROL internalName]** è l&#39;identificatore effettivo della funzionalità. Viene creato anche da [!DNL Target], ma non può essere modificato. Questo è il valore a cui dovrai fare riferimento per identificare le feature che desideri.
 
@@ -154,7 +154,7 @@ Nell’esempio mostrato qui, l’utente sta controllando l’elenco delle funzio
 
 ## Passaggio 3: aggiungere funzioni al inserisco nell&#39;elenco Bloccati di dell’attività {#step3}
 
-Per aggiungere funzionalità al inserisco nell&#39;elenco Bloccati di, modificare la richiesta da GET a PUT e modificare il corpo della richiesta in modo da specificare `blockedFeatureSources` o `blockedFeatures` come desiderato.
+Per aggiungere funzionalità al inserisco nell&#39;elenco Bloccati di, modificare la richiesta da GET a PUT e modificare il corpo della richiesta per specificare `blockedFeatureSources` o `blockedFeatures` come desiderato.
 
 * Il corpo della richiesta richiede `blockedFeatures` o `blockedFeatureSources`. Entrambi possono essere inclusi.
 * Popolare `blockedFeatures` con valori identificati da `internalName`. Vedi [Passaggio 1](#step1).
@@ -212,7 +212,7 @@ Nell&#39;esempio seguente, l&#39;utente sta bloccando due funzionalità, `SES_PR
 
 ![Passaggio 3](assets/models-api-step-3.png)
 
-Dopo aver inserito nell&#39;elenco Bloccati una funzione, si consiglia di verificare il inserisco nell&#39;elenco Bloccati di aggiornamento della funzione di eseguendo nuovamente il [passaggio 2](#step2) (GET il inserisco nell&#39;elenco Bloccati di). Verifica che i risultati vengano visualizzati come previsto (verifica che i risultati includano le funzioni aggiunte dall’ultima richiesta PUT).
+Dopo aver inserito nell&#39;elenco Bloccati una funzione, si consiglia di verificare il inserisco nell&#39;elenco Bloccati di aggiornamento del eseguendo nuovamente il [passaggio 2](#step2) (GET il inserisco nell&#39;elenco Bloccati di). Verifica che i risultati vengano visualizzati come previsto (verifica che i risultati includano le funzioni aggiunte dall’ultima richiesta PUT).
 
 ## Passaggio 4: (facoltativo) sblocca {#step4}
 
@@ -246,7 +246,7 @@ Nell’esempio mostrato qui, l’utente sta cancellando il proprio inserisco nel
 
 ![Passaggio 4](assets/models-api-step-4.png)
 
-Come sempre, dopo aver modificato il inserisco nell&#39;elenco Bloccati di, si consiglia di eseguire di nuovo il [Passaggio 2](#step2) (GET il inserisco nell&#39;elenco Bloccati di per verificare che l&#39;elenco includa le funzioni come previsto). Nell’esempio mostrato qui, l’utente sta verificando che il proprio inserisco nell&#39;elenco Bloccati di sia ora vuoto.
+Come sempre, dopo aver modificato il inserisco nell&#39;elenco Bloccati di, si consiglia di eseguire di nuovo il [Passaggio 2](#step2) (OTTIENI il inserisco nell&#39;elenco Bloccati di per verificare che l&#39;elenco includa le funzioni come previsto). Nell’esempio mostrato qui, l’utente sta verificando che il proprio inserisco nell&#39;elenco Bloccati di sia ora vuoto.
 
 ![Passaggio 4b](assets/models-api-step-4b.png)
 
@@ -293,7 +293,7 @@ Nella richiesta di esempio mostrata sopra, l’utente sta bloccando due funzioni
 
 Domanda: l&#39;esempio di codice qui sopra non è ridondante?
 
-Risposta: Sì. È ridondante bloccare le funzioni con valori che iniziano con &quot;AAM&quot;, bloccando al contempo tutte le funzioni la cui origine è &quot;AAM&quot;. Il risultato netto è che tutte le funzioni originate da AAM (Segmenti Experience Cloud) verranno bloccate. Pertanto, se l’obiettivo è quello di bloccare tutte le funzioni dai segmenti di Experience Cloud, non è necessario specificare singolarmente alcune funzioni che iniziano con &quot;AAM&quot;, nell’esempio precedente.
+Risposta: Sì. È ridondante bloccare le funzioni con valori che iniziano con &quot;AAM&quot;, bloccando al contempo tutte le funzioni la cui origine è &quot;AAM&quot;. Il risultato netto è che tutte le funzioni originate da AAM (Segmenti di Experience Cloud) verranno bloccate. Pertanto, se l’obiettivo è quello di bloccare tutte le funzionalità dei segmenti di Experience Cloud, non è necessario specificare singolarmente alcune funzionalità che iniziano con &quot;AAM&quot;, nell’esempio precedente.
 
 Passaggio finale: a livello di attività o globale, è consigliabile verificare il inserisco nell&#39;elenco Bloccati di aggiornamento dopo averlo modificato, per assicurarsi che contenga i valori previsti. Per eseguire questa operazione, modificare `PUT` in `GET`.
 

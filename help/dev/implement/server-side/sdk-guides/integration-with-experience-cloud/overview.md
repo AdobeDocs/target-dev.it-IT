@@ -1,6 +1,6 @@
 ---
 title: 'Panoramica dell''integrazione con  [!DNL Experience Cloud] '
-description: Gli SDK lato server di Adobe [!DNL Target] supportano un'integrazione diretta con Adobe Analytics e Adobe Audience Manager per sfruttare la potenza di Adobe Experience Cloud.
+description: Gli SDK lato server di Adobe [!DNL Target] supportano un'integrazione diretta con Adobe Analytics e Adobe Audience Manager per consentire di sfruttare la potenza di Adobe Experience Cloud.
 exl-id: 3645114e-320f-4cee-93ec-d75ae25d2c9b
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/dKR2224IPWCqivRDs-B--Q6eaqo1VgNLTZsoozSsPEg

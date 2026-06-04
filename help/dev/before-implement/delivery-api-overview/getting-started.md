@@ -1,6 +1,6 @@
 ---
 title: Guida introduttiva all’API di consegna di Adobe Target
-description: Utilizzo di [!UICONTROL Adobe Target Delivery API]
+description: Come si utilizza l'[!UICONTROL API di consegna Adobe Target]?
 keywords: API Delivery
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
@@ -16,14 +16,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 132
 ht-degree: 1%
 
 ---
 
-# Guida introduttiva a [!UICONTROL Adobe Target Delivery API]
+# Guida introduttiva all&#39;[!UICONTROL API di consegna Adobe Target]
 
-Una chiamata [!UICONTROL Target Delivery API] si presenta così:
+Una chiamata API di consegna [!UICONTROL Target] è simile alla seguente:
 
 ```
 curl -X POST \
@@ -55,9 +55,9 @@ curl -X POST \
     }'
 ```
 
-È possibile recuperare `clientCode` dall&#39;interfaccia utente di [!DNL Target] passando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+È possibile recuperare `clientCode` dall&#39;interfaccia utente [!DNL Target] passando a **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**.
 
-Prima di effettuare una chiamata [!UICONTROL Target Delivery API], segui questi passaggi per assicurarti che una risposta contenga l&#39;esperienza rilevante da mostrare agli utenti finali:
+Prima di effettuare una chiamata all&#39;[!UICONTROL API di consegna di Target], effettua le seguenti operazioni per assicurarti che la risposta contenga l&#39;esperienza pertinente da mostrare agli utenti finali:
 
 1. Creare un&#39;attività [!DNL Target] (A/B, XT, AP o Consigli) utilizzando [Compositore basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) o il [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it).
 1. Utilizza l&#39;API di consegna per ottenere una risposta per le mbox utilizzate nell&#39;attività [!DNL Target] creata nel passaggio 2.

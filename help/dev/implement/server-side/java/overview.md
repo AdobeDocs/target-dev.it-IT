@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 120
-ht-degree: 9%
+source-wordcount: 123
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ Per informazioni su come iniziare a utilizzare Java SDK, vai alla [[!DNL Target]
 
 Test di Java SDK:
 
-* Visitando il sito demo [[!DNL Adobe Target] [!UICONTROL on-device decisioning]](https://github.com/adobe/on-device-decisioning-demo-site)
+* Visitando il [[!DNL Adobe Target] [!UICONTROL sito demo decisioning sul dispositivo]](https://github.com/adobe/on-device-decisioning-demo-site)
 * In un&#39;applicazione [di esempio](../sdk-guides/sample-apps/sample-apps.md).
 
 ## Riferimenti

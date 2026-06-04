@@ -18,7 +18,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -71,8 +71,8 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_m
 Come puoi vedere, è stato aggiunto il parametro `adobe_mc` all&#39;URL. Questo parametro contiene valori codificati per:
 
 * TS=1660667205: il timestamp corrente. Questo timestamp assicura che la visualizzazione web non riceva valori scaduti.
-* MCMID=69624092487065093697422606480535692677: [!UICONTROL Experience Cloud ID] (ECID). Anche noto come MID o [!UICONTROL Marketing Cloud ID] richiesto per l&#39;identificazione di [!DNL Adobe] visitatori tra soluzioni.
-* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: [!UICONTROL Adobe Organization ID].
+* MCMID=69624092487065093697422606480535692677: [!UICONTROL ID Experience Cloud] (ECID). Anche noto come MID o [!UICONTROL Marketing Cloud ID] richiesto per l&#39;identificazione di [!DNL Adobe] visitatori tra soluzioni.
+* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: [!UICONTROL ID organizzazione Adobe].
 
 `Identity.getUrlVariables` è un metodo [!DNL Adobe Experience Platform Mobile SDK] alternativo che restituisce una stringa con formato appropriato contenente le variabili URL [!DNL Experience Cloud Identity Service]. Per ulteriori informazioni, vedere [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} nel *riferimento API identità*.
 
@@ -90,7 +90,7 @@ Target.getSessionId { (id, err) in
 
 ## Eseguire il test nelle visualizzazioni web
 
-I collegamenti di anteprima Web vengono generati nella pagina [!UICONTROL Activity detail] facendo clic sul collegamento [[!UICONTROL Adobe QA]](/help/dev/implement/mobile/target-mobile-preview.md) per visualizzare un popup per copiare ogni collegamento di anteprima esperienza, simile al seguente:
+I collegamenti di anteprima Web vengono generati nella pagina [!UICONTROL Dettagli attività] facendo clic sul collegamento [[!UICONTROL Adobe QA]](/help/dev/implement/mobile/target-mobile-preview.md) per visualizzare un pop-up per copiare ogni collegamento di anteprima esperienza, simile al seguente:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

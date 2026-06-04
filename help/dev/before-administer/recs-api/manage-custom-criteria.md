@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
-source-wordcount: 921
+source-wordcount: 890
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Per creare criteri personalizzati utilizzando l&#39;API [Crea criteri personaliz
 
 Procedi solo con i seguenti passaggi dopo aver letto l’avviso precedente e hai familiarità con la creazione di nuovi criteri personalizzati che non possono essere successivamente eliminati dall’interfaccia utente.
 
-1. Verificare che `TENANT_ID` e `API_KEY` per **[!UICONTROL Create custom criteria]** facciano riferimento alle variabili di ambiente Postman stabilite in precedenza. Utilizza l’immagine seguente per il confronto.
+1. Verificare `TENANT_ID` e `API_KEY` per **[!UICONTROL Creare criteri personalizzati]** fanno riferimento alle variabili di ambiente Postman stabilite in precedenza. Utilizza l’immagine seguente per il confronto.
 
    ![CreaCriteriPersonalizzati1](assets/CreateCustomCriteria1.png)
 
@@ -54,11 +54,11 @@ Procedi solo con i seguenti passaggi dopo aver letto l’avviso precedente e hai
 
    ![CreaCriteriPersonalizzati3](assets/CreateCustomCriteria3.png)
 
-1. Per verificare che i criteri personalizzati siano stati creati, passa a **[!UICONTROL Recommendations > Criteria]** all&#39;interno di Adobe Target e cerca i criteri in base al nome, oppure utilizza **[!UICONTROL List Custom Criteria API]** nel passaggio successivo.
+1. Per verificare che i criteri personalizzati siano stati creati, passa a **[!UICONTROL Consigli > Criteri]** in Adobe Target e cerca i criteri per nome, oppure utilizza l&#39;API **[!UICONTROL Elenca criteri personalizzati]** nel passaggio successivo.
 
    ![CreaCriteriPersonalizzati4](assets/CreateCustomCriteria4.png)
 
-In questo caso, abbiamo un errore. Esaminiamo l&#39;errore esaminando più attentamente i criteri personalizzati, utilizzando **[!UICONTROL List Custom Criteria API]**.
+In questo caso, abbiamo un errore. Esaminiamo l&#39;errore esaminando più attentamente i criteri personalizzati, utilizzando l&#39;**[!UICONTROL Elenco criteri personalizzati API]**.
 
 ## Elencare criteri personalizzati
 
@@ -89,7 +89,7 @@ Per modificare i dettagli di una definizione di criteri personalizzati, utilizza
 1. Invia la richiesta e annota la risposta.
    ![ModificaCriteriPersonalizzati4](assets/EditCustomCriteria4.png)
 
-Verifichiamo il successo dei criteri personalizzati aggiornati, utilizzando **[!UICONTROL Get Custom Criteria API]**.
+Verifichiamo il successo dei criteri personalizzati aggiornati, utilizzando l&#39;API **[!UICONTROL Get Custom Criteria]**.
 
 ## Ottieni criteri personalizzati
 
@@ -110,7 +110,7 @@ Utilizzando l&#39;ID criteri indicato in precedenza, elimina i criteri personali
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. Specifica l’ID del criterio personalizzato (singolo) da eliminare. Fare clic su **[!UICONTROL Send]**.
+1. Specifica l’ID del criterio personalizzato (singolo) da eliminare. Fai clic su **[!UICONTROL Invia]**.
    ![EliminaCriteriPersonalizzati1](assets/DeleteCustomCriteria1.png)
 
 1. Verifica che i criteri siano stati eliminati utilizzando Ottieni criteri personalizzati.

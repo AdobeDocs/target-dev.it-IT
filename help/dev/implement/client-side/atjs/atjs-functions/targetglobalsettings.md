@@ -1,6 +1,6 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, global settings, global settings, at.js, funzioni, funzione, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optoutout optout, opt out, selectorsPollingTimeout, dataProviders, Personalization ibrido, deviceIdLifetime
-description: Utilizza la funzione [!UICONTROL targetGlobalSettings()] per la libreria JavaScript at.js  [!DNL Adobe Target]  per ignorare le impostazioni invece di utilizzare le API REST o l'interfaccia utente di  [!DNL Target] .
+description: Utilizza la funzione [!UICONTROL targetGlobalSettings()] per la libreria JavaScript at.js [!DNL Adobe Target] per ignorare le impostazioni invece di utilizzare le API REST o interfaccia utente [!DNL Target] .
 title: Come si utilizza la funzione [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
@@ -24,7 +24,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2702
+source-wordcount: 2705
 ht-degree: 56%
 
 ---
@@ -124,7 +124,7 @@ ht-degree: 56%
 
   Inoltre, migliorare le tue esperienze personalizzate utilizzando il profilo utente di [!DNL Target], che viene mantenuto tra sessioni e canali diversi, può fornire risultati potenti per la tua azienda.
 
-  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi tramite i segmenti di Audience Manager e Adobe Analytics.
+  Infine, solo lato server consente di utilizzare Adobe Experience Cloud e di perfezionare i tipi di pubblico a cui rivolgersi grazie ai segmenti di Audience Manager e Adobe Analytics.
 
   **Solo su dispositivo**:
 

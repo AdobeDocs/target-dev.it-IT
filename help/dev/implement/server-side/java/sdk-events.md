@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 134
-ht-degree: 5%
+source-wordcount: 144
+ht-degree: 4%
 
 ---
 
@@ -27,9 +27,9 @@ L&#39;oggetto `OnDeviceDecisioningHandler` contiene i seguenti callback, chiamat
 
 | Nome | Argomenti | Descrizione |
 | --- | --- | --- |
-| onDeviceDecisioningReady | None (Nessuno) | Chiamata eseguita solo una volta la prima volta che il client è pronto per [!UICONTROL on-device decisioning] |
-| artifactDownloadSucceeded | byte[] contenuto del file di artefatto | Chiamata eseguita ogni volta che viene scaricato un artefatto [!UICONTROL on-device decisioning] |
-| artifactDownloadFailed | Eccezione | Chiamata eseguita ogni volta che non è possibile scaricare un artefatto [!UICONTROL on-device decisioning] |
+| onDeviceDecisioningReady | None (Nessuno) | Chiamata eseguita solo una volta la prima volta che il client è pronto per [!UICONTROL le decisioni sul dispositivo] |
+| artifactDownloadSucceeded | byte[] contenuto del file di artefatto | Chiamata eseguita ogni volta che viene scaricato un artefatto di [!UICONTROL decisioning sul dispositivo] |
+| artifactDownloadFailed | Eccezione | Chiamata eseguita ogni volta che non è stato possibile scaricare un artefatto [!UICONTROL decisioning sul dispositivo] |
 
 ## Esempio
 

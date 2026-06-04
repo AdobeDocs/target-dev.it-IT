@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ Segui i passaggi nel diagramma *Esperienze di rendering* per assicurarti che tut
 
 ## Diagramma esperienze di rendering {#diagram}
 
-La gestione automatica della visualizzazione momentanea di altri contenuti pronta all&#39;uso con at.js ha senso solo se è stato abilitato [!UICONTROL Automatic Page Load Request]. Questa opzione nasconde l&#39;intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
+La gestione automatica della visualizzazione momentanea di altri contenuti pronta all&#39;uso con at.js ha senso solo se è abilitata [!UICONTROL Richiesta di caricamento pagina automatico]. Questa opzione nasconde l&#39;intero corpo del HTML durante il recupero delle esperienze da [!DNL Target]. In questo caso, è tua responsabilità gestire la visualizzazione momentanea di altri contenuti. Per assistenza, cerca i modelli di implementazione disponibili per la gestione della visualizzazione momentanea di altri contenuti.
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ Creare consigli in base al contenuto del carrello dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Le Persone Che Hanno Visualizzato Questi Hanno Visualizzato Quelli]
+* [!UICONTROL Chi ha visualizzato questi ha acquistato anche quelli]
+* [!UICONTROL Chi ha comprato questi ha acquistato anche quelli]
 
 **Parametri di entità richiesti**
 
@@ -118,13 +118,13 @@ Puoi formulare raccomandazioni in base alla popolarità complessiva di un elemen
 
 **Criteri disponibili**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Più visualizzati nel sito]
+* [!UICONTROL Più visualizzati per categoria]
+* [!UICONTROL Più visualizzati per attributo elemento]
+* [!UICONTROL Più venduti nel sito]
+* [!UICONTROL Più venduti per categoria]
+* [!UICONTROL Più venduti per attributo articolo]
+* [!UICONTROL Primi per metrica di Analytics]
 
 **Parametri di entità richiesti**
 
@@ -147,10 +147,10 @@ Puoi formulare raccomandazioni in base alla ricerca di elementi simili a quelli 
 
 **Criteri disponibili**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Chi ha visualizzato questo ha visualizzato anche quello]
+* [!UICONTROL Chi ha visualizzato questo ha acquistato anche quello]
+* [!UICONTROL Chi ha acquistato questo ha acquistato anche quello]
+* [!UICONTROL Elementi con attributi simili]
 
 **Parametri di entità richiesti**
 
@@ -173,8 +173,8 @@ Creare consigli in base al comportamento dell’utente.
 
 **Criteri disponibili**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Elementi visualizzati di recente]
+* [!UICONTROL Consigliato per te]
 
 **Parametri di entità richiesti**
 
@@ -196,7 +196,7 @@ Formulare raccomandazioni in base a un file personalizzato caricato.
 
 **Criteri disponibili**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizzato]
 
 **Parametri di entità richiesti**
 

@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 276
+source-wordcount: 287
 ht-degree: 15%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 15%
 # Inizializzare Python SDK
 
 Descrizione
-Utilizzare il metodo `create` per inizializzare Python SDK e creare un&#39;istanza di [!UICONTROL Target Client] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
+Utilizzare il metodo `create` per inizializzare Python SDK e creare un&#39;istanza del client [!UICONTROL Target] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
 
 ## Metodo
 
@@ -34,8 +34,8 @@ TargetClient.create(options)
 
 | Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| client | str | Sì | None (Nessuno) | [!UICONTROL Adobe Target client ID] |
-| organization_id | str | Sì | None (Nessuno) | [!UICONTROL Experience Cloud Organization ID] |
+| client | str | Sì | None (Nessuno) | [!UICONTROL ID client Adobe Target] |
+| organization_id | str | Sì | None (Nessuno) | [!UICONTROL ID organizzazione Experience Cloud] |
 | timeout | int | No | 3000 | Timeout in millisecondi |
 | server_domain | str | No | `client.tt.omtrdc.net` | Sostituisce il nome host predefinito |
 | protetto | booleano | No | true | Annulla l&#39;impostazione per applicare lo schema HTTP |

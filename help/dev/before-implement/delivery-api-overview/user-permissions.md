@@ -12,14 +12,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 184
 ht-degree: 1%
 
 ---
 
 # Autorizzazioni utente (Premium)
 
-[!DNL Adobe] consente ai clienti di gestire le autorizzazioni per i propri utenti quando si utilizza Adobe Target. Per effettuare una chiamata [!UICONTROL Adobe Target Delivery API] corretta, è necessario trasmettere un token con le autorizzazioni appropriate all&#39;interno della chiamata API. Per ulteriori informazioni sulle autorizzazioni per gli utenti e su come recuperare il token, visita [questa documentazione](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=it).
+[!DNL Adobe] consente ai clienti di gestire le autorizzazioni per i propri utenti quando si utilizza Adobe Target. Per eseguire correttamente una chiamata [!UICONTROL API di consegna Adobe Target], è necessario passare un token con le autorizzazioni appropriate all&#39;interno della chiamata API. Per ulteriori informazioni sulle autorizzazioni per gli utenti e su come recuperare il token, visita [questa documentazione](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=it).
 
 ```
 curl -X POST \

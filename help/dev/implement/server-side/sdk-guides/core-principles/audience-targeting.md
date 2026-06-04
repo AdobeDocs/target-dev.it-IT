@@ -17,7 +17,7 @@ topic_v2:
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1069
-ht-degree: 17%
+ht-degree: 16%
 
 ---
 
@@ -47,7 +47,7 @@ Per ulteriori informazioni, vedere [[!DNL Target] Libreria](https://experiencele
 
 ### Geo
 
-Per ulteriori informazioni, consulta [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it).
+Per ulteriori informazioni, vedere [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=it).
 &#x200B;&#x200B;
 * Paese/Area geografica
 * Stato

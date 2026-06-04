@@ -16,7 +16,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 368
+source-wordcount: 369
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
    * `orderTotal`: totale ordine per l&#39;acquisto.
    * `orderId`: ID ordine dell&#39;acquisto.
 
-  La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} che deve essere attivata solo sulla pagina [!UICONTROL Confirmation].
+  La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} che deve essere attivata solo nella pagina [!UICONTROL Conferma].
 
   ![Pagina Configurazione azione](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 

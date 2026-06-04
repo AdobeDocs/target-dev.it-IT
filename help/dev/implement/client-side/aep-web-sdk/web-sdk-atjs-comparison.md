@@ -23,7 +23,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2303
+source-wordcount: 2308
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ Questo articolo fornisce una panoramica delle differenze tra la libreria `at.js`
 
 ### Installazione di at.js
 
-[!DNL Adobe] consente ai clienti di scaricare la libreria direttamente dalla scheda [!DNL Adobe Experience Cloud], [!UICONTROL Implementation]. La libreria at.js è personalizzata con impostazioni simili a quelle del cliente: clientCode, imsOrgId, ecc.
+[!DNL Adobe] consente ai clienti di scaricare la libreria direttamente dalla scheda [!DNL Adobe Experience Cloud], [!UICONTROL Implementazione]. La libreria at.js è personalizzata con impostazioni simili a quelle del cliente: clientCode, imsOrgId, ecc.
 
 ### Installazione del Web SDK
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
-È possibile recuperare [!UICONTROL Form-Based Composer] attività basate sul comando `sendEvent` e passare i nomi mbox nell&#39;opzione `decisionScopes`. Il comando `sendEvent` restituisce una promessa che viene risolta con un oggetto contenente le attività/proposte richieste:
+È possibile recuperare le attività basate su [!UICONTROL Compositore basato su modulo] utilizzando il comando `sendEvent` e passando i nomi mbox nell&#39;opzione `decisionScopes`. Il comando `sendEvent` restituisce una promessa che viene risolta con un oggetto contenente le attività/proposte richieste:
 
 Questo frammento di codice è l&#39;aspetto dell&#39;array `propositions`:
 
@@ -670,7 +670,7 @@ alloy("sendEvent", {
 
 ### Utilizzo di at.js
 
-Utilizzare la funzione `adobe.target.triggerView`. È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. La funzione `adobe.target.triggerView()` deve essere implementata affinché le applicazioni a pagina singola utilizzino il Compositore esperienza visiva [!UICONTROL Visual Experience Composer] per creare attività [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT). Se `adobe.target.triggerView()` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola.
+Utilizzare la funzione `adobe.target.triggerView`. È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. La funzione `adobe.target.triggerView()` deve essere implementata per le applicazioni a pagina singola per utilizzare il [!UICONTROL Compositore esperienza visivo] (VEC) per creare [!UICONTROL attività Test A/B] e [!UICONTROL Targeting esperienza] (XT). Se `adobe.target.triggerView()` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola.
 
 **Esempio**
 
@@ -682,7 +682,7 @@ adobe.target.triggerView("homeView")
 
 ### Utilizzo di [!DNL Platform Web SDK]
 
-Per attivare o segnalare un&#39;applicazione a pagina singola [!UICONTROL View Change], impostare la proprietà `web.webPageDetails.viewName` nell&#39;opzione `xdm` del comando `sendEvent`. [!DNL Platform Web SDK] controlla la cache di visualizzazione. Se sono presenti offerte per `viewName` specificate in `sendEvent`, le esegue e invia un evento di notifica di visualizzazione.
+Per attivare o segnalare un&#39;applicazione a pagina singola [!UICONTROL Modifica visualizzazione], impostare la proprietà `web.webPageDetails.viewName` nell&#39;opzione `xdm` del comando `sendEvent`. [!DNL Platform Web SDK] controlla la cache di visualizzazione. Se sono presenti offerte per `viewName` specificate in `sendEvent`, le esegue e invia un evento di notifica di visualizzazione.
 
 **Esempio**
 
@@ -701,7 +701,7 @@ alloy("sendEvent", {
 
 [Ulteriori informazioni](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## Come sfruttare [!UICONTROL Response Tokens]
+## Come sfruttare [!UICONTROL Token di risposta]
 
 Il contenuto Personalization restituito da [!DNL Target] include [token di risposta](https://experienceleague.adobe.com/it/docs/target/using/administer/response-tokens). I token di risposta sono dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
 

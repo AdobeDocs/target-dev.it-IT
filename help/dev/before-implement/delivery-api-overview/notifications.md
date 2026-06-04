@@ -1,6 +1,6 @@
 ---
 title: Notifiche API di consegna di Adobe Target
-description: Come si attivano le notifiche utilizzando [!UICONTROL Adobe Target Delivery API]?
+description: Come si attivano le notifiche tramite l'[!UICONTROL API di consegna di Adobe Target]?
 keywords: API Delivery
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
@@ -13,7 +13,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Affinché le notifiche vengano inviate per la mbox o la visualizzazione corretta
 
 ## Notifiche per mbox preacquisite
 
-Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o un `display` per ogni mbox in modo che la `type` della notifica possa essere riflessa correttamente. Inoltre, passa un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite [!UICONTROL &#x200B; Adobe Target Delivery API]. `timestamp` è inoltre importante da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una data mbox a scopo di reporting.
+Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o un `display` per ogni mbox in modo che la `type` della notifica possa essere riflessa correttamente. Inoltre, passare un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite l&#39;API di consegna di Adobe Target. `timestamp` è inoltre importante da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una data mbox a scopo di reporting.
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ Se tutti i `notifications` inviati a [!DNL Target] sono elaborati correttamente,
 
 ## Notifiche per le visualizzazioni preacquisite
 
-Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o `display` per ogni mbox in modo che il tipo di notifica possa essere riflesso correttamente. Inoltre, passare un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite [!UICONTROL Adobe Target Delivery API]. La marca temporale è importante anche da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una determinata visualizzazione a scopo di reporting.
+Una o più notifiche possono essere inviate tramite una singola chiamata di consegna. Determina se la metrica da tracciare è un `click` o `display` per ogni mbox in modo che il tipo di notifica possa essere riflesso correttamente. Inoltre, passa un `id` per ogni notifica in modo che si possa determinare se una notifica è stata inviata correttamente tramite la [!UICONTROL API di consegna Adobe Target]. La marca temporale è importante anche da inoltrare a [!DNL Target] per indicare quando si è verificato `click` o `display` per una determinata visualizzazione a scopo di reporting.
 
 ```
 curl -X POST \

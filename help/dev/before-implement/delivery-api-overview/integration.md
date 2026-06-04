@@ -13,15 +13,15 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 57
+source-wordcount: 60
 ht-degree: 0%
 
 ---
 
 # Integrazione con [!DNL Adobe Experience Cloud]
 
-Per informazioni sull&#39;integrazione lato server di [!DNL Adobe Target] con [!DNL Analytics] ([!UICONTROL Analytics for Target] o &quot;A4T&quot;), vedere [Rapporti di Analytics for Target (A4T)](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md).
+Per informazioni sull&#39;integrazione lato server di [!DNL Adobe Target] con [!DNL Analytics] ([!UICONTROL Analytics for Target] o &quot;A4T&quot;), vedere [Generazione rapporti di Analytics for Target (A4T)](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md).
 
 Per informazioni sull&#39;integrazione lato server di Adobe Target con [!DNL Adobe Audience Manager] (AAM), vedi [Segmenti AAM](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md).
 
-Per informazioni sull&#39;integrazione lato server con [!DNL Experience Cloud ID (ECID) Service], vedere [Servizio Experience Cloud ID (ECID)](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md).
+Per informazioni sull&#39;integrazione lato server con [!DNL Experience Cloud ID (ECID) Service], consulta [Servizio Experience Cloud ID (ECID)](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md).

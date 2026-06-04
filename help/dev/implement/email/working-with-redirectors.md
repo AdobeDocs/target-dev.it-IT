@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 64%
+source-wordcount: 697
+ht-degree: 63%
 
 ---
 
@@ -57,7 +57,7 @@ Prima di poter utilizzare un redirector, è necessario crearlo.
 
    * Dove `yourclientcode` è il codice client dell’azienda. Il codice cliente della tua azienda è tutto minuscolo e non ha caratteri speciali.
 
-     Il codice client è disponibile nella parte superiore della pagina **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** dell&#39;interfaccia [!DNL Target].
+     Il codice client è disponibile nella parte superiore della pagina **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** dell&#39;interfaccia [!DNL Target].
 
    * `redirectorlink_456` è il nome dell’elemento mbox redirector che appare nel tuo account, da utilizzare nelle campagne e nei test.
 
@@ -107,7 +107,7 @@ Puoi utilizzare un redirector per trasmettere i costi per clic.
 
 >[!NOTE]
 >
->Si consiglia di determinare il valore dei costi utilizzando la metrica di coinvolgimento **[!UICONTROL Score per visit]**.
+>Si consiglia di determinare il valore dei costi utilizzando la metrica di coinvolgimento **[!UICONTROL Punteggio per visita]**.
 
 Aggiungi `&mboxPageValue=-value` all’URL. Nota il valore negativo.
 
@@ -124,7 +124,7 @@ Per utilizzare un redirector per trasmettere i ricavi per clic.
 
 >[!NOTE]
 >
->Si consiglia di determinare il valore dei ricavi utilizzando la metrica di coinvolgimento **[!UICONTROL Score per visit]**.
+>Si consiglia di determinare il valore dei ricavi utilizzando la metrica di coinvolgimento **[!UICONTROL Punteggio per visita]**.
 
 Aggiungi `&mboxPageValue=value` all’URL.
 

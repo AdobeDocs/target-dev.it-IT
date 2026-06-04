@@ -14,7 +14,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 576
 ht-degree: 13%
 
 ---
@@ -70,7 +70,7 @@ L&#39;oggetto `TargetDeliveryRequest.Builder` ha la seguente struttura:
 | tntId | Stringa | No | Identificatore primario in [!DNL Target] per un utente. Recuperato da targetCookies. Generato automaticamente se non specificato. |
 | mcId | Stringa | No | Utilizzato per unire e condividere dati tra diverse soluzioni Adobe (ECID). Recuperato da targetCookies. Generato automaticamente se non specificato. |
 | trackingServer | Stringa | No | Il server Adobe Analytics affinché [!DNL Adobe Target] e [!DNL Adobe Analytics] uniscano correttamente i dati. |
-| trackingServerSecure | Stringa | No | [!UICONTROL Adobe Analytics Secure Server] affinché [!DNL Adobe Target] e [!DNL Adobe Analytics] uniscano correttamente i dati. |
+| trackingServerSecure | Stringa | No | [!UICONTROL Adobe Analytics Secure Server] per consentire a [!DNL Adobe Target] e [!DNL Adobe Analytics] di unire correttamente i dati. |
 | decisioningMethod | DecisioningMethod | No | Può essere utilizzato per impostare in modo esplicito il metodo di decisione ON_DEVICE o HYBRID per le decisioni sul dispositivo |
 
 I valori di ciascun campo devono essere conformi alla specifica della richiesta [API di consegna Target](/help/dev/implement/delivery-api/overview.md).

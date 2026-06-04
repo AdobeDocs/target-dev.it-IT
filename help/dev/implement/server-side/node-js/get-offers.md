@@ -1,5 +1,5 @@
 ---
-title: Usa [!UICONTROL getOffers()] in [!DNL Adobe Target] con SDK Node.js
+title: Usa [!UICONTROL getOffers()] in [!DNL Adobe Target] quando utilizzi il SDK Node.js
 description: Scopri come utilizzare [!UICONTROL getOffers()] per eseguire una decisione e recuperare un'esperienza da [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
@@ -10,12 +10,12 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 326
-ht-degree: 20%
+source-wordcount: 342
+ht-degree: 19%
 
 ---
 
-# [!UICONTROL Get Offers] (Node.js)
+# [!UICONTROL Ottieni offerte] (Node.js)
 
 ## Descrizione
 
@@ -51,8 +51,8 @@ L&#39;oggetto `options` ha la seguente struttura:
 
 | Nome | Tipo | Descrizione |
 | --- | --- | --- |
-| richiesta | Oggetto | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) richiesta |
-| risposta | Oggetto | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) risposta |
+| richiesta | Oggetto | [[!UICONTROL Richiesta API di consegna Target]](/help/dev/implement/delivery-api/overview.md) |
+| risposta | Oggetto | [[!UICONTROL Risposta API di consegna Target]](/help/dev/implement/delivery-api/overview.md) |
 | visitorState | Oggetto | Oggetto da passare all&#39;API visitatore `getInstance()` |
 | targetCookie | Oggetto | Cookie [!DNL Target] |
 | targetLocationHintCookie | Oggetto | Cookie dell&#39;hint di posizione [!DNL Target] |
@@ -76,7 +76,7 @@ L&#39;oggetto `status` utilizzato per indicare lo stato della risposta di destin
 | --- | --- | --- |
 | status | Numero | Codice di stato HTTP |
 | message | Stringa | Un messaggio sulla risposta. Ad esempio, potrebbe indicare se la risposta è stata decisa [sul dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) o lato server |
-| remoteMboxes | Array | Quando il metodo di decisione è `on-device`, viene fornito un array di nomi mbox che non è stato possibile decidere completamente sul dispositivo. In altre parole, è necessaria una richiesta [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md). |
+| remoteMboxes | Array | Quando il metodo di decisione è `on-device`, viene fornito un array di nomi mbox che non è stato possibile decidere completamente sul dispositivo. In altre parole, è necessaria una richiesta [[!UICONTROL API di consegna Target]](/help/dev/implement/delivery-api/overview.md). |
 
 ## Esempio
 

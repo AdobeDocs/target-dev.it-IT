@@ -98,7 +98,7 @@ at.js genera un `mboxSession ID` e lo memorizza nel cookie. La prima risposta co
 
 >[!NOTE]
 >
->Il cookie di prima parte `AMCV_###@AdobeOrg` è sempre impostato con l&#39;ID visitatore di Experience Cloud.
+>Il cookie di prime parti `AMCV_###@AdobeOrg` è sempre impostato con l&#39;ID visitatore di Experience Cloud.
 
 ### Comportamento dei cookie di terze parti
 

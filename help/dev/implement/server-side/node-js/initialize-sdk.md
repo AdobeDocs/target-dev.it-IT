@@ -15,8 +15,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
-ht-degree: 18%
+source-wordcount: 332
+ht-degree: 17%
 
 ---
 
@@ -40,9 +40,9 @@ TargetClient.create(options: Object): TargetClient
 
 | Nome | Tipo | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- | --- |
-| client | Stringa | Sì | None (Nessuno) | [!UICONTROL Adobe Target Client ID] |
-| organizationId | Stringa | Sì | None (Nessuno) | [!UICONTROL Experience Cloud Organization ID] |
-| ambiente | Stringa | No | produzione | Nome dell’ambiente di destinazione. Nell&#39;interfaccia utente [!DNL Target], [!UICONTROL Administration] > [!UICONTROL Environments]. |
+| client | Stringa | Sì | None (Nessuno) | [!UICONTROL ID client Adobe Target] |
+| organizationId | Stringa | Sì | None (Nessuno) | [!UICONTROL ID organizzazione Experience Cloud] |
+| ambiente | Stringa | No | produzione | Nome dell’ambiente di destinazione. Nell&#39;interfaccia utente [!DNL Target], [!UICONTROL Amministrazione] > [!UICONTROL Ambienti]. |
 | timeout | Numero | No | 3000 | Timeout in millisecondi |
 | serverDomain | Stringa | No | `*client*.tt.omtrdc.net` | Sostituisce il nome host predefinito |
 | protetto | Booleano | No | true | Annulla l&#39;impostazione per applicare lo schema HTTP |

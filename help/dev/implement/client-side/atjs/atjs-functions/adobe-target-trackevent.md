@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 61%
+source-wordcount: 336
+ht-degree: 59%
 
 ---
 
@@ -32,7 +32,7 @@ Di seguito sono riportati i dettagli API:
 
 | Chiave | Tipo | Obbligatorio | Descrizione |
 |--- |--- |--- |--- |
-| mbox | Stringa | Sì | Nome Mbox<P>**Nota**: se viene attivata una chiamata [!UICONTROL trackEvent()] con un nome mbox già attivato sulla pagina, l&#39;identificatore SDID di [!UICONTROL trackEvent()] viene reimpostato e sarà diverso dalle chiamate di [!DNL Target] sulla pagina. Tuttavia, l&#39;attivazione di una chiamata [!UICONTROL trackEvent()] con un nome mbox diverso mantiene l&#39;identificatore SDID della chiamata [!UICONTROL trackEvent()] coerente con le chiamate [!UICONTROL Page Load Request]/[!UICONTROL triggerView()] sulla pagina. |
+| mbox | Stringa | Sì | Nome Mbox<P>**Nota**: se una chiamata [!UICONTROL trackEvent()] viene attivata con un nome mbox già attivato sulla pagina, l&#39;identificatore SDID di [!UICONTROL trackEvent()] viene reimpostato e sarà diverso dalle chiamate [!DNL Target] sulla pagina. Tuttavia, l&#39;attivazione di una chiamata [!UICONTROL trackEvent()] con un nome mbox diverso mantiene l&#39;identificatore SDID della chiamata [!UICONTROL trackEvent()] coerente con le chiamate [!UICONTROL Page Load Request]/[!UICONTROL triggerView()] sulla pagina. |
 | selector | Stringa | No | Selettori CSS utilizzati per trovare gli elementi HTML. I listener di eventi verranno allegati agli elementi trovati. |
 | type | Stringa | No | Rappresenta un tipo di evento registrato. Può trattarsi sia di eventi HTML noti come: click, mouseown, ecc, così come di eventi HTML personalizzati. |
 | preventDefault | Booleano | No | Indica se utilizzare `[!UICONTROL event.preventDefault()]` nella chiamata di ritorno del listener di eventi. Predefinito su false.<P>**Nota**: sono supportati solo `[!UICONTROL form[submit]]` e `a[click]`. Altri scenari non sono supportati a causa della complessità e delle enormi quantità di scenari da supportare. |

@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 423
-ht-degree: 20%
+source-wordcount: 446
+ht-degree: 19%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. Implementare `adobe.target.triggerView()` per le applicazioni a pagina singola per utilizzare [!UICONTROL Visual Experience Composer] (VEC) per creare [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) attività. Se `[!UICONTROL adobe.target.triggerView()]` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola. Per ulteriori informazioni, consulta [Implementazione di un’applicazione a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+È possibile chiamare questa funzione a ogni caricamento di una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. Implementare `adobe.target.triggerView()` per le applicazioni a pagina singola per utilizzare il [!UICONTROL Compositore esperienza visivo] per creare [!UICONTROL attività Test A/B] e [!UICONTROL Attività di targeting esperienza] (XT). Se `[!UICONTROL adobe.target.triggerView()]` non è implementato sul sito, non è possibile utilizzare il Compositore esperienza visivo per le applicazioni a pagina singola. Per ulteriori informazioni, consulta [Implementazione di un’applicazione a pagina singola](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 20%
 
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
-| viewName | Stringa | Sì | Passa un nome qualsiasi come tipo di stringa che desideri rappresenti la tua visualizzazione. Questo nome della visualizzazione appare nel pannello [!UICONTROL Modifications] del Compositore esperienza visivo per consentire agli addetti al marketing di creare azioni ed eseguire le attività di [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] XT. |
+| viewName | Stringa | Sì | Passa un nome qualsiasi come tipo di stringa che desideri rappresenti la tua visualizzazione. Questo nome della visualizzazione appare nel pannello [!UICONTROL Modifiche] del Compositore esperienza visivo per consentire agli addetti al marketing di creare azioni ed eseguire le attività di [!UICONTROL Test A/B] e [!UICONTROL Targeting esperienza] Targeting esperienza. |
 | options | Oggetto | No |  |
 | options > page | Booleano | No | **TRUE:** il valore predefinito della pagina è vero. Con page=true, si inviano notifiche al backend [!DNL Target] per incrementare il conteggio delle impression.<P>Una notifica viene sempre inviata per impostazione predefinita quando viene chiamato un `[!UICONTROL triggerView]`, tranne quando options > page è impostato su false.<P>**FALSE:** con page=false, non si inviano le notifiche per incrementare il conteggio delle impression. Usa questo approccio quando vuoi eseguire nuovamente il rendering solo di un componente su una pagina con un’offerta.<P>**Nota**: le offerte di codice personalizzato nel Compositore esperienza visivo non vengono riprodotte quando `[!UICONTROL triggerView()]` viene chiamato con `{page: false}` come opzione. |
 
@@ -81,11 +81,11 @@ adobe.target.getOffers({
 });
 ```
 
-## Esempio: migliore compatibilità per `triggerView()` con [!UICONTROL Adobe Visual Editing Helper extension]
+## Esempio: migliore compatibilità per `triggerView()` con l&#39;estensione [!UICONTROL Adobe Visual Editing Helper]
 
 Quando utilizzi l&#39;estensione [Adobe Visual Editing Helper](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}, tieni presente quanto segue:
 
-A causa dei nuovi criteri V3 Manifest di [!DNL Googl]e per le estensioni [!DNL Chrome], [!UICONTROL Visual Editing Helper extension] deve attendere l&#39;evento `DOMContentLoaded` prima di caricare le librerie [!DNL Target] nel Compositore esperienza visivo. Questo ritardo potrebbe causare l&#39;attivazione della chiamata `triggerView()` da parte delle pagine Web prima che le librerie di authoring siano pronte, con conseguente mancato popolamento della visualizzazione al momento del caricamento.
+A causa dei nuovi criteri V3 Manifest di [!DNL Googl]e per le estensioni [!DNL Chrome], l&#39;estensione [!UICONTROL Helper per editing video] deve attendere l&#39;evento `DOMContentLoaded` prima di caricare le librerie [!DNL Target] nel Compositore esperienza visivo. Questo ritardo potrebbe causare l&#39;attivazione della chiamata `triggerView()` da parte delle pagine Web prima che le librerie di authoring siano pronte, con conseguente mancato popolamento della visualizzazione al momento del caricamento.
 
 Per attenuare questo problema, utilizzare un listener per l&#39;evento pagina `load`.
 

@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -104,7 +104,7 @@ Questa Guida per gli sviluppatori *[!DNL Adobe Target]* fornisce risorse e guide
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): recuperare le informazioni sul profilo utente di [!DNL Adobe Target].
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): recuperare i dati del report attività [!UICONTROL A/B Test] e [!UICONTROL Automated Personalization].
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): recupero dei dati del report attività [!UICONTROL Test A/B] e [!UICONTROL Automated Personalization].
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): utilizzare l&#39;API [!DNL Target Recommendations].
 

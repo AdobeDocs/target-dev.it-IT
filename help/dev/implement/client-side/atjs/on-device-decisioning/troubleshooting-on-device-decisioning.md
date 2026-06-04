@@ -1,6 +1,6 @@
 ---
 keywords: implementazione, libreria javascript, js, atjs, decisioning sul dispositivo, decisioning sul dispositivo, at.js, sul dispositivo, sul dispositivo, risoluzione dei problemi, risoluzione dei problemi, implementazione2
-description: Scopri come risolvere i problemi di [!UICONTROL on-device decisioning] con la libreria at.js.
+description: Scopri come risolvere i problemi di [!UICONTROL decisioning sul dispositivo] con la libreria at.js.
 title: Come posso risolvere i problemi relativi al decisioning sul dispositivo con la libreria JavaScript at.js?
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
@@ -18,14 +18,14 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 267
+source-wordcount: 281
 ht-degree: 0%
 
 ---
 
-# Risoluzione dei problemi di [!UICONTROL on-device decisioning] per at.js
+# Risoluzione dei problemi di [!UICONTROL decisioning sul dispositivo] per at.js
 
-Completa i seguenti passaggi per risolvere i problemi di [!UICONTROL on-device decisioning] in [!UICONTROL Adobe Target] con la libreria JavaScript at.js:
+Completa i seguenti passaggi per risolvere i problemi di [!UICONTROL decisioning sul dispositivo] in [!UICONTROL Adobe Target] con la libreria JavaScript at.js:
 
 ## Passaggio 1: abilitare il registro della console per at.js
 
@@ -60,7 +60,7 @@ Ad esempio, per aprire DevTools in Google Chrome:
 
 ## Passaggio 3: verifica il download dell’artefatto della regola utilizzando gli eventi personalizzati di at.js
 
-La libreria at.js invia due nuovi eventi personalizzati per supportare [!UICONTROL on-device decisioning].
+La libreria at.js invia due nuovi eventi personalizzati per supportare [!UICONTROL le decisioni sul dispositivo].
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

@@ -20,7 +20,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1139
+source-wordcount: 1166
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ Di seguito è riportato un esempio di risposta `interact` quando è abilitata la
 }
 ```
 
-Le proposte per le attività [!UICONTROL Form-based Experience Composer] possono contenere sia elementi di contenuto che elementi di metrica di clic nella stessa proposta. Pertanto, invece di avere un singolo token di analisi per la visualizzazione del contenuto nella proprietà `scopeDetails.characteristics.analyticsToken`, è possibile che nelle proprietà `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` siano specificati sia un token di analisi dei clic che un token di analisi dei clic.
+Le proposte per le attività del [!UICONTROL Compositore esperienza basato su moduli] possono contenere sia elementi di contenuto che elementi di metrica di clic nella stessa proposta. Pertanto, invece di avere un singolo token di analisi per la visualizzazione del contenuto nella proprietà `scopeDetails.characteristics.analyticsToken`, è possibile che nelle proprietà `scopeDetails.characteristics.analyticsDisplayToken` e `scopeDetails.characteristics.analyticsClickToken` siano specificati sia un token di analisi dei clic che un token di analisi dei clic.
 
 ```json
 {
@@ -236,13 +236,13 @@ Tutti i valori da `scopeDetails.characteristics.analyticsToken`, così come `sco
 
 Nelle sottosezioni seguenti viene illustrato come implementare la registrazione lato client di [!DNL Analytics] per i casi d&#39;uso comuni.
 
-### [!UICONTROL Form-Based Experience Composer] attività {#form-based-composer}
+### [!UICONTROL Attività del Compositore esperienza basato su moduli] {#form-based-composer}
 
 È possibile utilizzare [!DNL Platform Web SDK] per controllare l&#39;esecuzione delle proposte dalle attività [Compositore esperienza basato su Adobe Target Form](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it).
 
 Quando si richiedono proposte per un ambito decisionale specifico, la proposta restituita contiene il token [!DNL Analytics] appropriato. Si consiglia di concatenare il comando [!DNL Experience Platform Web SDK] `sendEvent` e di scorrere le proposte restituite per eseguirle durante la raccolta dei token [!DNL Analytics] contemporaneamente.
 
-È possibile attivare un comando `sendEvent` per un ambito attività [!UICONTROL Form-Based Experience Composer] come:
+È possibile attivare un comando `sendEvent` per un ambito di attività [!UICONTROL Compositore esperienza basato su moduli] come riportato di seguito:
 
 ```javascript
 alloy("sendEvent", {
@@ -402,7 +402,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-Una proposta può avere diversi tipi di elementi, come indicato dalla proprietà `schema` dell&#39;elemento in questione. Sono supportati quattro schemi di elementi di proposta per [!UICONTROL Form-Based Experience Composer] attività:
+Una proposta può avere diversi tipi di elementi, come indicato dalla proprietà `schema` dell&#39;elemento in questione. Sono supportati quattro schemi di elementi di proposta per le attività di [!UICONTROL Compositore esperienza basato su moduli]:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -432,9 +432,9 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Riepilogo dell’implementazione {#implementation-summary}
 
-In sintesi, è necessario eseguire i seguenti passaggi quando si applicano [!UICONTROL Form-Based Experience Composer] attività con [!DNL Experience Platform Web SDK]:
+In sintesi, è necessario eseguire i seguenti passaggi quando si applicano le attività [!UICONTROL Compositore esperienza basato su moduli] con [!DNL Experience Platform Web SDK]:
 
-1. Invia un evento che recupera [!UICONTROL Form-Based Experience Composer] offerte di attività;
+1. Invia un evento che recupera le offerte dell&#39;attività [!UICONTROL Compositore esperienza basato su moduli];
 1. Applica le modifiche al contenuto della pagina;
 1. Invia l&#39;evento di notifica `decisioning.propositionDisplay`;
 1. Raccogliere i token di visualizzazione [!DNL Analytics] dalla risposta di SDK e creare un payload per l&#39;hit [!DNL Analytics];
@@ -476,7 +476,7 @@ alloy("sendEvent", {
 });
 ```
 
-### [!UICONTROL Visual Experience Composer] attività (VEC) {#visual-experience-composer-acitivties}
+### [!UICONTROL Attività del Compositore esperienza visivo] {#visual-experience-composer-acitivties}
 
 [!DNL Platform Web SDK] consente di gestire le offerte create con [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it).
 

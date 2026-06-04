@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2981
-ht-degree: 66%
+source-wordcount: 2994
+ht-degree: 64%
 
 ---
 
@@ -63,7 +63,7 @@ Le sezioni seguenti illustrano la sequenza di azioni per i visitatori nuovi e pe
    * Crea un&#39;istanza dell&#39;oggetto Visitatore.
    * La libreria [!DNL Target] tenta di recuperare i dati ID visitatore di Experience Cloud.
    * Poiché si tratta di un nuovo visitatore, l’API Visitor genera una richiesta cross-domain a demdex.net.
-   * Dopo il recupero dei dati dell&#39;ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
+   * Dopo il recupero dei dati ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
 
 ### Visitatori di ritorno
 
@@ -74,7 +74,7 @@ Le sezioni seguenti illustrano la sequenza di azioni per i visitatori nuovi e pe
    * Crea un&#39;istanza dell&#39;oggetto Visitatore.
    * La libreria [!DNL Target] tenta di recuperare i dati ID visitatore di Experience Cloud.
    * L&#39;API dei visitatori recupera i dati dai cookie.
-   * Dopo il recupero dei dati dell&#39;ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
+   * Dopo il recupero dei dati ID visitatore di Experience Cloud, viene avviata una richiesta a [!DNL Target].
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ Caricare at.js in modo asincrono è un ottimo modo per evitare di bloccare il re
 
 Puoi evitare sfarfallii utilizzando uno snippet che nasconde preventivamente la pagina (o specifiche porzioni), quindi la rivela dopo il caricamento di at.js e della richiesta globale. Lo snippet deve essere aggiunto prima del caricamento di at.js.
 
-Se distribuisci at.js tramite un’implementazione asincrona di [!UICONTROL Adobe Experience Platform], assicurati di includere lo snippet per nascondere le pagine direttamente, prima di implementare [!DNL Target] utilizzando il codice da incorporare di [!UICONTROL Adobe Experience Platform].
+Se distribuisci at.js tramite un&#39;implementazione asincrona di [!UICONTROL Adobe Experience Platform], assicurati di includere lo snippet per nascondere le pagine direttamente, prima di implementare [!DNL Target] utilizzando il codice di incorporamento di [!UICONTROL Adobe Experience Platform].
 
 Durante l’implementazione di at.js tramite un’implementazione sincrona di DTM, puoi aggiungere lo snippet tramite una regola di caricamento della pagina attivata nella parte superiore della pagina.
 
@@ -131,7 +131,7 @@ Per ulteriori informazioni, consulta [Gestione at.js della visualizzazione momen
 
 ## at.js è compatibile con l’integrazione [!DNL Adobe Experience Manager] (Experience Manager)?
 
-[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive) ora supporta le implementazioni at.js con la relativa integrazione [!UICONTROL Adobe Target Cloud Services].
+[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o versioni successive) ora supporta le implementazioni at.js con la relativa integrazione di [!UICONTROL Adobe Target Cloud Services].
 
 ## Come posso evitare la visualizzazione momentanea di altri contenuti al caricamento pagina, utilizzando at.js?
 
@@ -159,7 +159,7 @@ No, se l’attraversamento di più domini è impostato su &quot;solo x&quot; e i
 
 Per supportare i visitatori Safari, un dominio X migliore sarebbe &quot;disabilitato&quot; (imposta solo un cookie di prima parte) o &quot;abilitato&quot; (imposta solo un cookie di prima parte su Safari, mentre imposta i cookie di prima e terze parti su altri browser).
 
-## È possibile utilizzare Target [!UICONTROL Visual Experience Composer] (VEC) nelle applicazioni a pagina singola?
+## È possibile utilizzare il [!UICONTROL Compositore esperienza visivo] di Target nelle applicazioni a pagina singola?
 
 Sì, puoi utilizzare il Compositore esperienza visivo per la tua applicazione a pagina singola se utilizzi at.js 2.x. Per ulteriori informazioni, vedere [Compositore esperienza visivo per applicazione a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=it).
 

@@ -24,7 +24,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2848
+source-wordcount: 2851
 ht-degree: 53%
 
 ---
@@ -87,7 +87,7 @@ Ora che abbiamo capito cosa sono le [!DNL Adobe Target] visualizzazioni, possiam
 
    Innanzitutto, dobbiamo installare at.js 2.*x*. Questa versione di at.js è stata sviluppata pensando alle applicazioni a pagina singola. Le versioni precedenti di at.js non supportano le visualizzazioni [!DNL Adobe Target] e il Compositore esperienza visivo per le applicazioni a pagina singola.
 
-   Scarica at.js 2.*x* tramite l&#39;interfaccia utente [!DNL Adobe Target] disponibile in **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. at.js 2.*x* può essere distribuito anche tramite tag in [!DNL Adobe Experience Platform].
+   Scarica at.js 2.*x* tramite l&#39;interfaccia utente [!DNL Adobe Target] disponibile in **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]**. at.js 2.*x* può essere distribuito anche tramite tag in [!DNL Adobe Experience Platform].
 
 1. Implementa la funzione at.js 2.*x*, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` nei tuoi siti.
 
@@ -101,7 +101,7 @@ Ora che abbiamo capito cosa sono le [!DNL Adobe Target] visualizzazioni, possiam
 
    | Parametro | Tipo | Obbligatorio | Convalida | Descrizione |
    | --- | --- | --- | --- | --- |
-   | viewName | Stringa | Sì | &#x200B;1. Nessuno spazio finale.<br />2. Non può essere vuoto.<br />3. Il nome della visualizzazione deve essere univoco per tutte le pagine.<br />4. **Avviso**: il nome della visualizzazione non deve iniziare o finire con &quot;`/`&quot;. Questo perché il cliente in genere estrae il nome della visualizzazione dal percorso URL. Per noi, &quot;home&quot; e &quot;`/home`&quot; sono diversi.<br />5. **Avviso**: non attivare la stessa visualizzazione in sequenza più volte con l&#39;opzione `{page: true}`. | Passa un nome qualsiasi come tipo di stringa che desideri rappresenti la tua visualizzazione. Questo nome della visualizzazione appare nel pannello **[!UICONTROL Modifications]** del Compositore esperienza visivo per consentire agli addetti al marketing di creare azioni ed eseguire le attività A/B e XT. |
+   | viewName | Stringa | Sì | &#x200B;1. Nessuno spazio finale.<br />2. Non può essere vuoto.<br />3. Il nome della visualizzazione deve essere univoco per tutte le pagine.<br />4. **Avviso**: il nome della visualizzazione non deve iniziare o finire con &quot;`/`&quot;. Questo perché il cliente in genere estrae il nome della visualizzazione dal percorso URL. Per noi, &quot;home&quot; e &quot;`/home`&quot; sono diversi.<br />5. **Avviso**: non attivare la stessa visualizzazione in sequenza più volte con l&#39;opzione `{page: true}`. | Passa un nome qualsiasi come tipo di stringa che desideri rappresenti la tua visualizzazione. Questo nome della visualizzazione appare nel pannello **[!UICONTROL Modifiche]** del Compositore esperienza visivo per consentire agli addetti al marketing di creare azioni ed eseguire le attività A/B e XT. |
    | options | Oggetto | No |  |  |
    | options > page | Booleano | No |  | **TRUE**: il valore predefinito della pagina è vero. Con `page=true`, verranno inviate notifiche ai server Edge per incrementare il conteggio delle impression.<br />**FALSE**: con `page=false`, non verranno inviate notifiche per incrementare il conteggio delle impression. Da utilizzare solo per eseguire nuovamente il rendering di un componente su una pagina con un’offerta. |
 
