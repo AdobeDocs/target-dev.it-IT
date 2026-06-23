@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 2994
 ht-degree: 64%
@@ -314,3 +314,5 @@ Il doctype HTML5 assicura che la pagina venga caricata in modalità standard. Du
 ## at.js funziona in un ambiente di app Ionic.
 
 Questa implementazione non è mai stata testata, poiché at.js non era destinato a funzionare in un ambiente non web. [!DNL Adobe] consiglia i relativi [SDK per le implementazioni mobili](/help/dev/implement/mobile/overview.md).
+
+

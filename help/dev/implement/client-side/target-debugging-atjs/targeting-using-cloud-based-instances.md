@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 203
 ht-degree: 46%
@@ -37,4 +37,5 @@ Questi domini, e molti altri, fanno parte dell’[elenco dei suffissi pubblici](
 La libreria JavaScript at.js utilizza i cookie per tenere traccia degli utenti in modo che [!DNL [!DNL Target]] fornisca sempre un&#39;esperienza coerente. Se la libreria JavaScript [!DNL Target] non è in grado di salvare i cookie, le richieste di Target sono disabilitate.
 
 **Soluzione:** come best practice, se vuoi utilizzare istanze basate su cloud con domini inclusi nellʼelenco dei suffissi pubblici, personalizza lʼimpostazione `cookieDomain`. Per ulteriori informazioni, consulta [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+
 

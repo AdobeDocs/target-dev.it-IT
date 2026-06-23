@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 61%
@@ -51,3 +51,4 @@ I seguenti vantaggi si applicano solo se si utilizzano i tag in [!DNL Adobe Expe
   >Utilizzare l&#39;azione Invia beacon nell&#39;estensione [!DNL Adobe Analytics] in modo che la chiamata [!DNL Analytics] attenda la chiamata [!DNL Target]. Se chiami direttamente `s.t()` o `s.tl()` con un codice personalizzato, le chiamate di [!DNL Analytics] non attendono il completamento delle chiamate di [!DNL Target].
 
 * **Impedisce la gestione errata delle offerte di reindirizzamento:** Se sulla pagina sono presenti [!DNL Target] e [!DNL Analytics] ed è presente un&#39;offerta di reindirizzamento eseguita da Target, si potrebbero riscontrare dei problemi se il tracker [!DNL Analytics] genera una richiesta quando non dovrebbe (perché l&#39;utente viene reindirizzato a un URL diverso). Se implementi [!DNL Target] e [!DNL Analytics] tramite i tag in [!DNL Adobe Experience Platform], questo problema non si verifica. Quando si utilizzano i tag in [!DNL Adobe Experience Platform], [!DNL Target] indica ad [!DNL Analytics] di interrompere la richiesta beacon di [!DNL Analytics].
+

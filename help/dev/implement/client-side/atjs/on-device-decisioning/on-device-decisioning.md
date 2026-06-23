@@ -24,7 +24,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 3835
 ht-degree: 4%
@@ -357,3 +357,4 @@ Questa etichetta non significa che l&#39;attività verrà sempre recapitata tram
 1. Crea e attiva un tipo di attività [supportato da [!UICONTROL decisioning sul dispositivo]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) e verifica che sia idoneo per [!UICONTROL decisioning sul dispositivo].
 1. Impostare il **[!UICONTROL metodo di decisione]** su **[!UICONTROL &quot;ibrido&quot;]** o **[!UICONTROL &quot;solo su dispositivo&quot;]** tramite l&#39;interfaccia utente delle impostazioni di at.js.
 1. Scarica e distribuisci at.js 2.5.0+ nelle tue pagine.
+
