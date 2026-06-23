@@ -33,7 +33,7 @@ ht-degree: 4%
 
 # [!UICONTROL Decisioning sul dispositivo] per at.js
 
-A partire dalla versione 2.5.0, at.js offre [!UICONTROL decisioning sul dispositivo]. [!UICONTROL Decisioning sul dispositivo] consente di memorizzare nella cache le attività [Test A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) e [Targeting esperienza](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) nel browser per eseguire decisioni in memoria senza una richiesta di blocco della rete all&#39;Edge Network [!DNL Adobe Target].
+A partire dalla versione 2.5.0, at.js offre [!UICONTROL decisioning sul dispositivo]. [!UICONTROL Decisioning sul dispositivo] consente di memorizzare nella cache le attività [Test A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=it) e [Targeting esperienza](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=it) (XT) nel browser per eseguire decisioni in memoria senza una richiesta di blocco della rete all&#39;Edge Network [!DNL Adobe Target].
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ I vantaggi di [!UICONTROL decisioning sul dispositivo] includono:
 * **Fornisci esperienze e decisioni rapide e sorprendenti.** Il bucket e il decisioning vengono eseguiti in memoria e sul browser per evitare il blocco delle richieste di rete.
 * **Migliora le prestazioni dell&#39;applicazione.** Esegui esperimenti e fornisci personalizzazione ai clienti e agli utenti senza compromettere le esperienze degli utenti finali.
 * **Miglioramento del punteggio di qualità del sito Google.** Con le decisioni prese in memoria, migliora il punteggio di qualità del sito Google del tuo business online per renderlo più individuabile dai consumatori.
-* **Scopri da analisi in tempo reale.** Ottieni informazioni sulle prestazioni dell&#39;attività in tempo reale tramite il reporting di [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T). A4T consente di ruotare la strategia nei momenti critici.
+* **Scopri da analisi in tempo reale.** Ottieni informazioni sulle prestazioni dell&#39;attività in tempo reale tramite il reporting di [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it) (A4T). A4T consente di ruotare la strategia nei momenti critici.
 
 ## Funzioni supportate
 
@@ -76,7 +76,7 @@ Con [!UICONTROL decisioning sul dispositivo], [!DNL Target] introduce una nuova 
 
 Solo lato server è il metodo decisionale predefinito impostato automaticamente quando at.js 2.5.0+ viene implementato e distribuito sulle proprietà web.
 
-Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html).
+Se si utilizza solo lato server come configurazione predefinita, tutte le decisioni vengono prese sulla rete Edge [!DNL Target], il che comporta una chiamata di blocco al server. Questo approccio può introdurre una latenza incrementale, ma offre anche vantaggi significativi, come la possibilità di applicare le funzionalità di machine learning di [!DNL Target], che includono [attività Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=it) (AP) e [Targeting automatico](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=it).
 
 Inoltre, migliorare le tue esperienze personalizzate utilizzando il profilo utente di [!DNL Target], che viene mantenuto tra sessioni e canali diversi, può fornire risultati potenti per la tua azienda.
 
@@ -92,7 +92,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 
 | Passaggio | Descrizione |
 | --- | --- |
-| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
+| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it&). |
 | 2 | La libreria at.js viene caricata in modo sincrono e nasconde il corpo del documento.<br />   La libreria at.js può anche essere caricata in modo asincrono con un eventuale snippet prenascosto implementato sulla pagina. |
 | 3 | La libreria at.js nasconde il corpo per evitare sfarfallii. |
 | 4 | Viene effettuata una richiesta di caricamento della pagina che include tutti i parametri configurati, ad esempio (ECID, ID cliente, parametri personalizzati, profilo utente e così via). |
@@ -131,7 +131,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 
 | Passaggio | Descrizione |
 | --- | --- |
-| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
+| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it). |
 | 2 | La libreria at.js viene caricata in modo sincrono e nasconde il corpo del documento.<br />La libreria at.js può anche essere caricata in modo asincrono con un eventuale snippet prenascosto implementato sulla pagina. |
 | 3 | La libreria at.js nasconde il corpo per evitare sfarfallii. |
 | 4 | La libreria at.js richiede di recuperare l’artefatto della regola JSON dal CDN Akamai più vicino al visitatore. |
@@ -158,7 +158,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 
 | Passaggio | Descrizione |
 | --- | --- |
-| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
+| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it). |
 | 2 | La libreria at.js viene caricata in modo sincrono e nasconde il corpo del documento.<br />La libreria at.js può anche essere caricata in modo asincrono con un eventuale snippet prenascosto implementato sulla pagina. |
 | 3 | La libreria at.js nasconde il corpo per evitare sfarfallii. |
 | 4 | La libreria at.js interpreta l’artefatto della regola JSON ed esegue la decisione in memoria per recuperare l’esperienza. |
@@ -193,7 +193,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 
 | Passaggio | Descrizione |
 | --- | --- |
-| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
+| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it). |
 | 2 | La libreria at.js viene caricata in modo sincrono e nasconde il corpo del documento.<br />La libreria at.js può anche essere caricata in modo asincrono con un eventuale snippet prenascosto implementato sulla pagina. |
 | 3 | La libreria at.js nasconde il corpo per evitare sfarfallii. |
 | 4 | All&#39;Edge Network [!DNL Adobe Target] viene effettuata una richiesta di caricamento pagina, inclusi tutti i parametri configurati come (ECID, ID cliente, parametri personalizzati, profilo utente e così via). |
@@ -223,7 +223,7 @@ L&#39;elenco seguente corrisponde ai numeri del diagramma:
 
 | Passaggio | Descrizione |
 | --- | --- |
-| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
+| 1 | L&#39;ID visitatore di Experience Cloud viene recuperato dal [servizio Adobe Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it). |
 | 2 | La libreria at.js viene caricata in modo sincrono e nasconde il corpo del documento.<br />La libreria at.js può anche essere caricata in modo asincrono con un eventuale snippet prenascosto implementato sulla pagina. |
 | 3 | La libreria at.js nasconde il corpo per evitare sfarfallii. |
 | 4 | Viene effettuata una richiesta per recuperare un’esperienza. |
@@ -243,7 +243,7 @@ Per abilitare [!UICONTROL le decisioni sul dispositivo]:
 
 >[!NOTE]
 >
->Per abilitare o disabilitare l&#39;attivazione/disattivazione di Decisioning sul dispositivo, è necessario disporre del ruolo utente [amministratore o approvatore](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html).
+>Per abilitare o disabilitare l&#39;attivazione/disattivazione di Decisioning sul dispositivo, è necessario disporre del ruolo utente [amministratore o approvatore](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=it).
 
 1. Fai clic su **[!UICONTROL Amministrazione]** > **[!UICONTROL Implementazione]** > **[!UICONTROL Dettagli account]**.
 1. In **[!UICONTROL Dettagli account]**, attiva **[!UICONTROL Decisioning sul dispositivo]**.
