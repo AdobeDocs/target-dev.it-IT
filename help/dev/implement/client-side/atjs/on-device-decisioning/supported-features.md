@@ -32,7 +32,7 @@ Il SDK JS [!DNL Adobe Target] offre ai clienti la flessibilità di scegliere tra
 
 ## Tipi di attività supportati
 
-La tabella seguente indica quali [tipi di attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) creati dal [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) o [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it) sono supportati o non supportati per [!UICONTROL decisioning sul dispositivo].
+La tabella seguente indica quali [tipi di attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=it) creati dal [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) o [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it) sono supportati o non supportati per [!UICONTROL decisioning sul dispositivo].
 
 | Tipo di attività | Supportate? |
 | --- | --- |
