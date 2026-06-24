@@ -329,7 +329,7 @@ I video che seguono contengono ulteriori informazioni:
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Consulta la pagina relativa al [funzionamento di at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) per ulteriori informazioni.
+Consulta la pagina relativa al [funzionamento di at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=it) per ulteriori informazioni.
 
 ### Implementare at.js 2.x in un’applicazione a pagina singola
 
