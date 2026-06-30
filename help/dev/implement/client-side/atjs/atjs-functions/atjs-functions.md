@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 557
 ht-degree: 38%
@@ -43,4 +43,5 @@ Elenco di funzioni che possono essere utilizzate con la libreria JavaScript at.j
 | [[!UICONTROL registerExtension(options)]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>(at.js 1.x) | Fornisce un metodo standard per registrare un’estensione specifica.<P>**Nota:** questa funzione è disponibile solo per at.js versione 1.*x*. Questa funzione è stata rimossa con il rilascio di at.js 2.x. Questa funzione restituisce il contenuto predefinito se utilizzata con at.js 2.x. |
 | [[!UICONTROL eventi personalizzati at.js]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | Eventi personalizzati at.js consentono di sapere quando una richiesta o un’offerta mbox ha esito negativo o positivo. |
 | [[!UICONTROL adobe.target.sendNotifications(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>(at.js 2.1.0) | Questa funzione invia una notifica al server Edge [!DNL Target] quando viene eseguito il rendering di un&#39;esperienza senza utilizzare `[!UICONTROL adobe.target.applyOffer()]` o `[!UICONTROL adobe.target.applyOffers()]`.<P>**Nota**: questa funzione è stata introdotta in at.js 2.1.0 e sarà disponibile per tutte le versioni successive alla versione 2.1.0. |
+
 
