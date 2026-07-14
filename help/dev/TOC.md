@@ -3,7 +3,7 @@ user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
 nudge: true
-source-git-commit: b7f74bef7a9e00aa9f794f63e5a29b391558808e
+source-git-commit: 894adb088e301a0628be687c7d381c30811f47e7
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 40%
