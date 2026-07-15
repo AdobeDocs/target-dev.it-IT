@@ -21,7 +21,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -295,5 +295,6 @@ La mbox di conferma d&#39;ordine utilizza i seguenti parametri:
 | orderId | Valore univoco per identificare un ordine per il conteggio di conversione.<p>L’`orderId` deve essere univoco. Gli ordini duplicati vengono ignorati nei rapporti. |
 | orderTotal | Valore monetario dell&#39;acquisto.<p>Non trasmettere il simbolo di valuta. Utilizza un punto decimale (non la virgola) per indicare i valori decimali. |
 | productPurchasedId  (facoltativo) | Elenco degli ID dei prodotti acquistati nell&#39;ordine, separati da virgole.<p>Questi ID prodotto vengono visualizzati nel rapporto di audit per supportare ulteriori analisi dei rapporti. |
+
 
 

@@ -17,7 +17,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 125
 ht-degree: 0%
@@ -30,5 +30,6 @@ L&#39;artefatto della regola è una rappresentazione JSON delle attività [!DNL 
 
 * Fai clic [qui](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) per ulteriori informazioni sull&#39;artefatto della regola.
 * Fai clic [qui](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md) per visualizzare un esempio di un artefatto di regola JSON.
+
 
 
