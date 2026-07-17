@@ -5,11 +5,22 @@ title: Come posso implementare con [!UICONTROL Experience Platform Web SDK]?
 feature: AEP Web SDK
 exl-id: 35ee60d2-3d6d-4169-9f22-b2aef4c6548b
 TQID: https://experienceleague.adobe.com/j3-KSuCkcyyTB2KG4Icm2E7xpAfcuPkaOlhxitd5q-4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
 source-wordcount: 844
@@ -53,7 +64,7 @@ Oltre alla documentazione di [!UICONTROL Platform Web SDK] di cui sopra, negli a
 | [Tipi di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/target.html) | I tipi di pubblico in [!DNL Target] determinano chi visualizzerà il contenuto e le esperienze in un&#39;attività di destinazione.<p>Vedi [Utilizzare l&#39;elenco dei tipi di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html#use-list) e [Combinare più tipi di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/combining-multiple-audiences.html). |
 | [Creare tipi di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=it) | L&#39;utilizzo dei tipi di pubblico creati in [!DNL Adobe Experience Platform] fornisce dati più completi sui clienti per una personalizzazione di maggiore impatto.<p>Vedi [Utilizza i tipi di pubblico da Adobe Experience Platform](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html#aep). |
 | [Decisioni di offerta](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html) | Aggiungi le decisioni sulle offerte create in [!DNL Adobe Journey Optimizer] alle attività [!DNL Target] (test A/B manuale o targeting delle esperienze) per determinare e consegnare la migliore offerta successiva per i visitatori su web e dispositivi mobili. |
-| [Offerte di reindirizzamento: domande frequenti su A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) | Le offerte di reindirizzamento fanno sì che i browser dei visitatori reindirizzino a una nuova pagina.<p>Vedere [Adobe Experience Platform Web SDK] supporta le offerte di reindirizzamento per A4T?](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html#platform)[!UICONTROL  |
+| [Offerte di reindirizzamento: domande frequenti su A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) | Le offerte di reindirizzamento fanno sì che i browser dei visitatori reindirizzino a una nuova pagina.<p>Vedere [Adobe Experience Platform Web SDK] supporta le offerte di reindirizzamento per A4T?(https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html#platform) |
 | [Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) | I token di risposta ti consentono di inviare dati [!DNL Target] a Google Analytics e ad altre integrazioni di terze parti.<p>Consulta [Invio di dati a Google Analytics tramite Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html#sending-data-to-google-analytics-via-platform-web-sdk) per un esempio di codice per l&#39;esecuzione di questa attività. |
 | [Implementazione di un&#39;applicazione a pagina singola](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html) nella *[!UICONTROL Panoramica di Platform Web SDK]*. | [!UICONTROL Adobe Experience Platform Web SDK] offre funzionalità avanzate che consentono all&#39;azienda di eseguire personalizzazioni su tecnologie lato client di nuova generazione, ad esempio applicazioni a pagina singola. |
 | [Modifiche alla crittografia di TLS (Transport Layer Security)](/help/dev/before-implement/tls-transport-layer-security-encryption.md) | TLS (Transport Layer Security) consente di mantenere standard di sicurezza elevati e di promuovere la sicurezza dei dati dei clienti. |
