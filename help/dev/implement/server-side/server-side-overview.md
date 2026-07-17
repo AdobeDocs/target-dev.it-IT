@@ -5,25 +5,15 @@ title: Dove posso trovare informazioni su [!DNL Target] API e SDK di distribuzio
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
 TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88cid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
 workflow-type: tm+mt
-source-wordcount: 618
-ht-degree: 12%
+source-wordcount: 825
+ht-degree: 9%
 
 ---
 
@@ -35,7 +25,7 @@ Informazioni su [!DNL Adobe Target] API di distribuzione lato server, SDK e [!DN
 >
 >Se l&#39;implementazione utilizza at.js e [!DNL AppMeasurement] sul lato client, è necessario utilizzare l&#39;[!UICONTROL API di distribuzione di Target] e gli SDK lato server descritti di seguito.
 >
->Se l&#39;implementazione utilizza [!UICONTROL Adobe Experience Platform Web SDK], è necessario utilizzare [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/it/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Se l&#39;implementazione utilizza [!UICONTROL Adobe Experience Platform Web SDK], è necessario utilizzare [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 Il processo seguente si verifica in un’implementazione lato server di [!DNL Target]:
 
@@ -91,3 +81,26 @@ Controlla le [app di esempio](sdk-guides/sample-apps/sample-apps.md) per diverti
 Collegamento: [API di Target Recommendations](https://developers.adobetarget.com/api/recommendations) e [Panoramica API di Adobe Recommendations](../../before-administer/recs-api/overview.md).
 
 Le API di Recommendations consentono di interagire in modo programmatico con [!DNL Target] server di consigli. Queste API possono essere integrate con una serie di applicazioni per eseguire funzioni che vengono normalmente eseguite tramite l&#39;interfaccia utente [!DNL Target].
+
+## [!DNL Platform Edge Network] chiamate API senza un SDK {#platform-edge-api-user-agent}
+
+[!UICONTROL Adobe Experience Platform Web SDK] e altre integrazioni SDK supportate includono un valore `User-Agent` simile al browser nelle intestazioni della richiesta HTTP quando si chiama [!DNL Experience Platform Edge Network]. Le integrazioni lato server che utilizzano l&#39;API [Interact](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank} pubblica senza un SDK devono fornire esplicitamente questa intestazione.
+
+Per le chiamate API di interazione non SDK, osserva i seguenti requisiti:
+
+* Includi un `User-Agent` valido simile a quello del browser nelle intestazioni della richiesta HTTP. Un valore visitatore o agente utente nel corpo della richiesta JSON da solo non soddisfa i requisiti di rilevamento di bot per questo modello di integrazione.
+* Non utilizzare valori segnaposto o non del browser, ad esempio `MyApp/1.0`, che possono causare la classificazione bot.
+* Per le chiamate API pubbliche di Edge non è necessario un nome SDK o una versione SDK. Per questo scenario, l&#39;elemento obbligatorio è un&#39;intestazione HTTP `User-Agent` valida.
+
+Quando [!DNL Target] classifica una richiesta come traffico da bot, la personalizzazione può non riuscire o apparire intermittente perché la ricerca di profili, la valutazione dei segmenti e i contenuti personalizzati per attività come [!UICONTROL Recommendations] e [!UICONTROL Auto-Target] sono soppressi, come descritto di seguito.
+
+Ulteriori informazioni sull&#39;implementazione con SDK nella [[!DNL Adobe Experience Platform Web SDK] panoramica](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
+
+**Esempio di richiesta Interact API (le intestazioni devono includere `User-Agent`):**
+
+```http
+POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+Accept: */*
+Content-Type: text/plain; charset=UTF-8
+```
