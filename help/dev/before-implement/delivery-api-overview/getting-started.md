@@ -63,6 +63,6 @@ curl -X POST \
 
 Prima di effettuare una chiamata all&#39;[!UICONTROL API di consegna di Target], effettua le seguenti operazioni per assicurarti che la risposta contenga l&#39;esperienza pertinente da mostrare agli utenti finali:
 
-1. Creare un&#39;attività [!DNL Target] (A/B, XT, AP o Consigli) utilizzando [Compositore basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) o il [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+1. Creare un&#39;attività [!DNL Target] (A/B, XT, AP o Consigli) utilizzando [Compositore basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) o il [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it).
 1. Utilizza l&#39;API di consegna per ottenere una risposta per le mbox utilizzate nell&#39;attività [!DNL Target] creata nel passaggio 2.
 1. Presenta l’esperienza al visitatore.
