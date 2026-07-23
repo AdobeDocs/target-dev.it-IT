@@ -3,7 +3,7 @@ user-guide-title: Guida per gli sviluppatori di Adobe Target
 breadcrumb-title: Guida per gli sviluppatori di Target
 user-guide-description: Scopri come adattare e personalizzare l’esperienza dei clienti per massimizzare le entrate dai siti web e mobili, dalle app, dai social media e da altri canali digitali.
 nudge: true
-source-git-commit: 72b19deb10f2e0d0c38f76317b1e8fee19ae0be1
+source-git-commit: 5c19d83d1ba84165dee064183ec04a9803dd1a61
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 40%
@@ -87,10 +87,10 @@ ht-degree: 40%
     + [Eventi personalizzati at.js](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
     + [Eseguire il debug di at.js utilizzando il debugger di Adobe Experience Cloud](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
     + [Utilizzare istanze basate su cloud con Target](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
-  + [FAQ su at.js](implement/client-side/atjs/target-atjs-faq.md)
-  + [Dettagli sulle versioni di at.js](implement/client-side/atjs/target-atjs-versions.md)
-  + [Aggiornamento da at.js 1.x a at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
-  + [Cookie di at.js](implement/client-side/atjs/atjs-cookies.md)
+    + [FAQ su at.js](implement/client-side/atjs/target-atjs-faq.md)
+    + [Dettagli sulle versioni di at.js](implement/client-side/atjs/target-atjs-versions.md)
+    + [Aggiornamento da at.js 1.x a at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
+    + [Cookie di at.js](implement/client-side/atjs/atjs-cookies.md)
   + [User-agent e suggerimenti client](implement/client-side/atjs/user-agent-and-client-hints.md)
   + Comprendere la mbox globale {#global-mbox}
     + [Panoramica sulla mbox globale](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
