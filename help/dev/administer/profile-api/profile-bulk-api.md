@@ -90,7 +90,7 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 >
 >Tutti i nomi e i valori dei parametri devono essere codificati in URL (UTF-8) prima di inviare il batch, inviato con `Content-Type: application/x-www-form-urlencoded`, con il corpo che inizia con `batch=`. I caratteri riservati non codificati vengono letti come sintassi della richiesta anziché come dati, il che può comportare il rifiuto, il troncamento o il danneggiamento del batch.
 >
->Se ricevi una risposta di &quot;Errore imprevisto&quot; senza l&#39;emissione di `batchId`, l&#39;API di aggiornamento del profilo di [Bulk Profile restituisce &quot;Errore imprevisto&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) per i passaggi di risoluzione dei problemi.
+>Se ricevi una risposta di &quot;Errore imprevisto&quot; senza l&#39;emissione di `batchId`, l&#39;API di aggiornamento del profilo di [Bulk Profile restituisce &quot;Errore imprevisto&quot;](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-24281) per i passaggi di risoluzione dei problemi.
 
 I seguenti caratteri sono comunemente presenti nei valori di profilo, ma hanno un significato speciale nei dati `application/x-www-form-urlencoded`. Se li invii non codificati, la richiesta non riesce o i dati vengono danneggiati senza un errore evidente:
 
