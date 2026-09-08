@@ -15,10 +15,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 9ecf805fe5a25a161564412fb01081a3546ea309
 workflow-type: tm+mt
-source-wordcount: 156
-ht-degree: 71%
+source-wordcount: 163
+ht-degree: 62%
 
 ---
 
@@ -30,4 +30,4 @@ In Adobe, prendiamo la sicurezza della tua esperienza digitale molto seriamente.
 
 Inoltre, il nostro lavoro di collaborazione con i partner, i principali ricercatori, gli istituti di ricerca sulla sicurezza e altre organizzazioni del settore ci aiuta a tenerci aggiornati sulle minacce e le vulnerabilità più recenti e a integrare regolarmente tecniche di sicurezza avanzata nei prodotti e nei servizi offerti.
 
-Per ulteriori informazioni, consulta il white paper [Adobe Target Security Overview](https://www.adobe.com/content/dam/cc/it/security/pdfs/AdobeTargetSecurityOverview.pdf) (Panoramica sulla sicurezza di Adobe Target).
+Per ulteriori informazioni, consulta il white paper [Adobe Target Security Overview](https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/experience-cloud/adobe-target-security-overview.pdf) (Panoramica sulla sicurezza di Adobe Target).
