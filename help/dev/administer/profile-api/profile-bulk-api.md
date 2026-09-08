@@ -5,21 +5,14 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
 TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
-source-wordcount: 1094
-ht-degree: 7%
+source-wordcount: 1311
+ht-degree: 6%
 
 ---
 
@@ -83,6 +76,27 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 * La dimensione del file batch deve essere inferiore a 50 MB. Inoltre, il numero totale di righe non deve superare 500,000. Questo limite assicura che i server non vengano inondati da troppe richieste.
 * Non esiste alcuna restrizione sul numero di attributi che è possibile caricare. Tuttavia, la dimensione totale dei dati del profilo esterno, che include Attributi del cliente, API del profilo, parametri del profilo In-Mbox e output degli script di profilo, non deve superare i 64 KB.
 * I parametri e i valori fanno distinzione tra maiuscole e minuscole.
+
+### Requisiti di codifica URL {#url-encoding}
+
+>[!IMPORTANT]
+>
+>Tutti i nomi e i valori dei parametri devono essere codificati in URL (UTF-8) prima di inviare il batch, inviato con `Content-Type: application/x-www-form-urlencoded`, con il corpo che inizia con `batch=`. I caratteri riservati non codificati vengono letti come sintassi della richiesta anziché come dati, il che può comportare il rifiuto, il troncamento o il danneggiamento del batch.
+>
+>Se ricevi una risposta di &quot;Errore imprevisto&quot; senza l&#39;emissione di `batchId`, l&#39;API di aggiornamento del profilo di [Bulk Profile restituisce &quot;Errore imprevisto&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) per i passaggi di risoluzione dei problemi.
+
+I seguenti caratteri sono comunemente presenti nei valori di profilo, ma hanno un significato speciale nei dati `application/x-www-form-urlencoded`. Se li invii non codificati, la richiesta non riesce o i dati vengono danneggiati senza un errore evidente:
+
+| Carattere | Codifica come | Se inviato non codificato |
+|---|---|---|
+| `%` | `%25` | L’intero batch viene rifiutato. La risposta restituisce HTTP 200 con `success=false` e il messaggio &quot;Errore imprevisto&quot; e non viene emesso alcun `batchId`. |
+| `&` | `%26` | Il batch viene troncato automaticamente alle prime `&`. Le righe rimanenti vengono eliminate, il che può comportare un aggiornamento parziale o una risposta &quot;Batch is empty&quot;. |
+| `+` | `%2B` | Il carattere viene automaticamente convertito in uno spazio, che danneggia il valore memorizzato. |
+| `=` | `%3D` | Il carattere può essere interpretato erroneamente come un limite di campo. |
+
+_Ad esempio, il valore `50% off & more` deve essere inviato come `50%25 off %26 more`._
+
+Si noti che lettere, cifre, caratteri accentati UTF-8 e i caratteri `- . ! ~ _ * ( )` non richiedono la codifica. Tuttavia, [!DNL Adobe] consiglia di codificare tutti i valori per evitare ambiguità.
 
 ## richiesta HTTP POST
 
