@@ -1,16 +1,13 @@
 ---
 keywords: prehide SDK, sfarfallio, anti-sfarfallio, pre-hiding, pre-hiding, alloy, at.js, implementazione, consenso, CMP, posizionamento script, inline, esterno, selezione SDK
-description: Scopri come integrare  [!DNL Adobe Target] Prehide SDK per eliminare la visualizzazione momentanea di contenuti non personalizzati (visualizzazione momentanea di altri contenuti) durante il caricamento della pagina. SDK funziona sia con Adobe Alloy (Web SDK) che con at.js.
+description: Scopri come integrare Prehide SDK di [!DNL Adobe Target] per eliminare la visualizzazione momentanea di contenuti non personalizzati (visualizzazione momentanea di altri contenuti) durante il caricamento della pagina. SDK funziona sia con Adobe Alloy (Web SDK) che con at.js.
 title: Guida all’integrazione di Prehide SDK
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # Guida all’integrazione di Prehide SDK
 
@@ -63,7 +60,8 @@ Una piccola libreria sincrona JavaScript che impedisce lo sfarfallio visivo caus
 >[!IMPORTANT]
 >
 >Prehide SDK deve essere eseguito prima di Alloy/at.js. Se Alloy viene caricato per primo, la pagina esegue il rendering del contenuto non personalizzato e quindi esegue nuovamente il rendering. Questo è esattamente lo sfarfallio che questo SDK è progettato per prevenire.
-></br>>Non aggiungere `async` o `defer` al tag di script Prehide SDK. È necessaria l’esecuzione sincrona in modo che la regola di nasconderlo venga inserita prima che il browser inizi a disporre la pagina.
+></br>
+>Non aggiungere `async` o `defer` al tag di script Prehide SDK. È necessaria l’esecuzione sincrona in modo che la regola di nasconderlo venga inserita prima che il browser inizi a disporre la pagina.
 
 Il SDK di previsualizzazione deve essere visualizzato prima nel documento rispetto al SDK [!DNL Adobe Target] che si ripulisce dopo. L&#39;ordine di caricamento non è negoziabile:
 
