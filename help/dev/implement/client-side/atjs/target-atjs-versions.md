@@ -1,37 +1,50 @@
 ---
 keywords: Versioni di at.js, versioni di at.js, note sulla versione
-description: Visualizza i dettagli sulle modifiche in ogni versione della libreria JavaScript at.js di  [!DNL Adobe Target] .
+description: Visualizza i dettagli sulle modifiche in ogni versione della libreria JavaScript at.js di [!DNL Adobe Target].
 title: Cosa è incluso in ogni versione di at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 TQID: https://experienceleague.adobe.com/95lXe4YAZ7mD12XBtKPB3ddFtGCJYdvlXR632qosuG4
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+    internal-label: Analytics integration
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 235baadf4059d2c363368408012630d6619aef99
+    internal-label: Privacy
+source-git-commit: 1e9b96361fd11095248b8fcae6f7a185f74a39c8
 workflow-type: tm+mt
-source-wordcount: 5174
+source-wordcount: '5217'
 ht-degree: 60%
-
 ---
-
 # Dettagli sulle versioni di at.js
 
 Dettagli sulle modifiche in ogni versione della libreria JavaScript at.js di [!DNL Adobe Target].
@@ -47,6 +60,10 @@ Dettagli sulle modifiche in ogni versione della libreria JavaScript at.js di [!D
 >È necessario eseguire l&#39;aggiornamento alle versioni più recenti di 1.*x* o 2.*x* per ottenere correzioni di bug e patch di sicurezza per i problemi rilevati in qualsiasi versione secondaria precedente della versione principale corrispondente.
 
 I tag in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sono il metodo preferito per aggiornare at.js. Gli sviluppatori di estensioni aggiungono continuamente nuove funzioni alle loro estensioni e spesso correggono i bug. Questi aggiornamenti vengono assemblati in nuove versioni di un’estensione e sono resi disponibili nel catalogo Adobe Experience Platform come aggiornamenti. Per ulteriori informazioni, vedere [Aggiornamenti dell&#39;estensione](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=it) nella *Panoramica sui tag*.
+
+## at.js versione 2.11.9 (febbraio 2026)
+
+* È stato risolto un problema che impediva alla funzione applyOffers di at.js di rilevare e modificare correttamente Lightning Web Components (LWC). La libreria at.js è stata aggiornata per rilevare i componenti LWC e applicare le modifiche applicabili. (TGT-54478)
 
 ## at.js versione 2.11.8 (31 marzo 2025)
 
@@ -495,7 +512,7 @@ I miglioramenti e le correzioni seguenti sono inclusi nella versione 0.9.7 di at
 I miglioramenti e le correzioni seguenti sono inclusi nella versione 0.9.6 di at.js:
 
 * Supporto per le offerte di reindirizzamento per A4T. Dopo aver scaricato e installato la versione 0.9.6 di at.js, è possibile utilizzare le offerte di reindirizzamento in attività che utilizzano [!UICONTROL Adobe Analytics come Source per la generazione di rapporti per Target] (A4T). Oltre alla versione 0.9.6 di at.js, l’implementazione deve soddisfare altri requisiti minimi al fine di usare le offerte di reindirizzamento e A4T. Per ulteriori informazioni e importanti informazioni aggiuntive che dovresti conoscere, consulta [Offerte di reindirizzamento: domande frequenti su A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=it).
-* Prima della versione 0.9.6 di at.js, se l&#39;API visitatore era presente nella pagina e l&#39;impostazione `visitorApiTimeout` era troppo aggressiva, poteva capitare che [!DNL Target] non inviasse dati MCID nella richiesta [!DNL Target]. Questo poteva portare a problemi come la presenza di dati parziali in [!DNL Analytics] durante l’utilizzo di A4T.
+* Prima della versione 0.9.6 di at.js, se l&#39;API visitatore era presente nella pagina e l&#39;impostazione `visitorApiTimeout` era troppo aggressiva, poteva capitare che [!DNL Target] non inviasse dati MCID nella richiesta [!DNL Target]. Questo poteva portare a problemi come la presenza hit senza unione delle identità in [!DNL Analytics] durante l’utilizzo di A4T.
 
   Questo comportamento è stato modificato nella versione 0.9.6 di at.js: anche se `visitorApiTimeout` è impostato su 1 ms, ad esempio, [!DNL Target] tenterà di raccogliere SDID, server di tracciamento e dati degli ID cliente, per inviarli nella richiesta [!DNL Target].
 
