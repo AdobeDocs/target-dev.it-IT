@@ -42,5 +42,5 @@ client = TargetClient.create({
 ```
 
 Si noti che questo funziona solo per le versioni di Nodo 18.2+, in cui `undici.fetch` è il `fetch` predefinito per il nodo.
-Visita l&#39;archivio degli esempi di SDK del nodo [](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
+Visita l&#39;archivio degli esempi di SDK del nodo [&#128279;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
 esempi di configurazione proxy per le versioni precedenti di node e ulteriori informazioni.
