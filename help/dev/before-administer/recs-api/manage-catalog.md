@@ -167,7 +167,7 @@ I dettagli di entità possono essere recuperati solo per una singola entità all
 
    >[!NOTE]
    >
-   >Se non viene specificato alcun ambiente in modo esplicito, Get Entity tenta di ottenere l&#39;entità solo dall&#39;[ambiente predefinito](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Se desideri effettuare il pull da un ambiente diverso da quello predefinito, devi specificare l’ID ambiente.
+   >Se non viene specificato alcun ambiente in modo esplicito, Get Entity tenta di ottenere l&#39;entità solo dall&#39;[ambiente predefinito](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=it). Se desideri effettuare il pull da un ambiente diverso da quello predefinito, devi specificare l’ID ambiente.
 
 1. Se necessario, aggiungi il parametro `environmentId` e invia nuovamente la richiesta.
 
