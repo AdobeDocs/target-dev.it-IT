@@ -1,27 +1,36 @@
 ---
 title: Implementazione di un'applicazione a pagina singola per [!DNL Adobe Experience Platform Web SDK]
-description: Scopri come creare un'implementazione di applicazione a pagina singola (SPA) di  [!DNL Adobe Experience Platform Web SDK]using [!DNL Target].
+description: Scopri come creare un'implementazione di applicazione a pagina singola (SPA) di [!DNL Adobe Experience Platform Web SDK] utilizzando [!DNL Target].
 keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;ciclo di vita SPA;lato client;test AB;AB;Targeting esperienza;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+TQID: 'https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1836
+source-wordcount: '1837'
 ht-degree: 2%
-
 ---
-
 # Implementazione di un&#39;applicazione a pagina singola
 
 [!DNL Adobe Experience Platform Web SDK] offre funzionalità avanzate che consentono all&#39;azienda di eseguire personalizzazioni su tecnologie lato client di nuova generazione, ad esempio applicazioni a pagina singola (SPA).

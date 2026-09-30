@@ -1,20 +1,23 @@
 ---
 title: Autorizzazioni utente e proprietà
-description: Gli SDK di  [!DNL Target]  includono il supporto per le autorizzazioni utente e le proprietà.
+description: Gli SDK [!DNL Target] includono il supporto per le autorizzazioni utente e le proprietà.
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI
+TQID: 'https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 123
+source-wordcount: '124'
 ht-degree: 8%
-
 ---
-
 # Autorizzazioni utente e proprietà
 
 Gli SDK [!DNL Target] includono il supporto per le autorizzazioni utente e le proprietà. Se non sai in che modo [!DNL Adobe Target] gestisce le autorizzazioni Enterprise tramite aree di lavoro e proprietà, puoi trovare ulteriori informazioni in [Autorizzazioni per gli utenti Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=it).

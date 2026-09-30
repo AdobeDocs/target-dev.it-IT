@@ -1,24 +1,30 @@
 ---
 title: Tracciamento degli eventi
-description: Utilizza le funzionalità di tracciamento degli eventi di  [!DNL Adobe Target] per misurare in modo efficace le metriche più importanti per la tua azienda e i casi d'uso.
+description: Utilizza le funzionalità di tracciamento degli eventi di [!DNL Adobe Target] per misurare in modo efficace le metriche più importanti per la tua azienda e i casi d'uso.
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/swckm7EdKlSkC2xl1P57EAyiuGz18rucZOAxcudzYpo
+TQID: 'https://experienceleague.adobe.com/swckm7EdKlSkC2xl1P57EAyiuGz18rucZOAxcudzYpo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 528
+source-wordcount: '529'
 ht-degree: 1%
-
 ---
-
 # Tracciamento degli eventi
 
 Utilizza le funzionalità di tracciamento degli eventi di [!DNL Adobe Target] per misurare in modo efficace le metriche più importanti per la tua azienda e i casi d&#39;uso. Il tracciamento degli eventi è fondamentale per misurare il successo delle attività di sperimentazione o personalizzazione, in quanto ti dicono quale variante o esperienza vince o perde. Comprendere questo ti aiuterà a capire in che modo gli utenti interagiscono con il tuo prodotto o si evolvono in un panorama in continua evoluzione.

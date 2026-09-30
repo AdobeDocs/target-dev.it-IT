@@ -3,26 +3,38 @@ title: Come recuperare i consigli con l’API di consegna
 description: Questo articolo guida gli sviluppatori attraverso i passaggi necessari per recuperare i contenuti dei consigli utilizzando l’API di distribuzione di Adobe Target.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
+TQID: 'https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1284
+source-wordcount: '1380'
 ht-degree: 1%
-
 ---
-
 # Recupero dei consigli con l’API di consegna
 
 Le API per la funzione Consigli di Adobe Target ed Adobe Target possono essere utilizzate per fornire risposte alle pagine web, ma anche in esperienze non basate su HTML, come app, schermi, console, e-mail, chioschi e altri dispositivi di visualizzazione. In altre parole, quando non è possibile utilizzare le librerie di Target e JavaScript, l&#39;[API di consegna di Target](/help/dev/implement/delivery-api/overview.md) consente ancora l&#39;accesso all&#39;intera gamma di funzionalità di Target, per distribuire esperienze personalizzate.
@@ -78,13 +90,13 @@ La sintassi per l&#39;[API di consegna](/help/dev/implement/delivery-api/overvie
    * gli oggetti **browser** e **address** sono stati rimossi da **Body**, poiché non sono necessari per casi di utilizzo non HTML
    * *api_charter* è elencato come nome della posizione in questo esempio
    * viene specificato entity.id, in quanto questo consiglio si basa sulla somiglianza dei contenuti, che richiede la trasmissione di una chiave dell&#39;elemento corrente a Target.
-     ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-Ricorda di configurare correttamente i parametri di query. Ad esempio, assicurarsi di specificare `{{CLIENT_CODE}}` in base alle esigenze. <!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
+     ![chiamata API-Delivery-lato server.png](assets/server-side-delivery-api-call2.png)
+Ricorda di configurare correttamente i parametri di query. Ad esempio, assicurarsi di specificare `{{CLIENT_CODE}}` come necessario. <!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
      ![codice-client3](assets/client-code3.png)
 1. Invia la richiesta. Questa operazione viene eseguita sulla posizione *api_charter*, su cui è in esecuzione un consiglio attivo, definita con la progettazione JSON che restituirà un elenco di entità consigliate.
 1. Ricevi una risposta in base alla progettazione JSON.
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
-La risposta include l’ID della chiave e gli ID delle entità consigliate.
+   La risposta include l’ID della chiave e gli ID delle entità consigliate.
 
 Questo utilizzo dell’API di consegna con Recommendations consente di eseguire passaggi aggiuntivi prima di mostrare i consigli al visitatore sul dispositivo non HTML. Ad esempio, puoi prendere la risposta dall’API di consegna per eseguire una ricerca aggiuntiva e in tempo reale dei dettagli degli attributi di entità (inventario, prezzo, valutazione e così via) da un altro sistema (come una piattaforma CMS, PIM o e-commerce), prima di visualizzare i risultati finali.
 

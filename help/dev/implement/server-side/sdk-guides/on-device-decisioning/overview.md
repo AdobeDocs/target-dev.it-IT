@@ -1,34 +1,47 @@
 ---
 keywords: lato server, lato server, sdk, sdk, su dispositivo, decisioni, su dispositivo, ondispositivo, latenza zero, latenza vicino a zero, node.js, lato server3
-description: Scopri come utilizzare [!UICONTROL [!UICONTROL on-device decisioning]] per memorizzare nella cache le attività  [!DNL Target] A/B e MVT sul server e eseguire le decisioni in memoria con latenza pressoché pari a zero.
+description: Scopri come utilizzare [!UICONTROL [!UICONTROL decisioning sul dispositivo]] per memorizzare nella cache le attività A/B e MVT [!DNL Target] sul server per eseguire decisioni in memoria con latenza vicina a zero.
 title: Cos’è Decisioning sul dispositivo?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
+TQID: 'https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1349
+source-wordcount: '1349'
 ht-degree: 8%
-
 ---
-
 # Panoramica del decisioning sul dispositivo
 
 Gli SDK [!DNL Adobe Target] di nuova generazione offrono ora [!UICONTROL decisioning sul dispositivo], che consente di memorizzare nella cache le campagne A/B e Targeting esperienza (XT) sul server e di eseguire le decisioni in memoria con latenza pressoché pari a zero, senza bloccare le richieste di rete all&#39;Edge Network di [!DNL Adobe Target].

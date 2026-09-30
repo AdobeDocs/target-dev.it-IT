@@ -1,24 +1,28 @@
 ---
-title: Utilizzare getOffers() in [!DNL Adobe Target] con Java SDK
+title: Usa getOffers() in [!DNL Adobe Target] quando si utilizza Java SDK
 description: Scopri come utilizzare getOffers() per eseguire una decisione e recuperare un'esperienza da [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
-TQID: https://experienceleague.adobe.com/2oYkwezf-GkZnybeQUKUbCE6sPAHNQkg3Z1KH8s2a-g
+TQID: 'https://experienceleague.adobe.com/2oYkwezf-GkZnybeQUKUbCE6sPAHNQkg3Z1KH8s2a-g'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Metadata
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 664
+source-wordcount: '665'
 ht-degree: 12%
-
 ---
-
 # Ottieni offerte (Java)
 
 ## Descrizione

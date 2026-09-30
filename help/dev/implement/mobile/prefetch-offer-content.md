@@ -1,16 +1,26 @@
 ---
 keywords: offerta, preacquisizione, iOS, android, sdk, mobile, mobile sdk, $8
-description: Utilizza la funzione di preacquisizione di  [!DNL Adobe Target]  negli SDK iOS e Android Mobile per recuperare il contenuto delle offerte il minor numero di volte possibile, memorizzando nella cache le risposte dal server.
+description: Utilizza la funzione di preacquisizione di [!DNL Adobe Target] negli SDK iOS e Android Mobile per recuperare il contenuto delle offerte il minor numero di volte possibile, memorizzando nella cache le risposte dal server.
 title: Posso prerecuperare il contenuto delle offerte per le app mobili?
 feature: Implement Mobile
 exl-id: 6f8e8298-f1e9-46f0-828f-717c7d632077
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '318'
 ht-degree: 37%
-
 ---
-
 # Preacquisire il contenuto dell’offerta
 
 La funzione di preacquisizione di [!DNL Target] utilizza gli SDK per dispositivi mobili iOS e Android per recuperare il contenuto delle offerte il minor numero di volte possibile, memorizzando nella cache le risposte dal server.

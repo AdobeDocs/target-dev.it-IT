@@ -1,26 +1,33 @@
 ---
 title: Notifica Target
-description: Assicurarsi che tutti gli eventi che devono essere tracciati da [!DNL Target]  vengano inviati utilizzando il metodo trackEvent.
+description: Verificare che tutti gli eventi che devono essere tracciati da [!DNL Target] siano inviati utilizzando il metodo trackEvent.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+TQID: 'https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # Notifica [!DNL Target]
 
 Il completamento di questo passaggio garantisce che tutti gli eventi che devono essere inviati a [!DNL Adobe Target] vengano inviati utilizzando il metodo `trackEvent`.
@@ -56,9 +63,9 @@ Non è necessario includere gli attributi di conversione dell&#39;ordine in ques
 * Incontra il tuo team aziendale per identificare tutti gli eventi che possono essere considerati come metriche di conversione o di successo. È inoltre necessario identificare l&#39;evento di conversione che genera ricavi in modo che tali dettagli possano essere inviati a [!DNL Target] insieme ai dati dell&#39;evento.
 * Assicurati che i seguenti attributi siano disponibili nel livello dati in modo da poterli inviare con l’evento di conversione. L’evento di conversione genera ricavi, ad esempio un acquisto di prodotto o un evento Aggiungi al carrello.
 
-   * `productPurchaseId`: ID prodotto acquistati come parte dell&#39;ordine. Separa più prodotti utilizzando le virgole.
-   * `orderTotal`: totale ordine per l&#39;acquisto.
-   * `orderId`: ID ordine dell&#39;acquisto.
+  * `productPurchaseId`: ID prodotto acquistati come parte dell&#39;ordine. Separa più prodotti utilizzando le virgole.
+  * `orderTotal`: totale ordine per l&#39;acquisto.
+  * `orderId`: ID ordine dell&#39;acquisto.
 
   La figura seguente mostra una regola [per [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=it){target=_blank} che deve essere attivata solo nella pagina [!UICONTROL Conferma].
 
