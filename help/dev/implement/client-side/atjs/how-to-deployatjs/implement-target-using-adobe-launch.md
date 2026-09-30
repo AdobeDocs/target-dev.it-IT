@@ -1,36 +1,43 @@
 ---
 keywords: implementazione, implementazione, implementazione, adobe launch, launch, race, redirect, experience platform launch, platform launch, tag, adobe platform, implementazione2
-description: Scopri come implementare la libreria at.js  [!DNL Adobe Target]  utilizzando  [!DNL Adobe Experience Platform], il metodo preferito per implementare Target.
-title: Come si implementa  [!DNL Target]  utilizzando  [!DNL Adobe Experience Platform]?
+description: Scopri come implementare la libreria at.js [!DNL Adobe Target] utilizzando [!DNL Adobe Experience Platform], il metodo preferito per implementare Target.
+title: Come posso implementare [!DNL Target] utilizzando [!DNL Adobe Experience Platform]?
 feature: Implement Server-side
 exl-id: 0a325871-194a-479c-a3bf-294e3dde3e9a
-TQID: https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo
+TQID: 'https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 446
-ht-degree: 61%
-
+source-wordcount: '448'
+ht-degree: 60%
 ---
-
 # Implementazione di [!DNL Target] tilizzando [!DNL Adobe Experience Platform]
 
 I tag in [!DNL Adobe Experience Platform] rappresentano la nuova generazione di funzionalità [!DNL Adobe] per la gestione dei tag. I tag offrono ai clienti un modo semplice di implementare e gestire i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in [!DNL Adobe Experience Platform]. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Per un riferimento consolidato delle modifiche terminologiche, consulta il seguente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=it&).
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in [!DNL Adobe Experience Platform]. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Per un riferimento consolidato delle modifiche terminologiche, consulta il seguente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?).
 
 Nella tabella seguente sono elencate diverse risorse utili:
 
@@ -38,7 +45,7 @@ Nella tabella seguente sono elencate diverse risorse utili:
 |--- |--- |
 | [Aggiungi Adobe Target](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html?lang=it#implement-solutions) | Questo tutorial fornisce istruzioni dettagliate per implementare [!DNL Target] in un sito web con tag in [!DNL Adobe Experience Platform]. Gli argomenti includono l’aggiunta della libreria JavaScript at.js, l’attivazione della mbox globale, l’aggiunta di parametri e l’integrazione con altre soluzioni. Questo articolo fa parte di un tutorial più ampio che mostra come implementare Adobe Experience Platform e altre soluzioni Adobe Experience Cloud. |
 | [Guida rapida](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=it) | Informazioni sull’implementazione e la gestione dei tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate. |
-| [Panoramica dell’estensione Adobe  [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=it) | Informazioni sull’implementazione di [!DNL Target] mediante [!DNL Adobe Experience Platform]. |
+| [Panoramica dell’estensione Adobe  [!DNL Target] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=it) | Informazioni sull’implementazione di [!DNL Target] mediante [!DNL Adobe Experience Platform]. |
 
 ## Vantaggi dell’implementazione di at.js con l’estensione [!DNL Target]
 

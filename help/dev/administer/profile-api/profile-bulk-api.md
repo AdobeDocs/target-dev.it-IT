@@ -1,28 +1,35 @@
 ---
 title: API di aggiornamento del profilo bulk di Adobe Target
-description: Scopri come utilizzare l'API [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] per inviare dati di profilo di più visitatori a [!DNL Target] per l'utilizzo nel targeting.
+description: Scopri come utilizzare l'API [!DNL Adobe Target] [!UICONTROL Bulk Profile Update] per inviare dati di profilo di più visitatori a [!DNL Target] per l'utilizzo nel targeting.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
+TQID: 'https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1311
+source-wordcount: '1313'
 ht-degree: 6%
-
 ---
-
 # [!DNL Adobe Target Bulk Profile Update API]
 
 L&#39;API [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] consente di aggiornare i profili utente per più visitatori in un sito Web in blocco utilizzando un file batch.
@@ -90,7 +97,7 @@ Si fa riferimento a questo file nella chiamata POST ai server [!DNL Target] per 
 >
 >Tutti i nomi e i valori dei parametri devono essere codificati in URL (UTF-8) prima di inviare il batch, inviato con `Content-Type: application/x-www-form-urlencoded`, con il corpo che inizia con `batch=`. I caratteri riservati non codificati vengono letti come sintassi della richiesta anziché come dati, il che può comportare il rifiuto, il troncamento o il danneggiamento del batch.
 >
->Se ricevi una risposta di &quot;Errore imprevisto&quot; senza l&#39;emissione di `batchId`, l&#39;API di aggiornamento del profilo di [Bulk Profile restituisce &quot;Errore imprevisto&quot;](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-24281) per i passaggi di risoluzione dei problemi.
+>Se ricevi una risposta di &quot;Errore imprevisto&quot; senza l&#39;emissione di `batchId`, l&#39;API di aggiornamento del profilo di [Bulk Profile restituisce &quot;Errore imprevisto&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) per i passaggi di risoluzione dei problemi.
 
 I seguenti caratteri sono comunemente presenti nei valori di profilo, ma hanno un significato speciale nei dati `application/x-www-form-urlencoded`. Se li invii non codificati, la richiesta non riesce o i dati vengono danneggiati senza un errore evidente:
 

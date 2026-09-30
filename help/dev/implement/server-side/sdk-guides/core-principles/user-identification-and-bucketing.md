@@ -3,21 +3,25 @@ title: Identificazione utente e bucket
 description: Identificazione utente e bucket
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
+TQID: 'https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1173
+source-wordcount: '1173'
 ht-degree: 4%
-
 ---
-
 # Identificazione utente e bucket
 
 ## Identificazione utente
@@ -29,7 +33,7 @@ Un utente può essere identificato in più modi in [!DNL Adobe Target]. [!UICONT
 | `tntID` | `tntId` è l&#39;identificatore primario in [!DNL Target] per un utente. È possibile specificare questo ID oppure [!DNL Target] lo genererà automaticamente se la richiesta non ne contiene uno. |
 | `thirdPartyId` | `thirdPartyId` è l&#39;identificatore dell&#39;utente della tua società, che puoi inviare con ogni chiamata. Quando un utente accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId` viene utilizzato per unire e condividere dati tra diverse soluzioni Adobe. MarketingCloudVisitorId è richiesto per le integrazioni con Adobe Analytics e Adobe Audience Manager. |
-| `customerIds` | Oltre all&#39;ID visitatore di Experience Cloud, è possibile utilizzare [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) aggiuntivi e uno stato di autenticazione per ogni visitatore. |
+| `customerIds` | Oltre all&#39;ID visitatore di Experience Cloud, è possibile utilizzare [ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) aggiuntivi e uno stato di autenticazione per ogni visitatore. |
 
 ## ID [!DNL Target] (tntID)
 
@@ -241,7 +245,7 @@ In questo scenario, [!DNL Target] genererà un `tntId` poiché non è stato pass
 
 ## ID cliente (customerIds)
 
-[Gli ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=it) possono essere aggiunti o associati a un ID visitatore di Experience Cloud. Ogni volta che si invia `customerIds`, è necessario specificare anche `marketingCloudVisitorId`. Inoltre, è possibile fornire uno stato di autenticazione insieme a ogni `customerId` per ogni visitatore. È possibile utilizzare i seguenti stati di autenticazione:
+[Gli ID cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) possono essere aggiunti o associati a un ID visitatore di Experience Cloud. Ogni volta che si invia `customerIds`, è necessario specificare anche `marketingCloudVisitorId`. Inoltre, è possibile fornire uno stato di autenticazione insieme a ogni `customerId` per ogni visitatore. È possibile utilizzare i seguenti stati di autenticazione:
 
 | Stato di autenticazione | Stato dell&#39;utente |
 | --- | --- |
@@ -323,7 +327,7 @@ L&#39;esempio precedente illustra come inviare un `customerId` con un `authentic
 
 ## Profilo unito
 
-È possibile combinare `tntId`, `thirdPartyID` e `marketingCloudVisitorId` nella stessa richiesta. In questo scenario, [!DNL Adobe Target] manterrà la mappatura di tutti questi ID e lo fisserà a un visitatore. Scopri come unire e sincronizzare in tempo reale [i profili](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=it) utilizzando i diversi identificatori.
+È possibile combinare `tntId`, `thirdPartyID` e `marketingCloudVisitorId` nella stessa richiesta. In questo scenario, [!DNL Adobe Target] manterrà la mappatura di tutti questi ID e lo fisserà a un visitatore. Scopri come unire e sincronizzare in tempo reale [i profili](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) utilizzando i diversi identificatori.
 
 >[!BEGINTABS]
 

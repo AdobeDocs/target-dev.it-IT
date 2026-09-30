@@ -1,29 +1,37 @@
 ---
 title: Accesso ai token di risposta tramite Adobe Experience Platform Web SDK
-description: Scopri come accedere ai token di risposta con  [!DNL Adobe Experience Platform Web SDK].
+description: Scopri come accedere ai token di risposta con [!DNL Adobe Experience Platform Web SDK].
 keywords: personalizzazione;target;adobe target;renderDecisions;sendEvent;decisionScopes;result.Decisions,response tokens;
 feature: AEP Web SDK
 exl-id: b125017c-c257-4f2f-a479-dd0f20e76a9a
-TQID: https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg
+TQID: 'https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 273
+source-wordcount: '273'
 ht-degree: 0%
-
 ---
-
 # Accesso ai token di risposta
 
-Il contenuto Personalization restituito da [!DNL Adobe Target] include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
+Il contenuto Personalization restituito da [!DNL Adobe Target] include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell&#39;interfaccia utente [!DNL Target].
 
 Per accedere a qualsiasi contenuto di personalizzazione, fornisci una funzione di callback durante l’invio di un evento. Questo callback viene richiamato dopo che SDK ha ricevuto una risposta corretta dal server. Al callback viene fornito un oggetto `result`, che potrebbe contenere una proprietà `propositions` contenente eventuali contenuti di personalizzazione restituiti. Di seguito è riportato un esempio di fornitura di una funzione di callback.
 
@@ -38,7 +46,7 @@ alloy("sendEvent", {
   });
 ```
 
-In questo esempio, `result.propositions`, se esiste, è un array contenente proposte di personalizzazione relative all&#39;evento. Consulta [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) per ulteriori informazioni sul contenuto di `result.propositions.`
+In questo esempio, `result.propositions`, se esiste, è un array contenente proposte di personalizzazione relative all&#39;evento. Consulta [Rendering del contenuto di personalizzazione](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) per ulteriori informazioni sul contenuto di `result.propositions.`
 
 Supponiamo di voler raccogliere tutti i nomi di attività da tutte le proposte di cui è stato eseguito il rendering automatico dal SDK web e inviarli in un singolo array. È quindi possibile inviare il singolo array a una terza parte. In questo caso:
 

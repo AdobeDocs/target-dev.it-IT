@@ -1,34 +1,46 @@
 ---
 keywords: implementazione applicazioni pagina singola, implementa applicazione pagina singola, spa, at.js 2.x, at.js, applicazione pagina singola, app a pagina singola, spa, SPA, implementazione applicazioni pagina singola
-description: Scopri come utilizzare  [!DNL Adobe Target] at.js 2.x per implementare [!DNL Target] per applicazioni a pagina singola (SPA).
-title: Posso implementare  [!DNL Target] per applicazioni a pagina singola?
+description: Scopri come utilizzare [!DNL Adobe Target] at.js 2.x per implementare [!DNL Target] per applicazioni a pagina singola.
+title: Posso implementare [!DNL Target] per applicazioni a pagina singola?
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
-TQID: https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo
+TQID: 'https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2851
+source-wordcount: '2854'
 ht-degree: 53%
-
 ---
-
 # Implementazione di un’applicazione a pagina singola
 
 I siti web tradizionali funzionavano su modelli di navigazione “da pagina a pagina”, altrimenti noti come Applicazioni a più pagine, in cui le progettazioni del sito web erano strettamente collegate a URL e le transizioni da una pagina web a un’altra richiedevano un caricamento di pagina. Le applicazioni web moderne, come le applicazioni a pagina singola, adottano invece un modello che attiva rapidamente il rendering dell’interfaccia utente del browser, spesso indipendente dalla pagina. Queste esperienze si attivano spesso tramite le interazioni dei clienti, ad esempio lo scorrimento, clic e movimenti del cursore. Con l’evoluzione dei paradigmi del web moderno, la rilevanza degli eventi generici tradizionali, come il caricamento delle pagine, per distribuire personalizzazione e sperimentazione non funziona più.
@@ -238,7 +250,7 @@ Ora, ovunque si implementi `triggerView()` nell’applicazione a pagina singola,
 
 ## Compositore esperienza visivo per app a pagina singola
 
-Dopo aver completato l’installazione di at.js 2.x e aggiunto `triggerView()` al sito, utilizza il Compositore esperienza visivo per eseguire attività A/B e XT. Per ulteriori informazioni, consulta [Compositore esperienza visivo per app a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=it).
+Dopo aver completato l’installazione di at.js 2.x e aggiunto `triggerView()` al sito, utilizza il Compositore esperienza visivo per eseguire attività A/B e XT. Per ulteriori informazioni, consulta [Compositore esperienza visivo per app a pagina singola](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
 
 >[!NOTE]
 >
@@ -246,7 +258,7 @@ Dopo aver completato l’installazione di at.js 2.x e aggiunto `triggerView()` a
 
 ## Utilizza TriggerView per garantire che A4T funzioni correttamente con at.js 2.x e le applicazioni a pagina singola
 
-Per garantire che [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it) (A4T) funzioni correttamente con at.js 2.x, assicurati di inviare lo stesso codice SDID nella richiesta [!DNL Target] e nella richiesta [!DNL Analytics].
+Per garantire che [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T) funzioni correttamente con at.js 2.x, assicurati di inviare lo stesso codice SDID nella richiesta [!DNL Target] e nella richiesta [!DNL Analytics].
 
 Come best practice relative alle applicazioni a pagina singola:
 
@@ -329,19 +341,19 @@ I video che seguono contengono ulteriori informazioni:
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Consulta la pagina relativa al [funzionamento di at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=it) per ulteriori informazioni.
+Consulta la pagina relativa al [funzionamento di at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) per ulteriori informazioni.
 
 ### Implementare at.js 2.x in un’applicazione a pagina singola
 
->[!VIDEO](https://video.tv.adobe.com/v/328136/?captions=ita&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-Per ulteriori informazioni, consulta [Implementare at.js 2.x di Adobe Target in un&#39;applicazione a pagina singola](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=it).
+Per ulteriori informazioni, consulta [Implementare at.js 2.x di Adobe Target in un&#39;applicazione a pagina singola](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html).
 
 ### Utilizzo del Compositore esperienza visivo per le applicazioni a pagina singola in [!DNL Adobe Target]
 
->[!VIDEO](https://video.tv.adobe.com/v/328139/?captions=ita&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-Per ulteriori informazioni, vedere [Utilizzo del Compositore esperienza visivo per le applicazioni a pagina singola in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=it).
+Per ulteriori informazioni, vedere [Utilizzo del Compositore esperienza visivo per le applicazioni a pagina singola in Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html).
 
 
 

@@ -1,31 +1,42 @@
 ---
 keywords: tls, tls 1.0, transport layer security, encryption, tls 1.1, tls 1.2
-description: Scopri come [!DNL Target] utilizza il protocollo TLS (Transport Layer Security) per mantenere standard di sicurezza elevati e promuovere la sicurezza dei dati dei clienti.
-title: In che modo  [!DNL Target] utilizza TLS per fornire protezione?
+description: Scopri in che modo [!DNL Target] utilizza il protocollo TLS (Transport Layer Security) per mantenere standard di sicurezza elevati e promuovere la sicurezza dei dati dei clienti.
+title: In che modo [!DNL Target] utilizza TLS per fornire sicurezza?
 feature: Privacy & Security
 exl-id: f5ea2272-27ab-49c9-b096-b15dd277d4e5
-TQID: https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E
+TQID: 'https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1231
-ht-degree: 45%
-
+source-wordcount: '1233'
+ht-degree: 44%
 ---
-
 # Modifiche alla crittografia di TLS (Transport Layer Security)
 
 Informazioni sulle modifiche apportate a come [!DNL Adobe] e [!DNL Adobe Target] utilizzano TLS (Transport Layer Security) per mantenere standard di sicurezza elevati e promuovere la sicurezza dei dati dei clienti.
@@ -44,7 +55,7 @@ TLS 1.2 è il valore predefinito dal 1° marzo 2020 e TLS 1.1 non sarà più sup
 
 Adobe sposterà i clienti a TLS 1.2 in modo graduale. Per coloro che sono già in possesso di domini conformi alla versione 1.2, verranno spostati in TLS 1.2 senza la necessità di apportare modifiche. La maggior parte dei domini dei clienti supporta già TLS 1.2; tuttavia, se il tuo dominio non supporta TLS 1.2, manterremo tali domini su TLS 1.1 come oggi (fino a marzo 2020).
 
-Non dovresti riscontrare alcun problema durante questa fase di migrazione. Se il Compositore esperienza visivo ha smesso di caricare un sito che prima funzionava, [apri un ticket dell&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it&#reference_ACA3391A00EF467B87930A450050077C) citando questa migrazione come possibile causa.
+Non dovresti riscontrare alcun problema durante questa fase di migrazione. Se il Compositore esperienza visivo ha smesso di caricare un sito che prima funzionava, [apri un ticket dell&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) citando questa migrazione come possibile causa.
 
 Tuttavia, se sei uno di quei clienti che usano TSL 1.1 senza supportare TLS 1.2, devi pianificare lo spostamento dei tuoi domini/dell’infrastruttura a TLS 1.2. Continueremo a supportare il protocollo TLS 1.1 fino al 1° marzo 2020. A partire dal 1° marzo 2020, [!DNL Target] non supporterà il protocollo TLS 1.1 da utilizzare per il Compositore esperienza visivo tramite la funzionalità Compositore esperienza avanzato.
 

@@ -3,18 +3,21 @@ title: Inizializzare .NET SDK utilizzando il metodo create
 description: Scopri come utilizzare il metodo create per inizializzare Java SDK e creare un'istanza di [!UICONTROL TargetClient] per effettuare chiamate a [!DNL Adobe Target] per esperimenti ed esperienze personalizzate.
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
-TQID: https://experienceleague.adobe.com/uOEojoWWjXmcDl2yY1UmSRD-EXL0j9p-p-eE8PXa7Rk
+TQID: 'https://experienceleague.adobe.com/uOEojoWWjXmcDl2yY1UmSRD-EXL0j9p-p-eE8PXa7Rk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 14%
-
 ---
-
 # Inizializzare .NET SDK
 
 ## Descrizione
@@ -29,7 +32,7 @@ In seguito, utilizzare il metodo `Initialize` di SDK per configurare SDK, comple
 
 `TargetClient` è stato creato utilizzando `TargetClient.Create`.
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -37,7 +40,7 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig` è stato creato con ClientConfig.Builder.
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -71,7 +74,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## Esempio
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

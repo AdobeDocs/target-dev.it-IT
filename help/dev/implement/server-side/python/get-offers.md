@@ -1,22 +1,26 @@
 ---
-title: Usa getOffers() in [!DNL Adobe Target] con Python SDK
+title: Utilizzare getOffers() in [!DNL Adobe Target] quando si utilizza Python SDK
 description: Scopri come utilizzare getOffers() per eseguire una decisione e recuperare un'esperienza da [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
-TQID: https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg
+TQID: 'https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Metadata
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 366
+source-wordcount: '367'
 ht-degree: 11%
-
 ---
-
 # Ottieni offerte (Python)
 
 ## Descrizione
@@ -58,7 +62,7 @@ Restituisce un valore `TargetDeliveryResponse` se chiamato in modo sincrono (imp
 | target_location_hint_cookie | dict | Cookie dell&#39;hint di posizione [!DNL Target] |
 | dettagli_analisi | list[AnalyticsResponse] | Payload di Analytics, in caso di utilizzo di Analytics lato client |
 | traccia | list[dict] | Dati di trace aggregati per tutte le mbox/visualizzazioni di richiesta |
-| response_tokens | list[dict] | Elenco di &#x200B;[Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it) |
+| response_tokens | list[dict] | Elenco di &#x200B;[Token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | dict | Metadati decisionali aggiuntivi da utilizzare con le decisioni sul dispositivo |
 
 `target_cookie` e `target_location_hint_cookie` oggetti utilizzati per restituire dati al browser hanno la seguente struttura:

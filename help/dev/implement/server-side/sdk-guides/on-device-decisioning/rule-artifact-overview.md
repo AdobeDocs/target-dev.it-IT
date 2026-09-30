@@ -1,26 +1,32 @@
 ---
 title: Comprendere l’artefatto della regola di decisioning sul dispositivo
-description: Scopri come utilizzare l’artefatto della regola, una rappresentazione JSON delle attività  [!DNL Adobe Target] [!UICONTROL decisioning sul dispositivo].
+description: Scopri come utilizzare l'artefatto della regola, una rappresentazione JSON delle attività [!DNL Adobe Target] [!UICONTROL decisioning sul dispositivo].
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
-TQID: https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE
+TQID: 'https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 86209eb483ca69d40615c632ba435d27fec78f36
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 277
+source-wordcount: '278'
 ht-degree: 0%
-
 ---
-
 # Panoramica dell’artefatto della regola
 
 L&#39;artefatto della regola è una rappresentazione JSON delle attività [!DNL Adobe Target] [!UICONTROL decisioning sul dispositivo]. Viene generato da [!DNL Adobe Target] e propagato alla rete CDN Akamai per verificare che sia disponibile un artefatto di regola il più vicino possibile agli utenti finali. Contiene metadati che garantiscono l’esecuzione e la consegna precise delle attività, consentendo al contempo l’analisi in tempo reale tramite il tracciamento degli eventi. Gli SDK [!DNL Adobe Target] possono essere configurati in modo da consentire la gestione automatica dell&#39;artefatto della regola, tramite la quale possono essere scaricati o aggiornati in base a un intervallo di tempo specificato dall&#39;utente. Inoltre, puoi anche gestire la tua copia locale dell&#39;artefatto della regola utilizzando un sistema di caching della memoria distribuita come [Memcached](https://memcached.org/) per inizializzare il SDK [!DNL Adobe Target], in modo che i server senza stato possano servire le richieste immediatamente. Per ulteriori informazioni su queste opzioni, consulta le seguenti guide:

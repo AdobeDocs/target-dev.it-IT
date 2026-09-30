@@ -3,28 +3,39 @@ title: Come gestire i criteri personalizzati
 description: Passaggi necessari per utilizzare le API di Adobe Target per gestire, creare, elencare, modificare, ottenere ed eliminare i criteri di Consigli di Adobe Target.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+TQID: 'https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 890
+source-wordcount: '939'
 ht-degree: 0%
-
 ---
-
 # Gestisci criteri personalizzati
 
 A volte gli algoritmi forniti da Recommendations non sono in grado di far emergere elementi particolari che desideri promuovere. In questa situazione, i criteri personalizzati consentono di fornire un set specifico di articoli consigliati per un determinato elemento o categoria chiave.
 
-Per creare criteri personalizzati, definisci e importa la mappatura desiderata tra l’elemento o la categoria chiave e gli elementi consigliati. Questo processo è descritto nella [documentazione sui criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=it). Come indicato in tale documentazione, puoi creare, modificare ed eliminare i criteri personalizzati tramite l’interfaccia utente di Target. Tuttavia, Target fornisce anche un set di API di criteri personalizzati che consentono una gestione più dettagliata dei criteri personalizzati.
+Per creare criteri personalizzati, definisci e importa la mappatura desiderata tra l’elemento o la categoria chiave e gli elementi consigliati. Questo processo è descritto nella [documentazione sui criteri personalizzati](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Come indicato in tale documentazione, puoi creare, modificare ed eliminare i criteri personalizzati tramite l’interfaccia utente di Target. Tuttavia, Target fornisce anche un set di API di criteri personalizzati che consentono una gestione più dettagliata dei criteri personalizzati.
 
 >[!WARNING]
 >
@@ -38,7 +49,7 @@ Per creare criteri personalizzati utilizzando l&#39;API [Crea criteri personaliz
 
 >[!WARNING]
 >
->I criteri personalizzati creati utilizzando l’API Crea criteri personalizzati, come descritto in questo esercizio, verranno visualizzati nell’interfaccia utente e persisteranno. Non potrai modificarli o eliminarli dall’interfaccia utente. Puoi modificarli o eliminarli **tramite API**, ma in entrambi i casi continueranno a essere visualizzati nell&#39;interfaccia utente di Target. Per mantenere l&#39;opzione di modifica o eliminazione dall&#39;interfaccia utente, crea i criteri personalizzati utilizzando l&#39;interfaccia utente per [la documentazione](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=it), anziché utilizzare l&#39;API Crea criteri personalizzati.
+>I criteri personalizzati creati utilizzando l’API Crea criteri personalizzati, come descritto in questo esercizio, verranno visualizzati nell’interfaccia utente e persisteranno. Non potrai modificarli o eliminarli dall’interfaccia utente. Puoi modificarli o eliminarli **tramite API**, ma in entrambi i casi continueranno a essere visualizzati nell&#39;interfaccia utente di Target. Per mantenere l&#39;opzione di modifica o eliminazione dall&#39;interfaccia utente, crea i criteri personalizzati utilizzando l&#39;interfaccia utente per [la documentazione](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html), anziché utilizzare l&#39;API Crea criteri personalizzati.
 
 Procedi solo con i seguenti passaggi dopo aver letto l’avviso precedente e hai familiarità con la creazione di nuovi criteri personalizzati che non possono essere successivamente eliminati dall’interfaccia utente.
 
@@ -110,12 +121,12 @@ Utilizzando l&#39;ID criteri indicato in precedenza, elimina i criteri personali
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. Specifica l’ID del criterio personalizzato (singolo) da eliminare. Fai clic su **[!UICONTROL Invia]**.
+1. Specifica l’ID del criterio personalizzato (singolo) da eliminare. Fai clic su **[!UICONTROL Send]** (Invia).
    ![EliminaCriteriPersonalizzati1](assets/DeleteCustomCriteria1.png)
 
 1. Verifica che i criteri siano stati eliminati utilizzando Ottieni criteri personalizzati.
    ![EliminaCriteriPersonalizzati2](assets/DeleteCustomCriteria2.png)
-In questo caso, l’errore 404 previsto indica che non è possibile trovare i criteri eliminati.
+   In questo caso, l’errore 404 previsto indica che non è possibile trovare i criteri eliminati.
 
 >[!NOTE]
 >

@@ -1,27 +1,36 @@
 ---
 title: Implementazione di un'applicazione a pagina singola per [!DNL Adobe Experience Platform Web SDK]
-description: Scopri come creare un'implementazione di applicazione a pagina singola (SPA) di  [!DNL Adobe Experience Platform Web SDK]using [!DNL Target].
+description: Scopri come creare un'implementazione di applicazione a pagina singola (SPA) di [!DNL Adobe Experience Platform Web SDK] utilizzando [!DNL Target].
 keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;ciclo di vita SPA;lato client;test AB;AB;Targeting esperienza;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+TQID: 'https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1836
+source-wordcount: '1837'
 ht-degree: 2%
-
 ---
-
 # Implementazione di un&#39;applicazione a pagina singola
 
 [!DNL Adobe Experience Platform Web SDK] offre funzionalità avanzate che consentono all&#39;azienda di eseguire personalizzazioni su tecnologie lato client di nuova generazione, ad esempio applicazioni a pagina singola (SPA).
@@ -72,7 +81,7 @@ Il concetto di [!UICONTROL visualizzazioni] può essere esteso molto oltre quest
 
 È possibile sfruttare [!UICONTROL le visualizzazioni XDM] in [!DNL Target] per consentire agli addetti al marketing di eseguire test A/B e XT nelle applicazioni a pagina singola tramite il [!UICONTROL Compositore esperienza visivo]. Per completare la configurazione di uno sviluppatore una tantum, è necessario eseguire i passaggi seguenti:
 
-1. Installa [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/install/overview).
+1. Installa [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 2. Determina tutte le [!UICONTROL visualizzazioni XDM] nell&#39;applicazione a pagina singola che desideri personalizzare.
 3. Dopo aver definito le [!UICONTROL visualizzazioni XDM], per distribuire le attività VEC A/B o XT, implementare la funzione `sendEvent()` con `renderDecisions` impostato su `true` e la corrispondente [!UICONTROL visualizzazione XDM] nell&#39;applicazione a pagina singola. La [!UICONTROL visualizzazione XDM] deve essere passata in `xdm.web.webPageDetails.viewName`. Questo passaggio consente agli esperti di marketing di sfruttare il [!UICONTROL Compositore esperienza visivo] per avviare test A/B e XT per tali XDM.
 
@@ -232,7 +241,7 @@ Dopo aver definito le [!UICONTROL visualizzazioni XDM] e implementato `sendEvent
 
 >[!NOTE]
 >
->Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [l&#39;estensione Chrome VEC Helper](https://experienceleague.adobe.com/it/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [l&#39;estensione Chrome VEC Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Pannello [!UICONTROL Modifiche]
 

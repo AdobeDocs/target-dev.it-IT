@@ -4,18 +4,24 @@ description: Utilizza i collegamenti di anteprima mobile per eseguire un control
 title: Come si utilizzano i collegamenti di anteprima mobile in [!DNL Adobe Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+TQID: 'https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '579'
 ht-degree: 24%
-
 ---
-
 # Anteprima mobile [!DNL Target]
 
 Utilizza i collegamenti di anteprima per dispositivi mobili per eseguire facilmente un controllo qualità end-to-end per le attività dell’app mobile e iscriverti a diverse esperienze utilizzando il tuo dispositivo senza dover utilizzare dispositivi di test speciali.
@@ -80,7 +86,7 @@ Apri il link in un browser mobile su un dispositivo in cui hai installato l&#39;
 1. Seleziona la combinazione di esperienze da visualizzare, quindi fai clic su **[!UICONTROL Avvia esperienze]**.
 
    |![anteprima mobile 1](assets/mobile-preview-experience-selection-1.png)|![anteprima mobile 2](assets/mobile-preview-experience-result-1-france.png)|![anteprima mobile 3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![anteprima mobile 4](assets/mobile-preview-experience-selection-2.png)|![anteprima mobile 5](assets/mobile-preview-experience-result-2-aus.png)|![anteprima mobile 6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![anteprima mobile 4](assets/mobile-preview-experience-selection-2.png)|![anteprima mobile 5](assets/mobile-preview-experience-result-2-aus.png)|![anteprima mobile 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitazioni
 

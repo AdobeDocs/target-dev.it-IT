@@ -1,33 +1,44 @@
 ---
 keywords: implementare target, implementare, implementare at.js, Tag Manager, decisioning sul dispositivo, su device decisioning
-description: Scopri come specificare le impostazioni (dettagli account, metodi di implementazione, ecc.) per implementare la libreria at.js  [!DNL Adobe Target]  senza utilizzare un gestore di tag.
-title: Posso implementare  [!DNL Target]  senza un sistema per la gestione dei tag?
+description: Scopri come specificare le impostazioni (dettagli account, metodi di implementazione, ecc.) per implementare la libreria at.js [!DNL Adobe Target] senza utilizzare un gestore di tag.
+title: Posso implementare [!DNL Target] senza un sistema per la gestione dei tag?
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+TQID: 'https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1785
+source-wordcount: '1787'
 ht-degree: 32%
-
 ---
-
 # Implementare [!DNL Target] senza un sistema per la gestione dei tag
 
 Informazioni sull&#39;implementazione di [!DNL Adobe Target] senza l&#39;utilizzo di uno o più tag in [!DNL Adobe Experience Platform].
@@ -76,7 +87,7 @@ Le seguenti impostazioni possono essere configurate nel pannello Metodi di imple
 | [!UICONTROL Caricamento pagina abilitato (creazione automatica mbox globale)] | Seleziona se incorporare la chiamata mbox globale nel file at.js in modo che si attivi automaticamente al caricamento di ogni pagina. |
 | [!UICONTROL Mbox globale] | Seleziona un nome per la mbox globale. Per impostazione predefinita, il nome è target-global-mbox.<p>Nei nomi delle mbox in at.js è possibile utilizzare caratteri speciali, tra cui il simbolo &amp;. |
 | [!UICONTROL Timeout (secondi)] | Se [!DNL Target] non risponde con il contenuto entro il periodo definito, la chiamata al server riceve un timeout e viene visualizzato il contenuto predefinito. Durante la sessione del visitatore vengono ripetuti ulteriori tentativi di chiamata. Il valore predefinito è 5 secondi.<p>La libreria at.js utilizza l&#39;impostazione di timeout in `XMLHttpRequest`. Il timeout viene avviato quando la richiesta viene attivata e si arresta quando [!DNL Target] riceve una risposta dal server. Per ulteriori informazioni, vedere [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) in Mozilla Developer Network.<p>Se il timeout specificato si verifica prima della ricezione della risposta, viene visualizzato il contenuto predefinito e il visitatore potrebbe essere conteggiato come partecipante a un&#39;attività, perché la raccolta dei dati viene eseguita sul server Edge [!DNL Target]. Se la richiesta raggiunge il server Edge [!DNL Target], il visitatore viene conteggiato.<p>Quando configuri l’impostazione di timeout, tieni presente quanto segue:<ul><li>Se il valore è troppo basso, gli utenti potrebbero visualizzare il contenuto predefinito la maggior parte delle volte, nonostante il visitatore venga conteggiato come partecipante all’attività.</li><li>Se il valore è troppo alto, i visitatori potrebbero visualizzare aree vuote nella pagina web o pagine vuote (se utilizzi la funzione per nascondere il corpo) per periodi di tempo prolungati.</li></ul>Per comprendere meglio i tempi di risposta della mbox, guarda la scheda Rete negli strumenti di sviluppo del tuo browser. Puoi anche utilizzare strumenti di terze parti per il monitoraggio delle prestazioni web, ad esempio Catchpoint.<p>**Nota**: l&#39;impostazione [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) garantisce che [!DNL Target] non attenda troppo a lungo la risposta dell&#39;API visitatore. Questa impostazione e l’impostazione Timeout per at.js qui descritta non entrano in contrasto. |
-| [!UICONTROL Durata profilo] | Questa impostazione determina per quanto tempo vengono memorizzati i profili visitatore. Per impostazione predefinita, i profili vengono memorizzati per due settimane. Questa impostazione può essere aumentata fino a 90 giorni.<p>Per modificare l&#39;impostazione della durata del profilo, contattare [l&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it#reference_ACA3391A00EF467B87930A450050077C). |
+| [!UICONTROL Durata profilo] | Questa impostazione determina per quanto tempo vengono memorizzati i profili visitatore. Per impostazione predefinita, i profili vengono memorizzati per due settimane. Questa impostazione può essere aumentata fino a 90 giorni.<p>Per modificare l&#39;impostazione della durata del profilo, contattare [l&#39;assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C). |
 
 ### Metodo di implementazione principale
 
@@ -90,7 +101,7 @@ Per modificare l&#39;impostazione di at.js, fai clic su **[!UICONTROL Modifica]*
 
 >[!WARNING]
 >
->Prima di modificare queste impostazioni predefinite, consulta [Assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=it#reference_ACA3391A00EF467B87930A450050077C) in modo da non influire sull&#39;implementazione corrente.
+>Prima di modificare queste impostazioni predefinite, consulta [Assistenza clienti](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C) in modo da non influire sull&#39;implementazione corrente.
 
 Oltre alle impostazioni spiegate in precedenza, sono disponibili anche le seguenti impostazioni at.js specifiche:
 

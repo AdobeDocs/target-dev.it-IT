@@ -4,32 +4,40 @@ description: Scopri come implementare le attività [!UICONTROL Recommendations] 
 title: Come posso implementare [!UICONTROL attività Consigli]?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-TQID: https://experienceleague.adobe.com/XHlWA44OdaG0N-lQoXiKvCSUS2OBHwAsFRla4exneEI
+TQID: 'https://experienceleague.adobe.com/XHlWA44OdaG0N-lQoXiKvCSUS2OBHwAsFRla4exneEI'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1607
+source-wordcount: '1607'
 ht-degree: 21%
-
 ---
-
 # Pianifica e implementa [!UICONTROL Recommendations]
 
 Informazioni utili per pianificare e implementare [!DNL Adobe Target Recommendations].
 
 >[!NOTE]
 >
->Oltre a questo articolo, la [Guida di Adobe Target Business Practitioner](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=it){target=_blank} contiene informazioni approfondite su [Target Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=it){target=_blank}.
+>Oltre a questo articolo, la [Guida di Adobe Target Business Practitioner](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=it){target=_blank} contiene informazioni approfondite su [Target Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html){target=_blank}.
 
 Prima di configurare la prima attività [!UICONTROL Recommendations] in [!DNL Adobe Target], completa i passaggi seguenti:
 
@@ -56,7 +64,7 @@ Per fornire consigli di alta qualità, [!UICONTROL Target] deve conoscere i prod
 
 | Metodo | Che cos’è | Quando utilizzarlo | Informazioni aggiuntive |
 | --- | --- | --- | --- |
-| Feed catalogo | Pianifica il caricamento e l’acquisizione di un feed (CSV, Google Product XML o Classificazioni di prodotto Analytics) su base giornaliera. | Per inviare informazioni su più elementi alla volta. Per l’invio di informazioni che non cambiano frequentemente. | Consulta [Feed](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=it). |
+| Feed catalogo | Pianifica il caricamento e l’acquisizione di un feed (CSV, Google Product XML o Classificazioni di prodotto Analytics) su base giornaliera. | Per inviare informazioni su più elementi alla volta. Per l’invio di informazioni che non cambiano frequentemente. | Consulta [Feed](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
 | API entità | Chiama un’API per inviare aggiornamenti immediati per un singolo elemento. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta la documentazione per gli sviluppatori API [Entities](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Trasmettere gli aggiornamenti sulla pagina | Invia aggiornamenti al minuto per un singolo elemento tramite JavaScript sulla pagina o utilizzando l’API di consegna. | Per l’invio di aggiornamenti man mano che si verificano su un elemento alla volta. Per l’invio di informazioni che cambiano frequentemente (ad esempio prezzo, livello di magazzino/scorte). | Consulta [Visualizzazioni elemento/pagine prodotto](#item-views-or-product-pages) di seguito. |
 
@@ -135,7 +143,7 @@ function targetPageParams() {
 }
 ```
 
-Per ulteriori informazioni sui consigli basati su carrello, consulta [In base al carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=it#cart-based) nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
+Per ulteriori informazioni sui consigli basati su carrello, consulta [In base al carrello](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based) nella *[!DNL Adobe Target]Guida per professionisti aziendali*.
 
 ### Escludere gli elementi già presenti nel carrello del visitatore
 
@@ -157,7 +165,7 @@ Quando si verifica un evento di acquisto, passa l’identità dell’articolo o 
 
 ## &#x200B;4. Configurare le esclusioni globali
 
-Escludi gli elementi a livello globale che non desideri consigliare a un visitatore. Consulta [Esclusioni](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html?lang=it) nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
+Escludi gli elementi a livello globale che non desideri consigliare a un visitatore. Consulta [Esclusioni](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html) nella Guida di *[!DNL Adobe Target]professionisti aziendali*.
 
 ## &#x200B;5. Configura impostazioni [!UICONTROL Consigli]
 
@@ -173,8 +181,8 @@ Sono disponibili le seguenti opzioni:
 |--- |--- |
 | Mbox globale personalizzata | (Facoltativo) Specifica la mbox globale personalizzata utilizzata per le attività di [!UICONTROL Target]. Per impostazione predefinita, la mbox globale utilizzata da [!UICONTROL Target] viene utilizzata per la funzione [!UICONTROL Consigli].<P>Nota: questa opzione è impostata sulla pagina [!UICONTROL Target] **[!UICONTROL Amministrazione]**. Apri [!UICONTROL Target], quindi fai clic su **[!UICONTROL Amministrazione]** > **[!UICONTROL Compositore esperienza visivo]**. |
 | Settore verticale | Il settore verticale è utilizzato per aiutare a categorizzare i criteri per i consigli. Queste informazioni aiutano i membri del team a trovare i criteri più appropriati per una pagina specifica, ad esempio quelli più adatti per la pagina del carrello o per una pagina multimediale. |
-| Filtra criteri incompatibili | Abilita questa opzione per mostrare solo i criteri per i quali la pagina selezionata trasmette i dati richiesti. Non tutti i criteri vengono eseguiti correttamente su ogni pagina. La pagina o mbox deve passare `entity.id` o `entity.categoryId` per rendere compatibili i consigli per l&#39;elemento o la categoria corrente. In generale, è consigliabile mostrare solo i criteri compatibili. Per fare in modo che i criteri incompatibili siano disponibili per l’attività, deseleziona questa opzione.<P>È consigliabile disattivare l’opzione se utilizzi una soluzione di gestione tag.<P>Per ulteriori informazioni su questa opzione, vedere [[!UICONTROL Domande frequenti su Recommendations]](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=it) nella *[!DNL Adobe Target]Guida per professionisti aziendali*. |
-| Gruppo host predefinito | Seleziona il gruppo host predefinito.<P>Il gruppo di host può essere utilizzato per separare gli elementi disponibili nel catalogo per usi diversi. Ad esempio, puoi utilizzare i gruppi di host per ambienti di sviluppo e di produzione, marchi diversi o diverse aree geografiche. Per impostazione predefinita, i risultati dell&#39;anteprima in Ricerca nel catalogo, Raccolte ed Esclusioni si basano sul gruppo di host predefinito. Puoi anche selezionare un gruppo di host diverso per visualizzare in anteprima i risultati, utilizzando il filtro Ambiente. Per impostazione predefinita, gli elementi appena aggiunti sono disponibili in tutti i gruppi di host, a meno che non venga specificato un ID ambiente al momento della creazione o dell’aggiornamento dell’elemento. I consigli distribuiti dipendono dal gruppo di host specificato nella richiesta.<P>Se i prodotti non vengono visualizzati, assicurati di utilizzare il gruppo host corretto. Ad esempio, se imposti che il consiglio usi un ambiente di gestione temporanea e imposti il gruppo host su Gestione temporanea, potrebbe essere necessario ricreare le raccolte nell&#39;ambiente di gestione temporanea perché si visualizzino i prodotti. Per visualizzare i prodotti disponibili in ogni ambiente, utilizza Ricerca catalogo con ogni ambiente. Puoi anche visualizzare in anteprima il contenuto delle [!UICONTROL raccolte ed esclusioni di Recommendations] per un ambiente selezionato (gruppo di host).<P>**Nota:** dopo aver modificato l&#39;ambiente selezionato, fare clic su Cerca per aggiornare i risultati restituiti.<P> **[!UICONTROL Il filtro Ambiente]** è disponibile nelle seguenti posizioni nell&#39;interfaccia utente di Target:<ul><li>Ricerca nel catalogo (**[!UICONTROL Recommendations]** > **[!UICONTROL Ricerca nel catalogo]**)</li><li>Finestra di dialogo Crea raccolta (**[!UICONTROL Recommendations]** > **[!UICONTROL Raccolte]** > **[!UICONTROL Crea nuova]**)</li><li>Finestra di dialogo Aggiorna raccolta (**[!UICONTROL Recommendations]** > **[!UICONTROL Raccolte]** > **[!UICONTROL Modifica]**)</li><li>Finestra di dialogo Crea esclusione (**[!UICONTROL Recommendations]** > **[!UICONTROL Esclusioni]** > **[!UICONTROL Crea nuova]**)</li><li>Finestra di dialogo Aggiorna esclusione (**[!UICONTROL Consigli]** > **[!UICONTROL Esclusioni]** > **[!UICONTROL Modifica]**)</li></ul>Per ulteriori informazioni, vedere [Host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=it) nella Guida di *[!DNL Adobe Target]professionisti aziendali*. |
+| Filtra criteri incompatibili | Abilita questa opzione per mostrare solo i criteri per i quali la pagina selezionata trasmette i dati richiesti. Non tutti i criteri vengono eseguiti correttamente su ogni pagina. La pagina o mbox deve passare `entity.id` o `entity.categoryId` per rendere compatibili i consigli per l&#39;elemento o la categoria corrente. In generale, è consigliabile mostrare solo i criteri compatibili. Per fare in modo che i criteri incompatibili siano disponibili per l’attività, deseleziona questa opzione.<P>È consigliabile disattivare l’opzione se utilizzi una soluzione di gestione tag.<P>Per ulteriori informazioni su questa opzione, vedere [[!UICONTROL Domande frequenti su Recommendations]](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html) nella *[!DNL Adobe Target]Guida per professionisti aziendali*. |
+| Gruppo host predefinito | Seleziona il gruppo host predefinito.<P>Il gruppo di host può essere utilizzato per separare gli elementi disponibili nel catalogo per usi diversi. Ad esempio, puoi utilizzare i gruppi di host per ambienti di sviluppo e di produzione, marchi diversi o diverse aree geografiche. Per impostazione predefinita, i risultati dell&#39;anteprima in Ricerca nel catalogo, Raccolte ed Esclusioni si basano sul gruppo di host predefinito. Puoi anche selezionare un gruppo di host diverso per visualizzare in anteprima i risultati, utilizzando il filtro Ambiente. Per impostazione predefinita, gli elementi appena aggiunti sono disponibili in tutti i gruppi di host, a meno che non venga specificato un ID ambiente al momento della creazione o dell’aggiornamento dell’elemento. I consigli distribuiti dipendono dal gruppo di host specificato nella richiesta.<P>Se i prodotti non vengono visualizzati, assicurati di utilizzare il gruppo host corretto. Ad esempio, se imposti che il consiglio usi un ambiente di gestione temporanea e imposti il gruppo host su Gestione temporanea, potrebbe essere necessario ricreare le raccolte nell&#39;ambiente di gestione temporanea perché si visualizzino i prodotti. Per visualizzare i prodotti disponibili in ogni ambiente, utilizza Ricerca catalogo con ogni ambiente. Puoi anche visualizzare in anteprima il contenuto delle [!UICONTROL raccolte ed esclusioni di Recommendations] per un ambiente selezionato (gruppo di host).<P>**Nota:** dopo aver modificato l&#39;ambiente selezionato, fare clic su Cerca per aggiornare i risultati restituiti.<P> **[!UICONTROL Il filtro Ambiente]** è disponibile nelle seguenti posizioni nell&#39;interfaccia utente di Target:<ul><li>Ricerca nel catalogo (**[!UICONTROL Recommendations]** > **[!UICONTROL Ricerca nel catalogo]**)</li><li>Finestra di dialogo Crea raccolta (**[!UICONTROL Recommendations]** > **[!UICONTROL Raccolte]** > **[!UICONTROL Crea nuova]**)</li><li>Finestra di dialogo Aggiorna raccolta (**[!UICONTROL Recommendations]** > **[!UICONTROL Raccolte]** > **[!UICONTROL Modifica]**)</li><li>Finestra di dialogo Crea esclusione (**[!UICONTROL Recommendations]** > **[!UICONTROL Esclusioni]** > **[!UICONTROL Crea nuova]**)</li><li>Finestra di dialogo Aggiorna esclusione (**[!UICONTROL Consigli]** > **[!UICONTROL Esclusioni]** > **[!UICONTROL Modifica]**)</li></ul>Per ulteriori informazioni, vedere [Host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) nella Guida di *[!DNL Adobe Target]professionisti aziendali*. |
 | URL di base per le miniature | L&#39;impostazione di un URL di base per il catalogo dei prodotti rende possibile l’utilizzo di URL relativi quando specifichi le miniature dei prodotti fornendo l’URL della miniatura.<P>Ad esempio:<P>`"entity.thumbnailURL=/Images/Homepage/product1.jpg"`<P>imposta un URL relativo all’URL di base della miniatura. |
 | [!UICONTROL Consigli] Token API | Usa questo token nelle chiamate API di [!UICONTROL Recommendations], ad esempio l&#39;API di download. |
 
